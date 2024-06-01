@@ -1,0 +1,31 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Spongebob {
+    background-image:url("Spongebob.png.png");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color:black !important;
+}
+.Empty {
+    background-image:none;
+}
+.flag {
+    background-image:url("flag.jpg");
+    background-size: 40px 40px;
+}

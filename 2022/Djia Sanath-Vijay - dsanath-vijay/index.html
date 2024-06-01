@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Attenborough vs Denes</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
+    <script src="code.js"></script>
+</head>
+<body>
+    <audio loop id="myAudio">
+        <source id='audio' src="putin.mp3" type="audio/mpeg">
+      </audio>
+    <p1>Player 1: Use right/left arrow keys to move. Get Mr Attenborough<br> to his computer without breaking the servers.</p1><br>
+    <br><p2>Player 2: Use WASD keys to move. Get Dr Denes to his mobile phone<br> without breaking any of the servers.</p2><br>
+      <script>function audio(){
+          var x = document.getElementById("myAudio");
+          x.play()
+      }</script>
+      <script>function audioPause() {
+            var x2 = document.getElementById("myAudio")
+            x2.pause()
+      }</script>
+    <br>
+    <button onclick="audio()">
+    Click for music
+    </button>
+    <button onclick="audioPause()">
+    Pause the music
+    </button>
+    <br>
+    <p3 id="Message"></p3>
+    <br>
+    <p4>Player 1 Score: </p4>
+    <p4 id="score">0</p4>
+    <p5>Player 2 Score: </p5>
+    <p5 id="score2">0</p5>
+</br>
+<table id="RacingTrack">
+        <!-- The table cells have an id with the row and column number -->
+        <tr>
+            <td id="R0C0" class="Car"></td>
+            <td id="R0C1"></td>
+            <td id="R0C2" class="Nitro"></td>
+            <td id="R0C3" class="wall"></td>
+            <td id="R0C4"></td>
+            <td id="R0C5"></td>
+            <td id="R0C6"></td>
+            <td id="R0C7" class="wall"></td>
+            <td id="R0C8" class="Coin"></td>
+            <td id="R0C9" class="wall"></td>
+        </tr>
+        <!-- Add another table row here -->
+        <tr>
+            <td id="R1C0" class="Coin"></td>
+            <td id="R1C1"></td>
+            <td id="R1C2"></td>
+            <td id="R1C3" class="wall"></td>
+            <td id="R1C4"></td>
+            <td id="R1C5" class="wall"></td>
+            <td id="R1C6"></td>
+            <td id="R1C7"></td>
+            <td id="R1C8" class="Coin"></td>
+            <td id="R1C9" class="phone"></td>
+        </tr>
+
+        <tr>
+            <td id="R2C0" class="wall"></td>
+            <td id="R2C1" class="wall"></td>
+            <td id="R2C2"></td>
+            <td id="R2C3" class="wall"></td>
+            <td id="R2C4"></td>
+            <td id="R2C5" class="wall"></td>
+            <td id="R2C6" class="wall"></td>
+            <td id="R2C7" class="wall"></td>
+            <td id="R2C8" class="wall"></td>
+            <td id="R2C9"></td>
+        </tr>
+    
+        <tr>
+            <td id="R3C0"></td>
+            <td id="R3C1"></td>
+            <td id="R3C2"></td>
+            <td id="R3C3"></td>
+            <td id="R3C4"></td>
+            <td id="R3C5"></td>
+            <td id="R3C6" class="Coin"></td>
+            <td id="R3C7" class="wall"></td>
+            <td id="R3C8"></td>
+            <td id="R3C9"></td>
+        </tr>
+
+        <tr>
+            <td id="R4C0"></td>
+            <td id="R4C1"></td>
+            <td id="R4C2" class="wall"></td>
+            <td id="R4C3" class="wall"></td>
+            <td id="R4C4" class="wall"></td>
+            <td id="R4C5" class="wall"></td>
+            <td id="R4C6"></td>
+            <td id="R4C7"></td>
+            <td id="R4C8"></td>
+            <td id="R4C9"></td>
+        </tr>
+
+        <tr>
+            <td id="R5C0" class="wall"></td>
+            <td id="R5C1"></td>
+            <td id="R5C2"></td>
+            <td id="R5C3"></td>
+            <td id="R5C4"></td>
+            <td id="R5C5"></td>
+            <td id="R5C6"></td>
+            <td id="R5C7" class="wall"></td>
+            <td id="R5C8" class="wall"></td>
+            <td id="R5C9" class="wall"></td>
+        </tr>
+
+        <tr>
+            <td id="R6C0" class="wall"></td>
+            <td id="R6C1" class="wall"></td>
+            <td id="R6C2"></td>
+            <td id="R6C3" class="wall"></td>
+            <td id="R6C4" class="Coin"></td>
+            <td id="R6C5" class="wall"></td>
+            <td id="R6C6"></td>
+            <td id="R6C7"></td>
+            <td id="R6C8"></td>
+            <td id="R6C9"></td>
+        </tr>
+
+        <tr>
+            <td id="R7C0"></td>
+            <td id="R7C1"></td>
+            <td id="R7C2"></td>
+            <td id="R7C3" class="wall"></td>
+            <td id="R7C4" class="wall"></td>
+            <td id="R7C5" class="wall"></td>
+            <td id="R7C6"></td>
+            <td id="R7C7"class="wall"></td>
+            <td id="R7C8" class="wall"></td>
+            <td id="R7C9"></td>
+        </tr>
+
+        <tr>
+            <td id="R8C0"></td>
+            <td id="R8C1" class="wall"></td>
+            <td id="R8C2"></td>
+            <td id="R8C3" class="wall"></td>
+            <td id="R8C4" class="Coin"></td>
+            <td id="R8C5" class="wall"></td>
+            <td id="R8C6"></td>
+            <td id="R8C7" class="wall"></td>
+            <td id="R8C8" class="wall"></td>
+            <td id="R8C9" class="Coin"></td>
+        </tr>
+
+        <tr>
+            <td id="R9C0" class="Car2"></td>
+            <td id="R9C1"></td>
+            <td id="R9C2"></td>
+            <td id="R9C3" class="wall"></td>
+            <td id="R9C4"></td>
+            <td id="R9C5"></td>
+            <td id="R9C6"></td>
+            <td id="R9C7"></td>
+            <td id="R9C8"></td>
+            <td id="R9C9" class="computer"></td>
+        </tr>
+</table>
+
+        <div class="column"></div>
+        
+            <!-- The table cells have an id with the row and column number -->
+
+
+
+    
+</body>
+</html>

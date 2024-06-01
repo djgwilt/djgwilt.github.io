@@ -1,0 +1,36 @@
+body {
+    background-image: url("background.jpg");
+    background-size: 1000px 1000px;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Frog {
+    background-image:url("frog.png");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-image: url("wall.jpg") !important;
+    background-size: 40px 40px;
+    
+}
+
+.flag {
+    background-image: url("flag.jpg") !important;
+    background-size: 40px 40px;
+    
+}
+.Empty {
+    background-image;
+}

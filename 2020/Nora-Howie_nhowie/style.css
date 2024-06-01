@@ -1,0 +1,33 @@
+body {
+    background-color:blanchedalmond;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid darkgoldenrod;
+}
+
+#RacingTrack td {
+    width:50px;
+    height:50px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("squirrelsprite.gif");
+    background-size: 55px 55px;
+}
+
+.wall {
+    background-color:darkgoldenrod !important;
+}
+
+.winning {
+    background-image:url("acorn.gif");
+    background-size: 50px 50px;
+}
+
+.Empty {
+    background-image:none;
+}

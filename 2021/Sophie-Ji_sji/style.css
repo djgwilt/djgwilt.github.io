@@ -1,0 +1,54 @@
+body {
+    background-color:darkred;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid gold;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color: ghostwhite;
+}
+
+.Car {
+    background-image:url("harry.png");
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.wall{
+    background-image:url("snape.jpg")!important;
+    background-size: 40px 50px;
+}
+
+.wall2{
+    background-image:url("voldemort.jpg")!important;
+    background-size: 40px 55px;
+}
+
+.wall3{
+    background-image:url("malfoys.jpg")!important;
+    background-size: 45px 50px;
+}
+
+.wall4{
+    background-image:url("dragon.jpg")!important;
+    background-size: 50px 40px;
+}
+
+.wall5{
+    background-image:url("dementor.jpg")!important;
+    background-size: 50px 40px;
+}
+
+.flag{
+    background-image:url("snitch.jpg")!important;
+    background-size: 40px 40px;
+}

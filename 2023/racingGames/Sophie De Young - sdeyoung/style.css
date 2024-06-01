@@ -1,0 +1,43 @@
+body {
+    background-color:rgb(244, 172, 225);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(170, 235, 18);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.carflip {
+    background-image:url("Picture1.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: rgb(14, 222, 118) !important;
+}
+
+.flag {
+    background-image:url("Picture2.jpg");
+    background-size: 40px 40px;
+}
+
+.car {
+    background-image:url("Picture1 flipped.jpg");
+    background-size: 40px 40px;
+}
+
+.wallFake{
+    background-color: rgb(14, 222, 118) !important;
+}
+
+.coin{
+    background-image:url("coin.jpg");
+    background-size: 40px 40px;
+}

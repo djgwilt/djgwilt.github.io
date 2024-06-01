@@ -1,0 +1,41 @@
+body {
+    background-color:white;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:7px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:2px solid;
+    background-color:white;
+}
+.real {
+    background-image:url("real.png");
+    background-size: 42px 42px;
+}
+.flag {
+    background-image:url("flag.png");
+    background-size: 42px 42px;
+}
+.fake {
+    background-color: red !important;
+}
+.wall {
+    background-color: black !important;
+}
+.Car {
+    background-image:url("New Piskel.gif");
+    background-size: 42px 42px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+p {
+  color:red;
+}

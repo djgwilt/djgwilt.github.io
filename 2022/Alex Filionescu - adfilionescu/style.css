@@ -1,0 +1,38 @@
+body {
+    background-image:url(background.jpg);
+    background-size: 140px 82px;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:0px solid;
+    background-color:rgb(0, 0, 0);
+}
+
+.Car {
+    background-image:url("car.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-image:url("flag.JPG");
+    background-size: 40px 40px;
+}
+.flag {
+    background-image:url("flag.png");
+    background-size: 40px 40px;
+}
+.cheese {
+    background-image:url("cheese.JPG");
+    background-size: 40px 40px;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }

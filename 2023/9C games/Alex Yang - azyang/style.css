@@ -1,0 +1,30 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-image:url("ocean.jpg");
+}
+
+.car {
+    background-image:url("Boat.jpg") !important ;   
+    background-size: 40px 40px; 
+}
+
+.wall {
+    background-image:url("wall.jpg") !important ;
+    background-size: 40px 43px ;
+}
+
+.flag {
+    background-image:url("island.jpg") !important;
+    background-size: 42px 40px;
+}

@@ -1,0 +1,51 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.level1sprite {
+    background-image:url("/assets/guns/1.png");
+    background-size: 40px 40px;
+}
+
+.level2sprite {
+    background-image:url("/assets/guns/gun.png");
+    background-size: 40px 40px;
+}
+
+.level3sprite {
+    background-image:url("/assets/guns/2.png");
+    background-size: 40px 40px;
+}
+
+
+
+.backgroundlevel1{
+    background-image: url("/assets/bgs/1.png");
+    background-size: 40px 40px;
+}
+
+.backgroundlevel2{
+    background-image: url("/assets/bgs/2.png");
+    background-size: 40px 40px;
+}
+
+.backgroundlevel3{
+    background-image: url("/assets/bgs/3.png");
+    background-size: 40px 40px;
+}
+
+audio {
+    visibility: hidden;
+}

@@ -1,0 +1,48 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(0, 0, 0);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.mouse {
+    background-image:url("mouse.jpg");
+    background-size: 40px 40px;
+}
+.wall {
+    background-image:url("trap.jpg");
+    background-size: 42px 42px;
+
+}
+
+.flag {
+    background-image:url("flag.png");
+    background-size: 40px 40px;
+}
+
+.mouseflipped {
+    background-image:url("mouseflipped.jpg");
+    background-size: 41px 41px;
+}
+
+.cheese {
+    background-image:url("cheese.jpg");
+    background-size: 40px 40px;
+}
+audio {
+    visibility: hidden;
+}
+
+.cat {
+    background-image: url("cat.jpg");
+    background-size: 40px 40px;
+}

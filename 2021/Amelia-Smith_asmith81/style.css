@@ -1,0 +1,38 @@
+body {
+    background-color:blueviolet;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.reindeer {
+    background-image:url("reindeer.png");
+    background-size: 40px 40px;
+}
+
+.wall{
+    background-color:black !important;
+}
+
+.flag{
+    background-image:url(FinishRaceFlag.jpg);
+    background-size:40px 40px;
+}
+
+.carrot{
+    background-image:url(carrot.png);
+    background-size:40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}

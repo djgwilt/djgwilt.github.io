@@ -1,0 +1,33 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("person.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: black !important;
+  }
+
+.flag {
+    background-image:url("giraffe.jfif");
+    background-size: 40px 40px;
+}
+
+.wallFake {
+    background-color: #333333 !important;
+}

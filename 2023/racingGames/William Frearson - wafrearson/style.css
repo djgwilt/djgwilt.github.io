@@ -1,0 +1,53 @@
+body {
+    /* background-color:grey; */
+    background-image:url("minion\ cursed.jpg");
+    background-size: 300px 100px;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid white;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    /* border:1px solid; */
+    background-color:white;
+}
+
+.car {
+    background-image:url("car.jpg");
+    background-size: 40px 40px;
+}
+
+.carFlip {
+    background-image:url("carflip.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    /* background-color: black !important; */
+    background-image:url("gru.jpg");
+    background-size: 40px 40px;
+}
+
+.flag {
+    background-image:url("finish\ flag.png");
+    background-size: 40px 40px;
+}
+
+.fakeWall {
+    background-image:url("grufakewall.png");
+    background-size: 40px 40px;
+}
+
+.coin {
+    background-image:url("moon.jpg");
+    background-size: 40px 40px;
+}
+
+.explosion {
+    background-image:url("explosion.png");
+    background-size: 40px 40px;
+}

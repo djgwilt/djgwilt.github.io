@@ -1,0 +1,43 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("slime.png");
+    background-size: 42px 40px;
+}
+
+.CarFlipped {
+    background-image:url("slimeflipped.png");
+    background-size: 42px 40px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.wall{
+    background-image:url('tree.jpg');
+    background-size: 45px 45px
+}
+
+.flag{
+    background-image:url('bug.jpg');
+    background-size: 45px 45px;
+}
+
+.home{
+    background-clip: blue 
+}

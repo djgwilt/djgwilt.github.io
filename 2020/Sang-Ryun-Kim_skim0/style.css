@@ -1,0 +1,63 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+}
+
+#RacingTrack td {
+    width:80px;
+    height:80px;
+    border:2px solid;
+    background-color:white;
+}
+
+.jet {
+    background-image:url("jet.png");
+    background-size: 80px 80px;
+}
+
+.jetLeft {
+    background-image:url("jetLeft.png");
+    background-size: 80px 80px;
+}
+
+.jetUp {
+    background-image:url("jetUp.jpg");
+    background-size: 80px 80px;
+}
+
+.jetDown {
+    background-image:url("jetDown.jpg");
+    background-size: 80px 80px;
+}
+
+.wall{
+    background-image:url("bomb.png") !important;
+    background-size: 80px 80px;
+}
+
+.house{
+    background-image:url("house.png") !important;
+    background-size: 80px 80px;
+}
+
+.money{
+    background-image:url("money.png") !important;
+    background-size: 80px 80px
+}
+
+.end{
+    background-image:url(runway.png);
+    background-size: 80px 80px;
+}
+
+.power{
+    background-image:url(star.png);
+    background-size: 80px 80px;
+}
+
+.Empty {
+    background-image:none;
+}

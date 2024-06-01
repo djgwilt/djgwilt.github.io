@@ -1,0 +1,33 @@
+body {
+    background-color:lightgreen;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:pink;
+}
+
+.Car {
+    background-image:url("catepillar.png");
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.wall {
+    background-color:#622D22 !important;
+}
+
+.flag {
+    background-image:url("butterfly.png");
+    background-size: 40px 40px;
+}

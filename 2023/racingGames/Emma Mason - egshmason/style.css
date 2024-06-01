@@ -1,0 +1,40 @@
+body {
+    background-color:lightskyblue;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(65, 100, 198);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(149, 155, 219);
+}
+
+.car {
+    background-color: palevioletred !important;
+}
+
+.wall {
+    background-color:rgb(62, 120, 228) !important;
+}
+
+.flag {
+    background-color: rgb(209, 75, 120) !important;
+}
+
+.coin {
+    background-color: rgba(232, 165, 204, 0.914) !important;
+}
+
+
+.fakewall {
+    background-color:rgb(62, 120, 228) !important;
+}
+
+audio {
+    visibility: hidden;
+}

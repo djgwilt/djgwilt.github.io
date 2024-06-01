@@ -1,0 +1,36 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.blob {
+    background-image:url("blob.gif");
+    background-size: 50px 50px;
+}
+
+.wall  {
+    background-color: black !important;
+}
+.blue  {
+    background-image:url("slimy wall.png") !important;
+    background-size: 40px 40px;
+}
+.goal {
+    background-image:url("Roblob.png");
+    background-size: 50px 50px;
+}
+
+.Empty {
+    background-image:none;
+}

@@ -1,0 +1,29 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.X-WingStarfighter {
+    background-image:url(X-Wing Starfighter.png);
+    background-size: 160px 160px;
+}
+
+.Tiefighter {
+    background-image:url("Tie-Fighter.png"); 
+    background size 160px 160px
+}
+.DeathStar {
+    background-image:url(Death Star.png);
+    background size 160px 160px
+}

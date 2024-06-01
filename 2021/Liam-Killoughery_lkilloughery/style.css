@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+:root {
+   --size: 100px; 
+}
+h1 {
+    text-align: center;
+}
+
+body {
+    
+    background-color:grey;
+    font-family: 'Staatliches', cursive;
+    font-size: 3em;
+}
+button {
+  background-color: #4CAF50; /* Green */   
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin: 3em;
+  text-align: center;
+  font-size: .5em;
+}
+#buttons {
+    display: flex;
+    justify-content: center;
+}
+
+#mode1 {
+    
+}
+#mode2 {
+    background-color: #ccbc06;
+}
+#mode3 {
+    background-color: #e06b04;   
+}
+#mode4 {
+    background-color: #bf2308;
+    
+}
+
+
+#RacingTrack {
+    
+    border-collapse:collapse;
+    /*border:5px solid black;*/
+}
+
+#RacingTrack td {
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    background-size: cover;
+    
+    width:var(--size);
+    height:var(--size);
+    
+    /*border:1px solid;*/
+    background-color:white;
+}
+
+.God {
+    /*background-color: red !important;*/
+    background-image:url("waluigi.png");
+    
+}
+
+.Empty {
+    /*background-image:none;*/
+}
+
+.Goal {
+    background-image: url("portal.png")
+    /*background-color: blue !important;*/
+}
+.Coin {
+    background-image: url("coin.png")
+}
+
+.screen_area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        
+}
+.Wall {
+    background-color: black !important;
+    background-image:url("brik.png");
+}

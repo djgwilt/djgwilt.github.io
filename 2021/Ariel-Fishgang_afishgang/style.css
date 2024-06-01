@@ -1,0 +1,101 @@
+body {
+    background-color:grey;
+    background-image:url("Wembley 2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#p {
+    text-align:center;
+    color: white;
+    font-family: monospace;
+    font: Courier New;
+    font-size: 40px;
+}
+#Message {
+    text-align:center;
+    color: white;
+    font-family: fantasy;
+    font: Copperplate;
+    font-size: 40px;
+}
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Harry {
+    background-image:url("Harry Kane.png");
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position-x: 7px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.Wall {
+    
+    background-color: black !important;
+}
+
+.WallFake {
+    
+    background-color: #222222 !important;
+}
+
+
+.flag {
+    background-image:url("Euros trophy.png");
+    background-size: 40px 40px;
+    
+}
+
+.Restart {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  align-items: center;
+  margin-top: 10px;
+  position: absolute;
+  top: 90%;
+  left: 40%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#NextLevel {
+  visibility: hidden;
+  background-color: blue;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  align-items: center;
+  margin-top: 10px;
+  position: absolute;
+  top: 90%;
+  left: 60%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

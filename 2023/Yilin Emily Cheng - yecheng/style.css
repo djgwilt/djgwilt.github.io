@@ -1,0 +1,47 @@
+body {
+    background-color:rgb(175, 220, 220);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(118, 198, 212);
+}
+
+.car {
+    background-image:url("Flap.gif");
+    background-size: 40px 40px;
+}
+
+.carflip {
+    background-image:url("Flip.gif");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color:rgb(53, 208, 53) !important;
+}
+
+.wallFake {
+    background-color:rgb(50, 222, 53) !important;
+}
+
+.flag {
+    background-image:url("Pipe.png");
+    background-size: 40px 40px;
+}
+
+.coin {
+    background-image:url("Coin.webp");
+    background-size: 43px 43px;
+}
+
+audio {
+    visibility: hidden;
+}

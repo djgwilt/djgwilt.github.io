@@ -1,0 +1,38 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("Car.gif");
+    background-size: 60px 60px;
+}
+
+.wall {
+    background-color:black !important;
+}
+
+.carFlipped {
+    background-image:url("flip")
+}
+.flag {
+    background-image:url("winnning flag.gif");
+    background-size: 40px 40px;
+}
+.wallfake {
+    background-color: #001100 !important;
+}  
+.wallFake {
+    background-color: #000000 !important;
+}    

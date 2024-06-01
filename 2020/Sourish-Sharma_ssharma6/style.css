@@ -1,0 +1,50 @@
+body {
+    background-image:url("space.jpg");
+    background-size: 1500px 600px;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:60px;
+    height:60px;
+    border:2px solid;
+    background-color:peachpuff;
+}
+
+.virus {
+    background-image:url("virus.png");
+    background-size: 60px 60px;
+}
+
+.virusFlip {
+    background-image:url("virus2.png");
+    background-size: 60px 60px;
+}
+
+.wall {
+    background-image:url("sanitiser.png") !important;
+    background-size: 60px 60px;
+}
+
+.wallFake {
+    background-image:url("cloth.png") !important;
+    background-size: 60px 60px;
+}
+
+.flag {
+    background-image:url("human.png");
+    background-size: 60px 60px;
+}
+
+.flag2 {
+    background-image:url("human2.png");
+    background-size: 60px 60px;
+}
+
+.Empty {
+    background-image:none;
+}

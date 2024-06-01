@@ -1,0 +1,32 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Snail {
+    background-image:url("snail.png");
+    background-size: 40px 40px;
+}
+
+.Wall {
+    background-color:black !Important;
+}
+
+.Flag {
+    background-image:url("f1-fin.gif");
+    background-size: 48px 40px;
+}
+.Empty {
+    background-image:none;
+}

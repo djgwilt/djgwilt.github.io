@@ -1,0 +1,77 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.car {
+    background-image:url("Georgetysome.png");
+    background-size: 40px 40px;
+}
+
+.wallsam {
+    background-image:url("Sam.jpg")  !important;
+    background-size: 40px 40px;
+}
+.wallseb {
+    background-image:url("Sus.jpg") !important;
+    background-size: 40px 40px;
+}
+.wallneil {
+    background-image:url("Neal.jpg") !important;
+    background-size: 40px 40px;
+}
+.wallted {
+    background-image:url("Ted.jpg")  !important;
+    background-size: 40px 40px;
+}
+.wallcass {
+    background-image:url("") !important;
+    background-size: 40px 40px;
+}
+.wallalexi {
+    background-image:url("Alexi.jpg") !important;
+    background-size: 40px 40px;
+}
+.wallnoah {
+    background-image:url("Noah.jpg") !important;
+    background-size: 40px 40px;
+}
+.walljonney {
+    background-image:url("Jonney.jpg")  !important;
+    background-size: 40px 40px;
+}
+.wallfelix {
+    background-image:url("Felix.jpg") !important;
+    background-size: 40px 40px;
+}
+.wallgeorgec {
+    background-image:url("george\ and\ jonney.jpg") !important;
+    background-size: 40px 40px;
+}
+.wallchris {
+    background-image:url("chris.jpg") !important;
+    background-size: 40px 40px;
+}
+.coin {
+    background-image:url(Rugby\ ball.webp) !important;
+    background-size: 40px 40px;
+}
+
+.flag {
+    background-image:url("Yoghurt.jpg");
+    background-size: 40px 40px;
+}
+audio {
+    visibility: hidden;
+}

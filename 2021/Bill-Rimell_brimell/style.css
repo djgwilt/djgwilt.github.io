@@ -1,0 +1,171 @@
+body {
+  min-height: 100vh;
+  font-family: Poppins, sans-serif;
+  background-color:#E0E5EC;
+  color: #98a5b4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.RacingTrack {
+  border-collapse: collapse;
+  /*     border:5px solid black; */
+  border-radius: 20px;
+  overflow: hidden !important;
+  box-shadow: 5px 10px 10px #00000048;
+}
+
+.RacingTrack td {
+  width: 100px;
+  height: 100px;
+  border: 2px dashed;
+  background-color: transparent;
+  padding: 0;
+}
+
+.Car {
+  background-image: url("car.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: scaleX(-1)
+}
+
+.Empty {
+  background-image: none;
+}
+.wall {
+  background-color: black !important;
+  background-image: url('./wall.jpg');
+  background-repeat: none;
+  background-size: contain;
+  /*     background-image: url(wall.jpg);
+    background-repeat: none;
+    background-size:  */
+}
+
+.flag {
+    background-image: url("flag.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.portal {
+  background-image: url("Portal.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.door {
+  background-image: url("door.png") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.exit {
+  background-image: url("exit-sign.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.key {
+  background-image: url("key.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.consoleOutput {
+  background-color: transparent;
+  border: 0;
+  width: auto;
+}
+
+.console {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto !important;
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* button */
+
+
+.btn {
+  color: #98a5b4;
+  border: 0;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  background-color:#E0E5EC;
+  box-shadow: 9px 9px 16px rgba(163,177,198,0.6), -9px -9px 16px    rgba(236, 240, 241, 0.6), 0px 0px 0px        rgba(163,177,198,0.6) inset, -0px -0px 0px rgba(255,255,255, 0.3) inset;
+  margin: 20px;
+  transition: all 0.3s;
+  cursor: pointer;
+  outline: 0;
+}
+
+.btn:hover {
+  box-shadow: 0 0 0        rgba(163,177,198,0.6), -0 -0 0    rgba(236, 240, 241, 0.6), 3px 3px 5px        rgba(163,177,198,0.6) inset, -3px -3px 3px rgba(255,255,255, 0.3) inset;
+}
+
+/* end */
+
+
+.card {
+  border-radius: 10px;
+  background-color:#E0E5EC;
+  box-shadow: 9px 9px 16px rgba(163,177,198,0.6), -9px -9px 16px    rgba(236, 240, 241, 0.6), 0px 0px 0px        rgba(163,177,198,0.6) inset, -0px -0px 0px rgba(255,255,255, 0.3) inset;
+  margin: 20px;
+  transition: all 0.3s;
+  outline: 0;
+  padding: 20px;
+}
+
+/* flipping car */
+
+.car-flipped {
+  transform: none !important;
+  background-image: url("car.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.carUp {
+  background-image: url("top-down-car.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(270deg);
+}
+
+.carDown {
+  background-image: url("top-down-car.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(90deg);
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#message {
+  position: fixed;
+  padding-top: 25%;
+  font-size: 3em;
+  font-weight: bold;
+}

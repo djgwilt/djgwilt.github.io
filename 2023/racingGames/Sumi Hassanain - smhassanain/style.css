@@ -1,0 +1,41 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player_1 {
+    background-image:url("player_1.png");
+    background-size: 40px 40px;
+}
+
+.player_2 {
+    background-image:url("player_2.png");
+    background-size: 40px 40px;
+}
+
+.strongwall {
+    background-color:black !important;
+}
+.weakwall {
+    background-color:grey !important;
+}
+
+.galuste {
+    background-image:url("galuste.png");
+    background-size: 40px 40px;
+}
+
+audio {
+    visibility: hidden;
+}

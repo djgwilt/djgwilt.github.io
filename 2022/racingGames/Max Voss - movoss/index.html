@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Racing Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
+    <script src="code.js"></script>
+
+</head>
+<body>
+    <audio id="coincollect" width="320" height="176">
+        <source src="coin2.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="death" width="320" height="176">
+        <source src="death3.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="win" width="320" height="176">
+        <source src="win1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="startnoise" width="320" height="176">
+        <source src="start2.mp3" type="audio/mpeg">
+    </audio>
+
+
+    
+    <p1 id="text">ALIEN ATTACK</p1>
+    
+    
+
+    
+    <table id="RacingTrack">
+        <!-- The table cells have an id with the row and column number -->
+        <tr>
+            <td id="R0C0" class="Car" ></td>
+            <td id="R0C1" ></td>
+            <td id="R0C2"></td>
+            <td id="R0C3"></td>
+            <td id="R0C4" ></td>
+            <td id="R0C5"></td>
+            <td id="R0C6" ></td>
+            <td id="R0C7" ></td>
+            <td id="R0C8"></td>
+            <td id="R0C9"class="Goal"></td>
+            <td id="R0C10"></td>
+            <td id="R0C11"></td>
+            
+        </tr>
+        <!-- Add another table row here -->
+        <tr>
+            <td id="R1C0" ></td>
+            <td id="R1C1" class="Wall"></td>
+            <td id="R1C2" class="Wall"></td>
+            <td id="R1C3"class="Wall"></td>
+            <td id="R1C4"class="Goal"></td>
+            <td id="R1C5"class="Wall"></td>
+            <td id="R1C6"class="Wall"></td>
+            <td id="R1C7"class="Wall"></td>
+            <td id="R1C8" class="Goal"></td>
+            <td id="R1C9"class="Wall"></td>
+            <td id="R1C10"class="Wall" ></td>
+            <td id="R1C11"></td>
+            
+        </tr>
+        <tr>
+            <td id="R2C0" ></td>
+            <td id="R2C1"class="Wall"></td>
+            <td id="R2C2"></td>
+            <td id="R2C3"></td>
+            <td id="R2C4"class="Goal" ></td>
+            <td id="R2C5"></td>
+            <td id="R2C6" class="Goal"></td>
+            <td id="R2C7" ></td>
+            <td id="R2C8"></td>
+            <td id="R2C9" class="Goal"></td>
+            <td id="R2C10"></td>
+            <td id="R2C11"></td>
+            
+        </tr>
+        <tr>
+            <td id="R3C0" ></td>
+            <td id="R3C1"class="Wall"></td>
+            <td id="R3C2"class="Goal"></td>
+            <td id="R3C3"class="Wall"></td>
+            <td id="R3C4"class="Wall"></td>
+            <td id="R3C5"class="Wall"></td>
+            <td id="R3C6"class="Goal"></td>
+            <td id="R3C7"class="Wall"></td>
+            <td id="R3C8"class="Wall"></td>
+            <td id="R3C9"class="Wall"></td>
+            <td id="R3C10"class="Wall"></td>
+            <td id="R3C11"></td>
+            
+        </tr>
+        <tr>
+            <td id="R4C0" ></td>
+            <td id="R4C1"class="Wall"></td>
+            <td id="R4C2"></td>
+            <td id="R4C3"class="Goal"></td>
+            <td id="R4C4"></td>
+            <td id="R4C5"class="Wall"></td>
+            <td id="R4C6"class="Goal"></td>
+            <td id="R4C7"class="Goal"></td>
+            <td id="R4C8"></td>
+            <td id="R4C9"></td>
+            <td id="R4C10"class="Wall"></td>
+            <td id="R4C11"></td>
+            
+        </tr><tr>
+            <td id="R5C0" ></td>
+            <td id="R5C1"class="Goal"></td>
+            <td id="R5C2"></td>
+            <td id="R5C3"class="Wall"></td>
+            <td id="R5C4"></td>
+            <td id="R5C5"class="Goal"></td>
+            <td id="R5C6"></td>
+            <td id="R5C7"class="Wall"></td>
+            <td id="R5C8"class="Wall"></td>
+            <td id="R5C9"></td>
+            <td id="R5C10"class="Wall"></td>
+            <td id="R5C11"></td>
+            
+        </tr><tr>
+            <td id="R6C0" ></td>
+            <td id="R6C1"class="Wall"></td>
+            <td id="R6C2"></td>
+            <td id="R6C3"class="Wall"></td>
+            <td id="R6C4"class="Wall"></td>
+            <td id="R6C5"class="Wall"></td>
+            <td id="R6C6"></td>
+            <td id="R6C7"></td>
+            <td id="R6C8"class="Wall"></td>
+            <td id="R6C9"></td>
+            <td id="R6C10"class="Goal"></td>
+            <td id="R6C11"></td>
+            
+        </tr><tr>
+            <td id="R7C0" ></td>
+            <td id="R7C1"class="Wall"></td>
+            <td id="R7C2"></td>
+            <td id="R7C3"class="Goal"></td>
+            <td id="R7C4"></td>
+            <td id="R7C5"></td>
+            <td id="R7C6"class="Goal"></td>
+            <td id="R7C7"></td>
+            <td id="R7C8"class="Wall"></td>
+            <td id="R7C9"></td>
+            <td id="R7C10"class="Wall"></td>
+            <td id="R7C11"></td>
+            
+        </tr><tr>
+            <td id="R8C0" ></td>
+            <td id="R8C1"></td>
+            <td id="R8C2"></td>
+            <td id="R8C3"class="Wall"></td>
+            <td id="R8C4"class="Wall"></td>
+            <td id="R8C5"class="Wall"></td>
+            <td id="R8C6"class="Wall"></td>
+            <td id="R8C7"class="Goal"></td>
+            <td id="R8C8"class="Wall"></td>
+            <td id="R8C9"class="Wall"></td>
+            <td id="R8C10"class="Wall"></td>
+            <td id="R8C11"class="Goal"></td>
+            
+        </tr><tr>
+            <td id="R9C0" ></td>
+            <td id="R9C1"class="Wall"></td>
+            <td id="R9C2"class="Goal"></td>
+            <td id="R9C3"></td>
+            <td id="R9C4"></td>
+            <td id="R9C5"class="Goal"></td>
+            <td id="R9C6"></td>
+            <td id="R9C7"class="Goal"></td>
+            <td id="R9C8"></td>
+            <td id="R9C9"class="Goal"></td>
+            <td id="R9C10"class="Wall"></td>
+            <td id="R9C11"class="Goal"></td>
+            
+        </tr><tr>
+            <td id="R10C0" ></td>
+            <td id="R10C1"class="Wall"></td>
+            <td id="R10C2"class="Wall"></td>
+            <td id="R10C3"class="Wall"></td>
+            <td id="R10C4"class="Goal"></td>
+            <td id="R10C5"class="Wall"></td>
+            <td id="R10C6"class="Wall"></td>
+            <td id="R10C7"class="Wall"></td>
+            <td id="R10C8"class="Goal"></td>
+            <td id="R10C9"class="Wall"></td>
+            <td id="R10C10"class="Wall"></td>
+            <td id="R10C11"></td>
+            
+        </tr><tr>
+            <td id="R11C0" ></td>
+            <td id="R11C1"></td>
+            <td id="R11C2"class="Goal"></td>
+            <td id="R11C3"></td>
+            <td id="R11C4"></td>
+            <td id="R11C5"class="Goal"></td>
+            <td id="R11C6"></td>
+            <td id="R11C7"></td>
+            <td id="R11C8"></td>
+            <td id="R11C9"></td>
+            <td id="R11C10"></td>
+            <td id="R11C11" class="CarB"></td>
+            
+        </tr>
+    </table>
+
+    <p5>Controls: WASD & IJKL</p5>
+    <button id = "start" onclick = "start()">start</button>
+    
+    
+
+    <p2 id="Message1"></p2>
+    <p3 id="Message2"></p3>
+    <p4 id="Message3"></p4>
+    <p6 id="Message4"></p6>
+
+
+    
+</body>
+</html>

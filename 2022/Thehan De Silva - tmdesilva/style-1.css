@@ -1,0 +1,101 @@
+body {
+    background-color: grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    
+    background-color: white;
+    border: black solid;
+}
+
+.Car {
+    background-image:url("char.gif");
+    background-size: 40px 40px;
+}
+.Car2 {
+    background-image:url("char.gif");
+    background-size: 40px 40px;
+    transform: scaleX(-1);
+}
+.Coin {
+    background-image:url("Coin.gif");
+    background-size: 40px 40px;
+}
+
+.Wall {
+    background-color: black ! important;
+    background-size: 40px 40px;
+}
+.Wall2 {
+    background-color: green !important;
+    ;
+}
+.flag{
+    background-image: url("Coin.gif");
+    background-size: 40px 40px;
+}
+
+.Enem {
+    background-image:url("Enem.gif");
+    background-size: 40px 40px;
+}
+.cloud {
+    background-image: url("cloud.png");
+    background-size: 40px 40px;
+}
+.notWall{
+    background-color: green !important;
+    background-size: 40px 40px;
+}
+#Four {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#Five {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#box {
+    background-color: #555555;
+    width: 670px;
+}
+#Score {
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#but {
+    background-size: 40px 40px;
+    background-color: #555555;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size : 20px;
+}
+a:hover {
+    background-color: #2bec;
+}
+
+#Message {
+    color: white;
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size: 20px;
+
+}
+#level {
+    color:white;
+}
+.pac {
+    background-image: url(Pac-man.gif);
+    background-size:40px 40px;
+}
+.pac2 {
+    background-image: url(Pac-man.gif);
+    background-size: 40px 40px;
+    transform: scaleX(-1);
+}

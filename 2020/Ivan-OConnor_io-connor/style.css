@@ -1,0 +1,35 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:64px;
+    height:64px;
+    border:1px solid;
+    background-image:url("space_bkg-1.png");
+    background-size: 64px 64px;
+}
+
+.Car {
+    background-image:url("ship_bkg.png") !important;
+    background-size: 64px 64px;
+}
+
+.wall {
+    background-image:url("asteroid_final.png") !important;
+    background-size: 64px 64px;
+}
+
+.flag {
+    background-image:url("flag.png") !important;
+    background-size: 64px 64px;
+}
+
+.Empty {
+    background-image:none;
+}

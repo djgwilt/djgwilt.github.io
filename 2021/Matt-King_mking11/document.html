@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script defer src="code.js"></script>
+    <title>Racing Game</title>    
+  </head>
+
+  <body>
+    
+    <p>Use arrow keys to move.</p>
+
+    <table id="RacingTrack">
+        <!-- The table cells have an id with the row and column number -->
+        <tr>
+            <td id="R0C0"></td>
+            <td id="R0C1"></td>
+            <td id="R0C2" class="wall2"></td>
+            <td id="R0C3"></td>
+            <td id="R0C4"></td>
+            <td id="R0C5" class="cloud"></td>
+            <td id="R0C6"></td>
+            <td id="R0C7"></td>
+            <td id="R0C8" class="wall2"></td>
+            <td id="R0C9"></td>
+            <td id="R0C10" class="cloud"></td>
+            <td id="R0C11"></td>
+            <td id="R0C12"></td>
+            <td id="R0C13"></td>
+            <td id="R0C14"></td>
+            <td id="R0C15" class="cloud"></td>
+            <td id="R0C16" class="wall2"></td>
+            <td id="R0C17"></td>
+            <td id="R0C18" class="cloud"></td>
+            <td id="R0C19"></td>
+            <td id="R0C20"></td>
+            <td id="R0C21"></td>
+            <td id="R0C22"></td>
+            <td id="R0C23" class="wall2"></td>
+            <td id="R0C24"></td>
+            <td id="R0C25" class="cloud"></td>
+            <td id="R0C26"></td>
+            <td id="R0C27" class="cloud"></td>
+            <td id="R0C28"></td>
+            <td id="R0C29" class="coin"></td>
+            <td id="R0C30"></td>
+            <td id="R0C31"></td>
+            <td id="R0C32"></td>
+            <td id="R0C33" class="wall2"></td>
+            <td id="R0C34" class="cloud"></td>
+            <td id="R0C35" class="cloud"></td>
+            <td id="R0C36"></td>
+            <td id="R0C37" class="wall2"></td>
+            <td id="R0C38"></td>
+            <td id="R0C39" class="cloud"></td>
+            <td id="R0C40"></td>
+        </tr>
+        <tr>
+            <td id="R1C0" class="Car"></td>
+            <td id="R1C1" class="ground"></td>
+            <td id="R1C2" class="ground"></td>
+            <td id="R1C3" class="ground"></td>
+            <td id="R1C4" class="ground"></td>
+            <td id="R1C5" class="wall1"></td>
+            <td id="R1C6" class="ground"></td>
+            <td id="R1C7" class="coin"></td>
+            <td id="R1C8" class="ground"></td>
+            <td id="R1C9" class="ground"></td>
+            <td id="R1C10" class="ground"></td>
+            <td id="R1C11" class="ground"></td>
+            <td id="R1C12" class="wall1"></td>
+            <td id="R1C13" class="ground"></td>
+            <td id="R1C14" class="ground"></td>
+            <td id="R1C15" class="ground"></td>
+            <td id="R1C16" class="ground"></td>
+            <td id="R1C17" class="ground"></td>
+            <td id="R1C18" class="ground"></td>
+            <td id="R1C19" class="ground"></td>
+            <td id="R1C20" class="wall1"></td>
+            <td id="R1C21" class="ground"></td>
+            <td id="R1C22" class="ground"></td>
+            <td id="R1C23" class="ground"></td>
+            <td id="R1C24" class="ground"></td>
+            <td id="R1C25" class="ground"></td>
+            <td id="R1C26" class="ground"></td>
+            <td id="R1C27" class="ground"></td>
+            <td id="R1C28" class="wall1"></td>
+            <td id="R1C29" class="ground"></td>
+            <td id="R1C30" class="coin"></td>
+            <td id="R1C31" class="wall1"></td>
+            <td id="R1C32" class="ground"></td>
+            <td id="R1C33" class="ground"></td>
+            <td id="R1C34" class="ground"></td>
+            <td id="R1C35" class="wall1"></td>
+            <td id="R1C36" class="ground"></td>
+            <td id="R1C37" class="ground"></td>
+            <td id="R1C38" class="ground"></td>
+            <td id="R1C39" class="wall1"></td>
+            <td id="R1C40" class="flag"></td>
+        </tr>
+
+      
+    </table>
+
+    <p id="Message"><br></p>
+
+    <div>
+    Console Output:
+    <textarea id='output' style='width: 100%;' rows='20' disabled></textarea>
+    </div>
+  </body>
+
+</html>

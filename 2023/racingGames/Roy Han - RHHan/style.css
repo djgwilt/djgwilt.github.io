@@ -1,0 +1,153 @@
+body {
+    background-color:rgb(71, 90, 125);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(23, 16, 114);
+}
+
+#RacingTrack td {
+    width:20px;
+    height:20px;
+    background-color:rgb(0, 0, 0);
+}
+
+.wall {
+    background-color:#1919A6 !important;
+}
+
+.coin {
+    background-image:url("coin.png");
+    background-size:20px 20px;
+}
+
+
+/*#############
+##  sprite   ##
+#############*/
+
+.spriteR {
+    background-image:url("/sprite/spriteR.gif");
+    background-size:21px 21px;
+}
+
+.spriteL {
+    background-image:url("/sprite/spriteL.gif");
+    background-size:21px 21px;
+}
+
+.spriteD {
+    background-image:url("/sprite/spriteD.gif");
+    background-size:21px 21px;
+}
+
+.spriteU {
+    background-image:url("/sprite/spriteU.gif");
+    background-size:21px 21px;
+}
+
+
+/*#############
+##   blue    ##
+#############*/
+
+.blueR {
+    background-image:url("/blue/blueR.gif");
+    background-size:21px 21px;
+}
+
+.blueL {
+    background-image:url("/blue/blueL.gif");
+    background-size:21px 21px;
+}
+
+.blueD {
+    background-image:url("/blue/blueD.gif");
+    background-size:21px 21px;
+}
+
+.blueU {
+    background-image:url("/blue/blueU.gif");
+    background-size:21px 21px;
+}
+
+
+/*#############
+##  orange   ##
+#############*/
+
+.orangeR {
+    background-image:url("/orange/orangeR.gif");
+    background-size:21px 21px;
+}
+
+.orangeL {
+    background-image:url("/orange/orangeL.gif");
+    background-size:21px 21px;
+}
+
+.orangeD {
+    background-image:url("/orange/orangeD.gif");
+    background-size:21px 21px;
+}
+
+.orangeU {
+    background-image:url("/orange/orangeU.gif");
+    background-size:21px 21px;
+}
+
+
+/*#############
+##   pink    ##
+#############*/
+
+.pinkR {
+    background-image:url("/pink/pinkR.gif");
+    background-size:21px 21px;
+}
+
+.pinkL {
+    background-image:url("/pink/pinkL.gif");
+    background-size:21px 21px;
+}
+
+.pinkD {
+    background-image:url("/pink/pinkD.gif");
+    background-size:21px 21px;
+}
+
+.pinkU {
+    background-image:url("/pink/pinkU.gif");
+    background-size:21px 21px;
+}
+
+
+/*#############
+##   red     ##
+#############*/
+
+.redR {
+    background-image:url("/red/redR.gif");
+    background-size:21px 21px;
+}
+
+.redL {
+    background-image:url("/red/redL.gif");
+    background-size:21px 21px;
+}
+
+.redD {
+    background-image:url("/red/redD.gif");
+    background-size:21px 21px;
+}
+
+.redU {
+    background-image:url("/red/redU.gif");
+    background-size:21px 21px;
+}
+
+
+
+
+

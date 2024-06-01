@@ -1,0 +1,39 @@
+ body {
+    background-color:#961010;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("smiley.gif");
+    background-size: 40px 40px;
+}
+
+.flag {
+    background-image:url("flag.gif");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: #dbdac5!important;
+}    
+
+
+
+
+
+
+
+
+
+    

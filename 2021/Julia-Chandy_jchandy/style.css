@@ -1,0 +1,40 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-image:url("grass with blue sky.jpg");
+    background-size: 40px 40px;
+}
+
+.dora {
+    background-image:url("dora.jpg") !important;
+    background-size: 40px 40px ;
+}
+
+.Empty {
+    background-image:none;
+}
+.wall {
+    background-image:url("swiper the fox.gif") !important;
+    background-size: 40px 40px;
+}
+.coin {
+    background-image:url("coin.gif") !important;
+    background-size: 40px 40px;
+    
+
+    
+}
+.flag {
+    background-image:url("flag.png") !important;
+    background-size: 40px 40px;
+}

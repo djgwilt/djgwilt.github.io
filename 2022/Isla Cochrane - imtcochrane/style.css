@@ -1,0 +1,31 @@
+body {
+    background-color:rgb(201, 110, 118);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgba(82, 84, 221, 0.555);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:cornflowerblue;
+}
+
+.Octopus {
+    background-image:url("octopus.png");
+    background-size: 40px 40px !important;
+}
+
+.wall {
+    background-color:rgb(104, 150, 249) !important;
+}
+
+.snail {
+    background-image:url("snail.png");
+    background-size: 60px 40px !important;
+    background-repeat: no-repeat;
+    background-position: center;
+}

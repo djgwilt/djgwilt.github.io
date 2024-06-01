@@ -1,0 +1,64 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("Halo character cs.png");
+    background-size: 40px 40px;
+}
+.CarFlip {
+    background-image:url("Halo flipCS.png");
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.wall1 {
+    background-image:url("Cs alien.jpg") !important;  
+    background-size: 40px 40px;
+}
+
+.wall2 {
+    background-image:url("Cs block.jpg") !important;  
+    background-size: 40px 40px;
+}
+
+.wallFake1 {
+    background-image:url("Cs alien.jpg") !important;  
+    background-size: 40px 40px;
+}
+
+.wallFake2 {
+    background-image:url("Cs block.jpg") !important;  
+    background-size: 40px 40px;
+}
+
+.coin {
+    background-image:url("Petrol canCS.jpg");  
+    background-size: 40px 40px;
+    
+}
+
+.portal {
+    background-image:url("portalCS.jpg");  
+    background-size: 40px 40px;
+}
+
+.flag {
+    background-image:url("Cs Truck.jpg");
+    background-size: 40px 40px;
+}

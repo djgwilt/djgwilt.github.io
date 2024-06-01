@@ -1,0 +1,38 @@
+body {
+    background-image:url("Capture.PNG");
+    background-size: 900px 900px;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Fire {
+    background-image:url("fire.JPG");
+    background-size: 40px 40px;
+}
+
+.Wall {
+    
+    background-image:url("Water.PNG");
+    background-size: 43px 43px;
+}
+
+.Volcano {
+    
+    background-image:url("Volcano.png");
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:url("fireting.gif");
+    background-size: 40px 40px;
+

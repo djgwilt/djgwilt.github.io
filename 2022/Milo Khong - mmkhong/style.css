@@ -1,0 +1,58 @@
+body {
+    background-repeat: no-repeat;
+    background-image: url("Background.jpg");
+    background-size: cover;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:80px;
+    height:80px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("car.jpg");
+    background-size: 80px 80px;
+}
+.CarL {
+    background-image: url("CarL.jpg");
+    background-size: 80px 80px;
+}
+.CarU {
+    background-image: url("CarU.jpg");
+    background-size: 80px 80px;
+}
+.CarD {
+    background-image: url("CarD.jpg");
+    background-size: 80px 80px;
+}
+.wall{
+    background-image:url('China.jpg');
+    background-size: 80px 80px;
+}
+.flag{
+    background-image:url('flag.jpeg');
+    background-size: 80px 80px;
+}
+.flag_ex{
+    background-image:url('Exp.gif');
+    background-size: 80px 80px;  
+}
+.warplane{
+    background-image: url('US_warplane.jpg');
+    background-size: 80px 80px;
+}
+.destroyed{
+    background-image: url(broken.jpg);
+    background-size: 80px 80px;
+}
+.ktank{
+    background-image: url("KoreaTank.jpg");
+    background-size: 80px 80px;
+}

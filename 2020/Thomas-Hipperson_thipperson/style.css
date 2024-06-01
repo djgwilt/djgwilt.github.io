@@ -1,0 +1,37 @@
+body {
+    background-color:green;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid red;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:darkgray;
+}
+
+.Wall  {
+    background-color: green !important;
+    border:1px solid green !important;
+    
+}
+
+.Car {
+    background-image:url("BTL-B.png");
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:url("space.png");
+}
+
+.flag {
+    background-image:url("flag.png");
+    background-size: 40px 40px:
+    
+    
+}

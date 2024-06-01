@@ -1,0 +1,32 @@
+
+
+body {
+    background-color:rgb(66, 144, 140);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(38, 220, 10);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(21, 155, 212);
+}
+
+.flag {
+    background-image:url("squirell.webp");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-image:url("ten.jpg");
+    background-size: 40px 40px;
+}
+
+.acorn {
+    background-image:url("acorn.gif");
+    background-size: 40px 40px;
+}

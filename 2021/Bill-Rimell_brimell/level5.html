@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script defer src="code.js"></script>
+    <title>Racing Game</title>
+
+</head>
+
+<body onload="checkStorage()">
+    <table id="RacingTrack2" class='active RacingTrack'>
+        <!-- The table cells have an id with the row and column number -->
+        <tr>
+            <td id="R0C0" class="Car"></td>
+            <td id="R0C1"></td>
+            <td id="R0C2" ></td>
+            <td id="R0C3"></td>
+            <td id="R0C4" ></td>
+            <td id="R0C5"></td>
+            <td id="R0C6"></td>
+            <td id="R0C7"></td>
+        </tr>
+        <tr>
+            <td id="R1C0"></td>
+            <td id="R1C1" ></td>
+            <td id="R1C2"></td>
+            <td id="R1C3"></td>
+            <td id="R1C4"></td>
+            <td id="R1C5"></td>
+            <td id="R1C6"></td>
+            <td id="R1C7"></td>
+        </tr>
+        <tr>
+            <td id="R2C0"></td>
+            <td id="R2C1"></td>
+            <td id="R2C2"></td>
+            <td id="R2C3"></td>
+            <td id="R2C4" class="portal"></td>
+            <td id="R2C5"></td>
+            <td id="R2C6" ></td>
+            <td id="R2C7"></td>
+        </tr>
+        <tr>
+            <td id="R3C0"></td>
+            <td id="R3C1"></td>
+            <td id="R3C2"></td>
+            <td id="R3C3" ></td>
+            <td id="R3C4"></td>
+            <td id="R3C5"></td>
+            <td id="R3C6"></td>
+            <td id="R3C7"></td>
+        </tr>
+        <tr>
+            <td id="R4C0"></td>
+            <td id="R4C1"></td>
+            <td id="R4C2"></td>
+            <td id="R4C3"></td>
+            <td id="R4C4" ></td>
+            <td id="R4C5"></td>
+            <td id="R4C6"></td>
+            <td id="R4C7" class="door"></td>
+        </tr>
+
+    </table>
+
+    <button type="button" id="btn" class='btn'>reset</button>
+    <div class="grid-container">
+        <div class="card">
+            <h2>TO-DO LIST</h2>
+            <ul>
+                <li>inventory</li>
+                <li>main room</li>
+                <li>portals</li>
+                <li>monsters</li>
+                <li>coins</li>
+                <li>powerups</li>
+            </ul>
+            <p id="Message"><br></p>
+
+        </div>
+
+        <div class="card console">
+            <p class="title">Console Output:</p>
+            <textarea id='output' class="consoleOutput" style='width: 100%;' rows='20' disabled></textarea>
+        </div>
+    </div>
+    <p id="keyStatus" style="display: none;" onchange="storageChange()">0</p>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

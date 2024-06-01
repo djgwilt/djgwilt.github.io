@@ -1,0 +1,53 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("Chess.png");
+    background-size: 40px 40px;
+}
+
+.wallFake {
+    background-image:url("White knight"); 
+    background-size: 40px 40px;
+}
+.wall {
+      background-image:url("White pawn");
+      background-size: 40px 40px;
+}
+.walltwo {
+     background-image:url("White rook");
+     background-size: 40px 40px;
+}
+
+.wallthree {
+     background-image:url("White bishop");
+     background-size: 40px 40px;
+}
+      
+.wallfour {
+     background-color: #FFFFFF !important
+}
+
+.wallfive {
+     background-image:url("White knight");
+     background-size: 40px 40px;
+}
+
+
+.flag {
+      background-image:url("flag.png");
+      background-size: 40px 40px;
+}

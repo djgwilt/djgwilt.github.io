@@ -1,0 +1,48 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:green;
+}
+
+.Car {
+    background-image:url("tennis.gif");
+    background-size: 40px 40px;
+}
+
+.CarFlip {
+    background-image:url("tennis-reversed.gif");
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.wall {
+    background-color:#FFFFFF !important;
+}
+
+.wallFake {
+    background-color: #FFFFF1 !important;
+}
+
+
+.flag {
+    background-image:url("image.gif");
+    background-size:40px 40px;
+}
+
+.coin {
+    background-image:url("Tennis ball.gif");
+    background-size: 40px 40px;
+}

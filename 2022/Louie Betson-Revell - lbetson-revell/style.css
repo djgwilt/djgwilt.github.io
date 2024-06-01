@@ -1,0 +1,44 @@
+body {
+    background-color:gray;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("delorian.png");
+    background-size: 40px 40px;
+}
+
+.delorianFlipped {
+    background-image:url("delorianflipped.png");
+    background-size: 40px 40px;
+}
+.wall {
+    background-image:url("bev.PNG");
+    background-size: 40px 40px;
+}
+
+
+.flag {
+    background-image:url("flag.png");
+    background-size: 40px 40px;
+}
+.winFake{
+    background-image:url("flag.png");
+    background-size: 40px 40px;
+}
+
+.wallFake{
+    background-image:url("bev.PNG");
+    background-size: 40px 40px;
+}

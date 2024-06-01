@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-msedge",
+            "request": "launch",
+            "name": "Open copy.html",
+            "file": "c:\\Users\\dtedgington\\The Perse School\\Computer Science 9B-Cs2 2021 PS - General\\Student work\\David Edgington - dtedgington\\Racing Game\\copy.html"
+        }
+    ]
+}

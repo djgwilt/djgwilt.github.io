@@ -1,0 +1,38 @@
+body {
+    background-color:#BFD7FF;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:60px;
+    height:60px;
+    border:1px solid;
+    background-color:#DCCCA3;
+}
+
+.Car {
+    background-image:url("New Piskel (2).gif");
+    background-size: 70px 70px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.Wall {
+    background-color: black !important
+}
+
+.Flag {
+    background-image:url("mud.jpg");
+    background-size: 65px 65px;
+}
+
+.Coin {
+    background-image:url("coin.jpeg");
+    background-size: 65px 65px;
+}

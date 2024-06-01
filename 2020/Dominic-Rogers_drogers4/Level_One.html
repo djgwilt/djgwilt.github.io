@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="code.js"></script>
+    <title>Racing Game</title>
+</head>
+
+<body onLoad="runGame(1)">
+    
+    <p id="instruction">Use right/left/up/down arrow keys to move. Get over <u>5</u> coins and reach the flag to move on.</p>
+    <button id="Button" onClick="Button(1)">
+        Play Again
+    </button>
+    <button id="Button_Flag" onClick="Button_Flag(1)">
+        Play Again
+    </button>
+    <button onclick="add_to_level()" id="Return_Button">
+       Return To Menu
+    </button>
+    <br>
+    <div id="score-container">
+        <h3 id="score">Score: 0</h3>
+    </div>
+    <table id="RacingTrack">
+        <tr>
+            <td id="r0 c0" class="Car"></td>
+            <td id="r0 c1" class="Empty"></td>
+            <td id="r0 c2" class="Empty"></td>
+            <td id="r0 c3" class="Empty"></td>
+            <td id="r0 c4" class="Empty"></td>
+            <td id="r0 c5" class="Wall"></td>
+            <td id="r0 c6" class="Empty"></td>
+            <td id="r0 c7" class="Empty"></td>
+        </tr>
+        <tr>
+            <td id="r1 c0" class="Wall"></td>
+            <td id="r1 c1" class="Empty"></td>
+            <td id="r1 c2" class="Empty"></td>
+            <td id="r1 c3" class="Empty"></td>
+            <td id="r1 c4" class="Empty"></td>
+            <td id="r1 c5" class="Empty"></td>
+            <td id="r1 c6" class="Wall"></td>
+            <td id="r1 c7" class="Empty"></td>
+        </tr>
+        
+        <tr>
+            <td id="r2 c0" class="Wall"></td>
+            <td id="r2 c1" class="Empty"></td>
+            <td id="r2 c2" class="Empty"></td>
+            <td id="r2 c3" class="Empty"></td>
+            <td id="r2 c4" class="Empty"></td>
+            <td id="r2 c5" class="Empty"></td>
+            <td id="r2 c6" class="Empty"></td>
+            <td id="r2 c7" class="Empty"></td>
+        </tr>
+        
+        <tr>
+            <td id="r3 c0" class="Empty"></td>
+            <td id="r3 c1" class="Empty"></td>
+            <td id="r3 c2" class="Empty"></td>
+            <td id="r3 c3" class="Empty"></td>
+            <td id="r3 c4" class="Empty"></td>
+            <td id="r3 c5" class="Wall"></td>
+            <td id="r3 c6" class="Empty"></td>
+            <td id="r3 c7" class="Empty"></td>
+        </tr>
+        
+        <tr>
+            <td id="r4 c0" class="Empty"></td>
+            <td id="r4 c1" class="Empty"></td>
+            <td id="r4 c2" class="Empty"></td>
+            <td id="r4 c3" class="Wall"></td>
+            <td id="r4 c4"class="Empty"></td>
+            <td id="r4 c5" class="Empty"></td>
+            <td id="r4 c6"class="Wall"></td>
+            <td id="r4 c7"class="Empty"></td>
+        </tr>
+        
+        <tr>
+            <td id="r5 c0" class="Empty"></td>
+            <td id="r5 c1" class="Empty"></td>
+            <td id="r5 c2" class="Empty"></td>
+            <td id="r5 c3" class="Empty"></td>
+            <td id="r5 c4"class="Empty"></td>
+            <td id="r5 c5" class="Empty"></td>
+            <td id="r5 c6"class="Wall"></td>
+            <td id="r5 c7"class="Empty"></td>
+        </tr>
+        
+        <tr>
+            <td id="r6 c0" class="Wall"></td>
+            <td id="r6 c1" class="Empty"></td>
+            <td id="r6 c2" class="Empty"></td>
+            <td id="r6 c3" class="Empty"></td>
+            <td id="r6 c4" class="Wally"></td>
+            <td id="r6 c5" class="Empty"></td>
+            <td id="r6 c6" class="Empty"></td>
+            <td id="r6 c7" class="Empty"></td>
+        </tr>
+        
+        <tr>
+            <td id="r7 c0" class="Wall"></td>
+            <td id="r7 c1" class="Empty"></td>
+            <td id="r7 c2" class="Empty"></td>
+            <td id="r7 c3" class="Empty"></td>
+            <td id="r7 c4" class="Empty"></td>
+            <td id="r7 c5" class="Empty"></td>
+            <td id="r7 c6" class="Wall"></td>
+            <td id="r7 c7" class="Empty"></td>
+        </tr>
+        
+        <tr>
+            <td id="r8 c0" class="Empty"></td>
+            <td id="r8 c1" class="Empty"></td>
+            <td id="r8 c2" class="Empty"></td>
+            <td id="r8 c3" class="Empty"></td>
+            <td id="r8 c4" class="Wall"></td>
+            <td id="r8 c5" class="Empty"></td>
+            <td id="r8 c6" class="Empty"></td>
+            <td id="r8 c7" class="Wall"></td>
+        </tr>
+        
+        <tr>
+            <td id="r9 c0" class="Wall"></td>
+            <td id="r9 c1" class="Wall"></td>
+            <td id="r9 c2" class="Empty"></td>
+            <td id="r9 c3" class="Empty"></td>
+            <td id="r9 c4" class="Flag"></td>
+            <td id="r9 c5" class="Empty"></td>
+            <td id="r9 c6" class="Empty"></td>
+            <td id="r9 c7" class="Empty"></td>
+        </tr>
+        
+        
+    </table>
+
+    <p id="Message"></p>
+    <button onclick="Unlock()" class="Unlocked" id="add_to_level">
+        Refresh Levels
+    </button>
+    <button onclick="location.href='index-copy.html'" class="Unlocked" id="Finir">
+        Endless
+    </button>
+    <button onclick="location.href='Level_One.html'" class="Unlocked" id="Level_1">
+        Level 1
+    </button>
+    <button onclick="Next_Level(2, 'Level_Two.html')" class="Locked" id="Level_2">
+        Level 2
+    </button>
+    <button onclick="Next_Level(3, 'Level_Three.html')" class="Locked" id="Level_3">
+        Level 3
+    </button>
+    <p id="debug">cdjkjc</p>
+</body>
+</html>

@@ -1,0 +1,40 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    
+}
+
+.flag {
+    background-image:url("house.PNG");
+    background-size: 40px 40px;
+}
+
+.Car {
+    background-image:url("peppa.PNG");
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.wall {
+    background-color: black !important;
+}
+.sky {
+    background-image:url("sky.png");
+    background-size: 40px 40px;
+}
+.spider {
+    background-image:url("spider.PNG");
+    background-size: 40px 40px;
+}

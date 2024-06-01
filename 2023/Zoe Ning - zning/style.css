@@ -1,0 +1,35 @@
+body {
+    background-color:rgb(36, 48, 107);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(14, 19, 50);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(67, 60, 128);
+}
+
+.car {
+    background-image:url("niki.jpg");
+    background-size: 40px 40px;
+}
+
+.wall{
+    background-image:url("zestyheeseung.png");
+    background-size: 40px 40px;
+}
+
+.flag {
+    background-image:url("enhaflag.jpg");
+    background-size: 40px 40px;
+}
+
+.coin {
+    background-image:url("sunoo.jpg");
+    background-size: 40px 40px;
+}

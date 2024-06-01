@@ -1,0 +1,45 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.car {
+    background-image:url("CompSci Prisoner.jpg");
+    background-size: 40px 40px;
+}
+
+.wall1 {
+    background-image:url("CompSci Prison Guard.jpg");
+    background-size: 40px 40px;
+}
+
+.wall2 {
+    background-color:black !important;
+    background-size: 40px 40px;
+}
+
+.flag {
+    background-image:url("CompSci Key.jpg");
+    background-size: 40px 40px;
+}
+
+.wallFake {
+    background-color:rgb(27, 27, 27) !important;
+    background-size: 40px 40px;
+}
+
+.money {
+    background-image:url("CompSci\ Money.jpg");
+    background-size: 40px 40px;
+}

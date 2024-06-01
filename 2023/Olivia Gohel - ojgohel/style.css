@@ -1,0 +1,38 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.bear {
+    background-image:url("bear.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color:mediumslateblue!important;
+}
+
+.honey {
+    background-image:url("honey.jpg");
+    background-size: 40px 40px;
+}
+
+.wallFake {
+    background-color:mediumslateblue !important;
+}
+
+.coin {
+    background-image:url ("coin.png");
+    background-size: 40px 40px;
+}

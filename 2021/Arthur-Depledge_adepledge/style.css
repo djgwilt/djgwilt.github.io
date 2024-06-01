@@ -1,0 +1,44 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.spaceship {
+    background-image:url("space ship.png");
+    background-size: 42px 42px;
+}
+
+.goal {
+    background-image:url("goal.png");
+    background-size: 42px 42px;
+}
+
+.human {
+    background-image:url("human.png");
+    background-size: 42px 42px;
+}
+
+.wall {
+    
+    background-color: black !important;
+}
+
+.powerUp {
+    background-image:url("powerUp.png");
+    background-size: 42px 42px;
+}
+
+.Empty {
+    background-image:none;
+}

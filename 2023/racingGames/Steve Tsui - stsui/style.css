@@ -1,0 +1,38 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.car {
+    background-image:url("th.jpg");
+    background-size: 40px 40px;
+}
+.wall {
+    background-image:url("farmer.jpg");
+    background-size: 40px 40px;
+}
+
+.flag {
+    background-image:url("planet.jpg") !important;
+    background-size: 40px 40px;
+}
+
+.coin {
+    background-image:url("cow.jpg");
+    background-size: 40px 40px;
+}
+
+audio {
+    visibility: hidden;
+}

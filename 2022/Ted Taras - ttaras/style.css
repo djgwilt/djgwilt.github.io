@@ -1,0 +1,46 @@
+body {
+    background-image: url('https://static.wikia.nocookie.net/spongebob/images/2/26/Bubbletown_002.png/revision/latest/scale-to-width-down/1200?cb=20181028171458');
+    background-size: cover;
+}
+
+
+
+#Bikini1 {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#Bikini1 td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:lightcyan;
+}
+.explosion{
+    background-image: url("Explosion.gif");
+    background-size: 50px, 50px;
+}
+
+.Car {
+    background-image:url("car.png");
+    background-size: 50px 40px;
+}
+.flag{
+    background-image:url("Money.png");
+    background-size: 40px 40px;
+
+}
+
+.hole{
+    background-image: url("Hole.png");
+    background-size: 40px, 10px;
+}
+.nitro{
+    background-image:url("Nitro.webp");
+    background-size: 30px,0px;
+}
+
+.wall{
+    background-image:url("wall.png");
+    background-size: 40px 40px;
+}

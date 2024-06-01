@@ -1,0 +1,44 @@
+body {
+    background-color:#00c3ff;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:#0063ba;
+}
+
+.Car {
+    background-image:url("image.gif");
+    background-size: 40px 40px;
+}
+
+.carFlip {
+    background-image:url("flippedangel.jpg");
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.wall {
+    background-color: #5ee080 !important;
+}
+
+.flag {
+    background-image:url("New Piskel.gif");
+    background-size: 40px 40px;
+}
+
+.wallFake {
+    background-color: #7cef8d !important;
+}
+
+  

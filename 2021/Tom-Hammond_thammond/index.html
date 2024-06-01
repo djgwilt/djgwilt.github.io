@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="jquery-3.6.0.min.js"></script>
+  <script src="code.js"></script>
+  <title>Racing Game</title>
+</head>
+
+<body onLoad="runGame()">
+  <p>Use arrow keys to move</p>
+  <table id="RacingTrack">
+    <!-- The table cells have an id with the row and column number -->
+    <tr>
+      <td id="R0C0" />
+      <td id="R0C1" />
+      <td id="R0C2" />
+      <td id="R0C3" />
+      <td id="R0C4" />
+      <td id="R0C5" />
+      <td id="R0C6" />
+      <td id="R0C7" />
+      <td id="R0C8" />
+      <td id="R0C9" />
+      <td id="R0CA" />
+      <td id="R0CB" />
+      <td id="R0CC" />
+    </tr>
+    <!-- Add another table row here -->
+    <tr>
+      <td id="R1C0" />
+      <td id="R1C1" />
+      <td id="R1C2" />
+      <td id="R1C3" />
+      <td id="R1C4" />
+      <td id="R1C5" />
+      <td id="R1C6" />
+      <td id="R1C7" />
+      <td id="R1C8" />
+      <td id="R1C9" />
+      <td id="R1CA" />
+      <td id="R1CB" />
+      <td id="R1CC" />
+    </tr>
+    <tr>
+      <td id="R2C0" />
+      <td id="R2C1" />
+      <td id="R2C2" />
+      <td id="R2C3" />
+      <td id="R2C4" />
+      <td id="R2C5" />
+      <td id="R2C6" />
+      <td id="R2C7" />
+      <td id="R2C8" />
+      <td id="R2C9" />
+      <td id="R2CA" />
+      <td id="R2CB" />
+      <td id="R2CC" />
+    </tr>
+    <tr>
+      <td id="R3C0" />
+      <td id="R3C1" />
+      <td id="R3C2" />
+      <td id="R3C3" />
+      <td id="R3C4" />
+      <td id="R3C5" />
+      <td id="R3C6" />
+      <td id="R3C7" />
+      <td id="R3C8" />
+      <td id="R3C9" />
+      <td id="R3CA" />
+      <td id="R3CB" />
+      <td id="R3CC" />
+    </tr>
+    <tr>
+      <td id="R4C0" />
+      <td id="R4C1" />
+      <td id="R4C2" />
+      <td id="R4C3" />
+      <td id="R4C4" />
+      <td id="R4C5" />
+      <td id="R4C6" />
+      <td id="R4C7" />
+      <td id="R4C8" />
+      <td id="R4C9" />
+      <td id="R4CA" />
+      <td id="R4CB" />
+      <td id="R4CC" />
+    </tr>
+    <tr>
+      <td id="R5C0" />
+      <td id="R5C1" />
+      <td id="R5C2" />
+      <td id="R5C3" />
+      <td id="R5C4" />
+      <td id="R5C5" />
+      <td id="R5C6" />
+      <td id="R5C7" />
+      <td id="R5C8" />
+      <td id="R5C9" />
+      <td id="R5CA" />
+      <td id="R5CB" />
+      <td id="R5CC" />
+    </tr>
+    <tr>
+      <td id="R6C0" />
+      <td id="R6C1" />
+      <td id="R6C2" />
+      <td id="R6C3" />
+      <td id="R6C4" />
+      <td id="R6C5" />
+      <td id="R6C6" />
+      <td id="R6C7" />
+      <td id="R6C8" />
+      <td id="R6C9" />
+      <td id="R6CA" />
+      <td id="R6CB" />
+      <td id="R6CC" />
+    </tr>
+    <tr>
+      <td id="R7C0" />
+      <td id="R7C1" />
+      <td id="R7C2" />
+      <td id="R7C3" />
+      <td id="R7C4" />
+      <td id="R7C5" />
+      <td id="R7C6" />
+      <td id="R7C7" />
+      <td id="R7C8" />
+      <td id="R7C9" />
+      <td id="R7CA" />
+      <td id="R7CB" />
+      <td id="R7CC" />
+    </tr>
+    <tr>
+      <td id="R8C0" />
+      <td id="R8C1" />
+      <td id="R8C2" />
+      <td id="R8C3" />
+      <td id="R8C4" />
+      <td id="R8C5" />
+      <td id="R8C6" />
+      <td id="R8C7" />
+      <td id="R8C8" />
+      <td id="R8C9" />
+      <td id="R8CA" />
+      <td id="R8CB" />
+      <td id="R8CC" />
+    </tr>
+    <tr>
+      <td id="R9C0" />
+      <td id="R9C1" />
+      <td id="R9C2" />
+      <td id="R9C3" />
+      <td id="R9C4" />
+      <td id="R9C5" />
+      <td id="R9C6" />
+      <td id="R9C7" />
+      <td id="R9C8" />
+      <td id="R9C9" />
+      <td id="R9CA" />
+      <td id="R9CB" />
+      <td id="R9CC" />
+    </tr>
+    <tr>
+      <td id="RAC0" />
+      <td id="RAC1" />
+      <td id="RAC2" />
+      <td id="RAC3" />
+      <td id="RAC4" />
+      <td id="RAC5" />
+      <td id="RAC6" />
+      <td id="RAC7" />
+      <td id="RAC8" />
+      <td id="RAC9" />
+      <td id="RACA" />
+      <td id="RACB" />
+      <td id="RACC" />
+    </tr>
+    <tr>
+      <td id="RBC0" />
+      <td id="RBC1" />
+      <td id="RBC2" />
+      <td id="RBC3" />
+      <td id="RBC4" />
+      <td id="RBC5" />
+      <td id="RBC6" />
+      <td id="RBC7" />
+      <td id="RBC8" />
+      <td id="RBC9" />
+      <td id="RBCA" />
+      <td id="RBCB" />
+      <td id="RBCC" />
+    </tr>
+    <tr>
+      <td id="RCC0" />
+      <td id="RCC1" />
+      <td id="RCC2" />
+      <td id="RCC3" />
+      <td id="RCC4" />
+      <td id="RCC5" />
+      <td id="RCC6" />
+      <td id="RCC7" />
+      <td id="RCC8" />
+      <td id="RCC9" />
+      <td id="RCCA" />
+      <td id="RCCB" />
+      <td id="RCCC" />
+    </tr>
+  </table>
+  <p id="Message"></p>
+  <p>High Score: 32</p>
+</body>
+
+</html>

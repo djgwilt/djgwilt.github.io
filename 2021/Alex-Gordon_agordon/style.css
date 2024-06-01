@@ -1,0 +1,49 @@
+body {
+    background-color:gray;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid lightskyblue;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:green;
+}
+
+.tiger {
+    background-image:url("thing.gif");
+    background-size: 40px 40px;
+    
+}
+
+.Car {
+    background-image:url("pony.gif");
+    background-size: 40px 40px;
+}
+.Carflipped {
+    background-image:url("carFlipped.gif");
+    background-size: 40px 40px;
+}
+
+.Flag {
+    background-image:url("flag.gif");
+    background-size: 40px 40px;
+}
+.Fakewall {
+    background-color: #333333 !important;
+   
+}
+.Wall {
+    background-image:url("pond.gif");
+    background-size: 40px 40px;}
+}
+
+
+
+td {
+    
+}

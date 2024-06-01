@@ -1,0 +1,59 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("Pac-Man.svg.png");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: black !important;
+}
+
+.Coin {
+    background-image:url("download.png");
+    background-size: 40px 40px;
+}
+
+.carFlipped {
+    background-image:url("image.png");
+    background-size: 40px 40px;
+}
+
+.carinverted {
+    background-image:url("image 1.png");
+    background-size: 40px 40px;
+}
+.Chest {
+    background-image:url("treasure chest.png");
+    background-size: 40px 40px;
+}
+.ghost {
+    background-image:url("ghost.png");
+    background-size: 40px 40px;
+}
+.ghost1 {
+    background-image:url("ghost 1.png");
+    background-size: 40px 40px;
+}
+.ghost2 {
+    background-image:url("ghost 2.png");
+    background-size: 40px 40px;
+}
+.ghost3 {
+    background-image:url("ghost 3.png");
+    background-size: 40px 40px;
+}

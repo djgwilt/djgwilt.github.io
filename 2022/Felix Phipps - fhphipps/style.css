@@ -1,0 +1,59 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(255, 242, 0);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(34, 34, 34);
+}
+
+.Car {
+    background-image:url("image.gif");
+    background-size: 41px 41px;
+
+    background-repeat:no-repeat;
+}
+
+.CarLeft {
+    background-image:url("imageleft.gif");
+    background-size: 41px 41px;
+
+    background-repeat:no-repeat;
+}
+
+.CarUp {
+    background-image:url("imageup.gif");
+    background-size: 41px 41px;
+
+    background-repeat:no-repeat;
+}
+
+.CarDown {
+    background-image:url("imagedown.gif");
+    background-size: 41px 41px;
+
+    background-repeat:no-repeat;
+}
+
+.wall {
+    background: red  !important;
+}
+
+.coin {
+    background-image:url(coin.gif);
+    background-size: 41px 41px;
+
+    background-repeat:no-repeat;
+}
+
+.winning_flag {
+    background-image:url(winningflag.gif);
+    background-size: 60px 60px;
+}

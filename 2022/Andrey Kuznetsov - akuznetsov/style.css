@@ -1,0 +1,106 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:30px;
+    height:30px;
+    background-color: rgb(147, 136, 36);
+}
+
+
+.Snake_body_horizontal {
+    background-repeat: no-repeat;
+    background-image:url("SnakeBodyHorizontal.png");
+    background-size: 43px 43px;
+}
+.Snake_head {
+    background-repeat: no-repeat;
+    background-image:url("Snake\ head\ 1.png");
+    background-size: 43px 43px;
+}
+.Snake_tail {
+    background-repeat: no-repeat;
+    background-image:url("Snake\ tail\ 1.png");
+    background-size: 43px 43px;
+}
+.Snake_head_up {
+    background-repeat: no-repeat;
+    background-image:url("SnakeHeadUp.gif");
+    background-size: 43px 43px;
+}
+.Snake_head_down {
+    background-repeat: no-repeat;
+    background-image:url("SnakeHeadDown.gif");
+    background-size: 43px 31px;
+}
+
+.Snake_head_left {
+    background-repeat: no-repeat;
+    background-image:url("SnakeHeadLeft.gif");
+    background-size: 43px 43px;
+}
+.Snake_head_right {
+    background-repeat: no-repeat;
+    background-image:url("SnakeHeadRight.gif");
+    background-size: 31px 43px;
+}
+.Snake_body_vertical{
+    background-repeat: no-repeat;
+    background-image:url("SnakeBodyVertical.png");
+    background-size: 43px 43px;
+}
+.Left_Up_turn{
+    background-repeat: no-repeat;
+    background-image:url("left-up_turnPart.png");
+    background-size: 43px 43px;
+}
+.Right_Up_turn{
+    background-repeat: no-repeat;
+    background-image:url("right-up_turnPart.png");
+    background-size: 43px 43px;
+}
+.Left_Down_turn{
+    background-repeat: no-repeat;
+    background-image:url("left-down_turnPart.png");
+    background-size: 43px 43px;
+}
+.Right_Down_turn{
+    background-repeat: no-repeat;
+    background-image:url("right-down_turnPart.png");
+    background-size: 43px 43px;
+}
+.Tail_Right{
+    background-repeat: no-repeat;
+    background-image:url("SnakeTailFacingRight.png");
+    background-size: 43px 43px;
+}
+.Tail_Up{
+    background-repeat: no-repeat;
+    background-image:url("SnakeTailFacingUp.png");
+    background-size: 43px 43px;
+}
+.Tail_Down{
+    background-repeat: no-repeat;
+    background-image:url("SnakeTailFacingDown.png");
+    background-size: 43px 43px;
+}.Tail_Left{
+    background-repeat: no-repeat;
+    background-image:url("SnakeTailFacingLeft.png");
+    background-size: 43px 43px;
+}
+.orange{
+    background-repeat: no-repeat;
+    background-image:url("Orange.png");
+    background-size: 29px 29px;
+}
+.rock{
+    background-repeat: no-repeat;
+    background-image:url("real-rock.png") !important;
+    background-size: 30px 30px;
+}

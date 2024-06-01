@@ -1,0 +1,113 @@
+body {
+    background-color: #8ec1fd;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#RacingTrack td {
+    width:99px;
+    height:99px;
+    border:1px solid;
+    
+}
+
+.grass {
+    background-size: 100px 100px;
+    border:1px solid;
+    background-image:url("Grass.png");
+}
+
+.peppa {
+    background-image:url("boat.png");
+    background-color: #2f62a1;
+    background-size: 110px 110px;
+    background-position: -5px 110px;
+}
+
+.danny {
+    background-image:url("boat2.png");
+    background-repeat: no-repeat;
+    background-color: #2f62a1;
+    background-size: 100px 75px;
+    background-position: 2px 20px;
+}
+.peppacrash {
+    background-image:url("crashboat.png");
+    background-color: #2f62a1;
+    background-position: 110px 110px;
+    background-size: 120px 110px;
+}
+
+.dannycrash {
+    background-image:url("dannycrash.png");
+    background-color: #2f62a1;
+    background-position: -5px 10px;
+    background-size: 130px 110px;
+}
+
+.sand {
+    background-image:url("sand.png") !important;
+    background-color: #2f62a1;
+    background-position: -10px 40px;
+    background-size: 130px 80px;
+    background-repeat: no-repeat;
+}
+
+.duck {
+    background-image:url("duck.png") !important;
+    background-color: #2f62a1;
+    background-position: 25px 50px;
+    background-size: 50px 40px;
+    background-repeat: no-repeat;
+}
+
+.duck2 {
+    background-image:url("duck.png") !important;
+    background-color: #2f62a1;
+    background-position: 25px 50px;
+    background-size: 50px 40px;
+    background-repeat: no-repeat;
+}
+
+.coin {
+    background-image:url("coin.gif") !important;
+    background-color: #2f62a1;
+    background-position: 20px 20px;
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+}
+
+audio {
+    visibility: hidden;
+}
+
+.video {
+    width: 100%
+}
+
+.play {
+    position: relative;
+    z-index: 1 !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0; 
+    height: 100px;
+    width: 100px; 
+    animation: opacityOn 0s normal forwards;
+    animation-delay: 16s
+}
+
+@keyframes opacityOn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

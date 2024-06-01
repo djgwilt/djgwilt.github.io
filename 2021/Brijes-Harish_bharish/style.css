@@ -1,0 +1,40 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("taxi2.PNG");
+    background-size: 40px 40px;
+}
+
+.CarFlip {
+    background-image:url("taxi4.PNG");
+    background-size: 40px 40px;
+}
+.wall {
+   background-image:url("thugs.PNG");
+   background-size: 40px 40px;
+}
+
+.flag {
+    background-image:url("house.jpg");
+    background-size: 40px 40px;
+}
+.coin {
+    background-image:url("steak.jpg");
+    background-size: 40px 40px;
+}
+
+

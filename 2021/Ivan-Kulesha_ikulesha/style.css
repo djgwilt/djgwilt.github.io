@@ -1,0 +1,35 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("image.gif");
+    background-size: 60px 45px;
+}
+
+.wallfake{
+    background-image:url("bojo.gif");
+    background-size: 55px 45px;
+    } 
+
+.wall{
+    background-image:url("trump.gif");
+    background-size: 55px 45px;
+}
+
+.end {
+    background-image:url("coin.gif");
+    background-size: 55px 45px;
+}

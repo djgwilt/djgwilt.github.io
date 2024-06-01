@@ -1,0 +1,47 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:red;
+}
+
+.car {
+    background-image:url("troll.jpg");
+    background-color:red;
+    background-size: 40px 40px;
+}
+
+.wall{
+    background-color:black !important;
+}
+
+.flag{
+    background-image:url("flag.jpg");
+    background-color:red;
+    background-size: 40px 40px;
+
+}
+
+.win{
+    background-image:url("win.jpg");
+    background-color:red;
+    background-size : 40px 40px;
+}
+
+.death{
+    background-color:red
+}
+
+.hiddenflag{
+    background-image:url("black.jpg");
+    background-size: 40px 40px;
+}

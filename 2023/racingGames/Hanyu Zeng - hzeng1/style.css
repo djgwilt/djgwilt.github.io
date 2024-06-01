@@ -1,0 +1,38 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.car {
+    background-image:url("Pompompurin.png");
+    background-size: 40px 40px;
+}
+
+.carFlip{
+    background-image:url(PompompurinFlip.png);
+    background-size: 40px 40px;
+}
+
+.wall{
+    background-color: peru !important;
+}
+
+.wallFake{
+    background-color: darkgoldenrod !important;
+}
+
+.flag{
+    background-image:url(ball.png);
+    background-size: 40px 40px;
+}

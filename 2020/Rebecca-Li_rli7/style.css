@@ -1,0 +1,41 @@
+body {
+    background-color:hotpink;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("peppapigbike.png");
+    background-size: 40px 40px;
+}
+
+.Carflip {
+    background-image:url("peppapigbike2.png");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: black !important;
+}
+
+.wallfake {
+    background-color: grey !important;
+}
+
+.Empty {
+    background-image:none;
+}
+.flag {
+    background-image:url("peppawinner.png");
+    background-size: 40px 40px;
+}

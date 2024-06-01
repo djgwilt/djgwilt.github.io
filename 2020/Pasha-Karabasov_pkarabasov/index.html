@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="code.js"></script>
+    <title>Racing Game</title>
+</head>
+
+<body onLoad="runGame()">
+    
+    <p>Use right/left arrow keys to move.</p>
+    
+    <table id="RacingTrack">
+        <!-- The table cells have an id with the row and column number -->
+        <tr>
+            <td id="r0 c0" class="ugandaknuckles"></td>
+            <td id="r0 c1"></td>
+            <td id="r0 c2"></td>
+            <td id="r0 c3"></td>
+            <td id="r0 c4"></td>
+            <td id="r0 c5"></td>
+            <td id="r0 c6"></td>
+            <td id="r0 c7"></td>
+        </tr>
+        <!-- Add another table row here -->
+        
+        <tr>
+            <td id="r1 c0"></td>
+            <td id="r1 c1"></td>
+            <td id="r1 c2"></td>
+            <td id="r1 c3" class="wall"></td>
+            <td id="r1 c4"></td>
+            <td id="r1 c5"></td>
+            <td id="r1 c6"></td>
+            <td id="r1 c7"></td>
+        </tr>
+        
+        <tr>
+            <td id="r2 c0"></td>
+            <td id="r2 c1"></td>
+            <td id="r2 c2"></td>
+            <td id="r2 c3"></td>
+            <td id="r2 c4"></td>
+            <td id="r2 c5" class="flag"></td>
+            <td id="r2 c6"></td>
+            <td id="r2 c7"></td>
+        </tr>
+    </table>
+
+    <p id="Message"></p>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:100px;
+    height:100px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("Duck.png");
+    background-size: 100px 100px;
+}
+
+.CarFlip {
+    background-image:url("Duck2.png");
+    background-size: 100px 100px;
+}
+
+.wall {
+    background-image:url("Rock.jpeg");
+    background-size: 100px 100px;
+}
+
+.wallFake {
+    background-image:url("Grass.png");
+    background-size: 100px 100px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.pond {
+    background-image:url("Pond.png");
+    background-size: 100px 100px;
+}
+

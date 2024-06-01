@@ -1,0 +1,35 @@
+body {
+    background-repeat: no-repeat;
+    background-image: url("Background.jpg");
+    background-size: cover;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+}
+
+#RacingTrack td {
+    width:80px;
+    height:80px;
+    background-color:#65cdff;
+}
+
+.Car {
+    background-image:url("car.jpg");
+    background-size: 80px 80px;
+}
+
+.wall{
+    background-image:url('China.jpg');
+    background-size: 80px 80px;
+}
+
+.warplane{
+    background-image: url('US_warplane.jpg');
+    background-size: 80px 80px;
+}
+.missile{
+    background-size: 80px 80px;
+    background-image: url('Anti-missile.gif');
+}
+

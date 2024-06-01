@@ -1,0 +1,323 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="code.js"></script>
+    <title>Racing Game</title>
+</head>
+
+<body onLoad="runGame()">
+    
+    <p>Use right/left arrow keys to move.</p>
+    
+    <table id="RacingTrack">
+        <!-- The table cells have an id with the row and column number -->
+                <tr>
+            <td id="r0 c0"class= "doge"></td>
+            <td id="r0 c1"class= "wall"></td>
+            <td id="r0 c2"class= "wall"></td>
+            <td id="r0 c3"></td>
+            <td id="r0 c4"></td>
+            <td id="r0 c5"class = "wall"></td>
+            <td id="r0 c6"></td>
+            <td id="r0 c7"></td>
+            <td id="r0 c8"></td>
+            <td id="r0 c9"></td>
+            <td id="r0 c10"></td>
+            <td id="r0 c11"></td>
+            <td id="r0 c12"></td>
+            <td id="r0 c13"></td>
+            <td id="r0 c14"></td>
+            <td id="r0 c15"></td>
+            <td id="r0 c16"></td>
+            <td id="r0 c17"></td>
+            <td id="r0 c18"></td>
+            <td id="r0 c19"></td>
+            <td id="r0 c20"></td>
+            <td id="r0 c21"></td>
+            <td id="r0 c22"></td>
+        </tr>
+                <tr>
+            <td id="r1 c0"></td>
+            <td id="r1 c1"></td>
+            <td id="r1 c2"></td>
+            <td id="r1 c3"></td>
+            <td id="r1 c4"></td>
+            <td id="r1 c5"class = "wall"></td>
+            <td id="r1 c6"></td>
+            <td id="r1 c7"></td>
+            <td id="r1 c8"></td>
+            <td id="r1 c9"></td>
+            <td id="r1 c10"></td>
+            <td id="r1 c11"></td>
+            <td id="r1 c12"></td>
+            <td id="r1 c13"></td>
+            <td id="r1 c14"></td>
+            <td id="r1 c15"></td>
+            <td id="r1 c16"></td>
+            <td id="r1 c17"></td>
+            <td id="r1 c18"></td>
+            <td id="r1 c19"></td>
+            <td id="r1 c20"></td>
+            <td id="r1 c21"></td>
+            <td id="r1 c22"></td>
+        </tr>
+                <tr>
+            <td id="r2 c0"></td>
+            <td id="r2 c1"></td>
+            <td id="r2 c2"></td>
+            <td id="r2 c3"></td>
+            <td id="r2 c4"></td>
+            <td id="r2 c5"class = "wall"></td>
+            <td id="r2 c6"></td>
+            <td id="r2 c7"></td>
+            <td id="r2 c8"></td>
+            <td id="r2 c9"></td>
+            <td id="r2 c10"></td>
+            <td id="r2 c11"></td>
+            <td id="r2 c12"></td>
+            <td id="r2 c13"></td>
+            <td id="r2 c14"></td>
+            <td id="r2 c15"></td>
+            <td id="r2 c16"></td>
+            <td id="r2 c17"></td>
+            <td id="r2 c18"></td>
+            <td id="r2 c19"></td>
+            <td id="r2 c20"></td>
+            <td id="r2 c21"></td>
+            <td id="r2 c22"></td>
+        </tr>
+        <tr>
+            <td id="r3 c0"></td>
+            <td id="r3 c1"></td>
+            <td id="r3 c2"></td>
+            <td id="r3 c3"></td>
+            <td id="r3 c4"></td>
+            <td id="r3 c5"class = "wall"></td>
+            <td id="r3 c6"></td>
+            <td id="r3 c7"></td>
+            <td id="r3 c8"></td>
+            <td id="r3 c9"></td>
+            <td id="r3 c10"></td>
+            <td id="r3 c11"></td>
+            <td id="r3 c12"></td>
+            <td id="r3 c13"></td>
+            <td id="r3 c14"></td>
+            <td id="r3 c15"></td>
+            <td id="r3 c16"></td>
+            <td id="r3 c17"></td>
+            <td id="r3 c18"></td>
+            <td id="r3 c19"></td>
+            <td id="r3 c20"></td>
+            <td id="r3 c21"></td>
+            <td id="r3 c22"></td>
+        </tr>
+        <tr>
+            <td id="r4 c0"></td>
+            <td id="r4 c1"></td>
+            <td id="r4 c2"></td>
+            <td id="r4 c3"></td>
+            <td id="r4 c4"></td>
+            <td id="r4 c5"class = "wall"></td>
+            <td id="r4 c6"></td>
+            <td id="r4 c7"></td>
+            <td id="r4 c8"></td>
+            <td id="r4 c9"></td>
+            <td id="r4 c10"></td>
+            <td id="r4 c11"></td>
+            <td id="r4 c12"></td>
+            <td id="r4 c13"></td>
+            <td id="r4 c14"></td>
+            <td id="r4 c15"></td>
+            <td id="r4 c16"></td>
+            <td id="r4 c17"></td>
+            <td id="r4 c18"></td>
+            <td id="r4 c19"></td>
+            <td id="r4 c20"></td>
+            <td id="r4 c21"></td>
+            <td id="r4 c22"></td>
+        </tr>
+        <tr>
+            <td id="r5 c0"></td>
+            <td id="r5 c1"></td>
+            <td id="r5 c2"></td>
+            <td id="r5 c3"></td>
+            <td id="r5 c4"></td>
+            <td id="r5 c5"class = "wall"></td>
+            <td id="r5 c6"></td>
+            <td id="r5 c7"></td>
+            <td id="r5 c8"></td>
+            <td id="r5 c9"></td>
+            <td id="r5 c10"></td>
+            <td id="r5 c11"></td>
+            <td id="r5 c12"></td>
+            <td id="r5 c13"></td>
+            <td id="r5 c14"></td>
+            <td id="r5 c15"></td>
+            <td id="r5 c16"></td>
+            <td id="r5 c17"></td>
+            <td id="r5 c18"></td>
+            <td id="r5 c19"></td>
+            <td id="r5 c20"></td>
+            <td id="r5 c21"></td>
+            <td id="r5 c22"></td>
+        </tr>
+        <tr>
+            <td id="r6 c0"></td>
+            <td id="r6 c1"></td>
+            <td id="r6 c2"></td>
+            <td id="r6 c3"></td>
+            <td id="r6 c4"></td>
+            <td id="r6 c5"class = "wall"></td>
+            <td id="r6 c6"></td>
+            <td id="r6 c7"></td>
+            <td id="r6 c8"></td>
+            <td id="r6 c9"></td>
+            <td id="r6 c10"></td>
+            <td id="r6 c11"></td>
+            <td id="r6 c12"></td>
+            <td id="r6 c13"></td>
+            <td id="r6 c14"></td>
+            <td id="r6 c15"></td>
+            <td id="r6 c16"></td>
+            <td id="r6 c17"></td>
+            <td id="r6 c18"></td>
+            <td id="r6 c19"></td>
+            <td id="r6 c20"></td>
+            <td id="r6 c21"></td>
+            <td id="r6 c22"></td>
+        </tr>
+        <tr>
+            <td id="r7 c0"></td>
+            <td id="r7 c1"></td>
+            <td id="r7 c2"></td>
+            <td id="r7 c3"></td>
+            <td id="r7 c4"></td>
+            <td id="r7 c5"class = "wall"></td>
+            <td id="r7 c6"></td>
+            <td id="r7 c7"></td>
+            <td id="r7 c8"></td>
+            <td id="r7 c9"></td>
+            <td id="r7 c10"></td>
+            <td id="r7 c11"></td>
+            <td id="r7 c12"></td>
+            <td id="r7 c13"></td>
+            <td id="r7 c14"></td>
+            <td id="r7 c15"></td>
+            <td id="r7 c16"></td>
+            <td id="r7 c17"></td>
+            <td id="r7 c18"></td>
+            <td id="r7 c19"></td>
+            <td id="r7 c20"></td>
+            <td id="r7 c21"></td>
+            <td id="r7 c22"></td>
+        </tr>
+        <tr>
+            <td id="r8 c0"></td>
+            <td id="r8 c1"></td>
+            <td id="r8 c2"></td>
+            <td id="r8 c3"></td>
+            <td id="r8 c4"></td>
+            <td id="r8 c5"class = "wall"></td>
+            <td id="r8 c6"></td>
+            <td id="r8 c7"></td>
+            <td id="r8 c8"></td>
+            <td id="r8 c9"></td>
+            <td id="r8 c10"></td>
+            <td id="r8 c11"></td>
+            <td id="r8 c12"></td>
+            <td id="r8 c13"></td>
+            <td id="r8 c14"></td>
+            <td id="r8 c15"></td>
+            <td id="r8 c16"></td>
+            <td id="r8 c17"></td>
+            <td id="r8 c18"></td>
+            <td id="r8 c19"></td>
+            <td id="r8 c20"></td>
+            <td id="r8 c21"></td>
+            <td id="r8 c22"></td>
+        </tr>
+        <tr>
+            <td id="r9 c0"></td>
+            <td id="r9 c1"></td>
+            <td id="r9 c2"></td>
+            <td id="r9 c3"></td>
+            <td id="r9 c4"></td>
+            <td id="r9 c5"class = "wall"></td>
+            <td id="r9 c6"></td>
+            <td id="r9 c7"></td>
+            <td id="r9 c8"></td>
+            <td id="r9 c9"></td>
+            <td id="r9 c10"></td>
+            <td id="r9 c11"></td>
+            <td id="r9 c12"></td>
+            <td id="r9 c13"></td>
+            <td id="r9 c14"></td>
+            <td id="r9 c15"></td>
+            <td id="r9 c16"></td>
+            <td id="r9 c17"></td>
+            <td id="r9 c18"></td>
+            <td id="r9 c19"></td>
+            <td id="r9 c20"></td>
+            <td id="r9 c21"></td>
+            <td id="r9 c22"></td>
+        </tr>
+        <tr>
+            <td id="r10 c0"></td>
+            <td id="r10 c1"></td>
+            <td id="r10 c2"></td>
+            <td id="r10 c3"></td>
+            <td id="r10 c4"></td>
+            <td id="r10 c5"class = "wall"></td>
+            <td id="r10 c6"></td>
+            <td id="r10 c7"></td>
+            <td id="r10 c8"></td>
+            <td id="r10 c9"></td>
+            <td id="r10 c10"></td>
+            <td id="r10 c11"></td>
+            <td id="r10 c12"></td>
+            <td id="r10 c13"></td>
+            <td id="r10 c14"></td>
+            <td id="r10 c15"></td>
+            <td id="r10 c16"></td>
+            <td id="r10 c17"></td>
+            <td id="r10 c18"></td>
+            <td id="r10 c19"></td>
+            <td id="r10 c20"></td>
+            <td id="r10 c21"></td>
+            <td id="r10 c22"></td>
+        </tr>
+        <tr>
+            <td id="r11 c0"></td>
+            <td id="r11 c1"></td>
+            <td id="r11 c2"></td>
+            <td id="r11 c3"></td>
+            <td id="r11 c4"></td>
+            <td id="r11 c5"class = "flag"></td>
+            <td id="r11 c6"></td>
+            <td id="r11 c7"></td>
+            <td id="r11 c8"></td>
+            <td id="r11 c9"></td>
+            <td id="r11 c10"></td>
+            <td id="r11 c11"></td>
+            <td id="r11 c12"></td>
+            <td id="r11 c13"></td>
+            <td id="r11 c14"></td>
+            <td id="r11 c15"></td>
+            <td id="r11 c16"></td>
+            <td id="r11 c17"></td>
+            <td id="r11 c18"></td>
+            <td id="r11 c19"></td>
+            <td id="r11 c20"></td>
+            <td id="r11 c21"></td>
+            <td id="r11 c22"class= "flag"></td>
+        </tr>
+
+               
+        
+    </table>
+
+    <p id="Message"></p>
+    
+</body>
+</html>

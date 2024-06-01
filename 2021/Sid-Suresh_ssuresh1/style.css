@@ -1,0 +1,75 @@
+body {
+    background-image:url("Space.jpg");
+    background-size: 40px 40px;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:1px solid yellow;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    background-image:url("Fire.png");
+    background-size: 40px 40px;
+       
+    
+}
+
+p#Message {
+    color:yellow;
+}
+
+p1 {
+    color:yellow;
+}
+p2 {
+    color:orange;
+}
+p3 {
+    color:red;
+}
+
+.Trophy {
+    
+    background-image:url("Trophy.png") !important;
+    background-size: 40px 40px;
+    
+}
+
+.empty {
+    background-image:url("Stars.png") !important;
+    background-size: 40px 40px;
+       
+}
+.Car {
+    background-image:url("Meteor.png") !important;
+    background-size: 40px 40px;
+}
+
+.carFlipped {
+    background-image:url("Meteor Flipped.png") !important;
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.Wall {
+    background-image:url("Asteroid Belt.png") !important;
+    background-size: 40px 40px;
+    
+}
+
+.flag {
+    background-image:url("Dinosaurs.png") !important;
+    background-size: 40px 40px;
+}
+
+.wallFake {
+    background-image:url("Asteroid Belt.png") !important;
+    background-size: 40px 40px;
+    
+}

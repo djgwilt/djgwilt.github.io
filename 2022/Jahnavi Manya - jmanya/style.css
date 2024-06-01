@@ -1,0 +1,29 @@
+body {
+    background-color:rgb(249, 223, 231);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(138, 192, 69);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(175, 226, 246);
+}
+
+.bird {
+    background-image:url("sprite.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: rgb(239, 227, 47) !important;
+}
+
+.coin {
+    background-image:url("coin.jpg");
+    background-size: 40px 40px;
+}

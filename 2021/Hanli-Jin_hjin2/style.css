@@ -1,0 +1,237 @@
+body {
+    background-color:black;
+    color: white;
+}
+
+p {
+    font-size: 20px;
+    font-family: courier;
+}
+p1 {
+    font-family: courier;
+    display: inline-block;
+    font-size: 20px;
+}
+
+
+p3{
+    font-size: 30px;
+    font-family: courier;
+    color: white;
+    font-weight: bolder;
+}
+p4{
+    text-decoration: underline;
+    font-family: courier;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+span1 {
+    font-size: 20px;
+    font-family: courier;
+    color: red;
+    font-weight: 900;
+    
+}
+span {
+    display: inline-block;
+}
+
+.easy {
+    color: #83db48;
+    font-weight: bold;
+}
+.med {
+    color: #f0c432;
+    font-weight: bold;
+}
+
+.hard {
+    color: #ff2205;
+    font-weight: bold;
+}
+
+.hardcore {
+    color: white;
+    font-weight: bold;
+}
+
+#Grid {
+    border-collapse:collapse;
+    border:20px solid white;
+    float: center;
+    background-color:grey;
+    height: 480px;
+}
+
+#Grid td {
+    width:60px;
+    height:60px;
+    border:2px solid white;
+}
+
+.player {
+    background-image:url("New Piskel.gif");
+    background-size: 60px 60px;
+}
+
+.Projectile {
+    background-image:url("proj.png");
+    background-size: 60px 60px;
+}
+.Empty {
+    
+}
+#blank {
+    border-collapse:collapse;
+    border:20px solid red;
+    float: center;
+    background-color:grey;
+}
+#blank td {
+    width:60px;
+    height:60px;
+    border:2px solid white;
+}
+
+.Fill {
+    width:40px;
+    height:40px;
+    background-color:red;
+}
+
+.Wall {
+    width:40px;
+    height:40px;
+    background-color:#b6ff4f;
+}
+
+.hide {
+    width:40px;
+    height:40px;
+    background-color:skyblue;
+}
+
+#Easy {
+    background-color: #83db48;
+}
+
+#Medium {
+    background-color: #f0c432;
+}
+
+#Hard {
+    background-color: #e01919;
+    color: white;
+}
+
+#Hardcore {
+    background-color: black;
+    color: red;
+}
+
+#incspeed {
+    background-color: black;
+    color: white;
+}
+
+#console {
+    margin: 20px;
+    padding: 20px;
+    border: 5px solid white;
+    background-color: black;
+    color: white;
+}
+
+
+#difficulty {
+    float: left;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 5px solid white;
+    background-color: black;
+    color: white;
+}
+
+#general {
+    float: left;
+    margin: 20px;
+    padding: 20px;
+    border: 5px solid white;
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 135px;
+}
+
+
+button {
+    font-family: courier;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#output {
+    height: 660px;
+    width: 300px;
+}
+
+#Lives {
+    font-size: 20px;
+    font-family: courier;
+    font-weight: bolder;
+}
+.default {
+    color: white;
+}
+
+
+.ThreeLives {
+    font-size: 20px;
+    font-family: courier;
+    color: yellow;
+    font-weight: bolder;
+}
+.TwoLives {
+    font-size: 20px;
+    font-family: courier;
+    color: orange;
+    font-weight: bolder;
+}
+.OneLife {
+    font-size: 20px;
+    font-family: courier;
+    color: red;
+    font-weight: bolder;
+}
+
+.leftcontainer {
+    float: left;
+}
+
+.midcontainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.constant {
+    color: #83db48;
+    font-weight: bold;
+}
+
+.increasing {
+    color: #e01919;
+    font-weight: bold;
+}

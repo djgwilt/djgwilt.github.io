@@ -1,0 +1,59 @@
+body {
+    background-color: #53aeff;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.CarRight {
+    background-image:url("car.jpg");
+    background-size: 40px 40px;
+}
+.CarLeft {
+    background-image:url("car1.jpg");
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}
+.wall {
+    background-image:url("wall.jpg") !important;
+    
+}
+.flag {
+    background-image:url("flag.jpg");
+    background-size: 40px 40px;
+}
+#Game {
+    display:none;
+}
+#Start {
+    display:block;
+}
+h1 {
+    color : black;
+    background-color:#0051ff;
+    font-size: 50px;
+    text-align:center;
+    border-radius:10px;
+}
+h2 {
+    color:black;
+    background-color:#0051ff;
+    font-size:25px;
+    text-align:center;
+    border-radius:5px;
+}
+button {
+    align-content:center;
+}

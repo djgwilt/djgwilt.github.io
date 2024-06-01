@@ -1,0 +1,42 @@
+body {
+    background-color:lightblue;
+    margin-left: 40%
+}
+h1 {
+    font-size: 40px
+}
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid darkcyan;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Wall{
+    background-color:#43e0ef !important;
+}
+
+.Car {
+    background-image:url("pijin edit.jpg");
+    background-size: 40px 40px;
+}
+.Token {
+    background-image:url("loaf.jpg");
+    background-size: 40px 40px;
+}
+
+
+.Finish {
+    background-image:url("flag.jpg");
+    background-size: 40px 40px;
+}
+
+
+.Empty {
+    background-image:none;
+}

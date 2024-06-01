@@ -1,0 +1,47 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:lightgreen;
+}
+
+.ecostraw {
+    background-image:url("output-onlinepngtools.png");
+    background-size: 42px 42px;
+    background-color:lightgreen;
+}
+
+.ecostrawflip {
+    background-image:url("output-onlinepngtools\ \(1\).png");
+    background-size: 42px 42px;
+    background-color:lightgreen;
+}
+
+.wall {
+    background-color: black !important;
+}
+
+.flag {
+    background-image:url("[removal.ai]_tmp-648b1ff98e451.png");
+    background-size: 40px 40px;
+    background-color:lightgreen;
+}
+
+.fakewall {
+    background-color: #333333 !important;
+}
+
+.coin {
+    background-image:url("tree.png");
+    background-size: 40px 40px;
+    background-color:lightgreen;
+}

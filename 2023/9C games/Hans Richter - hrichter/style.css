@@ -1,0 +1,43 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.rocket {
+    background-image:url("rocket.jpg");
+    background-size: 40px 40px;
+}
+.wall {
+    background-color: black !important;
+}
+.planet {
+    background-image:url("earth.jpg");
+    background-size: 40px 40px;
+}
+.rocket_flipped{
+    background-image: url("rocket_flipped.jpg");
+    background-size: 40px 40px;
+}
+.rocket_up{
+    background-image: url("rocket_up.jpg");
+    background-size: 40px 40px;
+}
+.rocket_down{
+    background-image:url("rocket_down.jpg");
+    background-size: 40px 40px;
+}
+.meteor{
+    background-image: url("meteor.jpg");
+    background-size: 40px 40px;
+}

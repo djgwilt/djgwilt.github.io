@@ -1,0 +1,42 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.wall {
+    background-color:black !important;
+                
+}
+
+.wallFake {
+    background-color:#303030 !important;
+                
+}
+
+.Car {
+    background-image:url("Donald duck.png");
+    background-size: 40px 40px;
+}
+.CarFlip {
+    background-image:url("Donald duck L.png");
+    background-size: 40px 40px;
+}
+
+.flag {
+    background-image:url("flag.png");
+    background-size: 40px 40px;
+}
+.Empty {
+    background-image:none;
+}

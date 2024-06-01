@@ -1,0 +1,63 @@
+body {
+    background-color:rgb(65, 65, 65);
+}
+
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(0, 3, 157);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(0, 0, 0);
+}
+
+.car {
+    background-image:url("pacman.png");
+    background-size: 40px 40px;
+}
+
+.carFlip {
+    background-image:url("pacman.jpg");
+    background-size: 40px 40px;
+}
+
+.carDown {
+    background-image:url("pacmandown.jpg");
+    background-size: 40px 40px;
+}
+
+.carUp {
+    background-image:url("pacmanup.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color:rgb(0, 30, 140) !important;
+}
+
+.wallFake {
+    background-color:rgb(156, 165, 182) !important;
+}
+
+.flag {
+    background-image:url("ghostred.png");
+    background-size: 40px 40px;
+}
+
+.coin {
+    background-image:url("pacmancoin.png");
+    background-size: 40px 40px;
+}
+
+.gost {
+    background-image:url("gost.png");
+    background-size: 40px 40px;
+}
+
+audio {
+    visibility: hidden;
+}

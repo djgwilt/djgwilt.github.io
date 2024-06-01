@@ -1,0 +1,43 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+.coin {
+    background-image:url("coin.jpg");
+    background-size: 40px 40px;
+}
+.car {
+    background-image:url("car.jpg");
+    background-size: 40px 40px;
+}
+.carFlip {
+    background-image:url("carFlipped.jpg");
+    background-size: 40px 40px;
+}
+.wall{
+    background-color: #000000 !important;
+    
+}
+.fakeWall {
+    background-color:#333333 !important;
+
+}
+.flag {
+    background-image:url("race.jpg");
+    background-size: 40px 40px;
+}
+audio {
+    visibility: hidden;
+
+}

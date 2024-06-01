@@ -1,0 +1,32 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color: rgb(68, 232, 211);
+}
+
+.Panda {
+    background-image:url("panda.png");
+    background-size: 40px 40px;
+    background-repeat:no-repeat;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.Wall {
+    
+    background-color: black !important;
+}
+
+

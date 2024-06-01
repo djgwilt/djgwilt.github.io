@@ -1,0 +1,44 @@
+body {
+    background-image:url("Octopod.webp");
+    background-size: 725px 350px;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.car {
+    background-image:url("kwazii.jpg");
+    background-size: 40px 40px;
+}
+
+.carFlip {
+    background-image:url("kwaziiFlip.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color:darkgreen !important;
+}
+
+.flag {
+    background-image:url("flag.png");
+    background-size: 40px 40px;
+}
+
+.wallFake {
+    background-color:green !important;
+}
+
+.coin {
+    background-image:url("fishbiscuits.jpg");
+    background-size: 40px 40px;
+}

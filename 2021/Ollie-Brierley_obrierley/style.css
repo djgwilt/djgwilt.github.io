@@ -1,0 +1,33 @@
+body {
+    background-color:white;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid blue;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:blue;
+}
+
+.SFX {
+    background-image:url("SFXWQd_L.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: blueviolet;
+}
+
+.o {
+    background-image:url("o.jpg");
+    background-size: 40px 40px;
+}
+.kid {
+    background-image:url("kid.jpg");
+    background-size: 40px 40px;
+}    

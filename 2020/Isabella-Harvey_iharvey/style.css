@@ -1,0 +1,59 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.donald {
+    background-image:url("danaltwithnowig.png");
+    background-size: 50px 50px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+}
+
+.hair1 {
+    background-image:url(wig1.jpg);!important
+    background-size:50px 50px;    
+}
+.hair2 {
+    background-image:url(wig2.jpg);!important
+    background-size:50px 50px; 
+}
+.hair3 {
+    background-image:url(wig3.jpg);!important
+    background-size:50px 50px;    
+}
+.hair4 {
+    background-image:url(wig4.jpg);!important
+    background-size:50px 50px;    
+}
+.hair5 {
+    background-image:url(wig5.jpg);!important
+    background-size:50px 50px;    
+}
+.hair6 {
+    background-image:url(wig6.jpg);!important
+    background-size:50px 50px;    
+}
+.hair7 {
+    background-image:url(wig7.jpg);!important
+    background-size:500px 500px;    
+}
+.DONALDSHAIR {
+    background-image:url(DONALDSWIG.jpg);!important
+    background-size:50px 50px;    
+}

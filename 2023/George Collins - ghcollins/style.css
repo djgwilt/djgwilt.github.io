@@ -1,0 +1,70 @@
+body {
+    background-color:black;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.car {
+    background-image:url("bowser\ gif.gif");
+    background-size: 40px 40px;
+}
+
+.carFlip { 
+    background-image:url("bowser\ gif.gif");
+    background-size: 40px 40px;
+    transform: scaleX(-1);
+}
+
+.wallFake {
+    background-color: grey !important;
+}
+
+
+.wall {
+    background-color: black !important;
+}
+
+.flag {
+    background-image:url("finish\ flag\ gif.gif");
+    background-size: 40px 40px;
+}
+
+
+.walldoubleFake {
+    background-color: white !important;
+}
+
+
+.wallFakeFake {
+    background-color: black !important;
+}
+
+
+.coin {
+    background-image:url("Mario\ coin.webp");
+    background-size: 40px 40px;
+}
+
+#Message {
+    color: white;
+}
+
+.mario {
+    background-image: url("Mario.webp");
+    background-size: 40px 40px;
+}
+
+.luigi {
+    background-image: url(luigi.jpg);
+    background-size: 40px 40px;
+}

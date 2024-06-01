@@ -1,0 +1,53 @@
+body {
+    background-color:teal;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:lightgrey;
+}
+
+.StarLord {
+    background-image:url("StarLord.gif");
+    background-size: 40px 40px;
+}
+
+.wall {
+ background-color: black !important;
+}
+
+.flag {
+ background-image:url(finishflag.jpg);
+ background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.purplegem {
+ background-image:url(purplegem.png);
+ background-size: 50px 50px;
+}
+
+.bluegem {
+ background-image:url(bluegem.png);
+ background-size: 50px 40px;
+}
+
+.yellowgem {
+ background-image:url(yellowgem.png);
+ background-size: 50px 50px;
+}
+
+.redgem {
+ background-image:url(redgem.png);
+ background-size: 50px 50px;
+}

@@ -1,0 +1,53 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.car {
+    background-image:url("Knight.jpg");
+    background-size: 42px 42px;
+}
+.wall {
+    background-color: black !important;
+}
+.finish {
+    background-image: url("Castle.jpg");
+    background-size: 52px 42px;
+}
+
+.carFlip{
+    background-image: url("KnightFlip.jpg");
+    background-size: 42px 42px;
+}
+
+.knightSword{
+    background-image: url("KnightSword.jpg");
+    background-size: 42px 42px;
+}
+
+.knightSwordFlip{
+    background-image: url("KnightSwordFlip.jpg");
+    background-size: 42px 42px;
+}
+
+.sword{
+    background-image: url("Sword.jpg");
+    background-size: 45px 45px;
+}
+
+.wallFake{
+    background-image: url("Skeleton.png");
+}
+```
+```

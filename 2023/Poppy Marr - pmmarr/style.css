@@ -1,0 +1,60 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.car {
+    background-image:url("hand.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: black !important;
+}
+
+.snap{
+    background-image:url("snap.jpg");
+    background-size: 40px 40px;
+}
+
+.red{
+    background-image:url("red.jpg");
+    background-size: 40px 40px;
+}
+
+.orange{
+    background-image:url("orange.jpg");
+    background-size: 40px 40px;
+}
+
+.yellow{
+    background-image:url("yellow.jpg");
+    background-size: 40px 40px;
+}
+
+.green{
+    background-image:url("green.jpg");
+    background-size: 40px 40px;
+}
+
+.blue{
+    background-image:url("blue.jpg");
+    background-size: 40px 40px;
+}
+
+.purple{
+    background-image:url("purple.jpg");
+    background-size: 40px 40px;
+}
+

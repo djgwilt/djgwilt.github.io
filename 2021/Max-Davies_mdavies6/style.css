@@ -1,0 +1,46 @@
+body {
+    background-color:green;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid green;
+}
+
+#RacingTrack td {
+    width:80px;
+    height:80px;
+    border:1px solid;
+    background-color: darkgray;
+}
+
+.Ghost {
+    background-image:url("Green.png");
+    background-size: 40px 40px;
+   
+}
+
+.GhostFlip {
+    background-image:url("GreenFlipped.PNG");
+    background-size: 40px 40px;
+
+}
+
+.wall  { 
+    background-color: black !important;
+}
+
+.coin {
+    background-image:url("coin.png");
+    background-size: 100px 100px;
+    
+}
+
+.Empty {
+    background-image:none;
+}
+.flag {
+    background-image:url("flag.png");
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+}

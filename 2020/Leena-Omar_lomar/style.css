@@ -1,0 +1,42 @@
+body {
+    background-color:aqua;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid blue;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("bunny.png");
+    background-size: 40px 40px;
+}
+
+.CarFlip {
+    background-image:url("bunny r.png");
+    background-size: 40px 40px;
+}
+
+.wall {
+ background-color: blue !important;
+}
+
+.wallFake {
+ background-color: #0099ff !important;
+}
+
+
+.Empty {
+    background-image:none;
+}
+.flag {
+    background-image:url("flag.png");
+    background-size: 40px 40px;
+}

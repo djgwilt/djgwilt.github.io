@@ -1,0 +1,92 @@
+body {
+    background-image:url("Sans bug.jpg");
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:gray;
+}
+
+.Knight {
+    background-image:url("TheKnight.gif");
+    background-size: 40px 40px;
+}
+
+.KnightUnoReverse {
+    background-image:url("TheKnight1.gif");
+    background-size: 40px 40px;
+}
+
+.aspid {
+    background-image:url("PrimalAspid.gif");
+    background-size: 40px 40px;
+}
+
+.husk{
+    background-image:url("Husk.gif");
+    background-size: 42px 42px;
+}
+
+.flag {
+    background-image:url("pale ore.png");
+    background-size: 40px 40px;    
+}
+
+.wall {
+    background-color: black !important;
+}
+
+.uwall {
+    background-image:url("Upper Wall.png");
+    background-size: 112px 112px;
+    background-position: center;
+}
+
+.lwall {
+    background-image:url("Lower Wall.png");
+    background-size: 112px 112px; 
+    background-position: center;
+}
+
+.uswall {
+    background-image:url("Upper Spike Wall.png");
+    background-size: 120px 120px; 
+    background-position: center;
+}
+
+.lswall {
+    background-image:url("Lower Spike Wall.png");
+    background-size: 120px 120px; 
+    background-position: center;
+}
+
+.uspike {
+    background-image:url("Upper Spike.png");
+    background-size: 112px 112px; 
+    background-position: center;
+}
+
+.lspike {
+    background-image:url("Lower Spike.png");
+    background-size: 112px 112px; 
+    background-position: center;
+}
+
+.Message {
+    color: white;
+}
+
+.Load {
+    color: white;
+}
+
+.Empty {
+    background-image:none;
+}

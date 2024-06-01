@@ -1,0 +1,39 @@
+body {
+    background: url("Frostbite.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+    /* background: transparent; this will allow you to see the image behind the track, if you remove the background-color */
+}
+
+.Car {
+    background-image:url("Walrus Zombie.png");
+    background-size: 40px 40px;
+}
+
+.plant1 {
+    background-image:url("Pepper-pult.png")  !important;
+    background-size: 40px 40px;
+}
+
+.plant2 {
+    background-image:url("bunchofplants.jpg") !important;
+    background-size: 40px 40px
+}
+.brainzombie {
+    background-image:url("brainzombie.jpg");
+    background-size: 40px 40px
+}

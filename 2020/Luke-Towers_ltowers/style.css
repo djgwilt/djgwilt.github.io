@@ -1,0 +1,36 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("ronaldoflip.png");
+    background-size: 40px 40px;
+}
+.carFlip {
+    background-image:url("ronaldo1.png");
+    background-size: 40px 40px;
+}
+.Empty {
+    background-image:none;
+}
+.wall{
+    background-image:url("ramosrl.png") !important;
+    background-size: 40px 40px;
+}
+.goal {
+    background-image:url("goal.jpg");
+
+    background-size: 40px 40px;
+}

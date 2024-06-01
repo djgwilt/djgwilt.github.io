@@ -1,0 +1,58 @@
+body {
+    background-color:rgb(241, 168, 8);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("BIG\ MAN.jpg");
+    background-size: 40px 40px;
+}
+
+.Wall1 {
+    background-image:url("Wall1.jpg");
+    background-size: 42px 42px; 
+}
+
+.Wall2 {
+    background-image:url("Wall2.png");
+    background-size: 42px 47px; 
+}
+
+.Wall3 {
+    background-image:url("Wall3.png");
+    background-size: 37px 42px; 
+}
+
+.Wall4 {
+    background-image:url("Wall4.jpg");
+    background-size: 42px 43px; 
+}
+
+.Wall5 {
+    background-image:url("Wall5.png");
+    background-size: 40px 40px; 
+}
+
+.IceCream {
+    background-image:url("ICE\ CREAM.jpg");
+    background-size: 40px 45px
+
+
+}
+
+.Cookie {
+    background-image: url("Cookie.png");
+    background-size: 40px 39px
+    
+}

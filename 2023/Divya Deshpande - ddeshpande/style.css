@@ -1,0 +1,35 @@
+body {
+    background-color:rgb(25, 90, 181);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(0, 0, 0);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.car {
+    background-image:url("girrafe.png");
+    background-size: 40px 40px;
+}
+.wall {
+    background-color: rgb(0, 0, 0) !important;
+}
+.flag {
+    background-image:url(finishflag.png);
+    background-size: 40px 40px;
+    background-repeat:no-repeat;
+}
+.wallFake {
+    background-color: #050505 !important;
+}
+.leaf {
+    background-image:url(leaf.png);
+    background-size: 40px;
+}

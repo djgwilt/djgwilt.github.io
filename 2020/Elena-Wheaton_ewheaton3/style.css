@@ -1,0 +1,33 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.wall {
+    background-color:black !important;
+}
+
+.Car {
+    background-image:url("Patrick.png");
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.Krabby_Patties {
+    background-image:url("Krabby_Patties.png");
+    background-size: 40px 40px;
+}

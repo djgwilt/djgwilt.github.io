@@ -1,0 +1,128 @@
+body {
+    background-color: blue;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:60px;
+    height:60px;
+    
+    background-color :sandybrown;
+}
+
+.Car {
+    background-image:url("Chara.gif");
+    background-size: 60px 60px;
+}
+.Coin {
+    background-image:url("Coin.gif");
+    background-size: 60px 60px;
+   
+}
+
+.Wall {
+    background-image: url(wall.png);
+    background-size: 60px 60px;
+}
+.Wall2 {
+    background-color: green !important;
+    ;
+}
+.flag{
+    background-image: url("Coin.gif");
+    background-size: 60px 60px;
+}
+
+.Enem {
+    background-image:url("Enem.gif");
+    background-size: 60px 60px;
+    
+}
+.cloud {
+    background-image: url("cloud.png");
+    background-size: 80px 80px;
+    
+}
+
+#but {
+    background-size: 40px 40px;
+    background-color: blue;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif; 
+    font-size : 20px;
+}
+
+#Score {
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+}   
+#Four {
+    font-family:Arial, Helvetica, sans-serif;  
+    color: white;
+    
+    
+}
+a:hover {
+    background-color:#2B65EC;
+}
+#Five {
+    font-family:Arial, Helvetica, sans-serif;  
+    color: white;
+    
+    
+}
+#box{
+    background-color: darkblue;
+    width: 635px;
+    height: 20px;
+    position:relative;
+    top:0px;
+}
+#Message {
+    font-family:Arial, Helvetica, sans-serif;  
+    color: white;
+}
+
+#crasho {
+    visibility: hidden;
+}
+#Final {
+    font-family:Arial, Helvetica, sans-serif;  
+    color: white;
+}
+
+#easy {
+    background-color: green;
+    background-size: 40px 40px;
+    color: white;
+    font-size: 20px;
+}
+#medium {
+    background-color: #fc0;
+    background-size: 40px 40px;
+    color: white;
+    font-size: 20px;
+}
+#hard {
+    background-color:red;
+    background-size: 40px 40px;
+    color: white;
+    font-size: 20px;
+}
+#start {
+    background-color: blue;
+    background-size: 40px 40px;
+    color: white;
+    font-size: 20px; 
+}
+#speed{
+    color:blue;
+}
+#level {
+    color:white;
+}
+

@@ -1,0 +1,71 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car_right {
+    background-image:url("xright.gif") !important;
+    background-size: 44px 30px;
+}
+.Car_left{
+    background-image:url("xleft.gif") !important;
+    background-size: 44px 30px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.wall {
+    background-image:url("xwall.jpg") !important;
+    background-size: 40px 30px;
+
+}
+
+.fake {
+    background-image:url("xwall.jpg") !important;
+    background-size: 40px 30px;
+
+}
+
+.flag {
+	background-image:url("xDonkey.png");
+	background-size: 41px 42px;
+}
+
+.invis {
+    background-color: white !important;
+    background-size: 40px 30px;
+
+}
+
+.xv {
+    background-image:url("xV.png") !important;
+    background-size: 40px 40px;
+}
+
+.xi {
+    background-image:url("xI.png") !important;
+    background-size: 40px 40px;
+}
+
+.xb {
+    background-image:url("xB.png") !important;
+    background-size: 40px 40px;
+}
+
+.xe {
+    background-image:url("xE.png") !important;
+    background-size: 40px 40px;
+}

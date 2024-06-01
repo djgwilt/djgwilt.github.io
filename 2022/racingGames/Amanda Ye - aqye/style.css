@@ -1,0 +1,33 @@
+body {
+    background-color:rgb(2, 250, 18);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(108, 19, 120);
+}
+
+.Car {
+    background-image:url("Picture1.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: rgb(95, 29, 110) !important
+}
+
+.flag {
+    background-image:url(apple.png);
+    background-size: 40px 40px;
+}
+
+.fakewall {
+    background-color: rgb(95, 29, 110) !important
+}

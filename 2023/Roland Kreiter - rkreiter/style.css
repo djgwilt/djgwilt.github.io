@@ -1,0 +1,42 @@
+body {
+    background-color:rgb(86, 65, 83);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:10px solid black;
+}
+
+#RacingTrack td {
+    width:60px;
+    height:60px;
+    background-color:white;
+}
+
+.duck {
+    background-image:url("duck.gif");
+    background-size: 60px 60px;
+}
+
+.duckflip {
+    background-image:url("duck_flipped.gif");
+    background-size: 60px 60px;
+}
+
+.wall {
+    background-color: black !important;
+}
+
+.wallFake {
+    background-color: rgb(33,33,33) !important;
+}
+
+.bread {
+    background-image:url("bread.gif");
+    background-size: 60px 60px;
+}
+
+.deadend {
+    background-image:url(deadend.png);
+    background-size: 60px 60px;
+}

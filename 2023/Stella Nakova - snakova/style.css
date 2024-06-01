@@ -1,0 +1,35 @@
+body {
+    background-color:#C1E3ED;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid #9daf41;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid #acaf41;
+    background-color:#D0D44E;
+}
+
+.car {
+    background-image:url("beeee.png");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-image:url("bushh.png");
+    background-size: 40px 40px;
+}
+
+.flag {
+    background-image:url("beehive.png");
+    background-size: 40px 40px;
+}
+
+.coin {
+    background-image:url("daisyy.png");
+    background-size: 40px 40px;
+}

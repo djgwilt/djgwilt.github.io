@@ -1,0 +1,33 @@
+body {
+    background-color:rgb(14, 248, 190);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(10, 218, 58);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:#dfeefc;
+}
+
+.car {
+    background-image:url("Ferrari.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color:rgb(9, 249, 61)!important;
+}
+
+.Trophy {
+    background-image:url("Trophy.jpg");
+    background-size: 40px 40px;
+}
+.Coin {
+    background-image:url("COIIIIN.png");
+    background-size: 40px 40px;
+}

@@ -1,0 +1,50 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:0px solid;
+    background-color: rgb(199, 244, 209);
+}
+
+audio{
+    visibility: hidden;
+}
+.car {
+    background-image:url("A korok.png");
+    background-size: 40px 40px;
+}
+.carflipethed{
+    background-image: url("A korok flipped.jpg");
+    background-size: 40px 40px;
+}
+.carcopy {
+    background-image:url("car copy.jpg");
+    background-size: 40px 40px;
+}
+.carflipethedcopy{
+    background-image: url("carflipeth copy.jpg");
+    background-size: 40px 40px;
+}
+.korokseed{
+    background-image:url("korok seed.webp") ;
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: rgb(3, 101, 13) !important;    
+}
+.wallfake {
+    background-color: #088e0f !important;
+}
+.flag {
+    background-image:url("flag.png");
+    background-size: 40px 40px;
+}

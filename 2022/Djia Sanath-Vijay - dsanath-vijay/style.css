@@ -1,0 +1,86 @@
+body {
+    background-image:url("Binarybackground.jpeg")
+}
+p1 {
+    background-color:white;
+    text-align: left;
+}
+
+p2 {
+    background-color:white;
+    text-align: left;
+}
+p3 {
+    background-color:white;
+    text-align: center;
+}
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#RacingTrack td {
+    width:60px;
+    height:60px;
+    border:1px solid;
+    background-color:white;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.Car {
+    background-image:url("Staff\ Mr\ I\ Attenborough.jpeg");
+    background-size: 60px 60px;
+}
+
+.Car2 {
+    background-image:url("Dr\ Gyorgy\ Denes.jpeg");
+    background-size: 60px 60px;
+}
+
+.wall {
+    background-image:url("Server.jpeg");
+    background-size: 60px 60px;
+}
+
+.computer {
+    background-image:url("Computer.jpeg");
+    background-size: 60px 60px;
+}
+
+.phone {
+    background-image:url("Phone.webp");
+    background-size: 60px 60px;
+}
+
+.Noice {
+    border-collapse:collapse;
+    border:5px solid white;
+    background-color: white;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.Noice td{
+    width:30;
+    height:10px;
+    border:1px solid;
+    background-color:white;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.Coin {
+    background-image:url("microchip.jpeg");
+    background-size: 60px 60px;
+}
+
+p4 {
+    background-color: white;
+}
+
+p5 {
+    background-color: white;
+}

@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+        <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script defer src="code.js"></script>
+    <title>Racing Game - Level 9</title>    
+  </head>
+    <body>
+        <p>Level 9</p>
+        <table id="RacingTrack">
+        <!-- The table cells have an id with the row and column number -->
+        <tr>
+            <td id="R0C0" class="Closed_portal"></td>
+            <td id="R0C1" class="Closed_door"></td>
+            <td id="R0C2" class="Key_2"></td>
+            <td id="R0C3" class="Closed_door_3"></td>
+            <td id="R0C4" class="Empty"></td>
+            <td id="R0C5" class="Empty"></td>
+            <td id="R0C6" class="Wall"></td>
+            <td id="R0C7" class="Empty"></td>
+            <td id="R0C8" class="Cross"></td>
+            <td id="R0C9" class="Key_3"></td>
+        </tr>
+        <!-- Add another table row here -->
+        <tr>
+            <td id="R1C0" class="Wall"></td>
+            <td id="R1C1" class="Car_cross"></td>
+            <td id="R1C2" class="Wall"></td>
+            <td id="R1C3" class="Empty"></td>
+            <td id="R1C4" class="Wall"></td>
+            <td id="R1C5" class="Empty"></td>
+            <td id="R1C6" class="Empty"></td>
+            <td id="R1C7" class="Empty"></td>
+            <td id="R1C8" class="Wall"></td>
+            <td id="R1C9" class="Cross"></td>
+        </tr>
+        
+        <tr>
+            <td id="R2C0" class="Cross"></td>
+            <td id="R2C1" class="Cross"></td>
+            <td id="R2C2" class="Wall"></td>
+            <td id="R2C3" class="Empty"></td>
+            <td id="R2C4" class="Empty"></td>
+            <td id="R2C5" class="Wall"></td>
+            <td id="R2C6" class="Empty"></td>
+            <td id="R2C7" class="Empty"></td>
+            <td id="R2C8" class="Empty"></td>
+            <td id="R2C9" class="Empty"></td>
+        </tr>
+        
+        <tr>
+            <td id="R3C0" class="Tunnel_1"></td>
+            <td id="R3C1" class="Wall"></td>
+            <td id="R3C2" class="Empty"></td>
+            <td id="R3C3" class="Wall"></td>
+            <td id="R3C4" class="Empty"></td>
+            <td id="R3C5" class="Empty"></td>
+            <td id="R3C6" class="Empty"></td>
+            <td id="R3C7" class="Wall"></td>
+            <td id="R3C8" class="Empty"></td>
+            <td id="R3C9" class="Empty"></td>
+        </tr>
+        
+        <tr>
+            <td id="R4C0" class="Key_3"></td>
+            <td id="R4C1" class="Wall"></td>
+            <td id="R4C2" class="Empty"></td>
+            <td id="R4C3" class="Empty"></td>
+            <td id="R4C4" class="Empty"></td>
+            <td id="R4C5" class="Empty"></td>
+            <td id="R4C6" class="Wall"></td>
+            <td id="R4C7" class="Wall"></td>
+            <td id="R4C8" class="Wall"></td>
+            <td id="R4C9" class="Empty"></td>
+        </tr>
+       
+        <tr>
+            <td id="R5C0" class="Wall"></td>
+            <td id="R5C1" class="Empty"></td>
+            <td id="R5C2" class="Empty"></td>
+            <td id="R5C3" class="Empty"></td>
+            <td id="R5C4" class="Wall"></td>
+            <td id="R5C5" class="Empty"></td>
+            <td id="R5C6" class="Empty"></td>
+            <td id="R5C7" class="Empty"></td>
+            <td id="R5C8" class="Wall"></td>
+            <td id="R5C9" class="Empty"></td>
+        </tr>
+        
+        <tr>
+            <td id="R6C0" class="Empty"></td>
+            <td id="R6C1" class="Wall"></td>
+            <td id="R6C2" class="Wall"></td>
+            <td id="R6C3" class="Empty"></td>
+            <td id="R6C4" class="Empty"></td>
+            <td id="R6C5" class="Empty"></td>
+            <td id="R6C6" class="Wall"></td>
+            <td id="R6C7" class="Empty"></td>
+            <td id="R6C8" class="Closed_door_3"></td>
+            <td id="R6C9" class="Tunnel_2"></td>
+        </tr>
+        
+        <tr>
+            <td id="R7C0" class="Empty"></td>
+            <td id="R7C1" class="Empty"></td>
+            <td id="R7C2" class="Empty"></td>
+            <td id="R7C3" class="Wall"></td>
+            <td id="R7C4" class="Wall"></td>
+            <td id="R7C5" class="Wall"></td>
+            <td id="R7C6" class="Empty"></td>
+            <td id="R7C7" class="Wall"></td>
+            <td id="R7C8" class="Empty"></td>
+            <td id="R7C9" class="Empty"></td>
+        </tr>
+        
+        <tr>
+            <td id="R8C0" class="Empty"></td>
+            <td id="R8C1" class="Wall"></td>
+            <td id="R8C2" class="Closed_door_3"></td>
+            <td id="R8C3" class="Empty"></td>
+            <td id="R8C4" class="Empty"></td>
+            <td id="R8C5" class="Empty"></td>
+            <td id="R8C6" class="Wall"></td>
+            <td id="R8C7" class="Empty"></td>
+            <td id="R8C8" class="Empty"></td>
+            <td id="R8C9" class="Closed_door_2"></td>
+        </tr>
+        
+        <tr>
+            <td id="R9C0" class="Coin"></td>
+            <td id="R9C1" class="Wall"></td>
+            <td id="R9C2" class="Key_3"></td>
+            <td id="R9C3" class="Empty"></td>
+            <td id="R9C4" class="Wall"></td>
+            <td id="R9C5" class="Empty"></td>
+            <td id="R9C6" class="Empty"></td>
+            <td id="R9C7" class="Empty"></td>
+            <td id="R9C8" class="Wall"></td>
+            <td id="R9C9" class="Key"></td>
+        </tr>
+    </table>
+    <audio controls class="hidden" id="Crash" width="320" height="176"><source src="Beep.mp3" type="audio/mpeg"></audio>
+    <audio controls class="hidden" id="Win" width="320" height="176"><source src="applause.mp3" type="audio/mpeg"></audio>
+        <button id="next_level" class="hidden">
+        <a href="Level_10.html" class="button"> Move on to next level</a>
+      </button>
+        <button id="past_level">
+        <a href="Level_8.html" class="button">Go back to last level</a>
+      </button><br>
+      <button><a href="index.html" class="button">Return to menu</a></button>
+    <p id="Message"><br></p>
+        <p class="fixed2"><a>Number of keys = </a><a id="keys">0</a></p>
+        <p class="fixed3">Ready!!!</p>
+      <p id="speed">Enter desired delay (200 = fast; 500 = slow)</p>
+      <input type="text" id="delay" value="">
+      <button id="btn"><a class="button">Enter</a></button>
+    <div>
+    Console Output:
+    <textarea id='output' style='width: 100%;' rows='20' disabled></textarea>
+    </div>
+    </body>
+</html>

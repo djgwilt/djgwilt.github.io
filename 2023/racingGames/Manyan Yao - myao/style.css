@@ -1,0 +1,48 @@
+body {
+    background-color:pink;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.car {
+    background-image:url("Images/duckwithknife.jpg");
+    background-size: 40px 40px;
+}
+
+.carflip {
+    background-image:url("Images/duckwithknifeflip.jpg");
+    background-size: 40px 40px; 
+}
+
+.wall {
+    background-image:url("Images/wall.jpg");
+    background-size: 40px 40px; 
+}
+
+.wallfake {
+    background-image:url("Images/bush.jpg");
+    background-size: 40px 40px;
+}
+
+.flag {
+    background-image: url("Images/Checkflag.png");
+    background-size: 40px 40px;
+}
+
+.coin {
+    background-image: url("Images/coin.png");
+    background-size: 40px 40px;
+}
+audio{
+    visibility: hidden;
+}

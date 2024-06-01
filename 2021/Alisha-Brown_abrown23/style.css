@@ -1,0 +1,33 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid grey;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:lightgray;
+}
+
+.Car {
+    background-image:url("TEA.jpeg");
+    background-size: 42px 42px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.wall {
+    background-image:url("Door.jpg") !important;
+    background-size: 42px 42px;
+}
+
+.spawner {
+    background-color:darkred !important;
+}

@@ -1,0 +1,24 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:3px solid black;
+}
+
+#RacingTrack td {
+    width:30px;
+    height:30px;
+    border:0.5px solid;
+    background-color:white;
+}
+
+.car {
+    background-image:url("Thomas.png");
+    background-size: 30px 30px;
+}
+
+audio {
+    visibility: hidden;
+}

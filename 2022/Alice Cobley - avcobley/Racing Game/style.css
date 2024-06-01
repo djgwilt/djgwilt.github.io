@@ -1,0 +1,41 @@
+body {
+    background-image:url("backdrop2.jpg");
+    background-size: 70px 70px;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+.Car {
+    background-image:url("CAt right.gif");
+    background-size: 42px 40px;
+}
+
+.CarFlip {
+    background-image:url("cat.gif");
+    background-size: 40px 40px;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:#143163;
+}
+
+
+
+.wall {
+    background-color: #FFFFFF !important;
+}
+
+.wallFake {
+    background-color: #FFFFFF !important;
+}
+
+.flag {
+    background-image:url("background.gif");
+    background-size:40px 40px;
+}

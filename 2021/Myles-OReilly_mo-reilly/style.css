@@ -1,0 +1,45 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("hasbulla.jpg");
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.wall {
+    background-color: blue !important;
+}
+
+.flag {
+    background-image:url("flag.jpg");
+    background-size: 40px 40px;
+}
+.quid {
+    background-image:url("quid.jpg");
+    background-size: 40px 40px;
+}
+.halfquid {
+    background-image:url("50p.jpg");
+    background-size: 40px 40px;
+}
+.twoquid {
+    background-image:url("twoquid.jpg");
+    background-size: 40px 40px;
+}

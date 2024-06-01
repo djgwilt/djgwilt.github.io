@@ -1,0 +1,31 @@
+body {
+    background-color:#de6ff7;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid #fdfaff;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:#efd2f1;
+}
+
+.car {
+    background-image:url("taylorswift.png");
+    background-size: 40px 40px;
+}
+
+
+.wall {
+    background-color:#52175f !important;
+    background-size: 40px 40px;
+}
+
+.flag{
+    background-image:url("grammy.jpg");
+    background-size: 40px 40px;
+}

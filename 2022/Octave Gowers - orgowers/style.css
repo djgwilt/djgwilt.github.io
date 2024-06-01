@@ -1,0 +1,51 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("Shrek.png");
+    background-size: 40px 40px;
+}
+.CarFlip {
+    background-image:url("Shrek 2.png");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-image:url("wall.png");
+    background-size: 40px 40px;
+}
+.flag {
+    background-image:url("Swamp.png");
+    background-size: 40px 40px;
+}
+.wallFake {
+    background-image:url("wall.png") !important;
+    background-size: 40px 40px;
+}
+.tree {
+    background-image:url("tree.png");
+    background-size: 40px 40px;
+}
+.wallCrashed {
+    background-image:url("brick.png");
+    background-size: 40px 40px;
+}
+.crashSound {
+    visibility: hidden;
+    }
+.winSound {
+    visibility: hidden;
+    }

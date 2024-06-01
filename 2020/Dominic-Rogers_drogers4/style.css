@@ -1,0 +1,121 @@
+body {
+    background-color:white;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+
+.Car {
+    background-image:url("car.jpg");
+    background-size: 40px 40px;
+}
+
+.Coin {
+    background-image:url("coin.jpg");
+    background-size:40px 40px;
+}
+
+.Wall {
+    background-color: black !important;
+}
+
+.Flag {
+    background-image: url("chequered.jpg");
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}
+#Button {
+    display:none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#Button_Flag {
+    display:none;
+    background-color: black;
+    color: white;
+}
+.Unlocked {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    width: 10%;
+    height: 40px;
+    border-radius: 4px;
+    float: center;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.Locked {
+    color: white;
+    background-color: black;
+    opacity: 50%;
+    width: 10%;
+    height: 40px;
+    border-radius: 4px;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+#Start_Button {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#Return_Button {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#Finir {
+    display: none;
+    border-radius: 4px;
+}
+#Level_1 {
+    display: none;
+}
+#Level_2 {
+    display: none;
+}
+#Level_3 {
+    display: none;
+}
+#add_to_level {
+    display: none;
+}
+#debug {
+    display: none;
+}
+#Return_Button {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.Faster {
+    background-image:url("");
+    height: 40px;
+    width: 40px;
+}
+#score-container {
+    height: 30px;
+    width: 90px;
+    background-color: powderblue;
+    align-content: center;
+    margin-left: 115px;
+}
+#score {
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+}

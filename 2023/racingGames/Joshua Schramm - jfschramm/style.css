@@ -1,0 +1,30 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+
+.bike {
+    background-image:url("bike.png");
+    background-size: 40px 40px;
+}
+.wall {
+    background-color: black !important;
+}
+
+.flag {
+	Background-image:url("Flag.jpg");
+	Background-size: 40px 40px;
+}
+

@@ -1,0 +1,57 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Jerry {
+    background-image:url("TOMright.jpg") ;
+    background-size: 40px 40px;
+}
+
+.JerryFlip {
+    background-image:url("TOMleft.jpg") ;
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: black !important ;
+}
+
+.wallSpike {
+    background-image:url("SpikeWall.png") !important ;
+    background-size: 40px 40px
+}
+
+.wallFake {
+    background-color: rgba(0, 0, 0, 0.64)    !important ;
+}
+
+.wallSpikeFake {
+    background-image:url("SpikeWall2.png") !important ;
+    background-size: 40px 40px
+}
+
+.Empty {
+    background-image:none;
+}
+
+.flag {
+    background-image:url("JerryFlag.png");
+    background-size: 40px 40px;
+}
+
+.collectable {
+    background-image:url("JerryCollect.png");
+    background-size: 40px 40px;
+}

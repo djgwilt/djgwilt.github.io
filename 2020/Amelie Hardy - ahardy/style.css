@@ -1,0 +1,49 @@
+body {
+    background-image: url("background.jfif");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(0, 0, 0);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(255, 255, 255);
+}
+
+p1 {
+    color:rgb(219, 140, 140);
+}
+
+p {
+    color: rgb(219, 140, 140)
+}
+
+.Car {
+    background-image:url("car.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: rgb(0, 0, 0) !important;
+}
+
+.flag {
+    background-image:url("https://media.istockphoto.com/vectors/vector-illustration-of-the-big-ben-vector-id537229160?k=6&m=537229160&s=612x612&w=0&h=8mmtmyHnK1BvYccB_O92ogDJNmXzOqu1FWfO6KH2720=");
+    background-size: 42px 42px;
+}
+
+.coin {
+    background-image:url("rose.jpg");
+    background-size: 42px 42px;
+}
+
+.explosion {
+    background-image: url("explosion.jfif");
+    background-size: 42px 42px;
+}

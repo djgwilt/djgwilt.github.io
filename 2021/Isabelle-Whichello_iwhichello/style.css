@@ -1,0 +1,31 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("tuktuk.png");
+    background-size: 45px 45px;
+}
+
+.flag {
+    background-image:url("short raya.png")!important;
+    background-size: 60px 50px;
+    
+}
+
+.wall {
+    background-image:url("rocks.png") !important;
+    background-size: 45px 45px;
+}

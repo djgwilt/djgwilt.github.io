@@ -1,0 +1,62 @@
+body {
+    background-color:#c3d9e3;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(1, 1, 82);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.sprite {
+    background-image:url("penguino.jpg");
+    background-size: 40px 40px;
+}
+
+.fish {
+    background-image:url("fish.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color:navy !important;
+}
+
+.icebergflag {
+    background-image:url("iceberg.jpg");
+    background-size: 40px 40px;
+}
+
+.spriteflip {
+    background-image:url("penguinoflip.jpg");
+    background-size: 40px 40px;
+}
+
+.wallFake {
+    background-color:#383880 !important;
+}
+
+audio {
+    visibility: hidden;
+}
+
+.door {
+    background-image:url("door.png");
+    background-size: 40px 40px;
+}
+
+.key {
+    background-image:url("key.png");
+    background-size: 40px 40px;
+}
+
+.rainbow {
+    background-image:url("rainbow.jpg");
+    background-size: 40px 40px;
+}

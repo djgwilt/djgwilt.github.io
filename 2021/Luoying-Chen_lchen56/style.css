@@ -1,0 +1,35 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Luffy {
+    background-image:url("luffy.png");
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.Wall {
+    
+    background-color: black !important;
+}
+
+.Shrine 
+{
+    background-image:url("malevolent shrine.jpg");
+    background-size: 40px 40px;
+}

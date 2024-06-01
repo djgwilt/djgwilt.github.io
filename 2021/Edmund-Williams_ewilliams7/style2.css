@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+:root {
+   --size: 100px; 
+}
+
+body {
+    
+    background-color:grey;
+    font-family: 'Staatliches', cursive;
+    font-size: 3em;
+}
+
+#RacingTrack {
+    
+    border-collapse:collapse;
+    /*border:5px solid black;*/
+}
+
+#RacingTrack td {
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    background-size: cover;
+    
+    width:var(--size);
+    height:var(--size);
+    
+    /*border:1px solid;*/
+    background-color:white;
+}
+
+.blob {
+    /*background-color: red !important;*/
+    background-image:url("blob.gif");
+    
+}
+
+.Empty {
+    /*background-image:none;*/
+}
+
+.Goal {
+    background-color: blue !important;
+}
+
+.screen_area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        
+}
+.Wall {
+    background-color: black !important;
+    background-image:url("red wall.png");
+}
+.slime {
+    background-color: black !important;
+    background-image:url("slimy wall.png");
+}
+

@@ -1,0 +1,38 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(5, 29, 247);
+}
+
+#RacingTrack td {
+    width:70px;
+    height:70px;
+    border:1px solid;
+    background-color:rgb(145, 25, 25);
+}
+
+.MONKEY {
+    background-image:url("MONKEY.jpg");
+    background-size: 70px 70px;
+}
+
+.wall {
+    background-color: rgb(0, 0, 0) !important;
+}
+
+.flag {
+    background-image:url("bonono.jfif");
+    background-size: 70px 70px;
+}
+
+.MONKEYFlip {
+    background-image:url("MONKEYFlipped.jpg");
+    background-size: 70px 70px;
+}
+
+.wallFake {
+    background-color:rgb(0, 0, 0) !important;
+}

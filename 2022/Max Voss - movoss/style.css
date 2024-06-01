@@ -1,0 +1,150 @@
+body {
+    background-color:lightblue;
+    text-align: center;
+    
+}
+
+p1 {
+    color: black;
+    text-decoration: underline overline;
+    text-shadow: 2px 2px 2px grey;
+    font-family: fantasy;
+    font-size: 35px;
+    
+
+}
+p2 {
+    color: green;
+    font-family: monospace;
+    font-size: 25px
+}
+
+p3 {
+    color: red;
+    font-family:sans-serif;
+    font-size:25px
+}
+
+p5 {
+    display:block;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+p6 {
+    font-family:Impact;
+    font-size: 60px;
+    color: green;
+    margin:auto;
+    
+}
+
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:10px solid black;
+    margin:auto;
+
+}
+
+#RacingTrack td {
+    width: 35px;
+    height: 35px;
+    border:0px solid;
+    background-color:grey;
+}
+
+.Car {
+    background-image:url("alienright.gif");
+    background-size: 35px 35px;
+}
+
+.Carflip {
+    background-image:url("alienright.gif");
+    background-size: 35px 35px;
+}
+
+.Wall {
+    background-color:black!important;
+}
+
+.Goal {
+    background-image:url("coin.gif") !important; 
+    background-size: 35px 35px;
+}
+
+.Enemy {
+    background-image:url("Goomba.png") !important;
+    background-size: 35px 35px;
+}
+
+
+
+.mariowin {
+    visibility: hidden;
+}
+
+.startnoise {
+    visibility: hidden;
+}
+
+.CarB {
+    background-image:url("bluealien.gif");
+    background-size: 35px 35px;
+}
+
+.CarflipB {
+    background-image:url("bluealien.gif");
+    background-size: 35px 35px;
+}
+
+.bluewin {
+    background-image:url("bluealienwin.png");
+    background-size: 35px 35px;
+
+}
+.greenwin {
+    background-image:url("greenalienwin.png");
+    background-size: 35px 35px;
+}
+
+.explode {
+    background-image:url("explosion4.png");
+    background-size: 37px 35px;
+}
+.coincollect {
+    visibility: hidden;
+}
+.death {
+    visibility: hidden;
+}
+.win {
+    visibility: hidden;
+}
+
+.hidden {
+    visibility: collapse;
+}
+
+button {
+    background-color: #4CAF50;
+    border: 3px solid black;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    font-family:impact;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    border-radius: 12px;
+    transition-duration: 0ms;
+    margin:auto;
+
+    
+
+}
+button:hover {
+    background-color: lightgreen;
+
+
+    
+}

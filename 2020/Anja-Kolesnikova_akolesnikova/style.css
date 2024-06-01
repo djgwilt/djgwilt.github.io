@@ -1,0 +1,45 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("barry the bee.png");
+    background-size: 40px 40px;
+}
+
+.carflip {
+    background-image:url("barry2.png");
+    background-size: 40px 40px;
+}
+
+.flower {
+    background-image:url("flower.png");
+    background-size: 40px 40px;
+}
+
+.fakeflower {
+    background-image:url("fake flower.png");
+    background-size: 40px 40px;
+}
+
+
+.flag {
+    background-image:url("finish flag.jpg");
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}

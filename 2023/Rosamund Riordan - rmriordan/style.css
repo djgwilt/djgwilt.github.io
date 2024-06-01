@@ -1,0 +1,39 @@
+body {
+    background-color:rgb(0, 5, 42);
+    
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:black;
+}
+
+
+.car {
+    background-image:url("pacman2.png");
+    background-size: 40px 40px;
+}
+
+.wall{
+    background-color:rgb(13, 29, 120)!important;
+}
+
+.flag {
+    background-image: url(flag.png);
+    background-size: 40px 40px;
+}
+.coin{
+    background-image: url("coin.png");
+    background-size: 40px 40px;
+}
+
+.bodytext {
+    color:white
+}

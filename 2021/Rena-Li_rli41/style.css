@@ -1,0 +1,42 @@
+chbody {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Rena {
+    background-image:url("character.png");
+    background-size: 40px 40px;
+}
+
+.Renaflip {
+    background-image:url("characterleft.png");
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.Wall {
+    background-color: black !important;
+}
+
+.Wallfake {
+    background-color: black !important;
+}
+
+.house {
+    background-image:url("house.png");
+    background-size: 40px 40px;
+}

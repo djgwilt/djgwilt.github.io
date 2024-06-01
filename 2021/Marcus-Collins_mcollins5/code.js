@@ -1,0 +1,91 @@
+const output = document.getElementById("output");
+
+$(document).ready(function() {
+  $.get('code.py', function(data) {
+    evaluatePython(data);
+  });
+});
+
+OUTPUT_PATCH = `
+import sys
+import io
+sys.stdout = io.StringIO()
+from js import addToOutput
+orig_print = print
+# redirect print via output textarea and console
+def new_print(*args, **kwargs):
+  stdout_len = len(sys.stdout.getvalue())
+  orig_print(*args, **kwargs)
+  stdout = sys.stdout.getvalue()
+  addToOutput(stdout[stdout_len:])
+  sys.stdout.flush()
+print = new_print
+`
+
+INPUT_PATCH = `
+from js import input_patch
+input = input_patch
+__builtins__.input = input_patch
+`
+
+function addToOutput(s) {
+  output.value += s;
+  console.log(s);
+}
+
+window.onerror = function(msg, url, lineNo, columnNo, error) {
+  try {
+    addToOutput("Error occurred: to view, run page in new tab & use ctrl-shift-j to view console");  
+    pyodide.runPython("window.clearInterval(intervalHandle)");  
+  } catch(err) {}
+};
+
+addToOutput('Initializing...\n');
+try {
+    document.getElementsByClassName("fixed1")[0].style.color = "#FF0000"
+    document.getElementsByClassName("fixed1")[0].innerHTML = "Ready!!!"
+}
+catch(err) {
+    document.getElementsByClassName("fixed3")[0].style.color = "#FF0000"
+    document.getElementsByClassName("fixed3")[0].innerHTML = "Ready!!!"
+}
+// init Pyodide
+
+async function main(){
+  await loadPyodide({ indexURL : 'https://cdn.jsdelivr.net/pyodide/v0.17.0/full/' });
+  try {
+  document.getElementsByClassName("fixed1")[0].style.color = "#FFBF00"
+  document.getElementsByClassName("fixed1")[0].innerHTML = "Steady!!!"
+}
+  catch(err) {
+  document.getElementsByClassName("fixed3")[0].style.color = "#FFBF00"
+  document.getElementsByClassName("fixed3")[0].innerHTML = "Steady!!!"
+  }
+  addToOutput('Ready!\n');
+}
+
+function input_patch(text) {
+    return prompt(text);
+};
+
+pyodideReadyPromise = main();
+
+async function evaluatePython(code) {
+  await pyodideReadyPromise;
+  await pyodide.runPythonAsync(OUTPUT_PATCH);
+  await pyodide.runPythonAsync(INPUT_PATCH);
+      
+  try {
+    await pyodide.runPythonAsync(code);
+  } catch(err) {
+    addToOutput(err);
+  }
+}
+
+
+
+
+
+
+
+

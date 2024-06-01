@@ -1,0 +1,52 @@
+body {
+    background-color:#0078FF;
+}
+p {
+    color: orange
+}
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:#CCCCFF;
+}
+.flag {
+    background-image:url("sid.jpg");
+    background-size: 40px 40px;
+}
+.wall {
+    background-image:url("iceberg.png");
+    background-size: 40px 40px;
+}
+.fakewall {
+    background-image:url("iceberg.png");
+    background-size: 40px 40px;
+}
+.Car {
+    background-image:url("scrat.png");
+    background-size: 40px 40px;
+}
+.CarFlipped {
+    background-image:url("scratflipped.png");
+    background-size: 40px 40px;
+}
+.acorn{
+    background-image:url("acorn.gif");
+    background-size: 40px 40px;
+}
+.rudy {
+    background-image:url("rudy.jpg");
+    background-size: 40px 40px;
+}
+.scratte{
+    background-image:url("scratte.png");
+    background-size: 40px 40px;
+}
+.Empty {
+    background-image:none;
+}

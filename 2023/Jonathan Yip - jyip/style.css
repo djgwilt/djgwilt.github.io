@@ -1,0 +1,23 @@
+body {
+    background-color:rgb(25, 128, 202);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px rgb(128, 9, 9);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:greenyellow;
+}
+
+.car {
+    background-image:url("OIP.jpg");
+    background-size: 40px 40px;
+}
+.wall{background-color: rgb(0, 0, 0) !important;}
+.flag {background-image: url(download.jpg);
+background-size: 40px 40px;}

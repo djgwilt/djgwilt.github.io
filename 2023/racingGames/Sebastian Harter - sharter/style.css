@@ -1,0 +1,20 @@
+body {
+    background-color:rgb(158, 228, 18);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(122, 77, 0);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(7, 83, 25);
+}
+
+.car {
+    background-image:url("Monkey-20230619-124701.piskel");
+    background-size: 40px 40px;
+}

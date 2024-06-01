@@ -1,0 +1,39 @@
+body {
+    background-color:rgb(229, 183, 183);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(31, 19, 19);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(252, 230, 230);
+}
+
+.car {
+    background-image:url("cat.gif");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-image:url("wall.png");
+    background-size: 40px 40px;
+}
+
+.flag {
+    background-image:url("Flower.gif");
+    background-size: 40px 40px
+}
+
+.empty {
+    background-color: rgb(123,30,43);
+    background-size: 40px 40px
+}
+
+audio {
+    visibility: hidden;
+}

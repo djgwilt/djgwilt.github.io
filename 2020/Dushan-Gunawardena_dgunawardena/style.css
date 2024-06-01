@@ -1,0 +1,35 @@
+debody {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.ball {
+    background-image:url("ball.png");
+    background-size: 40px 40px;
+}
+.ballFlip {
+    background-image:url("ball2.png");
+    background-size: 40px 40px;
+}
+.goal {
+    background-image:url("goal.jpg");
+    background-size: 40px 40px;
+}
+.defender{
+    background-image:url("defender.jpg");
+    background-size: 40px 40px;
+}
+.Empty {
+    background-image:none;
+}

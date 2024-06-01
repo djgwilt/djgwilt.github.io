@@ -1,0 +1,48 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("homer.jpg");
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.coin1 {
+    background-image:url("barny.jpg") !important;
+    background-size: 40px 40px;
+       
+}
+
+.wall {
+    background-image:url("WALL.jpg") !important;
+    background-size: 40px 40px;
+}
+
+.kwikEmart {
+    background-image:url("kwikEmart.jpg") !important;
+    background-size: 40px 40px;
+}
+
+.honorroller {
+     background-image:url("tha goat.jpg") !important;
+     background-size: 40px 40px;
+}
+
+
+

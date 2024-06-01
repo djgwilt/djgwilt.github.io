@@ -1,0 +1,38 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.car {
+    background-image:url("gru.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: #333333 !important;
+}
+.wallFake {
+    background-color: black !important;
+}
+.flag {
+    background-image:url("childflag.jpg");
+    background-size: 40px 40px;
+}
+.coins {
+    background-image:url("vbuck.jpg");
+    background-size: 40px 40px;
+}
+audio {
+    visibility: hidden;
+}

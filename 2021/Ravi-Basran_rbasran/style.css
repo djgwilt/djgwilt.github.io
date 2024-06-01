@@ -1,0 +1,43 @@
+body {
+    background-color:sandybrown;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Man {
+    background-image:url("New Piskel.gif");
+    background-size: 40px 40px;
+}
+
+.flag {
+    background-image:url("flags.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color:black !important;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.key {
+    background-image:url("Key.png");
+    background-size: 40px 40px; 
+}
+
+.Door {
+    background-image:url("Door.png");
+    background-size: 40px 40px;     
+}

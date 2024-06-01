@@ -1,0 +1,37 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid #08829b;
+    background-color:#08829b;
+}
+.Wall {
+    background-image:url("Tree.gif");
+    background-size: 40px 40px;
+}
+
+.Car {
+    background-image:url("car.gif");
+    background-size: 40px 40px;
+}
+.Car2 {
+    background-image:url("car2.gif");
+    background-size: 40px 40px;
+}
+
+.Flag {
+	background-image:url("Flag.gif");
+	background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}

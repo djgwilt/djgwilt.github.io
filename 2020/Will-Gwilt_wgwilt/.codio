@@ -1,0 +1,43 @@
+{
+// Configure your Run and Preview buttons here.
+
+// Run button configuration
+  "commands": {
+        "Node version": "node --version"
+  },
+
+// Preview button configuration
+  "preview": {
+        "Project Index (static)": "https://{{domain}}/{{index}}",
+        "Current File (static)": "https://{{domain}}/{{filepath}}",
+        "Box URL": "http://{{domain}}/",
+        "Box URL SSL": "https://{{domain}}/"
+  }
+}
+
+//    if (xDir != 0) {
+//        // Set the cell where the car was to empty
+//		document.getElementById("r" + row = " c" + column).className = "Empty"
+//        // Update the column position for the car
+//		column += xDir
+//        // Re-draw the car (or report a crash)
+//		if (!document.getElementById("r" + row = " c" + column)) {
+//			handleCrash()
+//		} else {
+//			document.getElementById("r" + row = " c" + column).className = "Car"
+//		}
+//	}
+//    if (yDir != 0) {
+//        // Set the cell where the car was to empty
+//		document.getElementById("r" + row = " c" + column).className = "Empty"
+//        // Update the column position for the car
+//		column += yDir
+//        // Re-draw the car (or report a crash)
+//		if (!document.getElementById("r" + row = " c" + column)) {
+//			handleCrash()
+//		} else {
+//			document.getElementById("r" + row = " c" + column).className = "Car"
+//		}
+//	}
+//}
+

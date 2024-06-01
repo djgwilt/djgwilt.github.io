@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="code.js"></script>
+    <title>Racing Game</title>
+</head>
+
+<body onLoad="runGame()">
+    
+    <p>Use right/left/down/up arrow keys to move. Win by reaching the flag without hitting any walls. 
+    Most of the walls are real, whilst some are fake. By playing this game multiple times, you will build a memory
+    of which walls are fake and which are real. This is a memory game. Good luck!</p>
+    
+    <table id="RacingTrack">
+        <!-- The table cells have an id with the row and column number -->
+        <tr>
+            <td id="r0 c0"class="Car"></td>
+            <td id="r0 c1"class="fakewall"></td>
+            <td id="r0 c2"class="fakewall"></td>
+            <td id="r0 c3"class="fakewall"></td>
+            <td id="r0 c4"class="fakewall"></td>
+            <td id="r0 c5"class="fakewall"></td>
+            <td id="r0 c6"class="wall"></td>
+            <td id="r0 c7"class="wall"></td>
+        </tr>
+        <!-- Add another table row here -->
+        <tr>
+            <td id="r1 c0"class="wall"></td>
+            <td id="r1 c1"class="fakewall"></td>
+            <td id="r1 c2"class="fakewall"></td>
+            <td id="r1 c3"class="wall"></td>
+            <td id="r1 c4"class="wall"></td>
+            <td id="r1 c5"class="fakewall"></td>
+            <td id="r1 c6"class="wall"></td>
+            <td id="r1 c7"class="wall"></td>
+        </tr>
+        <tr>
+            <td id="r2 c0"class="wall"></td>
+            <td id="r2 c1"class="fakewall"></td>
+            <td id="r2 c2"class="fakewall"></td>
+            <td id="r2 c3"class="wall"></td>
+            <td id="r2 c4"class="wall"></td>
+            <td id="r2 c5"class="fakewall"></td>
+            <td id="r2 c6"class="fakewall"></td>
+            <td id="r2 c7"class="wall"></td>
+        </tr>
+        <tr>
+            <td id="r3 c0"class="wall"></td>
+            <td id="r3 c1"class="wall"></td>
+            <td id="r3 c2"class="wall"></td>
+            <td id="r3 c3"class="wall"></td>
+            <td id="r3 c4"class="wall"></td>
+            <td id="r3 c5"class="wall"></td>
+            <td id="r3 c6"class="fakewall"></td>
+            <td id="r3 c7"class="win"></td>
+        </tr>
+    </table>
+
+    <p id="Message"></p>
+    
+</body>
+</html>

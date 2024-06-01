@@ -1,0 +1,59 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Messi {
+    background-image:url("Messi\ running\ with\ ball.jpg");
+    background-size: 42px 42px;
+}
+
+.Ramos {
+    background-image:url("ramos\ running.jpg");
+    background-size: 42px 42px;
+}
+
+.Wall {
+    background-color: black !important;
+}
+
+.BallonDor {
+    background-image: url("ballon\ dor.jpg");
+    background-size: 42px 42px;
+}
+
+.Goal {
+    background-image: url("goal.jpg");
+    background-size: 42px 42px;
+}
+
+.MessiTackled {
+    background-image: url("Running\ withput\ ball.jpg");
+    background-size: 42px 42px;
+}
+
+.RamosTackling {
+    background-image: url("My\ project.png");
+    background-size: 42px 42px;
+}
+
+.MessiInverted {
+    background-image: url("messi\ inverted.png");
+    background-size: 42px 42px;
+}
+
+.Ronaldo {
+    background-image: url("ronaldo.jpg");
+    background-size: 42px 42px;
+}

@@ -1,0 +1,69 @@
+body {
+    background-color:grey;
+    overflow: hidden;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("cs sprite.png");
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.wall {
+    background-color: black !important;
+}
+
+.coin {
+    background-image:url("csrods.png");
+    background-size: 40px 40px;
+}
+
+.guard {
+    background-image:url("csguard.png");
+    background-size: 40px 40px;
+}
+
+.flag {
+    background-image:url("csflag.png");
+    background-size: 40px 40px;
+}
+
+.door {
+    background-image:url("csdoor.png");
+    background-size: 40px 40px
+}
+
+.c1 {
+    background-image:url("c1.png");
+    background-size: 40px 40px
+}
+
+.c2 {
+    background-image:url("c2.png");
+    background-size: 40px 40px
+}
+
+.c3 {
+    background-image:url("c3.png");
+    background-size: 40px 40px
+}
+
+.c4 {
+    background-image:url("c4.png");
+    background-size: 40px 40px
+}

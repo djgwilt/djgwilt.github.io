@@ -1,0 +1,52 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:coral;
+}
+
+.spaceship {
+    background-image:url("spaceship.png");
+    background-size: 40px 40px;
+}
+
+.spaceshipFlipped {
+    background-image:url("spaceshipFlipped.png");
+    background-size: 40px 40px;
+}
+
+.wall{
+    background-color: black !important;
+}
+
+.earth{
+    background-image: url('earth');
+    background-size: 40px 40px;
+}
+
+.wallFake {
+    background-color: #333333 !important;
+}
+
+.shinyRock {
+    background-image: url("shinyRock");
+    background-size: 40px 40px;
+}
+
+.quasar {
+    background-image: url("quasar");
+    background-size: 40px 40px;
+}
+
+audio {
+    visibility: hidden;
+}

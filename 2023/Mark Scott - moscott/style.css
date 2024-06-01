@@ -1,0 +1,29 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:30px solid black;
+}
+
+#RacingTrack td {
+    width:30px;
+    height:30px;
+    border:0px solid;
+    background-color:white;
+}
+
+.car {
+    background-image:url("BABAYADABATASMALLAR.png");
+    background-size: 30px 30px;
+}
+
+.wall{
+    background-color:black !important;
+}
+
+.flag {
+    background-image:url("Troser Cest.png");
+    background-size: 30px 30px;
+}

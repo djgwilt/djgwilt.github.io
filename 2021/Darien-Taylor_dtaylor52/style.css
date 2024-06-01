@@ -1,0 +1,35 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.dragon {
+    background-image:url("Dragon right");
+    background-size: 40px 45px;
+}
+
+
+.flipped {
+    background-image:url("Dragon left");
+    background-size: 40px 45px;
+}
+
+
+
+.Empty {
+    background-image:none;
+}
+.wall {
+    background-color: black !important;
+}

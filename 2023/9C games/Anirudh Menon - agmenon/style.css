@@ -1,0 +1,30 @@
+.wall {
+    background-color:rgb(0, 0, 0) !important;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(255, 251, 0);
+}
+
+.car {
+    background-image:url("BobYay.webp");
+    background-size: 40px 40px;
+}
+
+.banana {
+    background-image:url("banana.jpg");
+    background-size: 40px 40px;
+}
+
+.flag {
+    background-image:url("th.jpg");
+    background-size: 40px 40px;
+}

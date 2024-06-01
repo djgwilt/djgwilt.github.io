@@ -1,0 +1,138 @@
+from os import walk
+from re import search,match
+from glob import glob
+import os
+
+links = {}
+
+# for i,j,k in walk('.'):
+#     if i.count("/") == 1 and "index.html" in k:
+#         try:
+#             name = search(r'\./(.*?) - ',i).group(1)
+#             url = "./{}/index.html".format(i)
+#             links[name] = url
+#         except AttributeError:
+#             pass
+#     if i.count("/") == 1 and "document.html" in k:
+#         try:
+#             name = search(r'\./(.*?) - ',i).group(1)
+#             url = "./{}/index.html".format(i)
+#             links[name] = url
+#         except AttributeError:
+#             pass
+
+def test_folder(path):
+    if not os.path.isfile(f"{path}/index.html"):
+        return False
+    res = search(r'([^\./\\]*) - ',path)
+    if not res:
+        return False
+    name = res.group(1)
+    links[name] = f"{path}/index.html"
+    return True
+
+links = {}
+
+students = glob("./*")
+for student in students:
+    test_folder(f"{student}") or test_folder(f"{student}/Racing Game")
+
+links["Daniel Weglowski"] = "https://schoolgameproject.dweglowki.repl.co/"
+links["Oliver Gerety"] = "https://olivergerety.github.io/compsciracinggame/"
+
+patterns = (
+  r'\A[a-c]',
+  r'\A[d-g]',
+  r'\A[h-j]',
+  r'\A[k-m]',
+  r'\A[n-r]',
+  r'\A[s-z]'
+)
+
+headings = [p.upper().replace("\\A","").replace("[","").replace("]","") for p in patterns]
+
+txt_url = [(txt,url) for txt,url in links.items()]
+txt_url.sort()
+
+sections = ["\n".join(f"<li><a href='{url}'>{txt}</a></li>" for txt,url in txt_url if match(p,txt.lower())) for p in patterns]
+
+tds = [f"""
+      <td>
+        <h2>{headings[i]}</h2>
+        <ul>
+        {sections[i]}
+        </ul>
+      </td>
+      """ for i in range(len(patterns))]
+
+trs = "\n".join([f"""
+    <tr>
+      {tds[3*i + 0]}
+      {tds[3*i + 1]}
+      {tds[3*i + 2]}
+    </tr>
+""" for i in range(2)])
+
+head = """
+<head>
+  <title>Year 9 Games</title>
+  <style>
+
+    body {
+      background-color:MediumPurple;
+    }
+    
+    h1 {
+      color:white;
+      font-size:30px;
+      font-family: "Palatino Linotype";
+    }
+
+    h2 {
+      color:white;
+      font-size:20px;
+      font-family:"Palatino Linotype";
+    }
+
+    a {
+      color:white;
+      font-size:15px;
+      font-family:"Palatino Linotype";
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+  </style>
+</head>
+"""
+
+body = f"""
+<body>
+  <h1>Year 9 Racing Games June 2022</h1>
+  <table> {trs} </table>
+</body>
+"""
+
+site = f"""
+<!DOCTYPE html>
+<html>
+{head}
+{body}
+</html>
+"""
+
+with open('index.html','w') as f:
+    print(site,file=f)
+    

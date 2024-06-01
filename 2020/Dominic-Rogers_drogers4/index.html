@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="code.js"></script>
+    <title>Racing Game</title>
+</head>
+
+<body>
+    <button onclick="Unlock()" class="Unlocked" id="add_to_level" style="display: block !important; cursor: pointer;">
+        Refresh Levels
+    </button>
+    <button onclick="location.href='index-copy.html'" class="Unlocked">
+        Endless
+    </button>
+    <button onclick="location.href='Level_One.html'" class="Unlocked" id="Level_1" style="display: block !important;">
+        Level 1
+    </button>
+    <button onclick="Next_Level(2, 'Level_Two.html')" class="Locked" id="Level_2" style="display: block !important;">
+        Level 2
+    </button>
+    <button onclick="Next_Level(3, 'Level_Three.html')" class="Locked" id="Level_3" style="display: block !important;">
+        Level 3
+    </button>
+    
+</body>
+</html>
+

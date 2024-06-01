@@ -1,0 +1,44 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("JKLS.JPG");
+    background-size: 40px 40px;
+}
+.Carflip {
+    background-image:url("JKLS2.jpg");
+    background-size: 40px 40px;
+}
+.Empty {
+    background-image:none;
+}
+.wall {
+    background-color:black !important;
+}
+.flag {
+    background-image:url("DR.jpg");
+    background-size: 40px 40px;
+}
+.fake {
+    background-color:grey !important;
+}
+.fakeD {
+    background-color:black !important;
+}
+.fakeflag {
+    background-image:url("InkedDR.jpg");
+    background-size: 40px 40px;
+}

@@ -1,0 +1,92 @@
+
+
+body {
+    margin-left: 400px;
+    background-size: 600px 600px;
+    background-image:url("back.jpg");
+    font-family: Comic Sans MS;
+    letter-spacing: 10px;
+    color: black;
+
+    
+
+}
+
+#p1 {
+    
+    color: red;
+}
+
+
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    background-color: white;
+    width:50px;
+    height:50px;
+    border:1px solid;
+
+}
+
+.Dog {
+    background-image:url("dog.png")!important;
+    background-size: 50px 50px;
+
+}
+.Dog2 {
+    background-image:url("dog2.jpg")!important;
+    background-size: 50px 50px;
+
+}
+
+.Flag{
+	Background-image:url("flag.png");
+	Background-size: 60px 60px;
+    Background-position: middle;
+    Background-repeat: no-repeat;
+
+}
+.Empty {
+    Background-image:url("pawsright.jpg");
+    Background-size: 50px 50px;
+    Background-repeat: no-repeat;
+    background-position: middle;
+    
+}
+.Empty2 {
+    Background-image:url("pawsleft.jpg");
+    Background-size: 50px 50px;
+    Background-repeat: no-repeat;
+    background-position: middle;
+    
+}
+.Empty3 {
+    Background-image:url("pawsup.jpg");
+    Background-size: 50px 50px;
+    Background-repeat: no-repeat;
+    background-position: middle;
+    
+}
+.Empty4 {
+    Background-image:url("pawsdown.jpg");
+    Background-size: 50px 50px;
+    Background-repeat: no-repeat;
+    background-position: middle;
+    
+}
+
+.Wall {
+	Background-image:url("floors.jpg");
+	Background-size: 100px 120px;
+    background-repeat: no-repeat;
+}
+.bed{
+	Background-image:url("bed.jpg");
+	Background-size: 45px 45px;
+    Background-position: middle;
+    Background-repeat: no-repeat;
+}

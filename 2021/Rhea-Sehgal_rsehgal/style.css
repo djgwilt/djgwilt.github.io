@@ -1,0 +1,35 @@
+body {
+    background-color:lightcyan;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:papayawhip;
+}
+
+.dog {
+    background-image:url("dog.png");
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.wall {
+    background-image: url("scary dog.svg");
+    background-size: 40px 40px
+
+}
+.bone {
+    background-image:url("bone.png");
+    background-size: 40px 40px;
+}
+

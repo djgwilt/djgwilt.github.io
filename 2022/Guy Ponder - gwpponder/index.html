@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Racing Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
+    <script src="code.js"></script>
+</head>
+<body>
+    
+    <p>Use right/left arrow keys to move.</p>
+    
+    <table id="RacingTrack">
+        <!-- The table cells have an id with the row and column number -->
+        <tr>
+            <td id="R0C0" class="Mario"></td>
+            <td id="R0C1"></td>
+            <td id="R0C2" class="wall"></td>
+            <td id="R0C3" class="wall"></td>
+            <td id="R0C4"></td>
+            <td id="R0C5"></td>
+            <td id="R0C6" class="wall"></td>
+            <td id="R0C7" class="wall"></td>
+            <td id="R0C8"></td>
+            <td id="R0C9"></td>
+            <td id="R0C10"></td>
+            <td id="R0C11"></td>
+            <td id="R0C12"></td>
+            <td id="R0C13"></td>
+            <td id="R0C14"></td>
+            <td id="R0C15"></td>
+        </tr>
+        <!-- Add another table row here -->
+        <tr>
+            <td id="R0C0"></td>
+            <td id="R0C1"></td>
+            <td id="R0C2"></td>
+            <td id="R0C3"></td>
+            <td id="R0C4"></td>
+            <td id="R0C5"></td>
+            <td id="R0C6"></td>
+            <td id="R0C7"></td>
+            <td id="R0C8"></td>
+            <td id="R0C9"></td>
+            <td id="R0C10"></td>
+            <td id="R0C11"></td>
+            <td id="R0C12"></td>
+            <td id="R0C13"></td>
+            <td id="R0C14"></td>
+            <td id="R0C15"></td>
+        </tr>
+        <tr>
+            <td id="R0C0"></td>
+            <td id="R0C1"></td>
+            <td id="R0C2"></td>
+            <td id="R0C3"></td>
+            <td id="R0C4"></td>
+            <td id="R0C5"></td>
+            <td id="R0C6"></td>
+            <td id="R0C7"></td>
+            <td id="R0C8"></td>
+            <td id="R0C9"></td>
+            <td id="R0C10"></td>
+            <td id="R0C11"></td>
+            <td id="R0C12"></td>
+            <td id="R0C13"></td>
+            <td id="R0C14"></td>
+            <td id="R0C15"></td>
+        </tr>
+        <tr>
+            <td id="R0C0"></td>
+            <td id="R0C1"></td>
+            <td id="R0C2"></td>
+            <td id="R0C3"></td>
+            <td id="R0C4"></td>
+            <td id="R0C5"></td>
+            <td id="R0C6"></td>
+            <td id="R0C7"></td>
+            <td id="R0C8"></td>
+            <td id="R0C9"></td>
+            <td id="R0C10"></td>
+            <td id="R0C11"></td>
+            <td id="R0C12"></td>
+            <td id="R0C13"></td>
+            <td id="R0C14"></td>
+            <td id="R0C15"></td>
+
+        </tr>
+        <tr>
+            <td id="R0C0"></td>
+            <td id="R0C1"></td>
+            <td id="R0C2"></td>
+            <td id="R0C3"></td>
+            <td id="R0C4"></td>
+            <td id="R0C5"></td>
+            <td id="R0C6"></td>
+            <td id="R0C7"></td>
+            <td id="R0C8"></td>
+            <td id="R0C9"></td>
+            <td id="R0C10"></td>
+            <td id="R0C11"></td>
+            <td id="R0C12"></td>
+            <td id="R0C13"></td>
+            <td id="R0C14"></td>
+            <td id="R0C15"></td>
+        </tr>
+        <tr>
+            <td id="R0C0"></td>
+            <td id="R0C1"></td>
+            <td id="R0C2"></td>
+            <td id="R0C3"></td>
+            <td id="R0C4"></td>
+            <td id="R0C5"></td>
+            <td id="R0C6"></td>
+            <td id="R0C7"></td>
+            <td id="R0C8"></td>
+            <td id="R0C9"></td>
+            <td id="R0C10"></td>
+            <td id="R0C11"></td>
+            <td id="R0C12"></td>
+            <td id="R0C13"></td>
+            <td id="R0C14" class="flag"></td>
+            <td id="R0C15"></td>
+        </tr>
+        <tr>
+            <td id="R0C0"></td>
+            <td id="R0C1"></td>
+            <td id="R0C2"></td>
+            <td id="R0C3"></td>
+            <td id="R0C4"></td>
+            <td id="R0C5"></td>
+            <td id="R0C6"></td>
+            <td id="R0C7"></td>
+            <td id="R0C8"></td>
+            <td id="R0C9"></td>
+            <td id="R0C10"></td>
+            <td id="R0C11"></td>
+            <td id="R0C12"></td>
+            <td id="R0C13"></td>
+            <td id="R0C14"></td>
+            <td id="R0C15"></td>
+        </tr>
+        <tr>
+            <td id="R0C0"></td>
+            <td id="R0C1"></td>
+            <td id="R0C2"></td>
+            <td id="R0C3"></td>
+            <td id="R0C4"></td>
+            <td id="R0C5"></td>
+            <td id="R0C6"></td>
+            <td id="R0C7"></td>
+            <td id="R0C8"></td>
+            <td id="R0C9"></td>
+            <td id="R0C10" class="exit"></td>
+            <td id="R0C11"></td>
+            <td id="R0C12"></td>
+            <td id="R0C13"></td>
+            <td id="R0C14"></td>
+            <td id="R0C15"></td>
+        </tr>
+    </table>
+
+    <p id="Message"></p>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("cat.jpg");
+    background-size: 40px 40px;
+}
+.kitten {
+    background-image:url("kitten.jpg");
+    background-size: 40px 40px;
+}
+.tree{
+    background-image:url("tree.png");
+    background-size: 40px 40px;   
+}
+.treeFake{
+    background-image:url("treeFake.png");
+    background-size: 40px 40px;   
+}
+// addedd items that you can collect for fun or just ignore
+.greenball{
+    background-image:url("greenball.jpg");
+    background-size: 40px 40px;    
+}
+.blueball{
+    background-image:url("blueball.jpg");
+    background-size: 40px 40px;    
+}
+
+.redball{
+    background-image:url("redball.png");
+    background-size: 40px 40px;    
+}
+.yellowball{
+    background-image:url("yellowball.jpg");
+    background-size: 40px 40px;    
+}
+.Empty {
+    background-image:none;
+}
+.flag {
+    background-image:url("flag.png");
+    background-size: 40px 40px;

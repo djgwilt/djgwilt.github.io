@@ -1,0 +1,97 @@
+body {
+    background-color:#f59432;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:10px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("goku2.png") !important;
+    background-size: 40px 40px;
+}
+
+.CarFlip {
+    background-image:url("gokuflip.png") !important;
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color:black !important
+}
+
+.wallFake {
+    background-color: #070707 !important
+}
+
+.Empty {
+    background-image:none;
+}
+
+.flag {
+    background-image:url("dragonball.jpeg");
+    background-size: 40px 40px;
+}
+
+.portal {
+    background-image:url("portal.jpeg");
+    background-size: 40px 40px;
+}
+
+.letterW {
+    background-image:url("W.jpeg");
+    background-size: 40px 40px;
+}
+
+.letterE {
+    background-image:url("E.png");
+    background-size: 40px 40px;
+}
+
+.letterL {
+    background-image:url("L.png");
+    background-size: 40px 40px;
+}
+
+.letterD {
+    background-image:url("D.jpeg");
+    background-size: 40px 40px;
+}
+
+.letterO {
+    background-image:url("O.png");
+    background-size: 40px 40px;
+}
+
+.letterN {
+    background-image:url("N.jpeg");
+    background-size: 40px 40px;
+}
+
+.letterY {
+    background-image:url("Y.png");
+    background-size: 40px 40px;
+}
+
+.letterU {
+    background-image:url("U.png");
+    background-size: 40px 40px;
+}
+
+.letterS {
+    background-image:url(S.jpeg);
+    background-size: 40px 40px;
+}
+
+.meanwall {
+    background-color: #FAFAFA !important
+        
+}

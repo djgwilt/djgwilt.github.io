@@ -1,0 +1,74 @@
+body {
+    background-image:url("background.jpg");
+    background-size: 1530px 750px;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+    background-image:url("sky.jpg");
+    background-size: 630px 450px;
+}
+
+#RacingTrack td {
+    width:35px;
+    height:35px;
+}
+
+.Car {
+    background-image:url("car.jpg") !important;
+    background-size: 45px 45px;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.Wall {
+    background-color: black !important;
+    background-image: url("ground.jpg");
+}
+
+.Flag {
+    background-image: url("flag.jpg");
+    background-size: 40px;
+}
+
+    
+.button {
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #6266ff; 
+  color: black; 
+  border: 2px solid blue;
+}
+
+.button1:hover {
+  background-color: royalblue;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.coin {
+    background-image: url("coin.gif");
+    background-size: 34px 35px;  
+}
+
+#Message {
+    color: white;
+}
+
+.MarioWin {
+    visibility: hidden;
+}

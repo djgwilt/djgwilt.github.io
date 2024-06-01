@@ -1,0 +1,35 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("baby yoda.png");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: skyblue!important;
+
+}
+
+.flag {
+    background-image:url("soup.PNG");
+    background-size: 40px 40px;
+}
+    
+
+.Empty {
+    background-image:none;
+}

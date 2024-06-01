@@ -1,0 +1,54 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("trex.jpg");
+    background-size: 40px 40px;
+}
+
+.wall1 {
+    background-image:url("cactus.jpg");
+    background-size: 40px 40px;
+}
+
+.wall2 {
+    background-image:url("pterodactyl.png");
+    background-size: 40px 40px;
+}
+
+.ground {
+    background-image:url("empty desert.jpg");
+    background-size: 40px 40px;
+}
+
+.cloud {
+    background-image:url("cloud.jpg");
+    background-size: 40px 40px;
+}
+
+.coin {
+    background-image:url("wifi bt router.jpg");
+    background-size: 40px 40px;
+}
+
+.flag {
+    background-image:url("wifi.png");
+    background-size: 40px 40px;
+}
+
+.Empty {
+    background-image:none;
+}

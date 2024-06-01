@@ -1,0 +1,37 @@
+body {
+    background-image: url('Max-Verstappen-holding-trophy-in-Abu-Dhabi-planetF1.jpg');
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black; 
+}
+
+#RacingTrack td {
+    width:30px;
+    height:30px;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("LEWIS\ HAMILTON.jpg");
+    background-size: 30px 30px;
+}
+
+.wall {
+    background-color: black !important;
+    background-size: 30px 30px;
+}
+
+.trophy {
+    background-image:url("trophy.jpg");
+    background-size: 30px 30px;
+}
+
+.tarmac {
+    background-color: grey !important;
+    background-size: 30px 30px;
+}
+
+
+

@@ -1,0 +1,41 @@
+body {
+    background-color:blue;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.Car {
+    background-image:url("sonicrunning.png");
+    background-size: 40px 40px;
+}
+.Carflip {
+    background-image:url("sonicrunning2.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color : black !important;
+}
+
+.wallFake {
+    background-color : #333333 !important;
+}
+
+.Empty {
+    background-image:none;
+}
+
+.sonicring {
+    background-image:url("sonicring.jpeg");
+    background-size: 40px 40px;
+}
