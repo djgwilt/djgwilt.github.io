@@ -5,22 +5,6 @@ import os
 
 links = {}
 
-# for i,j,k in walk('.'):
-#     if i.count("/") == 1 and "index.html" in k:
-#         try:
-#             name = search(r'\./(.*?) - ',i).group(1)
-#             url = "./{}/index.html".format(i)
-#             links[name] = url
-#         except AttributeError:
-#             pass
-#     if i.count("/") == 1 and "document.html" in k:
-#         try:
-#             name = search(r'\./(.*?) - ',i).group(1)
-#             url = "./{}/index.html".format(i)
-#             links[name] = url
-#         except AttributeError:
-#             pass
-
 def test_folder(path):
     res = search(r'([^\./\\]*) - ',path)
     if not res:
@@ -35,12 +19,12 @@ def test_folder(path):
     else:
       return False
 
-links = {}
+staff = ["DJG","EMC","GXD","IMA","SAG"]
 
-students = glob("./*")
-for student in students:
-    test_folder(f"{student}") or test_folder(f"{student}/Racing Game")
-
+for s in staff:
+  students = glob(f"{s}/*")
+  for student in students:
+      test_folder(f"{student}") or test_folder(f"{student}/My Racing Game") or test_folder(f"{student}/Unit 12 Racing Game/My Racing Game")
 
 patterns = (
   r'\A[a-c]',

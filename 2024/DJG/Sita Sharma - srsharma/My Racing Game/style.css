@@ -1,0 +1,47 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player1 {
+    background-image:url("Snake\,\ for\ computer\ science.png");
+    background-size: 40px 40px;
+}
+
+.player1-left{
+    background-image:url("Snake\,\ for\ computer\ science\ left.png");
+    background-size: 40px 40px;
+}
+
+.wall{
+    background-color:black !important;
+}
+
+.flag{
+    background-image:url("flag\ for\ end.jpg");
+    background-size: 40px 40px;
+}
+
+.wallFake {
+    background-color:rgb(11, 11, 11) !important;
+}
+
+.coin {
+    background-image:url("Coin.jpg");
+    background-size: 40px 40px;
+}
+
+.audio {
+    visibility: hidden;
+}

@@ -1,0 +1,44 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:lightskyblue;
+}
+
+.player1 {
+    background-image:url("Picture1.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-image:url("Door.png");
+    background-size: 40px 40px
+}
+
+.flag {
+    background-image:url(House.jpg) ;
+    background-size: 40px 40px;
+}
+
+.FakeWall {
+    background-image: url("Door.png");
+    background-size: 40px 40px
+}
+
+.coin {
+    background-image: url("Diamond2.png");
+    background-size: 40px 40px;
+}
+
+audio {
+    visibility: hidden;
+}

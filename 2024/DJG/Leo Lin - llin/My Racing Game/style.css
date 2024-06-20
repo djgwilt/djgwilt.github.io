@@ -1,0 +1,32 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player1 {
+    background-image:url("airplane.jpg");
+    background-size: 42px 42px;
+}
+
+.wall {
+    background-image:url("cone.png");
+    background-size: 40px 40px;
+}
+.flag {
+    background-image:url("flag.png");
+    background-size: 40px 40px;
+}
+.wallFake {
+    background-color:#333333d7 !important;
+}

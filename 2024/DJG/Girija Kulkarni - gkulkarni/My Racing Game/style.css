@@ -1,0 +1,28 @@
+body {
+    background-color:rgb(216, 176, 230);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(216, 176, 230);
+}
+
+.player1 {
+    background-image:url("tortoise.png");
+    background-size: 40px 40px;
+}
+.wall {
+    background-color: rgb(117, 0, 184) !important;
+  }
+
+.flag {
+    background-image:url(apple.png);
+    background-size: 41px 41px;
+}

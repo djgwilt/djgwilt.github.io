@@ -1,0 +1,30 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(10, 78, 51);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(20, 105, 47);
+}
+
+.player1 {
+    background-image:url("dashund sprite.jpg");
+    background-size: 40px 40px;
+}
+.player2 { 
+    background-image:url("treat\ pic.jpg");
+    background-size: 40px 40px;
+}
+.wall { 
+    background-image:url("cartoon\ poo.png");
+    background-size: 40px 40px;
+}
+ 
+

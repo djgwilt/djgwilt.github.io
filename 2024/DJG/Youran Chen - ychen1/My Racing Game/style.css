@@ -1,0 +1,42 @@
+body {
+    background-color:rgb(242, 224, 229);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(194, 229, 186);
+}
+
+.player1 {
+    background-image:url("bunnyracinggameFLIPPED.jpg");
+    background-size: 40px 40px;
+}
+
+.player1-left {
+    background-image:url("bunnyracinggame.jpg");
+    background-size: 40px 40px;
+}
+
+.flag {
+    background-image:url("finishflagracinggame.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color:rgba(163, 231, 173, 0.301) !important
+}
+
+.audio {
+    visibility: hidden;
+}
+
+.wallFake {
+    background-color:rgba(163, 231, 173, 0.147) !important;
+}

@@ -1,0 +1,26 @@
+body {
+    background-image:url("OIP\ \(5\).jpg");
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(255, 0, 0);
+}
+
+.player1 {
+    background-image:url("download\ \(2\).jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    width: 40px
+    height: 40px
+    background-color: rgb(0 , 0 , 0)!important ;
+}

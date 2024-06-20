@@ -1,0 +1,43 @@
+body {
+    background-image:url("Cloud.png");
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:lightblue;
+}
+
+.player1 {
+    background-image:url("1Airplane.png");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color:rgb(96, 96, 255) !important;
+}
+
+.fakewall {
+    background-color:rgb(120, 255, 172)!important;
+}
+
+.flag {
+    background-image:url("Airport.png");
+    background-size:  40px 40px;
+}
+
+.coin {
+    background-image:url("Coin.png");
+    background-size: 40px 40px;
+}
+
+.cloud {
+    background-image:url("F-14-Tomcat.png");
+    background-size: 40px 40px;
+}
