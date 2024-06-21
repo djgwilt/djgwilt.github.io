@@ -1,0 +1,53 @@
+body {
+    background-color:rgb(179, 220, 245);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(235, 210, 146);
+}
+
+.player_1_right {
+    background-image:url("player_1_right.jpg");
+    background-size: 40px 40px;
+}
+
+.player_1_left {
+    background-image:url("player_1_left.jpg") ;
+    background-size: 40px 40px;
+}
+
+.player_1_down {
+    background-image: url("player_1_down.jpg");
+    background-size: 40px 40px;
+}
+
+.player_1_up   {
+    background-image: url("player_1_up.jpg");
+    background-size: 40px 40px;
+}
+
+.sprite {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    top: 26px;
+    left: 6px;
+}
+
+.flag {
+    background-image:url("flag.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: rgb(156, 246, 168) !important;
+}
+

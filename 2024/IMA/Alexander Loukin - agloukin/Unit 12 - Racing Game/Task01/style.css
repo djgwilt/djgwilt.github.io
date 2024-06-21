@@ -38,3 +38,8 @@ body {
     background-image:url("hybrid.png");
     background-size: 42px 42px;
 }
+
+.enemy {
+    background-image:url("enemy.png");
+    background-size: 42px 42px;
+}

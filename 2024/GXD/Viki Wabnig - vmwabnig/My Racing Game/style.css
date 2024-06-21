@@ -1,0 +1,35 @@
+body {
+    background-color:rgb(4, 110, 110);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(183, 241, 240);
+}
+
+#RacingTrack td {
+    width:80px;
+    height:80px;
+    border:3px solid;
+    background-color:rgb(20, 215, 205);
+}
+
+.player1 {
+    background-image:url("jack sparrow sprite.png");
+    background-size: 80px 80px;
+}
+
+.wall {
+    background-image:url("island.jpg");
+    background-size: 80px 80px;
+}
+
+.flag {
+    background-image:url("gold.jpg");
+    background-size: 80px 80px;
+}
+
+.coin {
+    background-image:url("gold coin.jpg");
+    background-size: 80px 80px;
+}

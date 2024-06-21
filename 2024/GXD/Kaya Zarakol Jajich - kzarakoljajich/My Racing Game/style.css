@@ -1,0 +1,51 @@
+body {
+    background-color:rgb(255, 255, 255);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:1px solid black;
+}
+
+#RacingTrack td {
+    width:10px;
+    height:10px;
+    border:1px solid;
+    background-color:black;
+}
+
+.player1-up {
+    background-image:url("Final.png");
+    background-size: 40px 40px;
+}
+
+.player1-right {
+    background-image:url("Final.png");
+    background-size: 40px 40px;
+}
+
+.player1-down {
+    background-image:url("Final.png");
+    background-size: 40px 40px;
+}
+
+.player1-left {
+    background-image:url("Final.png");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: grey !important;
+}
+
+.closed-gate {
+    background-image:url("Gate.Closed.png") !important;
+}
+
+.sprite {
+    position: relative;
+    width: 30px;
+    height: 25px;
+    top: 26px; /* initial top */
+    left: 6px; /* initial left */
+}

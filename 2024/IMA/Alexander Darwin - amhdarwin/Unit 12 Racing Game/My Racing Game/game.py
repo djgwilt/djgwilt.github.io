@@ -17,6 +17,9 @@ direction = [0, 0]
 # to store the handle code for the timer interval to cancel it when we crash
 intervalHandle = 0
 
+# to see if you have water
+water = False
+
 #############################
 # Sub-Programs
 #############################
@@ -62,6 +65,8 @@ def updatePosition():
             handleCrash()
         elif cell.className == "wall":
             handleCrash()
+        elif cell.className == "water":
+            water = True
         elif cell.className == "Finish":
             handleWin()
         else:

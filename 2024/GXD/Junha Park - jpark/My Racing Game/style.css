@@ -1,0 +1,45 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(15, 14, 14);
+    background-image:url("Backrooms Wallpaper.png");
+}
+
+#RacingTrack td {
+    width:25px;
+    height:25px;
+    border:1px solid;
+}
+
+.playerLeft {
+    background-image:url("Left Arrow.png") !important;
+    background-size: 25px 25px;
+}
+
+.playerUp {
+    background-image:url("Up Arrow.png") !important;
+    background-size: 25px 25px;
+}
+
+.playerRight {
+    background-image:url("Right Arrow.png") !important;
+    background-size: 25px 25px;
+}
+
+.playerDown {
+    background-image:url("Down Arrow.png") !important;
+    background-size: 25px 25px;
+}
+
+.NoClipPoint {
+    background-image:url("Backrooms Unstable.gif");
+    background-size: 25px 25px;
+}
+
+.wall {
+    background-image:url("Backrooms Wallpaper (old).png") !important;
+    background-size: 25px 25px;
+}

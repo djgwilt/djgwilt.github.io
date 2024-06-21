@@ -85,11 +85,11 @@ def runGame():
  
 def handleWin():
     global cCount
-    global jam
+    global flag
     if jam == True:
         if cell.className == "flag":
             window.clearInterval(intervalHandle)
-            document.getElementId("Message").innerText = "You win"
+            document.getElementById("Message").innerText = "You win!"
 #############################
 # Main Program
 #############################

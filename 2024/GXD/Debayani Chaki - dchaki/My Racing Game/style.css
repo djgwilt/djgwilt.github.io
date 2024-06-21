@@ -1,0 +1,41 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player1 {
+    background-image:url("scaaaaary\ monster.jpg");
+    background-size: 40px 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+.player2 {
+    background-image:url("sprite\ hero.jpg");
+    background-size: 40px 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+
+.wall {
+    background-image:url("witch.gif") !important;
+    background-size: 40px 40px;
+}
+
+
+.flag {
+    background-image:url("flag.jpg");
+    background-size: 40px 40px;
+}
