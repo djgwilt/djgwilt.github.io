@@ -1,0 +1,41 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:#080808;
+}
+
+.car {
+    background-image:url("Screenshot 2024-06-05 130314.png");
+    background-size: 40px 40px;
+}
+
+
+.wall {
+    background-color:black !important;
+}
+
+.Fakewall {
+    background-color: #050505 !important;
+}
+
+
+.flag {
+    background-image:url("R.png");
+    background-size: 42px 42px;
+}
+
+
+.coin {
+    background-image:url("Fries.png");
+    background-size: 42px 42px;
+}

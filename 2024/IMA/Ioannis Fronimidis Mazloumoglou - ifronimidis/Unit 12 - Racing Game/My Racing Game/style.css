@@ -1,0 +1,64 @@
+body {
+    background-image:url("race.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:fixed;
+    background-size: 110% 160%;
+    width: 500px;
+    height: 500px;
+}
+p{
+    color: yellow;
+    background-color: black;
+}
+h1{
+    color: yellow;
+    background-color: black;
+}
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(255, 255, 0);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.car {
+    background-image:url("right.png");
+    background-size: 40px 40px;
+}
+.carleft {
+    background-image:url("left.png");
+    background-size: 40px 40px;
+}
+
+.wall{
+    background-color: black !important;
+}
+
+
+
+.closed{
+    background-image:url("Closed.png");
+    background-size: 42px 42px;
+}
+
+.key{
+    background-image:url("ke.svg");
+    background-size: 42px 42px;
+}
+.open{
+    background-image:url("Open.png");
+    background-size: 42px 42px;
+}
+.coin{
+    background-image:url("Star-coin.webp");
+    background-size: 42px 42px;
+}
+audio{
+    visibility: hidden;
+}

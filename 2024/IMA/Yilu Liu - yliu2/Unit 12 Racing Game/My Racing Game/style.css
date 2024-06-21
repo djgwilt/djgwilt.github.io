@@ -1,0 +1,43 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color: rgb(150, 150, 150);
+}
+
+.player1 {
+    background-image:url("Cropped_Image.png");
+    background-size: 40px 40px;
+}
+
+.player1Right {
+    background-image:url("CROPPED FLIP.png");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: black !important;
+}
+
+.wallFake {
+    background-color: rgb(47, 47, 47) !important;
+}
+
+.flag {
+    background-image:url("OIP.png");
+    background-size: 40px 40px;
+}
+
+.money {
+    background-image:url("pound.png");
+    background-size: 40px 40px;
+}

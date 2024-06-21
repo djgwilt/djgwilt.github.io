@@ -1,0 +1,42 @@
+body {
+    background-image:url("hi.png");
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.car {
+    background-image:url("hi.png");
+    background-size: 40px 40px;
+}
+.greenfn{
+    background-color: green !important;
+}
+
+.finish{
+    background-image:url("higuys.png") !important;
+    background-size: 40px 40px;
+}
+
+.wall{
+    background-color: black !important;
+    background-size: 40px 40px;
+}
+
+audio {
+    visibility: hidden;
+}
+
+.money {
+    background-image:url("money.jpg");
+    background-size: 40px 40px;
+}

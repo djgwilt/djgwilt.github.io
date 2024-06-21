@@ -1,0 +1,50 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player1 {
+    background-image:url("nugget.jpg");
+    background-size: 40px 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+.wall {
+    background-image:url(wall.jpg);
+}
+
+.flag {
+    background-image:url("Fire\ exit\ sign.jpg");
+    background-size: 40px 40px;
+    background-position: center;
+}
+
+.coin1 {
+    background-image:url(BBQ\ sauce.jpg);
+    background-size: 50px 50px;
+    background-position: center;
+}
+
+.coin2 {
+    background-image:url(Ketchup.jpg);
+    background-size: 50px 50px;
+    background-position: center;
+}
+
+.coin3 {
+    background-image:url(Mustard.jpg);
+    background-size: 50px 50px;
+    background-position: center;
+}

@@ -1,0 +1,33 @@
+body {
+    background-color:rgb(57, 67, 56);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(112, 125, 111);
+}
+
+#RacingTrack td {
+    width:70px;
+    height:70px;
+    border:1px solid;
+    background-color:rgb(172, 189, 171);
+}
+
+.gecko {
+    background-image:url("Characters/Gecko.png");
+    background-size: 70px 70px;
+}
+
+.wall {
+    background-color:rgb(57, 67, 56) !important;
+}
+
+.tree {
+    background-image:url("Characters/Tree.png");
+    background-size: 70px 70px;
+
+}
+
+
+

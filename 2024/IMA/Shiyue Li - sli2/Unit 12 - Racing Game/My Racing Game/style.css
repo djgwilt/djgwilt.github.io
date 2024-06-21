@@ -1,0 +1,47 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.car {
+    background-image:url("ufo.jpeg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: black !important;
+}
+
+.portal{
+    background-image:url("portal.jpg");
+    background-size: 40px 40px;
+}
+
+.car-left{
+    background-image:url("ufo-left.png");
+    background-size: 40px 40px; 
+}
+
+.coin{
+    background-image:url("venus.jpg");
+    background-size: 40px 40px; 
+}
+
+audio {
+    visibility: hidden;
+}
+
+<audio id="audioWin" width="0" height="0">
+    <source src="Win.mp3" type="audio/mpeg">
+</audio>

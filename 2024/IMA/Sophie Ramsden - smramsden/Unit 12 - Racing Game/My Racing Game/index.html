@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script defer src="code.js"></script>
+    <title>Racing Game</title>    
+  </head>
+
+  <body>
+    <tr>
+        <td><p>Player 1 starts in the top left corner. Use arrow keys to move.</br>Don't crash into walls.</br>Monsters and Player 2 will kill you.</br>Coloured squares give you immunity to the monster of the colour.</br>Immunities are not permanent.</br>Complete the game in less moves to get a higher score.</br>You need to have all 3 coins and get to the finish flag to win.</p><p>Good luck.</br>Don't die.</p></td>
+        <td><p>Player 2 starts in the middle of the top row. Use WASD to move.</br>Don't crash into walls.</br>Monsters do not kill you.</br>Your job is to catch Player 1 to kill them and stop them from finishing.</p><p>I hope you lose.</p></td>
+    </tr>
+
+    <table id="RacingTrack">
+        <!-- The table cells have an id with the row and column number -->
+        <tr>
+            <td id="R0C0" class="car"></td>
+            <td id="R0C1" class="wall"></td>
+            <td id="R0C2" class="r"></td>
+            <td id="R0C3" class="wall"></td>
+            <td id="R0C4" class="dg"></td>
+            <td id="R0C5" class="wall"></td>
+            <td id="R0C6" class="player2"></td>
+            <td id="R0C7" class="m"></td>
+            <td id="R0C8" class="wall"></td>
+            <td id="R0C9" class="wall"></td>
+            <td id="R0C10" class="coin1"></td>
+        </tr>
+        <!-- Add another table row here -->
+        <tr>
+            <td id="R1C0"></td>
+            <td id="R1C1" class="wall"></td>
+            <td id="R1C2"></td>
+            <td id="R1C3"></td>
+            <td id="R1C4"></td>
+            <td id="R1C5" class="wall"></td>
+            <td id="R1C6"></td>
+            <td id="R1C7" class="wall"></td>
+            <td id="R1C8" class="wall"></td>
+            <td id="R1C9"></td>
+            <td id="R1C10" class="c"></td>
+        </tr>
+        <tr>
+            <td id="R2C0"></td>
+            <td id="R2C1"></td>
+            <td id="R2C2"></td>
+            <td id="R2C3" class="wall"></td>
+            <td id="R2C4"></td>
+            <td id="R2C5" class="wall"></td>
+            <td id="R2C6"></td>
+            <td id="R2C7" class="ymonster"></td>
+            <td id="R2C8"></td>
+            <td id="R2C9"></td>
+            <td id="R2C10" class="wall"></td>
+        </tr>
+        <tr>
+            <td id="R3C0" class="wall"></td>
+            <td id="R3C1" class="wall"></td>
+            <td id="R3C2" class="wall"></td>
+            <td id="R3C3" class="wall"></td>
+            <td id="R3C4"></td>
+            <td id="R3C5" class="wall"></td>
+            <td id="R3C6"></td>
+            <td id="R3C7" class="wall"></td>
+            <td id="R3C8" class="wall"></td>
+            <td id="R3C9" class="wall"></td>
+            <td id="R3C10" class="wall"></td>
+        </tr>
+        <tr>
+            <td id="R4C0" class="o"></td>
+            <td id="R4C1" class="wall"></td>
+            <td id="R4C2"></td>
+            <td id="R4C3" class="rmonster"></td>
+            <td id="R4C4"></td>
+            <td id="R4C5" class="wall"></td>
+            <td id="R4C6"></td>
+            <td id="R4C7" class="pmonster"></td>
+            <td id="R4C8"></td>
+            <td id="R4C9"></td>
+            <td id="R4C10" class="wall"></td>
+        </tr>
+        <tr>
+            <td id="R5C0"></td>
+            <td id="R5C1" class="wall"></td>
+            <td id="R5C2"></td>
+            <td id="R5C3" class="wall"></td>
+            <td id="R5C4" class="wall"></td>
+            <td id="R5C5" class="wall"></td>
+            <td id="R5C6"></td>
+            <td id="R5C7" class="wall"></td>
+            <td id="R5C8" class="wall"></td>
+            <td id="R5C9"></td>
+            <td id="R5C10" class="wall"></td>
+        </tr>
+        <tr>
+            <td id="R6C0"></td>
+            <td id="R6C1"></td>
+            <td id="R6C2"></td>
+            <td id="R6C3"></td>
+            <td id="R6C4" class="b"></td>
+            <td id="R6C5" class="gmonster"></td>
+            <td id="R6C6" class="reset"></td>
+            <td id="R6C7" class="coin2"></td>
+            <td id="R6C8" class="wall"></td>
+            <td id="R6C9"></td>
+            <td id="R6C10" class="wall"></td>
+        </tr>
+        <tr>
+            <td id="R7C0" class="wall"></td>
+            <td id="R7C1" class="bmonster"></td>
+            <td id="R7C2" class="wall"></td>
+            <td id="R7C3" class="wall"></td>
+            <td id="R7C4" class="wall"></td>
+            <td id="R7C5" class="wall"></td>
+            <td id="R7C6"></td>
+            <td id="R7C7" class="wall"></td>
+            <td id="R7C8" class="wall"></td>
+            <td id="R7C9"></td>
+            <td id="R7C10" class="wall"></td>
+        </tr>
+        <tr>
+            <td id="R8C0" class="wall"></td>
+            <td id="R8C1" class="g"></td>
+            <td id="R8C2" class="wall"></td>
+            <td id="R8C3" class="coin3"></td>
+            <td id="R8C4"></td>
+            <td id="R8C5"></td>
+            <td id="R8C6"></td>
+            <td id="R8C7" class="omonster"></td>
+            <td id="R8C8" class="wall"></td>
+            <td id="R8C9"></td>
+            <td id="R8C10" class="wall"></td>
+        </tr>
+        <tr>
+            <td id="R9C0" class="wall"></td>
+            <td id="R9C1" class="wall"></td>
+            <td id="R9C2" class="wall"></td>
+            <td id="R9C3" class="wall"></td>
+            <td id="R9C4"></td>
+            <td id="R9C5" class="wall"></td>
+            <td id="R9C6" class="wall"></td>
+            <td id="R9C7" class="dgmonster"></td>
+            <td id="R9C8" class="wall"></td>
+            <td id="R9C9"></td>
+            <td id="R9C10" class="wall"></td>
+        </tr>
+        <tr>
+            <td id="R10C0" class="wall"></td>
+            <td id="R10C1" class="y"></td>
+            <td id="R10C2" class="mmonster"></td>
+            <td id="R10C3"></td>
+            <td id="R10C4"></td>
+            <td id="R10C5" class="wall"></td>
+            <td id="R10C6" class="p"></td>
+            <td id="R10C7" class="cmonster"></td>
+            <td id="R10C8" class="wall"></td>
+            <td id="R10C9"></td>
+            <td id="R10C10" class="flag"></td>
+        </tr>
+      
+    </table>
+
+    <table id="ImmunityTable">
+        <tr>
+            <td><p>You are immune to:</p></td>
+        </tr>
+        <tr>
+            <td id="red"></td>
+        </tr>
+        <tr>
+            <td id="yellow"></td>
+        </tr>
+        <tr>
+            <td id="green"></td>
+        </tr>
+        <tr>
+            <td id="cyan"></td>
+        </tr>
+        <tr>
+            <td id="blue"></td>
+        </tr>
+        <tr>
+            <td id="magenta"></td>
+        </tr>
+        <tr>
+            <td id="orange"></td>
+        </tr>
+        <tr>
+            <td id="darkgreen"></td>
+        </tr>
+        <tr>
+            <td id="purple"></td>
+        </tr>
+    </table>
+
+    <p id="Message"><br></p>
+
+    <div>
+    Console Output:
+    <textarea id='output' style='width: 100%;' rows='20' disabled></textarea>
+    </div>
+  </body>
+
+</html>

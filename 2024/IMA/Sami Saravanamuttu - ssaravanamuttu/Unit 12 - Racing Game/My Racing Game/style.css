@@ -1,0 +1,31 @@
+body {
+    background-color:white;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:green;
+}
+
+.car {
+    background-image:url("image.png");
+    background-size: 40px 40px;
+}
+.wall{
+    background-color:black!important;
+}
+.flag{
+    background-image:url(worldcup.png);
+    background-size: 40px 40px;
+}
+
+.wallFake {
+    background-color:rgb(1, 20, 20)!important;
+}
