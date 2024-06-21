@@ -1,0 +1,29 @@
+body {
+    background-color:rgb(242, 214, 239);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(70, 126, 95);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:whitesmoke;
+}
+
+.player1 {
+    background-image:url("dog.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color:rgb(140, 230, 167) !important;
+}
+
+.flag {
+    background-image:url("flag.jpg");
+    background-size: 40px 40px;
+}

@@ -1,0 +1,29 @@
+body {
+    background-color:#e7b3e0;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(109, 177, 113);
+}
+
+.player1 {
+    background-image:url("Picture2.png");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color:aliceblue !important;
+}
+
+.flag {
+    background-image:url("Untitled picture.png");
+    background-size: 40px 40px;;
+}

@@ -1,0 +1,30 @@
+body {
+    background-image:url("th.jpg");
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:palegoldenrod;
+}
+
+.car {
+    background-image:url("R.png");
+    background-size: 40px 40px;
+}
+.wall{
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rebeccapurple!important;
+}
+.coin{
+    background-image:url("Shrek.jpg");
+    background-size: 40px 40px;
+}\

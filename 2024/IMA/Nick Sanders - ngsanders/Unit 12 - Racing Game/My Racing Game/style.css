@@ -1,0 +1,39 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:0px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height: 33px;
+    border:0px solid;
+    background-color:black;
+}
+
+.carRight {
+    background-image:url("Textures/carRight.png");
+    background-size: 40px 33px;
+}
+
+.carLeft {
+    background-image:url("Textures/carLeft.png");
+    background-size: 40px 33px;
+}
+
+.carUp {
+    background-image:url("Textures/carUp.png");
+    background-size: 40px 33px;
+}
+
+.carDown {
+    background-image:url("Textures/carDown.png");
+    background-size: 40px 33px;
+}
+
+.wall{
+    background-color:blue !important;
+}

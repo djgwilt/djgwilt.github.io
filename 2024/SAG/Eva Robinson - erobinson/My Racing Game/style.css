@@ -1,0 +1,33 @@
+body {
+    background-color:rgb(219, 183, 241);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player1 {
+    background-image:url("cat\ cartoon\ \(my\ game\ sprite\).jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: black !important;
+}
+
+.flag {
+    background-image:url("flag.jpg");
+    background-size: 40px 40px;
+}
+
+audio {
+  visibility: ;  
+}

@@ -1,0 +1,513 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script defer src="code.js"></script>
+    <title>Racing Game</title>    
+  </head>
+
+  <body>
+    
+    <p>Use right/left arrow keys to move.</p>
+
+    <table id="RacingTrack">
+        <!-- The table cells have an id with the row and column number -->
+        <tr>
+          <td id="R0C0" class="wall"></td>
+          <td id="R0C1" class="wall"></td>
+          <td id="R0C2" class="wall"></td>
+          <td id="R0C3" class="wall"></td>
+          <td id="R0C4" class="wall"></td>
+          <td id="R0C5" class="wall"></td>
+          <td id="R0C6" class="wall"></td>
+          <td id="R0C7" class="wall"></td>
+          <td id="R0C8" class="wall"></td>
+          <td id="R0C9" class="wall"></td>
+          <td id="R0C10" class="wall"></td>
+          <td id="R0C11" class="wall"></td>
+          <td id="R0C12" class="wall"></td>
+          <td id="R0C13" class="wall"></td>
+          <td id="R0C14" class="wall"></td>
+          <td id="R0C15" class="wall"></td>
+          <td id="R0C16" class="wall"></td>
+          <td id="R0C17" class="wall"></td>
+          <td id="R0C18" class="wall"></td>
+        </tr>
+        <tr>
+          <td id="R1C0" class="wall"></td>
+          <td id="R1C1" class="carRight"></td>
+          <td id="R1C2"></td>
+          <td id="R1C3"></td>
+          <td id="R1C4"></td>
+          <td id="R1C5"></td>
+          <td id="R1C6"></td>
+          <td id="R1C7"></td>
+          <td id="R1C8"></td>
+          <td id="R1C9" class="wall"></td>
+          <td id="R1C10"></td>
+          <td id="R1C11"></td>
+          <td id="R1C12"></td>
+          <td id="R1C13"></td>
+          <td id="R1C14"></td>
+          <td id="R1C15"></td>
+          <td id="R1C16"></td>
+          <td id="R1C17"></td>
+          <td id="R1C18" class="wall"></td>
+        </tr>
+        <tr>
+          <td id="R2C0" class="wall"></td>
+          <td id="R2C1"></td>
+          <td id="R2C2" class="wall"></td>
+          <td id="R2C3" class="wall"></td>
+          <td id="R2C4"></td>
+          <td id="R2C5" class="wall"></td>
+          <td id="R2C6" class="wall"></td>
+          <td id="R2C7" class="wall"></td>
+          <td id="R2C8"></td>
+          <td id="R2C9" class="wall"></td>
+          <td id="R2C10"></td>
+          <td id="R2C11" class="wall"></td>
+          <td id="R2C12" class="wall"></td>
+          <td id="R2C13" class="wall"></td>
+          <td id="R2C14"></td>
+          <td id="R2C15" class="wall"></td>
+          <td id="R2C16" class="wall"></td>
+          <td id="R2C17"></td>
+          <td id="R2C18" class="wall"></td>
+        </tr>
+        <tr>
+          <td id="R3C0" class="wall"></td>
+          <td id="R3C1"></td>
+          <td id="R3C2" class="wall"></td>
+          <td id="R3C3" class="wall"></td>
+          <td id="R3C4"></td>
+          <td id="R3C5" class="wall"></td>
+          <td id="R3C6" class="wall"></td>
+          <td id="R3C7" class="wall"></td>
+          <td id="R3C8"></td>
+          <td id="R3C9" class="wall"></td>
+          <td id="R3C10"></td>
+          <td id="R3C11" class="wall"></td>
+          <td id="R3C12" class="wall"></td>
+          <td id="R3C13" class="wall"></td>
+          <td id="R3C14"></td>
+          <td id="R3C15" class="wall"></td>
+          <td id="R3C16" class="wall"></td>
+          <td id="R3C17"></td>
+          <td id="R3C18" class="wall"></td>
+        </tr>
+        <tr>
+          <td id="R4C0" class="wall"></td>
+          <td id="R4C1"></td>
+          <td id="R4C2"></td>
+          <td id="R4C3"></td>
+          <td id="R4C4"></td>
+          <td id="R4C5"></td>
+          <td id="R4C6"></td>
+          <td id="R4C7"></td>
+          <td id="R4C8"></td>
+          <td id="R4C9"></td>
+          <td id="R4C10"></td>
+          <td id="R4C11"></td>
+          <td id="R4C12"></td>
+          <td id="R4C13"></td>
+          <td id="R4C14"></td>
+          <td id="R4C15"></td>
+          <td id="R4C16"></td>
+          <td id="R4C17"></td>
+          <td id="R4C18" class="wall"></td>
+        </tr>
+        <tr>
+          <td id="R5C0" class="wall"></td>
+          <td id="R5C1"></td>
+          <td id="R5C2" class="wall"></td>
+          <td id="R5C3" class="wall"></td>
+          <td id="R5C4"></td>
+          <td id="R5C5" class="wall"></td>
+          <td id="R5C6"></td>
+          <td id="R5C7" class="wall"></td>
+          <td id="R5C8" class="wall"></td>
+          <td id="R5C9"class="wall"></td>
+          <td id="R5C10" class="wall"></td>
+          <td id="R5C11" class="wall"></td>
+          <td id="R5C12"></td>
+          <td id="R5C13" class="wall"></td>
+          <td id="R5C14"></td>
+          <td id="R5C15" class="wall"></td>
+          <td id="R5C16" class="wall"></td>
+          <td id="R5C17"></td>
+          <td id="R5C18" class="wall"></td>
+        </tr>
+        <tr>
+          <td id="R6C0" class="wall"></td>
+          <td id="R6C1"></td>
+          <td id="R6C2"></td>
+          <td id="R6C3"></td>
+          <td id="R6C4"></td>
+          <td id="R6C5" class="wall"></td>
+          <td id="R6C6"></td>
+          <td id="R6C7"></td>
+          <td id="R6C8"></td>
+          <td id="R6C9" class="wall"></td>
+          <td id="R6C10"></td>
+          <td id="R6C11"></td>
+          <td id="R6C12"></td>
+          <td id="R6C13" class="wall"></td>
+          <td id="R6C14"></td>
+          <td id="R6C15"></td>
+          <td id="R6C16"></td>
+          <td id="R6C17"></td>
+          <td id="R6C18" class="wall"></td>
+        </tr>
+        <tr>
+          <td id="R7C0" class="wall"></td>
+          <td id="R7C1" class="wall"></td>
+          <td id="R7C2" class="wall"></td>
+          <td id="R7C3" class="wall"></td>
+          <td id="R7C4"></td>
+          <td id="R7C5" class="wall"></td>
+          <td id="R7C6" class="wall"></td>
+          <td id="R7C7" class="wall"></td>
+          <td id="R7C8"></td>
+          <td id="R7C9" class="wall"></td>
+          <td id="R7C10"></td>
+          <td id="R7C11" class="wall"></td>
+          <td id="R7C12" class="wall"></td>
+          <td id="R7C13" class="wall"></td>
+          <td id="R7C14"></td>
+          <td id="R7C15" class="wall"></td>
+          <td id="R7C16" class="wall"></td>
+          <td id="R7C17" class="wall"></td>
+          <td id="R7C18" class="wall"></td>
+        </tr>
+        <tr>
+          <td id="R8C0"></td>
+          <td id="R8C1"></td>
+          <td id="R8C2"></td>
+          <td id="R8C3" class="wall"></td>
+          <td id="R8C4"></td>
+          <td id="R8C5" class="wall"></td>
+          <td id="R8C6"></td>
+          <td id="R8C7"></td>
+          <td id="R8C8"></td>
+          <td id="R8C9"></td>
+          <td id="R8C10"></td>
+          <td id="R8C11"></td>
+          <td id="R8C12"></td>
+          <td id="R8C13" class="wall"></td>
+          <td id="R8C14"></td>
+          <td id="R8C15" class="wall"></td>
+          <td id="R8C16"></td>
+          <td id="R8C17"></td>
+          <td id="R8C18"></td>
+        </tr>
+        <tr>
+          <td id="R9C0" class="wall"></td>
+          <td id="R9C1" class="wall"></td>
+          <td id="R9C2" class="wall"></td>
+          <td id="R9C3" class="wall"></td>
+          <td id="R9C4"></td>
+          <td id="R9C5" class="wall"></td>
+          <td id="R9C6"></td>
+          <td id="R9C7" class="wall"></td>
+          <td id="R9C8" class="wall"></td>
+          <td id="R9C9"></td>
+          <td id="R9C10" class="wall"></td>
+          <td id="R9C11" class="wall"></td>
+          <td id="R9C12"></td>
+          <td id="R9C13" class="wall"></td>
+          <td id="R9C14"></td>
+          <td id="R9C15" class="wall"></td>
+          <td id="R9C16" class="wall"></td>
+          <td id="R9C17" class="wall"></td>
+          <td id="R9C18" class="wall"></td>
+        </tr>
+        <tr>
+          <td id="R10C0"></td>
+          <td id="R10C1"></td>
+          <td id="R10C2"></td>
+          <td id="R10C3"></td>
+          <td id="R10C4"></td>
+          <td id="R10C5"></td>
+          <td id="R10C6"></td>
+          <td id="R10C7" class="wall"></td>
+          <td id="R10C8"></td>
+          <td id="R10C9"></td>
+          <td id="R10C10"></td>
+          <td id="R10C11" class="wall"></td>
+          <td id="R10C12"></td>
+          <td id="R10C13"></td>
+          <td id="R10C14"></td>
+          <td id="R10C15"></td>
+          <td id="R10C16"></td>
+          <td id="R10C17"></td>
+          <td id="R10C18"></td>
+        </tr>
+        <tr>
+          <td id="R11C0"></td>
+          <td id="R11C1"></td>
+          <td id="R11C2"></td>
+          <td id="R11C3"></td>
+          <td id="R11C4"></td>
+          <td id="R11C5"></td>
+          <td id="R11C6"></td>
+          <td id="R11C7" class="wall"></td>
+          <td id="R11C8"></td>
+          <td id="R11C9"></td>
+          <td id="R11C10"></td>
+          <td id="R11C11" class="wall"></td>
+          <td id="R11C12"></td>
+          <td id="R11C13"></td>
+          <td id="R11C14"></td>
+          <td id="R11C15"></td>
+          <td id="R11C16"></td>
+          <td id="R11C17"></td>
+          <td id="R11C18"></td>
+        </tr>
+        <tr>
+          <td id="R12C0" class="wall"></td>
+          <td id="R12C1" class="wall"></td>
+          <td id="R12C2" class="wall"></td>
+          <td id="R12C3" class="wall"></td>
+          <td id="R12C4"></td>
+          <td id="R12C5" class="wall"></td>
+          <td id="R12C6"></td>
+          <td id="R12C7" class="wall"></td>
+          <td id="R12C8" class="wall"></td>
+          <td id="R12C9" class="wall"></td>
+          <td id="R12C10" class="wall"></td>
+          <td id="R12C11" class="wall"></td>
+          <td id="R12C12"></td>
+          <td id="R12C13" class="wall"></td>
+          <td id="R12C14"></td>
+          <td id="R12C15" class="wall"></td>
+          <td id="R12C16" class="wall"></td>
+          <td id="R12C17" class="wall"></td>
+          <td id="R12C18" class="wall"></td>
+        </tr>
+        <tr>
+          <td id="R13C0"></td>
+          <td id="R13C1"></td>
+          <td id="R13C2"></td>
+          <td id="R13C3" class="wall"></td>
+          <td id="R13C4"></td>
+          <td id="R13C5" class="wall"></td>
+          <td id="R13C6"></td>
+          <td id="R13C7"></td>
+          <td id="R13C8"></td>
+          <td id="R13C9"></td>
+          <td id="R13C10"></td>
+          <td id="R13C11"></td>
+          <td id="R13C12"></td>
+          <td id="R13C13" class="wall"></td>
+          <td id="R13C14"></td>
+          <td id="R13C15" class="wall"></td>
+          <td id="R13C16"></td>
+          <td id="R13C17"></td>
+          <td id="R13C18"></td>
+        </tr>
+        <tr>
+          <td id="R14C0" class="wall"></td>
+          <td id="R14C1" class="wall"></td>
+          <td id="R14C2" class="wall"></td>
+          <td id="R14C3" class="wall"></td>
+          <td id="R14C4"></td>
+          <td id="R14C5" class="wall"></td>
+          <td id="R14C6"></td>
+          <td id="R14C7" class="wall"></td>
+          <td id="R14C8" class="wall"></td>
+          <td id="R14C9" class="wall"></td>
+          <td id="R14C10" class="wall"></td>
+          <td id="R14C11" class="wall"></td>
+          <td id="R14C12"></td>
+          <td id="R14C13" class="wall"></td>
+          <td id="R14C14"></td>
+          <td id="R14C15" class="wall"></td>
+          <td id="R14C16" class="wall"></td>
+          <td id="R14C17" class="wall"></td>
+          <td id="R14C18" class="wall"></td>
+        </tr>
+        <tr>
+          <td id="R15C0" class="wall"></td>
+          <td id="R15C1"></td>
+          <td id="R15C2"></td>
+          <td id="R15C3"></td>
+          <td id="R15C4"></td>
+          <td id="R15C5"></td>
+          <td id="R15C6"></td>
+          <td id="R15C7"></td>
+          <td id="R15C8"></td>
+          <td id="R15C9" class="wall"></td>
+          <td id="R15C10"></td>
+          <td id="R15C11"></td>
+          <td id="R15C12"></td>
+          <td id="R15C13"></td>
+          <td id="R15C14"></td>
+          <td id="R15C15"></td>
+          <td id="R15C16"></td>
+          <td id="R15C17"></td>
+          <td id="R15C18" class="wall"></td>
+        </tr>
+        <tr>
+          <td id="R16C0" class="wall"></td>
+          <td id="R16C1"></td>
+          <td id="R16C2" class="wall"></td>
+          <td id="R16C3" class="wall"></td>
+          <td id="R16C4"></td>
+          <td id="R16C5" class="wall"></td>
+          <td id="R16C6" class="wall"></td>
+          <td id="R16C7" class="wall"></td>
+          <td id="R16C8"></td>
+          <td id="R16C9" class="wall"></td>
+          <td id="R16C10"></td>
+          <td id="R16C11" class="wall"></td>
+          <td id="R16C12" class="wall"></td>
+          <td id="R16C13" class="wall"></td>
+          <td id="R16C14"></td>
+          <td id="R16C15" class="wall"></td>
+          <td id="R16C16" class="wall"></td>
+          <td id="R16C17"></td>
+          <td id="R16C18" class="wall"></td>
+        </tr>
+        <tr>
+          <td id="R17C0" class="wall"></td>
+          <td id="R17C1"></td>
+          <td id="R17C2"></td>
+          <td id="R17C3" class="wall"></td>
+          <td id="R17C4"></td>
+          <td id="R17C5"></td>
+          <td id="R17C6"></td>
+          <td id="R17C7"></td>
+          <td id="R17C8"></td>
+          <td id="R17C9"></td>
+          <td id="R17C10"></td>
+          <td id="R17C11"></td>
+          <td id="R17C12"></td>
+          <td id="R17C13"></td>
+          <td id="R17C14"></td>
+          <td id="R17C15" class="wall"></td>
+          <td id="R17C16"></td>
+          <td id="R17C17"></td>
+          <td id="R17C18" class="wall"></td>
+        </tr>
+        <tr>
+          <td id="R18C0" class="wall"></td>
+          <td id="R18C1" class="wall"></td>
+          <td id="R18C2"></td>
+          <td id="R18C3" class="wall"></td>
+          <td id="R18C4"></td>
+          <td id="R18C5" class="wall"></td>
+          <td id="R18C6"></td>
+          <td id="R18C7" class="wall"></td>
+          <td id="R18C8" class="wall"></td>
+          <td id="R18C9" class="wall"></td>
+          <td id="R18C10" class="wall"></td>
+          <td id="R18C11" class="wall"></td>
+          <td id="R18C12"></td>
+          <td id="R18C13" class="wall"></td>
+          <td id="R18C14"></td>
+          <td id="R18C15" class="wall"></td>
+          <td id="R18C16"></td>
+          <td id="R18C17" class="wall"></td>
+          <td id="R18C18" class="wall"></td>
+        </tr>
+        <tr>
+          <td id="R19C0" class="wall"></td>
+          <td id="R19C1"></td>
+          <td id="R19C2"></td>
+          <td id="R19C3"></td>
+          <td id="R19C4"></td>
+          <td id="R19C5" class="wall"></td>
+          <td id="R19C6"></td>
+          <td id="R19C7"></td>
+          <td id="R19C8"></td>
+          <td id="R19C9" class="wall"></td>
+          <td id="R19C10"></td>
+          <td id="R19C11"></td>
+          <td id="R19C12"></td>
+          <td id="R19C13" class="wall"></td>
+          <td id="R19C14"></td>
+          <td id="R19C15"></td>
+          <td id="R19C16"></td>
+          <td id="R19C17"></td>
+          <td id="R19C18" class="wall"></td>
+        </tr>
+        <tr>
+          <td id="R20C0" class="wall"></td>
+          <td id="R20C1"></td>
+          <td id="R20C2" class="wall"></td>
+          <td id="R20C3" class="wall"></td>
+          <td id="R20C4" class="wall"></td>
+          <td id="R20C5" class="wall"></td>
+          <td id="R20C6" class="wall"></td>
+          <td id="R20C7" class="wall"></td>
+          <td id="R20C8"></td>
+          <td id="R20C9" class="wall"></td>
+          <td id="R20C10"></td>
+          <td id="R20C11" class="wall"></td>
+          <td id="R20C12" class="wall"></td>
+          <td id="R20C13" class="wall"></td>
+          <td id="R20C14" class="wall"></td>
+          <td id="R20C15" class="wall"></td>
+          <td id="R20C16" class="wall"></td>
+          <td id="R20C17"></td>
+          <td id="R20C18" class="wall"></td>
+        </tr>
+        <tr>
+          <td id="R21C0" class="wall"></td>
+          <td id="R21C1"></td>
+          <td id="R21C2"></td>
+          <td id="R21C3"></td>
+          <td id="R21C4"></td>
+          <td id="R21C5"></td>
+          <td id="R21C6"></td>
+          <td id="R21C7"></td>
+          <td id="R21C8"></td>
+          <td id="R21C9"></td>
+          <td id="R21C10"></td>
+          <td id="R21C11"></td>
+          <td id="R21C12"></td>
+          <td id="R21C13"></td>
+          <td id="R21C14"></td>
+          <td id="R21C15"></td>
+          <td id="R21C16"></td>
+          <td id="R21C17"></td>
+          <td id="R21C18" class="wall"></td>
+        </tr>
+        <tr>
+          <td id="R22C0" class="wall"></td>
+          <td id="R22C1" class="wall"></td>
+          <td id="R22C2" class="wall"></td>
+          <td id="R22C3" class="wall"></td>
+          <td id="R22C4" class="wall"></td>
+          <td id="R22C5" class="wall"></td>
+          <td id="R22C6" class="wall"></td>
+          <td id="R22C7" class="wall"></td>
+          <td id="R22C8" class="wall"></td>
+          <td id="R22C9" class="wall"></td>
+          <td id="R22C10" class="wall"></td>
+          <td id="R22C11" class="wall"></td>
+          <td id="R22C12" class="wall"></td>
+          <td id="R22C13" class="wall"></td>
+          <td id="R22C14" class="wall"></td>
+          <td id="R22C15" class="wall"></td>
+          <td id="R22C16" class="wall"></td>
+          <td id="R22C17" class="wall"></td>
+          <td id="R22C18" class="wall"></td>
+        </tr>
+      
+    </table>
+
+    <p id="Message"><br></p>
+
+    <div>
+    Console Output:
+    <textarea id='output' style='width: 100%;' rows='20' disabled></textarea>
+    </div>
+  </body>
+
+</html>

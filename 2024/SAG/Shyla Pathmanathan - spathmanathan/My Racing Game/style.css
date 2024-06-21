@@ -1,0 +1,25 @@
+body {
+    background-color:lightskyblue !important;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.flag{
+    background-image: url("flag.png");
+    background-size: 40px 40px;
+}
+
+.player1 {
+    background-image:url("butterfly.png");
+    background-size: 40px 40px;
+}

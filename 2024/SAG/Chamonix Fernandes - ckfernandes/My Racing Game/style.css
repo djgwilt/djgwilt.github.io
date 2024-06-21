@@ -1,0 +1,59 @@
+body {
+    background-color:rgb(75, 75, 75);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:30px;
+    height:30px;
+    border:1px solid;
+    background-color: white;
+}
+
+
+.player1right {
+    background-image:url("raccoonright.png");
+    background-size: 34px 34px;
+}
+
+.player1left {
+    background-image:url("raccoon-left.png");
+    background-size: 34px 34px;
+}
+
+.player1 {
+    background-image:url("racoon.png");
+    background-size: 34px 34px;
+}
+.player1up {
+    background-image:url("raccoon_PNG16966.png");
+    background-size: 34px 34px;
+}
+
+.player1down {
+    background-image:url("raccoondown.png");
+    background-size: 34px 34px;
+}
+
+.wall {
+    background-image:url("LeicesterRedStockEnglish.webp") !important; 
+    background-size: 34px 34px;
+}
+
+.flag {
+    background-image:url("trashbim.png");
+    background-size: 34px 36px;
+}
+
+.wallFake {
+    background-image:url("crackedwall.png") !important;
+    background-size: 34px 34px;
+}
+.coin {
+    background-image:url("burger.png");
+    background-size: 34px 34px;
+}

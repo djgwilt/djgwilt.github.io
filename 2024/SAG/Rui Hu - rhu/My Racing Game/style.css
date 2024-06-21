@@ -1,0 +1,32 @@
+body {
+    background-color:rgb(167, 193, 225);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player1 {
+    background-image:url("Screenshot\ 2024-06-06\ 143401.png");
+    background-size: 40px 40px;
+}
+
+.wall {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color: black !important;
+}
+
+.wormholeflag {
+    background-image:url("Screenshot\ 2024-06-07\ 111343.png");
+    background-size: 40px 40px;
+}

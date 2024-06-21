@@ -1,0 +1,68 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player1 {
+    background-image:url("My game character.jpg");
+    background-size: 42px 42px;
+}
+
+
+.wall {
+    background-color: black  !important;
+}
+
+.Winning {
+    background-image:url("Winning.jpg");
+    background-size: 40px 40px ;
+}
+
+.wall2 {
+    background-image:url("Enemies.jpg");
+    background-size: 42px 42px ;
+}
+
+.wall3 {
+    background-image:url("moving enemies.jpg");
+    background-size: 42px 42px ;
+}
+
+.wall4 {
+    background-image:url("moving enemies down.jpg");
+    background-size: 42px 42px;
+}
+
+.wall5 {
+    background-image:url("moving enemies right.jpg");
+    background-size: 42px 42px;
+}
+
+.wall6 {
+    background-image:url("moving enemies left.jpg");
+    background-size: 42px 42px;
+}
+
+.coin1 {
+    background-image:url("coins.jpg");
+    background-size: 40px 40px ;
+}
+
+.openExit {
+    background-image:url("openExit.jpg");
+}
+
+
+
+
