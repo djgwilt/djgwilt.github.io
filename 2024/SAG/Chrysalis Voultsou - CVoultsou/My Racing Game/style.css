@@ -1,0 +1,41 @@
+body {
+    background-color:rgb(250, 85, 181);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(0, 0, 0);
+}
+
+#RacingTrack td {
+    width:85px;
+    height:60px;
+    border:1px solid;
+    background-color:rgb(234, 184, 226);
+}
+
+
+.flag {
+    background-image:url("pink flag.png");
+    background-size:90px 62px;
+}
+
+.player1{
+    background-image:url("Pink racing car.png");
+    background-size:90px 62px;
+}
+
+.player1-left{
+    background-image:url("pink car left.png");
+    background-size:90px 62px;
+}
+.wall {
+background-color: #ff3baa !important;
+}
+
+
+
+.coin {
+    background-image:url("pink\ coin.gif");
+    background-size:90px 62px;
+}

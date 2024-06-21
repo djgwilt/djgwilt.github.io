@@ -1,0 +1,41 @@
+
+
+.flag {
+    background-image:url("flag.png");
+    background-size: 40px 40px;    
+}
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player1 {
+    background-image:url("sprite.jpg");
+    background-size: 40px 40px;
+}
+.wall{
+    background-color : black !important ;
+}
+.igloo {
+    background-image:url("igloo.jpg");
+    background-size: 40px 40px;
+}
+.fakewall{
+    background-image: url("fakewall.jpg") ;
+    background-size: 40px 40px;
+}
+.smallplayer{
+    background-image: url("sprtie.jpg");
+    background-size: 5px 5px;
+}

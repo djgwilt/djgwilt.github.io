@@ -20,6 +20,7 @@ bag = [2, 0]
 
 # to store the handle code for the timer interval to cancel it when we crash
 intervalHandle = 0
+count = 0
 
 #############################
 # Sub-Programs
@@ -65,13 +66,36 @@ def updatePosition():
             handleCrash()
         elif cell.className == "wall":
             handleCrash()
+        elif cell.className == "coin":
+            cell.className = "player1"
+            treatcount()
+        elif cell.className == "flag":
+            cell.className = "player1"
+            win()
         else:
             cell.className = "player1"
 
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = "Oops you crashed..."
+
+    document.getElementById("Message").innerText = "Oops you crashed...! you have eaten {} treats but now you are covered with poo.".format(count)
+
+def win():
+    window.clearInterval(intervalHandle)
+    if count <= 5:
+        print("you are going to die of starvation, unlucky there.")
+    elif count <= 13:
+        print("you are a happy little sausage!")
+    else:
+        print("you are fat now.lol.")
+    document.getElementById("Message").innerText = "Well done, you found your owner! you have eaten {} treats.".format(count)
+    
+
+def treatcount():
+    global count
+    count = count + 1
+    document.getElementById("Message").innerText = "you have collected {}".format(count)
 
 # called when the page is loaded to start the timer checks
 def runGame():

@@ -1,0 +1,30 @@
+body {
+    background-color:rgb(238, 88, 1);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(238, 88, 1);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(255, 255, 255);
+}
+
+.player1 {
+    background-image:url();
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-image:url(https://tse2.mm.bing.net/th/id/OIP.tA_Ev0CEnsS1IWm6mmCxhgHaHa?w=168&h=180&c=7&r=0&o=5&dpr=1.8&pid=1.7)
+    background-size: 40px 40px;
+}
+
+.flag {
+    background-image:url(https://tse4.mm.bing.net/th/id/OIP.BEBUILdtm13FjeesdZg3jwHaHZ?w=152&h=180&c=7&r=0&o=5&dpr=1.8&pid=1.7);
+    background-size: 40px 40px;
+}

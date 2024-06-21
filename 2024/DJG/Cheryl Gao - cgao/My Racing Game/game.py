@@ -25,7 +25,7 @@ intervalHandle = 0
 
 
 def getCell():
-    return document.getElementById("R{}C{}".format(0, position[0]))
+    return document.getElementById("R{}C{}".format(position[1], position[0]))
 
 def checkKey(event):
     event.preventDefault()  # this will prevent the down arrow from scrolling the page
@@ -36,12 +36,12 @@ def checkKey(event):
         # left arrow
         direction[0] = -1
         direction[1] = 0
-    elif event.key == "ArrowDown":
-        direction[0] = 0
-        direction[1] = -1
     elif event.key == "ArrowUp":
+        direction[1] = -1
         direction[0] = 0
+    elif event.key == "ArrowDown":
         direction[1] = 1
+        direction[0] = 0
 
 # the timer check function - runs every 300 milliseconds to update player1's position
 def updatePosition():

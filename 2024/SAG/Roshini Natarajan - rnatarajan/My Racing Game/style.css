@@ -1,0 +1,30 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:10px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:5px solid;
+    background-color:white;
+}
+
+.player1 {
+    background-image:url("ghost.png");
+    background-size: 40px 40px;
+}
+.wall {
+background-color: black !important;
+}
+
+
+.flag{ 
+    background-image:url("flag.png");
+    background-size:40px 40px;
+
+}

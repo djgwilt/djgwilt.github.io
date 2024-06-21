@@ -26,3 +26,8 @@ body {
     background-image:url(apple.png);
     background-size: 41px 41px;
 }
+
+.coin {
+    background-image: url("lettuce2.png");
+    background-size: 40px 40px;
+}

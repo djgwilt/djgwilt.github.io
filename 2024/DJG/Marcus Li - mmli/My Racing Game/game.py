@@ -77,30 +77,47 @@ def crashwall():
 # called when the page is loaded to start the timer checks
 def runGame():
     global intervalHandle
+    #settings()
+    #setboard()
     print("Go!")
     document.addEventListener('keydown', create_proxy(checkKey))
     intervalHandle = window.setInterval(create_proxy(updatePosition), 0)
 
+def settings():
+    global playernumber
+    global mode
+    playernumber = 0
+    mode = ""
+    while playernumber == 0:
+        try:
+            playernumber = int(input("Select number of players (1/2/3/4)"))
+            if playernumber != 1 and playernumber != 2 and playernumber != 3 and playernumber != 4:
+                playernumber = 0
+        except:
+            pass
+    if playernumber == 1:
+        while mode == "":
+            mode = input("Select mode (Easy/Medium/Hard) or type \"Back\" to reselect number of players")
+            if mode.title() != "Easy" and mode.title() != "Medium" and mode.title() != "Hard" and mode.title() != "Back":
+                mode = ""
+    else:
+        while mode == "":
+            mode = input("Select mode (1v1/Escape/Race) or type \"Back\" to reselect number of players")
+            if mode.lower() != "1v1" and mode.title() != "Escape" and mode.title() != "Race" and mode.title() != "Back":
+                mode = ""
+    if mode.title() == "Back":
+        settings()
+
+def setboard():
+    if playernumber == 1:
+        if mode.title() == "Easy":
+            templist = [player1, ]
+            tempposition = [0, 0]
+            tempcell = document.getElementById("R{}C{}".format(tempposition[1], tempposition[0]))
+            tempcell.className = templist
+
+
 #############################
 # Main Program
 #############################
-playernumber = 0
-mode = ""
-while playernumber == 0:
-    try:
-        playernumber = int(input("Select number of players (1/2/3/4)"))
-        if playernumber != 1 and playernumber != 2 and playernumber != 3 and playernumber != 4:
-            playernumber = 0
-    except:
-        pass
-if playernumber == 1:
-    while mode == "":
-        mode = input("Select mode (Easy/Medium/Hard)")
-        if mode.title() != "Easy" and mode.title() != "Medium" and mode.title() != "Hard":
-            mode = ""
-else:
-    while mode == "":
-        mode = input("Select mode (1v1, Escape, Race)")
-        if mode.lower() != "1v1" and mode.title() != "Escape" and mode.title() != "Race":
-            mode = ""
 runGame()

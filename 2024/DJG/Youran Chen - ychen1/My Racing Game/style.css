@@ -40,3 +40,8 @@ body {
 .wallFake {
     background-color:rgba(163, 231, 173, 0.147) !important;
 }
+
+.coin {
+    background-image:url("strawberryracinggame.jpg");
+    background-size: 40px 40px;
+}

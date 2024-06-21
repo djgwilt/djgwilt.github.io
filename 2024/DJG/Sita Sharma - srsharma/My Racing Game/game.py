@@ -74,6 +74,8 @@ def updatePosition():
             handleWin()
         elif cell.className == "coin":
             cell.className = player1Class
+        elif cell.className == "apple":
+           handleCrash()
         else:
             cell.className = player1Class
                 
@@ -87,7 +89,7 @@ def runGame():
     global intervalHandle
     print("Running Game")
     document.addEventListener('keydown', create_proxy(checkKey))
-    intervalHandle = window.setInterval(create_proxy(updatePosition), 300)
+    intervalHandle = window.setInterval(create_proxy(updatePosition), 250)
 
 
 

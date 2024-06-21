@@ -60,6 +60,9 @@ def updatePosition():
             handleCrash()
         elif cell.className == "wall":
             handleCrash()
+        elif cell.className == "flag":
+            cell.className = "player1"
+            handleWin()
         else:
             cell.className = "player1"
             
@@ -74,6 +77,11 @@ def runGame():
     print("Running Game")
     document.addEventListener('keydown', create_proxy(checkKey))
     intervalHandle = window.setInterval(create_proxy(updatePosition), 300)
+
+# if the car reaches the flag the user has won
+def handleWin():
+    window.clearInterval(intervalHandle)
+    document.getElementById("Message").innerText = "You Win!"
 
 #############################
 # Main Program

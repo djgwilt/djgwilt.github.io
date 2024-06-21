@@ -1,0 +1,51 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player1 {
+    background-image:url("Mario.jpg");
+    background-size: 43px 43px;
+}
+
+.wall {
+    background-image:url("REAL\ GOOMBA.jpg") ;
+    background-size: 43px 43px;
+}
+
+.flag  {
+    background-image:url("Flag.jpg");
+    background-size: 43px 43px;
+}
+
+.coin   {
+    background-image:url("COIN.jpg") ;
+    background-size: 43px 43px;
+}
+
+.wall2  {
+    background-image:url("Flying\ koopa.jpg") ;
+    background-size: 45px 45px;
+}
+.wall3  {
+    background-image:url("Flying\ koopa.jpg") ;
+    background-size: 45px 45px;
+}
+
+.wall4  {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}

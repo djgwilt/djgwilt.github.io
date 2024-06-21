@@ -45,3 +45,8 @@ body {
 .audio {
     visibility: hidden;
 }
+
+.apple {
+    background-image:url(apple.jpg);
+    background-size: 40px 40px;
+}

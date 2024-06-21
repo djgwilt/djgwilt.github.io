@@ -1,0 +1,27 @@
+body {
+    background-color:green;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid yellow;
+}
+
+#RacingTrack td {
+    width:15px;
+    height:15px;
+    border:1px yellow;
+    background-color: black;
+}
+
+.player1 {
+    background-image:url("f1car.jpg");
+    background-size: 15px 15px;
+}
+.wall {
+    background-color: green !important;
+}
+.flag {
+    background-image:url("Flag.jpg");
+    background-size: 15px 15px;
+}

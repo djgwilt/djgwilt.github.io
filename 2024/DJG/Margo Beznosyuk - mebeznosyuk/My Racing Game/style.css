@@ -1,0 +1,37 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color: rgb(37, 35, 35) ;
+}
+
+.wall {
+    width: 40px;
+    height: 40px;
+    background-color:lightslategrey!important;
+}
+
+.water {
+    width: 40px;
+    height: 40px;
+    background-color: lightskyblue !important;
+}
+
+.grass {
+    width: 40px;
+    height: 40px;
+    background-color: lightgreen !important;
+}
+.player1 {
+    background-image:url("car.jpg");
+    background-size: 40px 40px;
+}

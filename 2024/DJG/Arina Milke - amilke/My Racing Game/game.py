@@ -83,6 +83,9 @@ def updatePosition():
             handleCrash()
         elif cell.className == "wall":
             handleCrash()
+        elif cell.className == "fakepassage":
+            cell.className = "wall"
+            handleFakepassage()
         elif cell.className == "coin":
             cell.className = "player1"
             bag = bag + 1
@@ -90,9 +93,9 @@ def updatePosition():
             handleWin()
         elif cell.className == "flag2":
             handleWrongflag()
-        #elif cell.className == "speedup":
-            #speedup()
-            #cell.className = "player1"
+        elif cell.className == "speedup":
+            speedup()
+            cell.className = "player1"
         else:
             cell.className = "player1"
 
@@ -108,6 +111,9 @@ def updatePosition():
             handleCrash()
         elif cell.className == "wall":
             handleCrash2()
+        elif cell.className == "fakepassage":
+            cell.className = "wall"
+            handleFakepassage()
         elif cell.className == "coin":
             cell.className = "player2"
             bag = bag + 1
@@ -115,35 +121,37 @@ def updatePosition():
             handleWrongflag()
         elif cell.className == "flag2":
             handleWin2()
-        #elif cell.className == "speedup":
-            #speedup()
-            #cell.className = "player2"
+        elif cell.className == "speedup":
+            speedup()
+            cell.className = "player2"
         else:
             cell.className = "player2"
 
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():
-    window.clearInterval(intervalHandle)
-    if win != 1:
+    if win != 1:    
+        window.clearInterval(intervalHandle)
         if bag == 0:
-            document.getElementById("Message").innerText = "Oops you crashed... you didn't even collect any candy."
+            document.getElementById("Message").innerText = "Oops, you crashed... you didn't even collect any candy."
         elif bag < 4:
-            document.getElementById("Message").innerText = "Oops you crashed... you only collected {} candy.".format(bag)
+            document.getElementById("Message").innerText = "Oops, you crashed... you only collected {} candy.".format(bag)
         else:
-            document.getElementById("Message").innerText = "Oops you crashed... you collected {} candy, though.".format(bag)
+            document.getElementById("Message").innerText = "Oops, you crashed... you collected {} candy, though.".format(bag)
         
 
 def handleCrash2():
-    if win2 != 1:
-        window.clearInterval(intervalHandle)
+    if win2 != 1:       
+        window.clearInterval(intervalHandle) 
         if bag == 0:
-            document.getElementById("Message").innerText = "Oops you crashed... you didn't even collect any candy."
+            document.getElementById("Message").innerText = "Oops, you crashed... you didn't even collect any candy."
         elif bag < 4:
-            document.getElementById("Message").innerText = "Oops you crashed... you only collected {} candy.".format(bag)
+            document.getElementById("Message").innerText = "Oops, you crashed... you only collected {} candy.".format(bag)
         else:
-            document.getElementById("Message").innerText = "Oops you crashed... you collected {} candy, though.".format(bag)
+            document.getElementById("Message").innerText = "Oops, you crashed... you collected {} candy, though.".format(bag)
 
-        
+def handleFakepassage():
+    window.clearInterval(intervalHandle)
+    document.getElementById("Message").innerText = "Oops, you crashed. That's a hidden wall, I told you to watch out for those..."
 
 def handleWrongflag():
     window.clearInterval(intervalHandle)
@@ -169,15 +177,20 @@ def handleWin2():
     else:
         document.getElementById("Message").innerText = "Only one more left! {} candy so far!".format(bag) 
 
-# def speedup():
+def speedup():
+    global x
+    global intervalHandle
+    x = x-50
+    window.clearInterval(intervalHandle)
+    intervalHandle = window.setInterval(create_proxy(updatePosition), x)
 
 
 # called when the page is loaded to start the timer checks
 def runGame():
     global intervalHandle
-    print("Running Game")
+    print("Running Game, watch out for hidden walls!")
     document.addEventListener('keydown', create_proxy(checkKey))
-    intervalHandle = window.setInterval(create_proxy(updatePosition), 300)
+    intervalHandle = window.setInterval(create_proxy(updatePosition), x)
 
 #############################
 # Main Program

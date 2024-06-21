@@ -1,0 +1,41 @@
+body {
+    background-color: white;
+}
+.dharwall {
+    background-color: gray !important;
+}
+
+.wall {
+    background-color: black !important;
+}
+.fakewall {
+    background-color: rgb(72, 72, 200) !important;
+}
+.handler {
+    background-image:url("https://m.media-amazon.com/images/M/MV5BZGFjODBmYTctZGNlMy00MGFlLWE5MTAtNmRlMDc1ZmFjNzQyXkEyXkFqcGdeQXVyMTIzNjQwNTQ1._V1_.jpg") ;
+    background-size: 40px 40px;
+}
+.burger {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEtCqdeaRxeH0k_6swQUYPgwMqekxczq0XxmjQ9mpbdkyiFx16:https://assets.bonappetit.com/photos/5b919cb83d923e31d08fed17/1:1/w_2560%252Cc_limit/basically-burger-1.jpg&s");
+    background-size: 40px 40px;
+}
+.flag{
+    background-image: url("https://m.media-amazon.com/images/M/MV5BMjczNGQ2NDYtYTQyYS00MjUyLTllYWUtMjVlZmI5NGY0NzcxXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_UY1200_CR285,0,630,1200_AL_.jpg");  
+    background-size: 40px 40px;  
+}
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid blue;
+
+}
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player1 {
+    background-image:url("https://m.media-amazon.com/images/M/MV5BZTM1NDFhMWEtOTUyOS00MWQwLTljZjgtM2QxYjViNzUyMTZhXkEyXkFqcGdeQXVyMTIzNTczNDc0._V1_QL75_UY281_CR116,0,190,281_.jpg");
+    background-size: 40px 40px;
+}

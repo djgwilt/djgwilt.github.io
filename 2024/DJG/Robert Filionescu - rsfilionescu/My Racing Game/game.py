@@ -45,8 +45,15 @@ def checkKey(event):
 def getCell():
     return document.getElementById("R{}C{}".format(position[1], position[0]))
 
+count = 11
+
 # the timer check function - runs every 300 milliseconds to update player1's position
 def updatePosition():
+    global count
+    if count <= 10:
+        count -=1
+        if count == 0:
+            slowAgain()
     global coin_counter
     if direction[0] != 0 or direction[1] != 0: # If I am moving left or right
         # Set the cell where player1 was to empty
@@ -69,6 +76,10 @@ def updatePosition():
             coin_counter += 1
             print(f"Coin counter {coin_counter}")
             cell.className = "player1"
+        elif cell.className == "cloud":
+            fast()
+            count = 10
+            cell.className = "player1"
         else:
             cell.className = "player1"
 
@@ -83,6 +94,17 @@ def runGame():
     print("Running Game")
     document.addEventListener('keydown', create_proxy(checkKey))
     intervalHandle = window.setInterval(create_proxy(updatePosition), 300)
+
+def fast():
+    global intervalHandle
+    window.clearInterval(intervalHandle)
+    intervalHandle = window.setInterval(create_proxy(updatePosition), 200)
+
+def slowAgain():
+    global intervalHandle
+    window.clearInterval(intervalHandle)
+    intervalHandle = window.setInterval(create_proxy(updatePosition), 300)
+    
 
 def finishGame():
     window.clearInterval(intervalHandle)

@@ -38,6 +38,7 @@ def checkKey(event):
         direction[1] = 1
         direction[0] = 0
 def getCell():
+
     return document.getElementById("R{}C{}".format(position[1], position[0]))
 
 # the timer check function - runs every 300 milliseconds to update player1's position # also if [0] != [0] then it is moving left and right
@@ -52,8 +53,12 @@ def updatePosition():
         position[1] += direction[1]
         # Re-draw player1 (or report a crash)
         cell = getCell()
-        if cell == None or cell.className == "wall":
+        if cell == None:
             handleCrash()
+        elif cell.className == "wall":
+            handleCrash()
+        elif cell.className == "flag":
+            handleWin()
         else:
             cell.className = "player1"
 
@@ -75,5 +80,7 @@ def handleWin():
 #############################
 # Main Program
 #############################
-
+def handleWin():
+    window.clearInterval(interHandle)
+    document.getElemntByID("Message").innerText = "You win!"
 runGame()

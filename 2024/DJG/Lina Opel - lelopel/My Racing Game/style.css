@@ -18,12 +18,16 @@ body {
     background-image:url("dashund sprite.jpg");
     background-size: 40px 40px;
 }
-.player2 { 
+.coin { 
     background-image:url("treat\ pic.jpg");
     background-size: 40px 40px;
 }
 .wall { 
     background-image:url("cartoon\ poo.png");
+    background-size: 40px 40px;
+}
+.flag { 
+    background-image:url("business\ man.png");
     background-size: 40px 40px;
 }
  

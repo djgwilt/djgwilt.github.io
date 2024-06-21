@@ -52,3 +52,8 @@ body {
     background-image:url("blueberry.png");
     background-size: 40px 40px;
 }
+
+.fakewall {
+    background-color: #b62bbd !important;
+    background-size: 40px 40px;
+}

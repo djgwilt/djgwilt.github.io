@@ -1,0 +1,44 @@
+
+
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(227, 247, 214);
+}
+body {
+    background-color: rgb(148, 201, 141);
+}
+font{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+
+}
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+.car {
+    background-image: url("car.jpg");
+    background-size: 40px 40px;
+}
+.win {
+    background-image:url("babypanda.png");
+    background-size: 42px 42px;
+}
+.bamboo{
+    background-image: url("bamboo.png");
+    background-size: 40px 40px;
+}
+.player1 {
+    background-image:url("panda.png");
+    background-size: 43px 43px;
+}
+.player1flipped {
+    background-image: url("flippedpanda.png");
+    background-size: 43px 43px;
+}
+.wall {
+    background-color: rgb(148, 201, 141) !important;
+}

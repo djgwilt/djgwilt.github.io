@@ -1,0 +1,33 @@
+body {
+    background-color:rgb(53, 90, 155);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(0, 0, 0);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(245, 245, 246);
+}
+
+.player1 {
+    background-image:url("pacman.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: black !important;
+}
+
+.wallFake {
+    background-color: rgb(0, 0, 0) !important;
+}
+
+.coin {
+background-image:url("goldcoin.png");
+background-size: 40px 40px;
+}
