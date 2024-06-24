@@ -1,0 +1,29 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+.wall{
+    background-image:url("gumball.jpg");
+}
+.wall2{
+    background-image:url("darwin.jpg");
+}
+.flag{
+    background-image:url("flaggie.png");
+    background-size: 40px 40px;
+}
+.player1 {
+    background-image:url("anais.png");
+    background-size: 40px 40px;
+} 

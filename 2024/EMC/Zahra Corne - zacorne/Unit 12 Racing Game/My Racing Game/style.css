@@ -1,0 +1,45 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:rgb(255, 255, 255);
+}
+
+.player1 {
+    background-image:url("kirby.jpg");
+    background-size: 40px 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+.wall {
+    background-color: rgb(207, 124, 172) !important;
+}
+
+.flag {
+    background-image:url("finishflags.png");
+    background-size: 40px 40px;
+}
+
+.player1-left {
+    background-image:url("kirbyleft.jpg");
+    background-size: 40px 40px;
+}
+
+.player1-right {
+    background-image:url("kirbyright.jpg");
+    background-size: 40px 40px;
+}
+
+.coin {
+    background-image: url("coin.jpg");
+    background-size: 40px 40px;
+}

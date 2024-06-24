@@ -1,0 +1,39 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid #000000;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:#330E77;
+}
+
+.player1 {
+    background-image:url("eagle.gif");
+    background-size: 40px 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+.player1-left{
+    background-image:url("eagleFlipped.gif");
+    background-size: 40px 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+.wall {
+    background-image:url("bluewall.gif");
+    background-size: 40px 40px;
+}
+
+.flag {
+    background-image:url("earth.gif");
+    background-size: 40px 40px;
+}

@@ -1,0 +1,33 @@
+body {
+    background-color:rgb(255, 255, 255);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgba(0, 0, 0, 0);
+}
+.finishquokka {
+    background-image:url("quokka.jpg") !important;
+    background-size: 40px 40px;
+}
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+.wall {
+    background-color:rgb(0, 0, 0) !important;
+}
+.wallFake {
+    background-color:dimgrey !important;
+}
+
+.player1 {
+    background-image:url("download.jpg");
+    background-size: 40px 40px;
+}
+.player1-left {
+    background-image:url("car\ fipped.png");
+    background-size: 40px 40px;
+}

@@ -1,0 +1,50 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color: beige;
+}
+
+.player1 {
+    background-image:url("cat.jpg") !important;
+    background-size: 40px 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.wall {
+    background-image:url("WALL.jpg");
+    background-size: 40px 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.money {
+    background-image:url("money\ money\ money.jpg");
+    background-size: 40px 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.wallFake {
+    background-image:url("FAKE WALL.jpg");
+    background-size: 40px 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.flag {
+    background-image:url("dooo\ youuu\ have\ a\ flaagggg.jpg");
+    background-size: 40px 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+}

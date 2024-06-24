@@ -1,0 +1,53 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player1 {
+    background-image:url("oioioi.jpg");
+    background-size: 40px 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.wall {
+    background-image:url("nigel farage.jpg") !important;
+    background-size: 40px 40px;
+}
+
+.flag {
+    background-image:url("Flaglarvae.jpg");
+    background-size: 40px 40px;
+}
+
+.player1-left {
+    background-image:url("Jet.jpg");
+    background-size: 40px 40px;
+}
+
+.wallfake {
+    background-image:url("redsus.png") !important;
+    background-size: 40px 40px;
+}
+
+.coin {
+    background-image:url("Doonut.jpg");
+    background-size: 40px 40px;
+}
+
+
+audio {
+    visibility: hidden;
+}
+

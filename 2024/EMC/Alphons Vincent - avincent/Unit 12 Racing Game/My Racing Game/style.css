@@ -1,0 +1,36 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player1 {
+    background-image:url("cat.jpg");
+    background-size: 40px 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.player1-left {
+    background-image:url("carFlipped.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: navajowhite !important;
+}
+
+.portal{
+    background-image:url("portal.jpg");
+    background-size: 40px 40px;
+}

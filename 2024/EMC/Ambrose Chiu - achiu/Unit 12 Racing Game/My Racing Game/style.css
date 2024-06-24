@@ -1,0 +1,63 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player1 {
+    background-image:url("racecar.png");
+    background-size: 40px 40px;
+}
+
+.player1-left {
+    background-image:url("racecar_flipped.png");
+    background-size: 40px 40px;
+}
+
+.player1-left-down{
+    background-image:url("left_down car.png");
+    background-size: 40px 40px;
+}
+
+.player1-right-up{
+    background-image:url("right_up car");
+    background-size: 40px 40px;
+}
+
+.player1-left-up{
+    background-image:url("left_up car");
+    background-size: 40px 40px;
+}
+
+.player1-right-down{
+    background-image:url("right_down car");
+    background-size: 40px 40px;
+}
+
+
+.wall {
+    background-color: black !important;
+}
+
+.fake-wall {
+    background-color: #1C1C1C !important;
+}
+.flag {
+    background-image:url("flag.png");
+    background-size: 40px 40px;
+}
+
+.coin {
+    background-image:url("coin.jpg");
+    background-size : 40px 40px;
+}

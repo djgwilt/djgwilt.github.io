@@ -1,0 +1,78 @@
+body {
+    background-color:grey;
+}
+
+#racing_track {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#racing_track td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player1 {
+    background-image:url("porsche_gt3_rs.jpg");
+    background-size: 40px 40px;
+}
+
+.finish {
+    background-image: url("finish_flag.jpg");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: black !important;
+}
+
+.player_flipped {
+    background-image:url("porsche_gt3_rs_flipped.jpg");
+    background-size: 40px 40px;
+}
+
+.coin {
+    background-image:url("bitcoin.jpg");
+    background-size: 40px 40px;
+}
+
+.player_shield {
+    background-image:url("car_shield.jpg");
+    background-size: 40px 40px;
+}
+
+.player_shield_flipped {
+    background-image:url("car_flipped_shield.jpg");
+    background-size: 40px 40px;
+}
+
+#shields td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+#shield1 {
+    background-image:url("shield.jpg");
+    background-size: 40px 40px;
+}
+
+#shield2 {
+    background-image:url("shield.jpg");
+    background-size: 40px 40px;
+}
+
+#shield3 {
+    background-image:url("shield.jpg");
+    background-size: 40px 40px;
+}
+
+.hide_shield {
+    z-index: 10;
+    width:40px;
+    height:40px;
+    background-color:white;
+}

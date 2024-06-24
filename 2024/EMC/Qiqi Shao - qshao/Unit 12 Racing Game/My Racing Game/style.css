@@ -1,0 +1,44 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player1 {
+    background-image:url("Car.jpg");
+    background-size: 42px 42px;
+}
+
+.playerLeft {
+    background-image:url("Car\ left.png");
+    background-size: 42px 42px;
+}
+
+.playerUp {
+    background-image:url("car\ up.png");
+    background-size: 42px 42px;
+}
+
+.playerDown {
+    background-image:url(car\ down.png);
+    background-size: 42px 42px;
+}
+
+.Wall {
+    background-color: black !important;
+}
+
+.Flag {
+    background-image:url("finish\ line.jpg");
+    background-size: 40px 40px;
+}

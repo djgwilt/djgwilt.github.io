@@ -1,0 +1,41 @@
+body {
+    background-color:rgb(61, 132, 52);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    
+    background-color:rgb(4,151,90);
+}
+
+.player1 {
+    background-image:url("sprite.png");
+    background-size: 40px 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+.wall {
+    background-color:rgb(6, 105, 52) !important;
+}
+
+.flag {
+    background-image:url("Picture1.png");
+    background-size: 40px 40px;
+}
+
+.wallFake {
+    background-color:rgb(4, 110, 90) !important;
+}
+
+.coin {
+    background-image:url(acorn.png);
+    background-size: 40px 40px;
+}

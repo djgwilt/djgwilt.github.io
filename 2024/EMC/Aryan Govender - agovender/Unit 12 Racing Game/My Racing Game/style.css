@@ -1,0 +1,43 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player1 {
+    background-image:url("brooooo.png");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color:black !important;
+}
+
+.flag {
+    background-image:url("flag.png");
+    background-size: 40px 40px;
+}
+
+.player1-flipped{
+    background-image:url("brooooo flipped.png");
+    background-size: 40px 40px;
+}
+ 
+.fakewall {
+    background-color:grey!important;
+}
+
+.coin {
+    background-image:url("coin jpeg.png");
+    background-size: 40px 40px;
+}

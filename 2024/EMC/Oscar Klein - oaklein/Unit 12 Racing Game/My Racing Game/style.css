@@ -1,0 +1,76 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player1-left {
+    background-image:url("Michael\ Rosen\'s\ Head\ \(Stretched\).png");
+    background-size: 40px 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+.player1-right {
+    background-image:url("Michael\ Rosen\'s\ Head\ \(Stretched\)\ \(right\).png");
+    background-size: 40px 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+.player1-left-crash {
+    background-image:url("Michael\ Rosen\'s\ Head\ \(Crash\).png");
+    background-size: 40px 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+.player1-right-crash {
+    background-image:url("Michael\ Rosen\'s\ Head\ \(Crash\)\ \(right\).png");
+    background-size: 40px 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+.player2-left {
+    background-image:url("player%20sprites/NORMAN-Neville-PIC.jpg");
+    background-size: 40px 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+.player2-right {
+    background-image:url("NORMAN-Neville-PIC\ \(right\).jpg");
+    background-size: 40px 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+.player2-left-crash {
+    background-image:url("NORMAN-Neville-PIC\ \(Crash\).jpg");
+    background-size: 40px 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+.player2-right-crash {
+    background-image:url("NORMAN-Neville-PIC\ \(Crash\)\ \(right\).jpg");
+    background-size: 40px 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+.wall {
+    background-image:url("wall.jpg");
+    background-size: 40px 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+.flag {
+    background-image:url("finish\ flag.jpg");
+    background-size: 40px 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
