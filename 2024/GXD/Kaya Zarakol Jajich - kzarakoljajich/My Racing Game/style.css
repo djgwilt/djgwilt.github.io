@@ -15,22 +15,22 @@ body {
 }
 
 .player1-up {
-    background-image:url("Final.png");
+    background-image:url("This.png");
     background-size: 40px 40px;
 }
 
 .player1-right {
-    background-image:url("Final.png");
+    background-image:url("This.png");
     background-size: 40px 40px;
 }
 
 .player1-down {
-    background-image:url("Final.png");
+    background-image:url("This.png");
     background-size: 40px 40px;
 }
 
 .player1-left {
-    background-image:url("Final.png");
+    background-image:url("This.png");
     background-size: 40px 40px;
 }
 

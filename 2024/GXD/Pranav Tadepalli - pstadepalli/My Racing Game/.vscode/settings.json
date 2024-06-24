@@ -1,0 +1,10 @@
+{
+  "difficultyLevels": {
+    "easy": 10,
+    "medium": 20,
+    "hard": 30
+  },
+  "boardWidth": 1200,
+  "boardHeight": 1200,
+  "initialSnakeLength": 5
+}

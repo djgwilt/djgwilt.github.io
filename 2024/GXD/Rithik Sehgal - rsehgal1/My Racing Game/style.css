@@ -36,6 +36,9 @@ body {
 audio {
     visibility: hidden;
 }
+.bi {
+    background-image:url("Race\ track.jpg");
+}
 
 
 

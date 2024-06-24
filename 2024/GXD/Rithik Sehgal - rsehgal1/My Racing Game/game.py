@@ -69,7 +69,7 @@ def updatePosition():
             givePoint()
         elif cell.className == "flag":
             cell.className = "player1"
-            
+
             handleWin()
 
         else:
@@ -88,7 +88,7 @@ def runGame():
     global intervalHandle
     print("Running Game")
     document.addEventListener('keydown', create_proxy(checkKey))
-    intervalHandle = window.setInterval(create_proxy(updatePosition), 380)
+    intervalHandle = window.setInterval(create_proxy(updatePosition), 250)
 
 def handleWin():
     window.clearInterval(intervalHandle)

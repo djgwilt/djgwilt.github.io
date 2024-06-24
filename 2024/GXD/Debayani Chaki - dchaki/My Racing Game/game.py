@@ -31,11 +31,13 @@ def checkKey(event):
         direction[0] = -1
         direction[1] = 0
     elif event.key == "ArrowUp":
-        _direction[0] = 0
+        direction[0] = 0
         direction[1] = -1
     elif event.key == "ArrowDown":
         direction[0] = 0
         direction[1] = 1
+    else:
+        print("invalid key") 
 
 
 def getCell():
@@ -46,15 +48,15 @@ def updatePosition():
     if direction[0] != 0 or direction[1] != 0:
         # Set the cell where player1 was to empty
         cell = getCell()
-        cell.className = "wall"
-        
+     #   cell.className = "wall" #--change by dc
+        cell.className = ""   
         # Update the column position for player1
         position[0] += direction[0]
         position[1] += direction[1]
 
         # Re-draw player1 (or report a crash)
         cell = getCell()
-        cell = getCell()
+    #    cell = getCell()
         if cell == None:
             handleCrash()
         elif cell.className == "wall":

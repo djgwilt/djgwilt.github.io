@@ -9,7 +9,7 @@ from pyodide.ffi import create_proxy, to_js
 ####################
 
 # to store current position (x,y)
-position = [0, 0]
+position = [1, 4]
 
 # to store movement directions (x,y)
 direction = [0, 0]
@@ -80,8 +80,8 @@ def updatePosition():
             cellRect = cell.getBoundingClientRect()
             tableRect = document.getElementById("RacingTrack").getBoundingClientRect()
             jQuery("#player1").animate(to_js({
-                "left": f"{cellRect.x-tableRect.x+20}px",
-                "top": f"{cellRect.y-tableRect.y+20}px",
+                "left": f"{cellRect.x-tableRect.x+2}px",
+                "top": f"{cellRect.y-tableRect.y+42}px",
             }), 300, "linear")
 
 # if player1 has gone off the table, this tidies up including crash message

@@ -20,6 +20,8 @@ intervalHandle = 0
 
 WhenWallGen = 0
 
+
+Score = -1
 #############################
 # Sub-Programs
 #############################
@@ -43,16 +45,16 @@ def wallgen(x,y):
 # the timer check function - runs every 300 milliseconds to update player1's position
 def updatePosition():  
     global WhenWallGen
-
-    print(direction)
+    global Score
     for x in range(5):
-        for y in range(5):
+        for y in range(6):
             getCellXY(x, y).className = getCellXY(x+1, y).className
 
     WhenWallGen +=  1
     if WhenWallGen == 5:
-        GapPlace = random.randint(0,4)
-        for y in range(5):
+        Score += 1
+        GapPlace = random.randint(1,4)
+        for y in range(6):
             x = 5
             if y > GapPlace:
                 wallgen(x,y).className = "wall"
@@ -63,7 +65,7 @@ def updatePosition():
                 wallgen(x,y).className = ""
         WhenWallGen = 0
     else:
-        for y in range(5):
+        for y in range(6):
             x=5
             wallgen(x,y).className = ""
 
@@ -93,7 +95,7 @@ def updatePosition():
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = "Oops you crashed..."
+    document.getElementById("Message").innerText = "Your score was ",Score
 
 # called when the page is loaded to start the timer checks
 def runGame():

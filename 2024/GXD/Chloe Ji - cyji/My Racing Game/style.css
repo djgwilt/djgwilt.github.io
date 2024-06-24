@@ -4,7 +4,7 @@ body {
 
 #RacingTrack {
     border-collapse:collapse;
-    border:5px solid rgb(253, 151, 255);
+    border:8px solid rgb(240, 196, 240);
 }
 
 #RacingTrack td {

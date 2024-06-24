@@ -38,8 +38,8 @@ body {
     position: relative;
     width: 40px;
     height: 40px;
-    top: 26px;
-    left: 6px;
+    top: 218px;
+    left: 49px;
 }
 
 .flag {
@@ -50,4 +50,3 @@ body {
 .wall {
     background-color: rgb(156, 246, 168) !important;
 }
-

@@ -81,7 +81,7 @@ def handleCrash():
 
 def handleWin():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = "Well done..."
+    document.getElementById("Message").innerText = "Well done you won!"
 
 # called when the page is loaded to start the timer checks
 def runGame():

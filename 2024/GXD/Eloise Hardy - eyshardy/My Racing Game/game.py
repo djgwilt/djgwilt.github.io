@@ -50,6 +50,7 @@ def updatePosition():
         # Set the cell where player1 was to empty
         cell = getCell()
         cell.className = ""
+        player1Class= "player1"
         
         # Update the column position for player1
         position[0] += direction[0]
@@ -70,7 +71,7 @@ def updatePosition():
                 handleWin()
 
         else:
-            cell.className = player1Class
+            cell.className = player1Class 
     #print(position)
 
 # if player1 has gone off the table, this tidies up including crash message
