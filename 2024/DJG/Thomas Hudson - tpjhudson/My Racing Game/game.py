@@ -3,7 +3,7 @@
 #############################
 from js import document, window
 from pyodide.ffi import create_proxy
-
+import webbrowser 
 #############################
 # Global Variables
 #############################
@@ -59,6 +59,10 @@ def updatePosition():
             handleCrash()
         elif cell.className == "flag":
             handleWin()
+        elif cell.className == "rickrollbutton":
+            direction[0] = 0
+            direction[1] = 0
+            rickroll()
         else:
             cell.className = "player1"
 
@@ -68,6 +72,8 @@ def handleCrash():
     document.getElementById("Message").innerText = "Oops you crashed... lmao wompwomp"
 
 # called when the page is loaded to start the timer checks
+def rickroll():
+    webbrowser.open('https://www.youtube.com/watch?v=462dkfAvlGo')
 def runGame():
     global intervalHandle
     print("Running Game")
@@ -76,11 +82,8 @@ def runGame():
 #what to do when the car reaches the flag
 def handleWin():
     window.clearInterval(intervalHandle)
-    document.getElementById("Wow good job, you're literally the best gamer ever")
+    document.getElementById("Message").innerText = "Ka-chow!"
 #############################
 # Main Program
 #############################
-def handleWin():
-    window.clearInterval(interHandle)
-    document.getElemntByID("Message").innerText = "You win!"
 runGame()

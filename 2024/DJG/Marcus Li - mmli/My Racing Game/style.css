@@ -15,7 +15,14 @@ body {
 }
 
 .player1 {
-    background-image:url("fish.jpg");
+    background-image:url("fish.png");
+    background-size: 40px 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+.player2 {
+    background-image:url("fish.png");
     background-size: 40px 40px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
@@ -29,13 +36,6 @@ body {
 }
 
 .flag {
-    background-image:url("homecave.jpg");
-    background-size: 40px 40px;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-}
-
-.sea {
     background-image:url("sea.jpg");
     background-size: 40px 40px;
     background-position: center; /* Center the image */
@@ -43,7 +43,7 @@ body {
 }
 
 .coin {
-    background-image:url("seaweed.png");
+    background-image:url("coral.png");
     background-size: 40px 40px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
@@ -84,92 +84,64 @@ body {
     background-repeat: no-repeat; /* Do not repeat the image */
 }
 
-.redkey{
-    background-image:url("red key.jpg");
-    background-size: 40px 40px;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-}
-
-.redkeydoor{
-    background-image:url("red keyhole.jpg");
-    background-size: 40px 40px;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */  
-}
-
 .orangekey{
-    background-image:url("orange key.jpg");
+    background-image:url("orange key.png");
     background-size: 40px 40px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
 }
 
 .orangekeydoor{
-    background-image:url("orange keyhole.jpg");
+    background-image:url("orange keyhole.png");
     background-size: 40px 40px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */  
 }
 
 .yellowkey{
-    background-image:url("yellow key.jpg");
+    background-image:url("yellow key.png");
     background-size: 40px 40px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
 }
 
 .yellowkeydoor{
-    background-image:url("yellow keyhole.jpg");
+    background-image:url("yellow keyhole.png");
     background-size: 40px 40px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */  
 }
 
 .greenkey{
-    background-image:url("green key.jpg");
+    background-image:url("green key.png");
     background-size: 40px 40px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
 }
 
 .greenkeydoor{
-    background-image:url("green keyhole.jpg");
+    background-image:url("green keyhole.png");
     background-size: 40px 40px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */  
 }
 
 .bluekey{
-    background-image:url("blue key.jpg");
+    background-image:url("blue key.png");
     background-size: 40px 40px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
 }
 
 .bluekeydoor{
-    background-image:url("blue keyhole.jpg");
-    background-size: 40px 40px;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */  
-}
-
-.purplekey{
-    background-image:url("purple key.jpg");
-    background-size: 40px 40px;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-}
-
-.purplekeydoor{
-    background-image:url("purple keyhole.jpg");
+    background-image:url("blue keyhole.png");
     background-size: 40px 40px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */  
 }
 
 .permbutton{
-    background-image:url("");
+    background-image:url("button.jpg");
     background-size: 40px 40px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
@@ -204,7 +176,7 @@ body {
 }
 
 .tempbutton{
-    background-image:url("");
+    background-image:url("button.jpg");
     background-size: 40px 40px;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */

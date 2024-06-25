@@ -20,13 +20,19 @@ body {
 }
 
 .wall {
-    background-image:url("cone.png");
-    background-size: 40px 40px;
+    background-color:#f10808 !important;
 }
 .flag {
     background-image:url("flag.png");
-    background-size: 40px 40px;
+    background-size: 42wpx 42px;
 }
 .wallFake {
-    background-color:#333333d7 !important;
+    background-color:#f10808e2 !important;
+}
+.background{
+    background-color:#ffffffff !important;
+}
+.coin{
+    background-image:url("coin.jpg");
+    background-size: 42px 42px;
 }
