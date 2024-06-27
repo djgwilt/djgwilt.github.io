@@ -29,5 +29,17 @@ body {
 
 }
 
+.wallfake {
+    background-color: rgb(79, 94, 78) !important;
 
+}
 
+.geckoright {
+    background-image: url("Characters/GeckoRight.png");
+    background-size: 70px 70px;
+}
+
+.grasshopper {
+    background-image: url("Characters/Grasshopper.png");
+    background-size: 70px 70px;
+}

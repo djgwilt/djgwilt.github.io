@@ -31,11 +31,11 @@ def checkKey(event):
         direction[0] = -1
         direction[1] = 0
     elif event.key == "ArrowUp":
-        direction[0] = -1
-        direction[1] = 0
+        direction[0] = 0
+        direction[1] = -1
     elif event.key == "ArrowDown":
-        direction[0] = -1
-        direction[1] = 0
+        direction[0] = 0
+        direction[1] = 1
         
 def getCell():
     return document.getElementById("R{}C{}".format(position[1], position[0]))
@@ -45,18 +45,18 @@ def updatePosition():
     if direction[0] != 0 or direction[1] != 0:
         # Set the cell where the car was to empty
         cell = getCell()
-        cell.className = "dolphin"
+        cell.className = "dolphin.jpg"
         
         # Update the column position for the car
-        position[0] += direction[1]
-        position[1] += direction[0]
+        position[0] += direction[0]
+        position[1] += direction[1]
 
         # Re-draw the car (or report a crash)
         cell = getCell()
         if cell == None:
             handleCrash()
         else:
-            cell.className = "dolphin"
+            cell.className = "dolphin.jpg"
 
 # if the car has gone off the table, this tidies up including crash message
 def handleCrash():

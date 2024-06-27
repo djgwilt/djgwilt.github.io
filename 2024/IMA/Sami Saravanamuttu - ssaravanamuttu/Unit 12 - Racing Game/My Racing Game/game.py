@@ -27,21 +27,13 @@ def checkKey(event):
     event.preventDefault()
     if event.key == "ArrowRight":
         direction[0] = 1
-        direction[1] = 0
     elif event.key == "ArrowLeft":
         # left arrow
         direction[0] = -1
-        direction[1] = 0
-    elif event.key =="ArrowDown":
-        direction [0] = 0
-        direction[1]= 1
-    elif event.key =="ArrowUp":
-        direction[0] = 0
-        direction[1] = -1
 
 
 def getCell():
-    return document.getElementById("R{}C{}".format(position[0](position[1])))
+    return document.getElementById("R0C{}".format(position[0]))
 
 # the timer check function - runs every 300 milliseconds to update the car position
 def updatePosition():
@@ -82,5 +74,21 @@ def runGame():
 #############################
 # Main Program
 #############################
+ 
+def checkKey(event):
+    event.preventDefault()
+    if event.key == "ArrowRight":
+        direction[0] = 1
+        direction[1] = 0
+    elif event.key == "ArrowLeft":
+        # left arrow
+        direction[0] = -1
+        direction[1] = 0
+    elif event.key =="ArrowDown":
+        direction [0] = 0
+        direction[1]= 1
+    elif event.key =="ArrowUp":
+        direction[0] = 0
+        direction[1] = -1
 
 runGame()

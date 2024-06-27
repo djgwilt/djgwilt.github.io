@@ -35,6 +35,16 @@ body {
     background-size: 40px 40px;
 }
 
+.cross {
+    background-image:url("cross.jpg");
+    background-size: 40px 40px;
+}
+
+.cross2 {
+    background-image:url("attempt2.jpg");
+    background-size: 40px 40px;
+}
+
 .wall{
     width:40px;
     height:40px;

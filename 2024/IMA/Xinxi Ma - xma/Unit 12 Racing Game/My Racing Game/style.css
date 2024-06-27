@@ -1,0 +1,42 @@
+body {
+    background-color:grey;
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player1 {
+    background-image:url("Duolingo1.png");
+    background-size: 40px 40px;
+}
+.player-left {
+    background-image:url("DuolngoR.jpg");
+    background-size: 40px 40px;
+}
+
+.wall  {
+    background-image:url("Fire.png");
+    background-size: 40px 40px;
+}
+
+.finish  {
+    background-image:url("Finish.png");
+    background-size: 40px 40px;
+}
+.wallFake {
+    background-image : url("StreakFreeze.png");
+    background-size: 40px 40px;
+}
+.Coin {
+    background-image : url("Coin.png");
+    background-size: 40px 40px;
+}

@@ -79,3 +79,7 @@ td {
     background-image:url("checkered_flag.jpg");
     background-size: 43px 45px;
 }
+
+audio { 
+    visibility: hidden;
+}

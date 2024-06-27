@@ -13,12 +13,15 @@ position = [0, 0]
 # to store movement directions (x,y)
 direction = [0, 0]
 
-bag = [2,0]
+bag = [0,0]
 
 # to store the handle code for the timer interval to cancel it when we crash
 intervalHandle = 0
 
 audioWin = document.getElementById("audioWin")
+audioCoin = document.getElementById("audioCoin")
+audioCrash = document.getElementById("audioCrash")
+
 #############################
 # Sub-Programs
 #############################
@@ -49,9 +52,11 @@ def updatePosition():
         # Set the cell where the car was to empty
         cell = getCell()
         if direction[0] > 0:
-            player1Class = "car"
-        elif direction[1] > 0:
-            player1Class = "car-left"
+            car = "car"
+        elif direction[0] < 1:
+            car = "car-left"
+        else:
+            player1Class = cell.className
         cell.className = ""
         
         # Update the column position for the car
@@ -62,11 +67,15 @@ def updatePosition():
         if cell == None:
             handleCrash()
         elif cell.className == "wall":
+            audioCrash.play()
             handleCrash()
+
         elif cell.className == "coin":
-            cell.className = player1Class
-            bag[1] = bag[1] + 1
+            cell.className = "car"
+            bag[0] = bag[0] + 1
+            audioCoin.play()
         elif cell.className == "portal":
+            audioWin.play()
             handleWin()
         else:
             cell.className = "car"
@@ -78,7 +87,7 @@ def handleCrash():
 
 def handleWin():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = "You Win and scored {} coins".format(bag)
+    document.getElementById("Message").innerText = "You Win and scored {} coins".format(bag[0])
 
 # called when the page is loaded to start the timer checks
 def runGame():
@@ -87,11 +96,15 @@ def runGame():
     document.addEventListener('keydown', checkKey)
     intervalHandle = window.setInterval(updatePosition, 300)
 
-audioWin.autoplay = False
-audioWin.load()
-
 #############################
 # Main Program
 #############################
+
+audioWin.autoplay = False
+audioWin.load()
+audioCoin.autoplay = False
+audioCoin.load()
+audioCrash.autoplay = False
+audioCrash.load()
 
 runGame()

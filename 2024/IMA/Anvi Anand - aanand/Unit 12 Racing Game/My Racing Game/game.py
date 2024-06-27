@@ -62,11 +62,7 @@ def updatePosition():
         elif cell.className == "wall":
             handleCrash()
         elif cell.className == "coin":
-            cCount +=1
-            cell.className = "player1"
-            if cCount == 9:
-                jam = True
-                handleWin() 
+            handleWin() 
         else:
             cell.className = "player1"
  # re-draw player1 in the new cell
@@ -84,12 +80,8 @@ def runGame():
     intervalHandle = window.setInterval(create_proxy(updatePosition), 300)
  
 def handleWin():
-    global cCount
-    global flag
-    if jam == True:
-        if cell.className == "flag":
-            window.clearInterval(intervalHandle)
-            document.getElementById("Message").innerText = "You win!"
+    window.clearInterval(intervalHandle)
+    document.getElementById("Message").innerText = "You win!"
 #############################
 # Main Program
 #############################

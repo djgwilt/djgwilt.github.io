@@ -2,7 +2,7 @@
 # Library Imports
 #############################
 from js import document, window
-
+import webbrowser
 #############################
 # Global Variables
 #############################
@@ -15,6 +15,7 @@ direction = [0, 0]
 
 # to store the handle code for the timer interval to cancel it when we crash
 intervalHandle = 0
+coins = 0
 
 #############################
 # Sub-Programs
@@ -60,8 +61,10 @@ def updatePosition():
 
 # if the car has gone off the table, this tidies up including crash message
 def handleCrash():
+    url = "https://youtu.be/dQw4w9WgXcQ"
     window.clearInterval(intervalHandle)
     document.getElementById("Message").innerText = "Oops you crashed..."
+    webbrowser.open(url)
 
 # called when the page is loaded to start the timer checks
 def runGame():
@@ -70,7 +73,14 @@ def runGame():
     document.addEventListener('keydown', checkKey)
     intervalHandle = window.setInterval(updatePosition, 300)
 
+
+def handleWin():
+    window.clearInterval(intervalHandle)
+    document.getElementById("Message").innerText = f"you win and collected {coins}"
+
+
 def updatePosition():
+    global coins
     if direction[0] != 0 or direction[1] != 0:
         # Set the cell where player1 was to empty
         cell = getCell()
@@ -86,6 +96,11 @@ def updatePosition():
             handleCrash()
         elif cell.className == "wall":
             handleCrash()
+        elif cell.className == "flag":
+            handleWin()
+        elif cell.className == "coin":
+            coins = coins + 1
+            cell.className = "car"
         else:
             cell.className = "car"
 #############################

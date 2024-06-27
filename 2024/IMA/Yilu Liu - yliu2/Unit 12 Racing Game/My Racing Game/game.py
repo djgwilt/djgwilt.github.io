@@ -13,9 +13,11 @@ hitFlag = False
 
 # to store current position (x,y)
 position = [1, 0]
+spos = [5,6]
 
 # to store movement directions (x,y)
 direction = [0, 0]
+sdir = [0,0]
 
 # to store the handle code for the timer interval to cancel it when we crash
 intervalHandle = 0
@@ -43,10 +45,15 @@ def checkKey(event):
 
 def getCell():
     return document.getElementById("R{}C{}".format(position[1], position[0]))
+def getCellBaddy():
+    return document.getElementById("R{}C{}".format(spos[1], spos[0]))
+def getC(x,y):
+    return document.getElementById("R{}C{}".format(y,x))
 
 # the timer check function - runs every 300 milliseconds to update player1's position
 def updatePosition():
     global hitFlag
+    global spos
     if direction[0] != 0 or direction[1] != 0:
         # Set the cell where player1 was to empty
         cell = getCell()
@@ -81,6 +88,45 @@ def updatePosition():
             handleWin()
         else:
             cell.className = player1Class
+    
+    # baddy move
+    # Work out x delta and y delta
+    xdelta = direction[0]-sdir[0]
+    ydelta = direction[1]-sdir[1]
+    # pick largest
+    if abs(xdelta) > abs(ydelta):
+        if xdelta > 0:
+            vector = [1,0]
+        else:
+            vector = [-1,0]
+        nextpos = [vector[0]+spos[0],vector[1]+spos[1]]
+        print(nextpos)
+        cell = getC(*nextpos)
+        #print(cell)
+        if cell == None:
+            print(spos,vector,cell,position)
+        elif cell.className != "wall":
+            spos = [spos[0]+vector[0],spos[1]+vector[1]]
+    
+    else:
+        if ydelta > 0:
+            vector = [0,1]
+        else:
+            vector = [0,-1]
+        nextpos = [vector[0]+spos[0],vector[1]+spos[1]]
+        
+        print(nextpos)
+        cell = getC(*nextpos)
+        if cell == None:
+            print(spos,vector,cell,position)
+        elif cell.className != "wall":
+            spos = [spos[0]+vector[0],spos[1]+vector[1]]
+
+    # attempt to move that way if clear
+
+    # attempt to move other way if clear
+
+
 
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():

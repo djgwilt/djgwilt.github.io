@@ -1,3 +1,4 @@
+
 #############################
 # Library Imports
 #############################
@@ -56,7 +57,8 @@ def updatePosition():
             handleCrash()
         elif cell.className == "wall":
             handleCrash()
-
+        elif cell.className == "secondflag":
+            handleWin()
         else:
             cell.className = "ufo"
 

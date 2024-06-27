@@ -12,6 +12,8 @@ audioUhHuh = document.getElementById("uh-huh")
 audioDKane = document.getElementById("duwapaudio")
 audioJace = document.getElementById("hitherwrizz")
 audioIntro = document.getElementById("intro")
+audioHelpMe = document.getElementById("helpme")
+
 is_audio_playing = False
 # to store current position (x,y)
 position = [0, 0]
@@ -108,7 +110,7 @@ def updatePosition():
         audioIntro.play()
 
     counter += 1
-    if counter == 10:
+    if counter == 20:
         document.getElementById("Message").innerText = ""
         document.getElementById("pleasehelp").style.display = "none"
         document.getElementById("pleasehelp").style.visibility = "hidden"
@@ -126,6 +128,7 @@ def handleCrash():
 
     # to store movement directions (x,y)
     direction = [0, 0]
+    audioHelpMe.play
     document.getElementById("Message").innerText = "Oops you crashed..."
     document.getElementById("pleasehelp").style.display = "block"
     document.getElementById("pleasehelp").style.visibility = "visible"

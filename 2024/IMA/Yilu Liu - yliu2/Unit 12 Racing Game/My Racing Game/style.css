@@ -41,3 +41,8 @@ body {
     background-image:url("pound.png");
     background-size: 40px 40px;
 }
+
+.shaver {
+    background-image:url("shaver.png");
+    background-size: 40px 40px;    
+}

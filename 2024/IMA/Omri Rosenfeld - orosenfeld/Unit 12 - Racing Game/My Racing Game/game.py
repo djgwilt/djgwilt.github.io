@@ -17,6 +17,8 @@ bag = [0]
 # to store the handle code for the timer interval to cancel it when we crash
 intervalHandle = 0
 
+audioWin = document.getElementById("audioWinn")
+
 #############################
 # Sub-Programs
 #############################
@@ -59,6 +61,7 @@ def updatePosition():
             handleCrash()
         elif cell.className == "flag":
             handleWin()
+            audioWin.play()
         else:
             cell.className = "car"
 
@@ -82,4 +85,6 @@ def handleWin():
 # Main Program
 #############################
 
+audioWin.autoplay = False
+audioWin.load()
 runGame()

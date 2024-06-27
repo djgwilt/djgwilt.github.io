@@ -7,6 +7,7 @@ from js import document, window
 # Global Variables
 audiocrash = document.getElementById("audiocrash")
 audiofein = document.getElementById("audiofein")
+audiofweh = document.getElementById("audiofweh")
 money = 0
 #############################
 def getCell():
@@ -77,6 +78,7 @@ def updatePosition():
             audiofein.play()
         elif cell.className == "money":
             cell.className = "car"
+            audiofweh.play()
             money = money + 1
 
         else:
@@ -108,6 +110,8 @@ audiocrash.autoplay = False
 audiocrash.load()
 audiofein.autoplay = False
 audiofein.load()
+audiofweh.autoplay = False
+audiofweh.load()
 
 
 runGame()

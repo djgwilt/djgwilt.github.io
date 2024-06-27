@@ -86,7 +86,7 @@ def runGame():
 
 def handleWin():
     window.clearInterval(intervalHandle)
-    document.getElementByID("Message").innertext = "You Win!"
+    document.getElementById("Message").innerText = "YYou win"
 
 #############################
 # Main Program

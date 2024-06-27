@@ -4,17 +4,42 @@ body {
 
 #RacingTrack {
     border-collapse:collapse;
-    border:5px solid black;
+    border:0cm solid black;
 }
 
 #RacingTrack td {
     width:40px;
     height:40px;
-    border:1px solid;
-    background-color:white;
+    border:0px solid;
+    background-color: lightgreen;
+}
+
+.wall {
+    background-image:url("wall.png");
+    background-size: 40px 40px;
 }
 
 .car {
-    background-image:url("car.jpg");
-    background-size: 40px 40px;
+    background-image:url("player.png");
+    background-size: 42px 42px;
+}
+
+.collectable {
+    background-image:url("collectable.png");
+    background-size: 50px 50px;
+}
+
+.wallFake {
+    background-image:url("wallFake.png");
+    background-size: 50px 50px;
+}
+
+.hybrid {
+    background-image:url("hybrid.png");
+    background-size: 42px 42px;
+}
+
+.enemy {
+    background-image:url("enemy.png");
+    background-size: 42px 42px;
 }

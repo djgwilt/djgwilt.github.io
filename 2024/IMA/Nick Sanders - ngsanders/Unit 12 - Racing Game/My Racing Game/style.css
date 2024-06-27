@@ -36,22 +36,22 @@ body {
 
 .red {
     background-repeat:no-repeat;
-    background-image:url("Textures/GhostRED.png");
+    background-image:url("Textures/GhostRED.png")!important;
     background-size: 40px 33px;
 }
 .blue {
     background-repeat:no-repeat;
-    background-image:url("Textures/GhostBLUE.png");
+    background-image:url("Textures/GhostBLUE.png")!important;
     background-size: 40px 33px;
 }
 .pink {
     background-repeat:no-repeat;
-    background-image:url("Textures/GhostPINK.png");
+    background-image:url("Textures/GhostPINK.png")!important;
     background-size: 40px 33px;
 }
 .orange {
     background-repeat:no-repeat;
-    background-image:url("Textures/GhostORANGE.png");
+    background-image:url("Textures/GhostORANGE.png")!important;
     background-size: 40px 33px;
 }
 .gate {
@@ -60,4 +60,9 @@ body {
 }
 .wall{
     background-color:blue !important;
+}
+
+.dot{
+    background-image:url("Textures/dot.png");
+    background-size: 40px 33px;
 }

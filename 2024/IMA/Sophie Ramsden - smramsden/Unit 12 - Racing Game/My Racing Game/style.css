@@ -1,10 +1,23 @@
 body {
-    background-color:grey;
+    background-color:darkolivegreen;
+}
+
+h2 {
+    color:white;
+}
+
+h3 {
+    color:white;
+}
+
+p {
+    color:white;
 }
 
 #RacingTrack {
     border-collapse:collapse;
     border:5px solid black;
+    float:left;
 }
 
 #RacingTrack td {
@@ -303,56 +316,61 @@ body {
 #ImmunityTable {
     border-collapse:collapse;
     border:5px solid black;
+    float:right;
 }
 
 #ImmunityTable td {
-    width:40px;
-    height:40px;
+    width:750px;
+    height:56px;
     border:1px solid;
     background-color:white;
 }
 
 .redcolor {
     background-image:url("r.jpg");
-    background-size: 40px 40px;
+    background-size: 750px 56px;
 }
 
 .yellowcolor {
     background-image:url("y.jpg");
-    background-size: 40px 40px;
+    background-size: 750px 56px;
 }
 
 .greencolor {
     background-image:url("g.jpg");
-    background-size: 40px 40px;
+    background-size: 750px 56px;
 }
 
 .cyancolor {
     background-image:url("c.jpg");
-    background-size: 40px 40px;
+    background-size: 750px 56px;
 }
 
 .bluecolor {
     background-image:url("b.jpg");
-    background-size: 40px 40px;
+    background-size: 750px 56px;
 }
 
 .magentacolor {
     background-image:url("m.jpg");
-    background-size: 40px 40px;
+    background-size: 750px 56px;
 }
 
 .orangecolor {
     background-image:url("o.jpg");
-    background-size: 40px 40px;
+    background-size: 750px 56px;
 }
 
 .darkgreencolor {
     background-image:url("dg.jpg");
-    background-size: 40px 40px;
+    background-size: 750px 56px;
 }
 
 .purplecolor {
     background-image:url("p.jpg");
-    background-size: 40px 40px;
+    background-size: 750px 56px;
+}
+
+audio {
+    visibility:hidden;
 }

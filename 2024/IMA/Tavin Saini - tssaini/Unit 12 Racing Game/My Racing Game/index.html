@@ -7,16 +7,16 @@
     <script src="https://cdn.jsdelivr.net/pyodide/v0.26.0/full/pyodide.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script defer src="code.js"></script>
-    <title>The Racing Game</title>    
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <title>🍪🍪🍪</title>    
   </head>
-<h1 id=title1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;"">THE RACING GAME</h1>
-<button type="button" class="block">PLAY</button>
+<h1 id=title1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;"">THE COOKIE GAME</h1>
+<button id=click type="button" class="block" >PLAY</button>
 
 
- 
   <body>
     <centre>
-    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Use right/left arrow keys to move.</p>
+    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Use W/A/S/D keys to move.</p>
     </centre>
     <table id="RacingTrack">
         <!-- The table cells have an id with the row and column number -->
@@ -254,10 +254,246 @@
         <td id="R5C34"></td>
         <td id="R5C35"></td>
       </tr>
+      <tr>
+        <td id="R6C0"></td>
+        <td id="R6C1"></td>
+        <td id="R6C2"></td>
+        <td id="R6C3" class="wall"></td>
+        <td id="R6C4"></td>
+        <td id="R6C5"></td>
+        <td id="R6C6"></td>
+        <td id="R6C7"></td>
+        <td id="R6C8"></td>
+        <td id="R6C9" class="wall"></td>
+        <td id="R6C10"></td>
+        <td id="R6C11"></td>
+        <td id="R6C12"></td>
+        <td id="R6C13"></td>
+        <td id="R6C14"></td>
+        <td id="R6C15" class="wall"></td>
+        <td id="R6C16"></td>
+        <td id="R6C17"></td>
+        <td id="R6C18"></td>
+        <td id="R6C19"></td>
+        <td id="R6C20"></td>
+        <td id="R6C21" class="wall"></td>
+        <td id="R6C22"></td>
+        <td id="R6C23"></td>
+        <td id="R6C24"></td>
+        <td id="R6C25"></td>
+        <td id="R6C26"></td>
+        <td id="R6C27" class="wall"></td>
+        <td id="R6C28"></td>
+        <td id="R6C29"></td>
+        <td id="R6C30"></td>
+        <td id="R6C31"></td>
+        <td id="R6C32"></td>
+        <td id="R6C33"></td>
+        <td id="R6C34"></td>
+        <td id="R6C35"></td>
+
+
+
+
+    </tr>
+    <tr>
+      <td id="R7C0"></td>
+      <td id="R7C1"></td>
+      <td id="R7C2"></td>
+      <td id="R7C3"></td>
+      <td id="R7C4"></td>
+      <td id="R7C5"></td>
+      <td id="R7C6" class="wall"></td>
+      <td id="R7C7"></td>
+      <td id="R7C8"></td>
+      <td id="R7C9"></td>
+      <td id="R7C10"></td>
+      <td id="R7C11"></td>
+      <td id="R7C12" class="wall"></td>
+      <td id="R7C13"></td>
+      <td id="R7C14"></td>
+      <td id="R7C15"></td>
+      <td id="R7C16"></td>
+      <td id="R7C17"></td>
+      <td id="R7C18" class="wall"></td>
+      <td id="R7C19"></td>
+      <td id="R7C20"></td>
+      <td id="R7C21"></td>
+      <td id="R7C22"></td>
+      <td id="R7C23"></td>
+      <td id="R7C24" class="wall"></td>
+      <td id="R7C25"></td>
+      <td id="R7C26"></td>
+      <td id="R7C27"></td>
+      <td id="R7C28"></td>
+      <td id="R7C29"></td>
+      <td id="R7C30" class="wall"></td>
+      <td id="R7C31"></td>
+      <td id="R7C32"></td>
+      <td id="R7C33"></td>
+      <td id="R7C34"></td>
+      <td id="R7C35"></td>
+    </tr>
+    <tr>
+      <td id="R8C0"></td>
+      <td id="R8C1"></td>
+      <td id="R8C2"></td>
+      <td id="R8C3"></td>
+      <td id="R8C4"></td>
+      <td id="R8C5"></td>
+      <td id="R8C6" class="wall"></td>
+      <td id="R8C7"></td>
+      <td id="R8C8"></td>
+      <td id="R8C9"></td>
+      <td id="R8C10"></td>
+      <td id="R8C11"></td>
+      <td id="R8C12" class="wall"></td>
+      <td id="R8C13"></td>
+      <td id="R8C14"></td>
+      <td id="R8C15"></td>
+      <td id="R8C16"></td>
+      <td id="R8C17"></td>
+      <td id="R8C18" class="wall"></td>
+      <td id="R8C19"></td>
+      <td id="R8C20"></td>
+      <td id="R8C21"></td>
+      <td id="R8C22"></td>
+      <td id="R8C23"></td>
+      <td id="R8C24" class="wall"></td>
+      <td id="R8C25"></td>
+      <td id="R8C26"></td>
+      <td id="R8C27"></td>
+      <td id="R8C28"></td>
+      <td id="R8C29"></td>
+      <td id="R8C30" class="wall"></td>
+      <td id="R8C31"></td>
+      <td id="R8C32"></td>
+      <td id="R8C33"></td>
+      <td id="R8C34"></td>
+      <td id="R8C35"></td>
+
+
+    </tr>
+    <tr>
+      <td id="R9C0"></td>
+      <td id="R9C1"></td>
+      <td id="R9C2"></td>
+      <td id="R9C3" class="wall"></td>
+      <td id="R9C4"></td>
+      <td id="R9C5"></td>
+      <td id="R9C6"></td>
+      <td id="R9C7"></td>
+      <td id="R9C8"></td>
+      <td id="R9C9" class="wall"></td>
+      <td id="R9C10"></td>
+      <td id="R9C11"></td>
+      <td id="R9C12"></td>
+      <td id="R9C13"></td>
+      <td id="R9C14"></td>
+      <td id="R9C15" class="wall"></td>
+      <td id="R9C16"></td>
+      <td id="R9C17"></td>
+      <td id="R9C18"></td>
+      <td id="R9C19"></td>
+      <td id="R9C20"></td>
+      <td id="R9C21" class="wall"></td>
+      <td id="R9C22"></td>
+      <td id="R9C23"></td>
+      <td id="R9C24"></td>
+      <td id="R9C25"></td>
+      <td id="R9C26"></td>
+      <td id="R9C27" class="wall"></td>
+      <td id="R9C28"></td>
+      <td id="R9C29"></td>
+      <td id="R9C30"></td>
+      <td id="R9C31"></td>
+      <td id="R9C32"></td>
+      <td id="R9C33" class="wall"></td>
+      <td id="R9C34"></td>
+      <td id="R9C35"></td>
+  </tr>
+  <tr>
+    <td id="R10C0"></td>
+    <td id="R10C1"></td>
+    <td id="R10C2"></td>
+    <td id="R10C3"></td>
+    <td id="R10C4"></td>
+    <td id="R10C5"></td>
+    <td id="R10C6" class="wall"></td>
+    <td id="R10C7"></td>
+    <td id="R10C8"></td>
+    <td id="R10C9"></td>
+    <td id="R10C10"></td>
+    <td id="R10C11"></td>
+    <td id="R10C12" class="wall"></td>
+    <td id="R10C13"></td>
+    <td id="R10C14"></td>
+    <td id="R10C15"></td>
+    <td id="R10C16"></td>
+    <td id="R10C17"></td>
+    <td id="R10C18" class="wall"></td>
+    <td id="R10C19"></td>
+    <td id="R10C20"></td>
+    <td id="R10C21"></td>
+    <td id="R10C22"></td>
+    <td id="R10C23"></td>
+    <td id="R10C24" class="wall"></td>
+    <td id="R10C25"></td>
+    <td id="R10C26"></td>
+    <td id="R10C27"></td>
+    <td id="R10C28"></td>
+    <td id="R10C29"></td>
+    <td id="R10C30" class="wall"></td>
+    <td id="R10C31"></td>
+    <td id="R10C32"></td>
+    <td id="R10C33"></td>
+    <td id="R10C34"></td>
+    <td id="R10C35"></td>
+  </tr>
+  <tr>
+    <td id="R11C0"></td>
+    <td id="R11C1"></td>
+    <td id="R11C2"></td>
+    <td id="R11C3"></td>
+    <td id="R11C4"></td>
+    <td id="R11C5"></td>
+    <td id="R11C6" class="wall"></td>
+    <td id="R11C7"></td>
+    <td id="R11C8"></td>
+    <td id="R11C9"></td>
+    <td id="R11C10"></td>
+    <td id="R11C11"></td>
+    <td id="R11C12" class="wall"></td>
+    <td id="R11C13"></td>
+    <td id="R11C14"></td>
+    <td id="R11C15"></td>
+    <td id="R11C16"></td>
+    <td id="R11C17"></td>
+    <td id="R11C18" class="wall"></td>
+    <td id="R11C19"></td>
+    <td id="R11C20"></td>
+    <td id="R11C21"></td>
+    <td id="R11C22"></td>
+    <td id="R11C23"></td>
+    <td id="R11C24" class="wall"></td>
+    <td id="R11C25"></td>
+    <td id="R11C26"></td>
+    <td id="R11C27"></td>
+    <td id="R11C28"></td>
+    <td id="R11C29"></td>
+    <td id="R11C30" class="wall"></td>
+    <td id="R11C31"></td>
+    <td id="R11C32"></td>
+    <td id="R11C33"></td>
+    <td id="R11C34"></td>
+    <td id="R11C35"></td>
+  </tr>
         <!-- Add another table row here -->
       
     </table>
-    <audio id="audioBackground" width="0" height="0"><source src="Rick-Roll-Sound-Effect.mp3" type="audio/mpeg"></audio>
+    <audio id="audioWin" width="0" height="0"><source src="Rick-Roll-Sound-Effect.mp3" type="audio/mpeg"></audio>
+    <audio id="audioCrash" width="0" height="0"><source src="the-hunger-games-rue's-whistle-made-with-Voicemod (1).mp3" type="audio/mpeg"></audio>
+    <audio id="audioBackground" width="0" height="0" autoplay><source src="Sesame Street - Cookie Monster - C is for Cookie.mp3" type="audio/mpeg"></audio>
     <p id="Message"><br></p>
 
     <div style="font-family: Verdana, Geneva, Tahoma, sans-serif;">

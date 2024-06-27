@@ -15,12 +15,12 @@ body {
 }
 
 .slugcat {
-    background-image:url("slugcat.png");
+    background-image:url("slugcat.png") !important;
     background-size: 40px 40px;
 }
 
 .slugcat-right {
-    background-image:url("slugcatflipped.png");
+    background-image:url("slugcatflipped.png") !important;
     background-size: 40px 40px;
 }
 

@@ -15,6 +15,23 @@ body {
 }
 
 .car {
-    background-image:url("car.jpg");
+    background-image:url("../My%20Racing%20Game/Picture2.png");
     background-size: 40px 40px;
+}
+.wall {
+    background-color:black !important
+}
+
+.flag {
+    background-image:url("../My%20Racing%20Game/Picture1.jpg");
+    background-size: 40px 40px;
+}
+
+.coin {
+    background-image:url("../My%20Racing%20Game/Picture3.jpg");
+    background-size: 40px 40px;
+}
+
+.fakewall {
+    background-color:#333333 !important
 }

@@ -16,6 +16,9 @@ direction = [0, 0]
 # to store the handle code for the timer interval to cancel it when we crash
 intervalHandle = 0
 
+#to store grasshoppers collected
+bag = [0,0]
+
 #############################
 # Sub-Programs
 #############################
@@ -67,6 +70,7 @@ def updatePosition():
     if direction[0] != 0 or direction[1] != 0:
         # Set the cell where the car was to empty
         cell = getCell()
+        original = cell.className
         cell.className = ""
        
         # Update the column position for the car
@@ -77,8 +81,21 @@ def updatePosition():
         cell = getCell()
         if cell.className == None or cell.className == "wall": # there is no cell with that ID
             handleCrash()
+        elif cell.className == "tree":
+            handleWin()
+        elif cell.className == "grasshopper":
+            cell.className = "gecko"
+            bag[1] = bag[1] + 1
         else:
-            cell.className = "gecko" #drwa the car in new location
+            if direction[0] < 0: # left
+                cell.className = "gecko" #draw the car in new location
+            elif direction[0] > 0: # right
+                cell.className = "geckoright" #draw the car in new location
+            else:
+                cell.className = original # up or down
+
+
+            
  
 # if the car has gone off the table, this tidies up including crash message
 def handleCrash():
@@ -95,7 +112,7 @@ def runGame():
 
 def handleWin():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = "You Won!"
+    document.getElementById("Message").innerText = "You didn't fail and ate {} grasshoppers!".format(bag[1])
 #############################
 # Main Program
 #############################

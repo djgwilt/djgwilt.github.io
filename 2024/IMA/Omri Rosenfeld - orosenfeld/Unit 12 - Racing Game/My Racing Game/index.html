@@ -7,13 +7,15 @@
     <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
     <script defer src="code.js"></script>
-    <title>Racing Game</title>    
+    <title>Dhar Hunt</title>    
   </head>
 
   <body>
     
-    <p>Use right/left arrow keys to move.</p>
-
+    <p>Use arrow keys to move.</p>
+    <audio id="audioWinn" width="0" height="0">
+      <source src="dhar-mann-winner.mp3" type="audio/mpeg"> 
+    </audio>
     <table id="RacingTrack">
         <!-- The table cells have an id with the row and column number -->
         <tr>

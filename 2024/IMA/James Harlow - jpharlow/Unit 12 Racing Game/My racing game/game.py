@@ -3,6 +3,7 @@
 #############################
 from js import document, window
 from pyodide.ffi import create_proxy
+
 #############################
 # Global Variables
 #############################
@@ -16,7 +17,7 @@ coin = 0
 #############################
 # Sub-Programs
 #############################
-
+audioFlag = document.getElementById("audioFlag")
 # the function called when a key is pressed - sets direction variable
 def checkKey(event):
     event.preventDefault()
@@ -41,7 +42,7 @@ def getCell():
 
 def handleWin():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = f"You won (somehow). You collected {coin} Lord Farquaads"
+    document.getElementById("Message").innerText = f"You won (for some reason). You collected {coin} Lord Farquaads."
 def updatePosition():
     global coin
     if direction[0] != 0 or direction[1] != 0: # you are moving!
@@ -74,11 +75,12 @@ def updatePosition():
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = f"Imagine losing. You collected {coin} Lord Farquaads"
+    document.getElementById("Message").innerText = f"Imagine losing. You collected {coin} Lord Farquaads."
 # called when the page is loaded to start the timer checks
 
     
 def runGame():
+    audioFlag.play()
     global intervalHandle
     print("Game is running")
     document.addEventListener('keydown', create_proxy(checkKey))
@@ -86,4 +88,6 @@ def runGame():
 #############################
 # Main Program
 #############################
+audioFlag.autoplay = False
+audioFlag.load()
 runGame()

@@ -39,19 +39,7 @@ def checkKey(event):
     elif event.key == "ArrowDown":
         if "pole" in cell.className:
             directionplayer1[1] = 1
-    # player 2
-    elif event.key == "KeyD":
-        directionplayer2[0] = 1
-    elif event.key == "KeyA":
-        directionplayer2[0] = -1
-    elif event.key == "KeyW":
-        if "pole" in cell.classname:
-            directionplayer2[1] = -1
-    elif event.key == "KeyS":
-        if "pole" in cell.classname:
-            directionplayer2[1] = 1
     
-
             
 def checkKeyUp(event):
     event.preventDefault()
@@ -69,62 +57,53 @@ foodcount = 0
 def updatePosition():
     # player 1
     global foodcount
+    cell = getCell()
     if directionplayer1[0] != 0 or directionplayer1[1] != 0:
 
-        # Set the cell where the car was to empty
-        cell = getCell()
-        print("from",cell.className)
-
-        #change the sprite of the player when they turn
         if directionplayer1[0] > 0 :
             player1class = "slugcat-right"
         elif directionplayer1[0] < 0:
             player1class = "slugcat"
         else:
             player1class = cell.className
-        if cell.className.endswith(player1class):
-            #remove player sprite after moving over a square
-            cell.className = cell.className[:-len(" "+ player1class)]
-            
-            #removing the slugcat pictures
-            classes = cell.className.split(" ")
-            classes.remove(player1class)
-            classes.append("slugcat")
-            #rebuilding the class name
-            cell.className = "".join(classes)
 
-        # removing food when eaten
-        if cell.className == ("food"):
-            cell.className = cell.className[:-len("food")]
+        # Remove the slugcat/ slugcat-right from the current cell class name
+  
+        currentClassName = cell.className
+        classes = currentClassName.split(" ")
+        if "slugcat" in classes:
+            classes.remove("slugcat")
+        if "slugcat-right" in classes:
+            classes.remove("slugcat-right")
+        cell.className = " ".join(classes)
         
-        # Update the column position for the car
+        # Update the column position for the player
         positionplayer1[0] += directionplayer1[0]
         positionplayer1[1] += directionplayer1[1]
 
-        
         # Re-draw the car (or report a crash)
         cell = getCell()
-        print("to",cell.className)
-
+    
         if cell == None:
             handleCrash()
-        elif cell.className == "wall":
+        elif "wall" in cell.className:
             handleCrash()
-        elif cell.className == "flag":
+
+        elif "flag" in cell.className:
             if foodcount >= 5: #checking for enough food to trigger win
                 handleWin()
-        elif cell.className == "food": #add to food whenever player gets food
+        elif "food" in cell.className: #add to food whenever player gets food
             foodcount = foodcount + 1
         elif cell.className == "PassageDark1":
             positionplayer1[0] = 3
             positionplayer1[1] = 8
-        elif cell.className == "passageDark2":
+        elif cell.className == "PassageDark2":
             positionplayer1[0] = 8
             positionplayer1[1] = 2
         elif cell.className == "lizard":
             handleCrash()
         else:
-            cell.className += " "+ player1class
+            cell.className += " " + player1class
         
 
 # if the car has gone off the table, this tidies up including crash message

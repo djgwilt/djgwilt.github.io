@@ -11,16 +11,14 @@ audioBackground = document.getElementById("audioBackground")
 
 # to store current position (x,y)
 position = [0, 0]
-enemyposition = [0, 0]
 # to store movement directions (x,y)
 direction = [0, 0]
-enemydirection = [0, 0]
 #to store flags left + coins collected
 bag = [0, 0]
 
 # to store the handle code for the timer interval to cancel it when we crash
 intervalHandle = 0
-
+enemyintervalHandle = 0
 #############################
 # Sub-Programs
 #############################
@@ -46,6 +44,7 @@ def getCell():
 
 # the timer check function - runs every 300 milliseconds to update player1's position
 def updatePosition():
+    global position
     if direction[0] != 0 or direction[1] != 0:
         # Set the cell where player1 was to empty
         cell = getCell()
@@ -63,16 +62,20 @@ def updatePosition():
         # Re-draw player1 (or report a crash)
         cell = getCell()
         if cell == None:
-            handleCrash()
+            position[0] -= direction[0]
+            position[1] -= direction[1]
+            cell = getCell()
         elif cell.className == "wall":
-            handleCrash()
+            position[0] -= direction[0]
+            position[1] -= direction[1]
+            cell = getCell()
         elif cell.className == "flag":
             win()
         elif cell.className == "coin":
             cell.className = player1Class
             bag[1] += 1
-        else:
-            cell.className = player1Class
+        
+        cell.className = player1Class
 
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():
@@ -95,38 +98,5 @@ audioBackground.autoplay = False
 audioBackground.load()
 audioBackground.play()
 #############################
-def updateEnemyPosition():
-    if random.randint(1,4) == 1:
-        direction[0] = 1
-        enemydirection[1] = 0
-    elif random.randint(1,4) == 2:
-        enemydirection[0] = -1
-        enemydirection[1] = 0
-    elif random.randint(1,4) == 3:
-        enemydirection[0] = 0
-        enemydirection[1] = -1
-    elif random.randint(1,4) == 4:
-        enemydirection[0] = 0
-        enemydirection[1] = 1 
-    # Set the cell where player1 was to empty
-    cell = getCell()
-    cell.className = ""
-        
-    # Update the column position for player1
-    enemyposition[0] += enemydirection[0]
-    enemyposition[1] += enemydirection[1]
-    # Re-draw player1 (or report a crash)
-    cell = getCell()
-    if cell == None or cell.className == "wall":
-        handleCrash()
-    elif cell.className == "wall":
-        handleCrash()
-    elif cell.className == "flag":
-        win()
-    elif cell.className == "coin":
-        cell.className = player1Class
-        bag[1] += 1
-    else:
-        cell.className = "enemy"
 
 runGame()

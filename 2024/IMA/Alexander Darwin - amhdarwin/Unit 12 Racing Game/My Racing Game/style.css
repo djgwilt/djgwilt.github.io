@@ -15,7 +15,7 @@ body {
 }
 
 .player1 {
-    background-image:url("seed.jpg") !important;
+    background-image:url("Seed.gif") !important;
     background-size: 40px 40px;
 }
 .wall {
@@ -34,5 +34,6 @@ body {
 }
 
 .Water {
-    background-color: aqua !important;
+    background-image:url("Water.gif") !important;
+    background-size: 40px 40px;
 }

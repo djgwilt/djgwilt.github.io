@@ -25,7 +25,7 @@ body {
 }
 
 .fake {
-    background-color: black !important;
+    background-color: #524f4f !important;
 }
 
 .wall {
@@ -40,4 +40,7 @@ body {
 .flag {
     background-image:url("flag.png");
     background-size: 40px 40px;
+}
+audio {
+    visibility: hidden;
 }

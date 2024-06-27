@@ -41,7 +41,3 @@ body {
 audio {
     visibility: hidden;
 }
-
-<audio id="audioWin" width="0" height="0">
-    <source src="Win.mp3" type="audio/mpeg">
-</audio>

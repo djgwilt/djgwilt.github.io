@@ -55,6 +55,8 @@ def updatePosition():
         cell = getCell()
         if cell == None:
             handleCrash()
+        elif cell.className == "wall":
+            handleCrash()
         else:
             cell.className = "player1"
 

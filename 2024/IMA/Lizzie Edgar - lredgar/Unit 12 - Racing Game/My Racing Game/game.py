@@ -24,30 +24,42 @@ id="RacingTrack"
 
 # the function called when a key is pressed - sets direction variable
 def checkKey(event):
-    event.preventDefault()
+    event.preventDefault()  # this will prevent the down arrow from scrolling the page
     if event.key == "ArrowRight":
         direction[0] = 1
+        direction[1] = 0
     elif event.key == "ArrowLeft":
         # left arrow
         direction[0] = -1
+        direction[1] = 0
+    elif event.key == "ArrowUp":
+        direction[0] = 0
+        direction[1] = -1
+    elif event.key == "ArrowDown":
+        direction[0] = 0
+        direction[1] = 1
+
 
 def getCell():
-    return document.getElementById("R0C{}".format(position[0]))
+    return document.getElementById("R{}C{}".format(position[1],position[0]))
 
 # the timer check function - runs every 300 milliseconds to update the car position
 def updatePosition():
-    if direction[0] != 0:
+    if direction[0] != 0 or direction[1] !=0:
         # Set the cell where the car was to empty
         cell = getCell()
         cell.className = ""
         
         # Update the column position for the car
         position[0] += direction[0]
+        position[1]+= direction[1]
 
         # Re-draw the car (or report a crash)
         cell = getCell()
         if cell == None:
             handleCrash()
+        elif cell.className == 'wall':
+            handleCrash()    
         else:
             cell.className = "car"
 
@@ -63,21 +75,6 @@ def runGame():
     document.addEventListener('keydown', checkKey)
     intervalHandle = window.setInterval(updatePosition, 300)
 
-def checkKey(event):
-    event.preventDefault()  # this will prevent the down arrow from scrolling the page
-    if event.key == "ArrowRight":
-        direction[0] = 1
-        direction[1] = 0
-    elif event.key == "ArrowLeft":
-        # left arrow
-        direction[0] = -1
-        direction[1] = 0
-    elif event.key == "ArrowUp":
-        direction[0] = 0
-        direction[1] = 1
-    elif event.key == "ArrowDown":
-        direction[0] = 0
-        direction[1] = -1
 
 
 #############################

@@ -1,5 +1,7 @@
 body {
-    background-color:grey;
+    background-image:url("mcd.webp");
+    background-size: cover;
+    background-position: fixed;
 }
 
 #RacingTrack {
@@ -21,7 +23,7 @@ body {
 
 
 .wall {
-    background-color:black !important;
+    background-color:red !important;
 }
 
 .Fakewall {
@@ -38,4 +40,7 @@ body {
 .coin {
     background-image:url("Fries.png");
     background-size: 42px 42px;
+}
+audio {
+    visibility: hidden;
 }

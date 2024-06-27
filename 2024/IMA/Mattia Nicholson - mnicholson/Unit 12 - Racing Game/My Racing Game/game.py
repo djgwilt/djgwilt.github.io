@@ -15,6 +15,11 @@ direction = [0, 0]
 
 coin = 0
 
+secretdiddymist = document.getElementById("secretdiddymist")
+adlib = document.getElementById("adlib")
+ken = document.getElementById("ken")
+
+
 # to store the handle code for the timer interval to cancel it when we crash
 intervalHandle = 0
 
@@ -68,6 +73,7 @@ def updatePosition():
                 print("You have collected {} chip".format(coin))
             else:
                 print("You have collected {} chips".format(coin))
+            adlib.play()
         elif cell.className == "flag":
             cell.className = "car"
             handleWin()
@@ -78,6 +84,7 @@ def updatePosition():
 def handleCrash():
     window.clearInterval(intervalHandle)
     document.getElementById("Message").innerText = "Gng done crashed🙏🏻🙏🏻👶🏿"
+    ken.play()
 
 # called when the page is loaded to start the timer checks
 def runGame():
@@ -89,9 +96,17 @@ def runGame():
 def handleWin():
     window.clearInterval(intervalHandle)
     document.getElementById("Message").innerText = "Gng done won🙌🏻🙌🏻 and you got {} fries".format(coin)  # type: ignore
+    secretdiddymist.play()
 
 #############################
 # Main Program
 #############################
+
+secretdiddymist.autoplay = False
+secretdiddymist.load()
+adlib.autoplay = False
+adlib.load()
+ken.autoplay = False
+ken.load()
 
 runGame()

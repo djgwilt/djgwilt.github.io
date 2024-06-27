@@ -1,5 +1,4 @@
 from js import document, window
-
 position1 = [3, 2]
 position2 = [4, 2]  
 direction1 = [0, 0]
@@ -8,18 +7,18 @@ intervalHandle1 = 0
 intervalHandle2 = 0
 defaultTime = 300
 boostTime = 100
-curbTime = 700
+curbTime = 1000
 limitTime = 650
 limitsTime = 3000
-
 laps_completed1 = 0
 laps_completed2 = 0
-blockstraveled1 = 0
-blockstraveled2 = 0
 total_laps = 5
-
 player1class = "player11"
 player2class = "player21"
+
+audioboom = document.getElementById("audioboom") 
+audiowin = document.getElementById("audiowin") 
+
 
 def checkKey(event):
     event.preventDefault()
@@ -47,25 +46,20 @@ def checkKey(event):
     elif event.key == "s":
         direction2[0] = 0
         direction2[1] = 1
-
 def getCell1():
     return document.getElementById("R{}C{}".format(position1[1], position1[0]))
-
 def getCell2():
     return document.getElementById("R{}C{}".format(position2[1], position2[0]))
-
 def updatePosition1():
-    global position1, direction1, player1class, laps_completed1, total_laps, blockstraveled1
+    global position1, direction1, player1class, laps_completed1, total_laps
     currentTime1 = defaultTime
     changeInterval1 = False
-
-    if (position1 == [3, 1] or position1 == [4, 1] or position1 == [5, 1]) and (blockstraveled1 % 5 == 0):
+    if (position1 == [3, 1] or position1 == [4, 1] or position1 == [5, 1]):
         laps_completed1 += 1
         print(f"Player 1 completed {laps_completed1} laps.")
         if laps_completed1 == total_laps:
             end_game("Player 1")
             return
-
     oldsprite1 = player1class
     if direction1 == [0, 1]:
         player1class = "player11"
@@ -75,43 +69,36 @@ def updatePosition1():
         player1class = "player13"
     elif direction1 == [-1, 0]:
         player1class = "player14"
-
     if position1 == [13, 0]:
         cell = getCell1()
         if cell:
             cell.classList.remove("player12")
-        position1 = [3, 0]
-        cell = getCell1()
         if cell:
-            cell.classList.add("player11")
-            cell.classList.remove("player11")
-        direction1 = [0, 1]
-        currentTime1 = defaultTime
-        changeInterval1 = True
+            position1 = [3, 0]
+            cell = getCell1()
+            direction1 = [0, 1]
+            currentTime1 = defaultTime
+            changeInterval1 = True
     elif position1 == [14, 0]:
         cell = getCell1()
         if cell:
             cell.classList.remove("player12")
-        position1 = [4, 0]
-        cell = getCell1()
         if cell:
-            cell.classList.add("player11")
-            cell.classList.remove("player11")
-        direction1 = [0, 1]
-        currentTime1 = defaultTime
-        changeInterval1 = True
+            position1 = [4, 0]
+            cell = getCell1()
+            direction1 = [0, 1]
+            currentTime1 = defaultTime
+            changeInterval1 = True
     elif position1 == [15, 0]:
         cell = getCell1()
         if cell:
             cell.classList.remove("player12")
-        position1 = [5, 0]
-        cell = getCell1()
         if cell:
-            cell.classList.add("player11")
-            cell.classList.remove("player11")
-        direction1 = [0, 1]
-        currentTime1 = defaultTime
-        changeInterval1 = True
+            position1 = [5, 0]
+            cell = getCell1()
+            direction1 = [0, 1]
+            currentTime1 = defaultTime
+            changeInterval1 = True
     else:
         cell = getCell1()
         if cell:
@@ -130,34 +117,27 @@ def updatePosition1():
             changeInterval1 = True
             cell.classList.add(player1class)
         elif cell.classList.contains("limits"):
-            currentTime1 = limitsTime
-            changeInterval1 = True
-            cell.classList.add(player1class)
+            handleCrash1()
         elif cell.classList.contains("boost"):
             currentTime1 = boostTime
             changeInterval1 = True
             cell.classList.add(player1class)
-            blockstraveled1 =+ 1
         else:
             currentTime1 = defaultTime
             changeInterval1 = True
             cell.classList.add(player1class)
-
     if changeInterval1:
         updateInterval1(currentTime1)
-
 def updatePosition2():
-    global position2, direction2, player2class, laps_completed2, total_laps, blockstraveled2
+    global position2, direction2, player2class, laps_completed2, total_laps
     currentTime2 = defaultTime
     changeInterval2 = False
-
-    if (position2 == [3, 1] or position2 == [4, 1] or position2 == [5, 1]) and (blockstraveled2 % 5 == 0):
+    if (position2 == [3, 1] or position2 == [4, 1] or position2 == [5, 1]):
         laps_completed2 += 1
         print(f"Player 2 completed {laps_completed2} laps.")
         if laps_completed2 == total_laps:
             end_game("Player 2")
             return
-
     oldsprite2 = player2class
     if direction2 == [0, 1]:
         player2class = "player21"
@@ -167,7 +147,6 @@ def updatePosition2():
         player2class = "player23"
     elif direction2 == [-1, 0]:
         player2class = "player24"
-
     if position2 == [13, 0]:
         cell = getCell2()
         if cell:
@@ -222,23 +201,18 @@ def updatePosition2():
             changeInterval2 = True
             cell.classList.add(player2class)
         elif cell.classList.contains("limits"):
-            currentTime2 = limitsTime
-            changeInterval2 = True
-            cell.classList.add(player2class)
+            handleCrash2()
         elif cell.classList.contains("boost"):
             currentTime2 = boostTime
             changeInterval2 = True
             cell.classList.add(player2class)
-            blockstraveled2 =+ 1
         else:
             currentTime2 = defaultTime
             changeInterval2 = True
             cell.classList.add(player2class)
 
-
     if changeInterval2:
         updateInterval2(currentTime2)
-
 def updateInterval1(newTime):
     global intervalHandle1
     window.clearInterval(intervalHandle1)
@@ -254,7 +228,8 @@ def handleCrash1():
     window.clearInterval(intervalHandle1)
     document.getElementById("Message").innerText = "Player 1 got injured"
     position1 = [3, 2]
-    direction1 = [0, 1] 
+    direction1 = [0, 1]
+    audioboom.play()
     updatePosition1() 
 
 def handleCrash2():
@@ -263,6 +238,7 @@ def handleCrash2():
     document.getElementById("Message").innerText = "Player 2 got injured"
     position2 = [4, 2] 
     direction2 = [0, 1] 
+    audioboom.play()
     updatePosition2()  
 
 def end_game(winner):
@@ -279,5 +255,10 @@ def runGame():
     document.addEventListener('keydown', checkKey)
     intervalHandle1 = window.setInterval(updatePosition1, defaultTime)
     intervalHandle2 = window.setInterval(updatePosition2, defaultTime)
+
+audioboom.autoplay = False
+audioboom.load()
+audiowin.autoplay = False
+audiowin.load()
 
 runGame()
