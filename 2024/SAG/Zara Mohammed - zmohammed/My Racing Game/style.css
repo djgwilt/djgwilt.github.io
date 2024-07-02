@@ -28,3 +28,8 @@ body {
     background-image:url("gumball.jpg") ;
     background-size: 40px 40px;
 }
+
+.coin{
+    background-image:url("coin.png") ;
+    background-size: 40px 40px;
+}

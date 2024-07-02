@@ -49,6 +49,7 @@ def updatePosition():
     if direction[0] != 0 or direction[1] != 0:
         # Set the cell where player1 was to empty
         cell = getCell()
+        bag= 
         cell.className = ""
         player1Class= "player1"
         

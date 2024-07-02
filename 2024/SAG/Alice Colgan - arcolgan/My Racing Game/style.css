@@ -10,8 +10,8 @@ body {
 #RacingTrack td {
     width:40px;
     height:40px;
-    border:1px solid;
-    background-color:rgb(109, 177, 113);
+    border: 1px solid;
+    background-color: #3b8955e0; 
 }
 
 .player1 {
@@ -20,7 +20,8 @@ body {
 }
 
 .wall {
-    background-color:aliceblue !important;
+    background-image:url("Untitled\ picture5.png");
+    background-size: 40px 40px;
 }
 
 .flag {

@@ -14,6 +14,9 @@ position = [0, 0]
 # to store movement directions (x,y)
 direction = [0, 0]
 
+# to store flags left to collect and coins collected
+bag = [3,0] 
+
 # to store the handle code for the timer interval to cancel it when we crash
 intervalHandle = 0
 
@@ -57,8 +60,14 @@ def updatePosition():
             handleCrash()
         elif cell.className == "wall":
             handleCrash()
-        elif cell.className == "bird food flag":
-            handleWin ()
+        elif cell.className == "coin":
+            cell.className = player1
+            bag[1] = bag [1] + 1
+        elif cell.className == "flag":
+            cell.className = player1
+            bag[0] = bag [0] - 1
+            if bag[0] == 0:
+                handleWin ()
         else:
             cell.className = "player1"
 
@@ -78,6 +87,7 @@ def runGame():
 def handleWin():
     window.clearInterval(intervalHandle)
     document.getElementById("Message").innerText = "You Win!"
+
 #############################
 # Main Program
 #############################

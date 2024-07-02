@@ -40,3 +40,6 @@ body {
 	top: 46px;
 	Left: 6px;
 }
+Audio {
+	visibility: hidden;
+}

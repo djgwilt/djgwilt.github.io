@@ -7,7 +7,10 @@
     <script src="https://cdn.jsdelivr.net/pyodide/v0.26.0/full/pyodide.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script defer src="code.js"></script>
-    <title>Racing Game</title>    
+    <title>Racing Game</title>   
+    <audio id="audioLebron" width="0" height="0">
+      <source src="lebron.mp3" type="audio/mpeg">
+    </audio> 
   </head>
 
   <body>
@@ -78,7 +81,20 @@
             <td id="R5C4"></td>
             <td id="R5C5"></td>
             <td id="R5C6"class="wall"></td>
-            <td id="R5C7"class="flag"></td>
+            <td id="R5C7"></td>
+
+          <tr>
+            <td id="R6C0"></td>
+            <td id="R6C1"class="wall"></td>
+            <td id="R6C2"></td>
+            <td id="R6C3"class="wall"></td>
+            <td id="R6C4"class="wall"></td>
+            <td id="R6C5"class="wall"></td>
+            <td id="R6C6"></td>
+            <td id="R6C7"class="flag"></td>
+        </tr>
+
+
             </table>
   
     <p id="Message"><br></p>
@@ -90,3 +106,5 @@
   </body>
 
 </html>
+
+

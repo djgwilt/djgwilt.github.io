@@ -6,9 +6,9 @@ body {
   height: 100vh;
   margin: 0;
   background-color: #000000;
-  color: #fff;
+  color: #ffffff;
 }
 
 canvas {
-  border: 1px solid white;
+  border: 1px solid rgb(255, 255, 255);
 }

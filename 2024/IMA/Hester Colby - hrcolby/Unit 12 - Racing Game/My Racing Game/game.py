@@ -85,10 +85,15 @@ def updatePosition():
         cell = getCell()
     
         if cell == None:
-            handleCrash()
+            positionplayer1[0] -= directionplayer1[0]
+            positionplayer1[1] -= directionplayer1[1]
+            cell = getCell()
+            cell.className += player1class
         elif "wall" in cell.className:
-            handleCrash()
-
+            positionplayer1[0] -= directionplayer1[0]
+            positionplayer1[1] -= directionplayer1[1]
+            cell = getCell()
+            cell.className += player1class
         elif "flag" in cell.className:
             if foodcount >= 5: #checking for enough food to trigger win
                 handleWin()
@@ -97,9 +102,13 @@ def updatePosition():
         elif cell.className == "PassageDark1":
             positionplayer1[0] = 3
             positionplayer1[1] = 8
+            cell = getCell()
+            cell.className += player1class
         elif cell.className == "PassageDark2":
             positionplayer1[0] = 8
             positionplayer1[1] = 2
+            cell = getCell()
+            cell.className += player1class
         elif cell.className == "lizard":
             handleCrash()
         else:

@@ -1,38 +1,39 @@
 body {
-    background-color:#9c9999;
+    background-image:url("skyy.jpg")
 }
 
 #RacingTrack {
-    border-collapse:collapse;
-    border:5px solid rgb(255, 255, 255);
+    background-image:url("pigcollage.jpg");
 }
 
 #RacingTrack td {
-    width:40px;
-    height:40px;
+    width:50px;
+    height:50px;
     border:1px solid;
-    background-color:rgb(176, 176, 176);
+    background-color:rgb(77, 77, 77);
 }
 
 .player1 {
-    background-image:url("Picture5.jpg");
-    background-size: 40px 40px;
-}
-
-.flag {
-    background-image:url("Jam1.jpg");
-    background-size : 40px 40px;
+    background-image:url("what.jpg");
+    background-size: 50px 70px;
 }
 
 .wall {
-    background-color: rgb(31, 31, 43) !important;
+    background-image:url("grass.jpg");
+    background-size : 70px 70px;
 }
 
-.fakeWall {
-    background-color: rgb(69, 68, 68) !important;
-}
 .coin {
-    background-image:url("Picture6.jpg");
-    background-size : 40px 40px;
-    
+    background-image:url("OIP.jpg");
+    background-size : 70px 70px;
+}
+
+.coin2 {
+    background-image:url("coin2.jpg");
+    background-size : 70px 70px;
+}
+
+.flag {
+    background-image:url("Picture1.jpg");
+    background-size : 70px 70px;
 }

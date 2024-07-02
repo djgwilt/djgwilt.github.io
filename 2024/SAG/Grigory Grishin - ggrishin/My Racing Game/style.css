@@ -20,8 +20,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-.player1-left {
-    background-image:url("player-left.jpg");
+.player2 {
+    background-image:url("Player2.jpg");
     background-size: 40px 40px;
     background-position: center;
     background-repeat: no-repeat;

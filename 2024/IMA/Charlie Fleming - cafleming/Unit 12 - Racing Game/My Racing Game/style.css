@@ -1,5 +1,5 @@
 body {
-    background-color:grey;
+    background-color: black;
 }
 
 #RacingTrack {
@@ -8,47 +8,79 @@ body {
 }
 
 #RacingTrack td {
-    width:40px;
-    height:40px;
+    width:70px;
+    height:70px;
     border:1px solid;
     background-color:white;
 }
 
 .car {
     background-image:url("GOOSE.jpg");
-    background-size: 40px 40px;
+    background-size: 70px 70px;
 }
 
 .GOOSE2 {
     background-image:url("GOOSE2.png");
-    background-size: 40px 40px;
+    background-size: 70px 70px;
 }
 
 
 .car2 {
     background-image:url("hunter.jpg");
-    background-size: 40px 40px;
+    background-size: 70px 70px;
 }
 
 .powerup {
     background-image:url("pentegram.jpg");
-    background-size: 40px 40px;
+    background-size: 70px 70px;
 }
 
 .cross {
     background-image:url("cross.jpg");
-    background-size: 40px 40px;
+    background-size: 70px 70px;
 }
 
 .cross2 {
     background-image:url("attempt2.jpg");
-    background-size: 40px 40px;
+    background-size: 70px 70px;
 }
 
 .wall{
-    width:40px;
-    height:40px;
+    width:70px;
+    height:70px;
     border:1px solid;
     background-color:rgb(0, 0, 0) !important;
 
 }
+
+.title{
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 50px;
+  }
+
+  .flashing-title {
+    font-size: 4em;
+    font-weight: bold;
+    animation: flashing 1s infinite alternate;
+  }
+
+  .scary-text {
+    color: red;
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 41px red, 0 0 80px red;
+  }
+
+  @keyframes flashing {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  .white{
+    color:white;
+
+  }

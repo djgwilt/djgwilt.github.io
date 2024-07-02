@@ -28,7 +28,7 @@ intervalHandle = 0
 
 # To store the movement fluidity
 
-Interval = 100
+Interval = 120
 
 # Variables to store positions and such
 
@@ -207,9 +207,14 @@ def updatePosition():
             cell.className = arrownames[arrow]
             direction = [0, 0]
             NoClipTimes += 1
-            print(Messages[NoClipTimes], "\n")
-            ExpandTrack()
-            resetVariables()
+            if NoClipTimes == 4:
+                # Add a rickroll here
+                
+                print("")
+            else:
+                print(Messages[NoClipTimes], "\n")
+                ExpandTrack()
+                resetVariables()
 
         else:
             cell.className = arrownames[arrow]

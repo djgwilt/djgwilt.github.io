@@ -1,23 +1,23 @@
 body {
-    background-color:rgba(235, 177, 231, 0.442);
+    background-color:rgb(208, 240, 255);
 }
 
 #RacingTrack {
     border: 0; 
     border-color: transparent;
     border-style: solid;
-    border-width: 105px;
-    -moz-border-image: url(bush.png) 105 repeat;
-    -webkit-border-image: url(bush.png) 105 repeat;
-    -o-border-image: url(bush.png) 105 repeat;
-    border-image: url(bush.png) 105 fill repeat;
+    border-width: 115px;
+    -moz-border-image: url(bush.png) 115 repeat;
+    -webkit-border-image: url(bush.png) 115 repeat;
+    -o-border-image: url(bush.png) 115 repeat;
+    border-image: url(bush.png) 115 fill repeat;
 }
 
 #RacingTrack td {
     width:80px;
     height:80px;
     border:0px solid;
-    background-color:rgb(207, 229, 246);
+    background-color:rgba(134, 219, 112, 0.712);
 }
 
 .player1 {

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flashing Demon Duck HUNT!</title>
+<style>
+  body {
+    font-family: Comic Sans MS, cursive, sans-serif;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 50px;
+  }
+
+  .flashing-title {
+    font-family: Comic Sans MS, cursive, sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+    animation: flashing 1s infinite alternate;
+  }
+
+  .scary-text {
+    color: red;
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 40px red, 0 0 80px red;
+  }
+
+  @keyframes flashing {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+</style>
+</head>
+<body>
+  <h1 class="flashing-title"><span class="scary-text">DEMON</span> Duck HUNT!</h1>
+</body>
+</html>

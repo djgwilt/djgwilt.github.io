@@ -1,28 +1,20 @@
 <!doctype html>
 <html>
-  
-  <head>
+<head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
-    <script src="code.js"></script>
     <title>Racing Game</title>    
-  </head>
-
-  <body>
-    
+</head>
+<body>
     <p>Use all arrow keys to move.</p>
-
-    <table id="RacingTrack">
-    </table>
-
+    <table id="RacingTrack"></table>
     <p id="Message"><br></p>
-
     <div>
-    Console Output:
-    <textarea id='output' style='width: 100%;' rows='20' disabled></textarea>
+        Console Output:
+        <textarea id='output' style='width: 100%;' rows='20' disabled></textarea>
     </div>
-  </body>
-
+    <script src="code.js"></script>
+</body>
 </html>

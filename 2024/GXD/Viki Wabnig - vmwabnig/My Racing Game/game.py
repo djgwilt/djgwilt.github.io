@@ -57,10 +57,10 @@ def updatePosition():
         cell = getCell()
         if cell == None:
             handleCrash()
-        elif cell.className == "coin":  
-            cell.className = player1 
         elif cell.className == "wall":  
             handleCrash()  
+        elif cell.className == "coin":  
+            cell.className = "player1"     
         elif cell.className == "flag":
             handleWin()
         else:
@@ -74,7 +74,7 @@ def handleCrash():
 # if the car reaches the flag the user has won
 def handleWin():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = "You Win!"
+    document.getElementById("Message").innerText = "You Win! Here are the links to the other levels: http://127.0.0.1:5500/level%202.html"
 # called when the page is loaded to start the timer checks
 def runGame():
     global intervalHandle

@@ -39,7 +39,8 @@ body {
 }
 
 .closed-gate {
-    background-image:url("Gate.Closed.png") !important;
+    background-color: yellow !important;
+
 }
 
 .sprite {
@@ -48,4 +49,9 @@ body {
     height: 25px;
     top: 26px; /* initial top */
     left: 6px; /* initial left */
+}
+
+.YellowDoorKey {
+    background-image:url("YellowDoorKey.png");
+    background-size: 40px 40px;
 }

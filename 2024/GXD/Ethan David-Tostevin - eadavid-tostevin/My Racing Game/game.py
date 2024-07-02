@@ -4,9 +4,14 @@
 from js import document, window, jQuery
 from pyodide.ffi import create_proxy, to_js
 import random
+import webbrowser
+
+url = ''
 #############################
 # Global Variables
 #############################
+audioApple = document.getElementById("audioApple")
+audioCrash = document.getElementById("audioCrash")
 
 # to store current position (x,y)
 positions = [[0, 0]]
@@ -58,12 +63,15 @@ def updatePosition():
             handleCrash()
         elif cell.className == "wall":
             handleCrash()
+            webbrowser.open_new(url)
         elif cell.className == "player1":
             handleCrash()
+            webbrowser.open_new(url)
         elif cell.className == "food":
             cell.className = "player1"
             givePoint()
             generateFood()
+            audioApple.play()
         else:
             #cell.className = "player1"
             cellRect = cell.getBoundingClientRect()
@@ -85,7 +93,7 @@ def updatePosition():
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = f"GAME OVER Score: {score}"
+    document.getElementById("Message").innerText = f"Ur dead fella! Score: {score}"
 
 # called when the page is loaded to start the timer checks
 def runGame():
@@ -126,6 +134,10 @@ def handleWin():
 #############################
 # Main Program
 #############################
+audioApple.autoplay = False
+audioApple.load()
+audioCrash.autoplay = False
+audioCrash.load()
 
 
 runGame()

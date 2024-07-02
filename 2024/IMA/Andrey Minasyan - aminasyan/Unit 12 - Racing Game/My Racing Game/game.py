@@ -49,6 +49,10 @@ def updatePosition():
             player1Class = "car" 
         elif direction[0] < 0:
             player1Class = "carFlipped"
+        elif direction[1] > 0:
+            player1Class = "carDown"
+        elif direction[1] < 0:
+            player1Class = "carUp"
         else:
             player1Class = cell.className
         cell.className = ""

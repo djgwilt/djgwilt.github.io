@@ -65,13 +65,13 @@ def updatePosition():
         elif cell.className =="wall":
             handleCrash()
         elif cell.className == "bamboo":
-            cell.className="player1"
+            cell.className=player1Class
             bag[1]=bag[1]+1
             handlePoints()
         elif cell.className =="win":
-            cell.className = "player1"
-            bag[0] =bag[0]-1
-            if bag[0]== 0:
+#            cell.className = "player1"
+ #           bag[0] =bag[0]-1
+  #          if bag[0]== 0:
                 handleWin()
         else:
             cell.className = player1Class
@@ -84,7 +84,8 @@ def handleCrash():
 #if the car reaches the flag the user has won
 def handlePoints():
     document.getElementById("Points").innerText = "Points: {}".format(bag[1])
-    
+
+
 def handleWin():
     window.clearInterval(intervalHandle)
     document.getElementById("Message").innerText = "You Win!"

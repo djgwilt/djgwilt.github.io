@@ -9,7 +9,7 @@ import random
 #############################
 # to store current positions (x,y) for players
 player1_position = [0, 0]
-player2_position = [9, 9]
+player2_position = [1, 0]
 # to store movement directions (x,y) for players
 player1_direction = [0, 0]
 player2_direction = [0, 0]
@@ -52,8 +52,11 @@ def checkKey2(event):
     elif event.key == "w":
         player2_direction[0] = 0
         player2_direction[1] = -1
-def getCell(player_position):
-    return document.getElementById("R{}C{}".format(player_position[1], player_position[0]))
+def getCell(player1_position):
+    return document.getElementById("R{}C{}".format(player1_position[1], player1_position[0]))
+
+def getCell2(player2_position):
+    return document.getElementById("R{}C{}".format(player2_position[1], player2_position[0]))
 # the timer check function - runs every 300 milliseconds to update players' positions
 def updatePositions():
     global it
@@ -75,7 +78,7 @@ def updatePositions():
             cell.className = "player1"
     if player2_direction[0] != 0 or player2_direction[1] != 0:
         # Set the cell where player2 was to empty
-        cell = getCell(player2_position)
+        cell = getCell2(player2_position)
         if cell:
             cell.className = ""
         
@@ -83,8 +86,8 @@ def updatePositions():
         player2_position[0] += player2_direction[0]
         player2_position[1] += player2_direction[1]
         # Re-draw player2 (or report a crash)
-        cell = getCell(player2_position)
-        if cell is None or cell.className == "wall":
+        cell = getCell2(player2_position)
+        if cell.className== None or cell.className == "wall":
             handleCrash("player2")
         else:
             cell.className = "player2"

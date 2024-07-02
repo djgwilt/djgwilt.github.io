@@ -32,3 +32,6 @@ body {
     background-image: url("Golden\ Egg.jpg");
     background-size: 40px 40px;
 }
+audio {
+    visibility: hidden;
+}

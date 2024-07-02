@@ -13,7 +13,7 @@ hitFlag = False
 
 # to store current position (x,y)
 position = [1, 0]
-spos = [5,6]
+spos = [6,5]
 
 # to store movement directions (x,y)
 direction = [0, 0]
@@ -100,11 +100,12 @@ def updatePosition():
         else:
             vector = [-1,0]
         nextpos = [vector[0]+spos[0],vector[1]+spos[1]]
-        print(nextpos)
+        #print(nextpos)
         cell = getC(*nextpos)
         #print(cell)
         if cell == None:
-            print(spos,vector,cell,position)
+            #print(spos,vector,cell,position)
+            a=1
         elif cell.className != "wall":
             spos = [spos[0]+vector[0],spos[1]+vector[1]]
     
@@ -115,10 +116,11 @@ def updatePosition():
             vector = [0,-1]
         nextpos = [vector[0]+spos[0],vector[1]+spos[1]]
         
-        print(nextpos)
+        #print(nextpos)
         cell = getC(*nextpos)
         if cell == None:
-            print(spos,vector,cell,position)
+            #print(spos,vector,cell,position)
+            a=1
         elif cell.className != "wall":
             spos = [spos[0]+vector[0],spos[1]+vector[1]]
 

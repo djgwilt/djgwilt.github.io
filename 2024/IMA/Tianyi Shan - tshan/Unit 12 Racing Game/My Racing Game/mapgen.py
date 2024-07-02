@@ -3,8 +3,8 @@ import os
 import time
 
 # odd number for width and height
-WIDTH = 20
-HEIGHT = 20
+WIDTH = 5
+HEIGHT = 5
 SPEED = 0.00000000001
 
 # build an array of True for walls
@@ -33,7 +33,7 @@ def printMazeAsHTMLTable():
     for y in range(HEIGHT):
         print('<tr>')
         for x in range(WIDTH):
-            print('<td id="R{}C{}" class="wall"></td>'.format(y, x) if maze[x][y] else '<td id="R{}C{}"></td>'.format(y, x))
+            print('<td id="R{}C{}" class="wall"></td>'.format(y, x) if maze[x][y] else '<td id="R{}C{}" class="fake"></td>'.format(y, x))
         print('</tr>')
     print('</table>')
        

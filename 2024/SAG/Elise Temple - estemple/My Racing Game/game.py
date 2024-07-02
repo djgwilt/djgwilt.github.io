@@ -23,12 +23,19 @@ intervalHandle = 0
 
 # the function called when a key is pressed - sets direction variable
 def checkKey(event):
-    event.preventDefault()
+    event.preventDefault()  # this will prevent the down arrow from scrolling the page
     if event.key == "ArrowRight":
         direction[0] = 1
+        direction[1] = 0
     elif event.key == "ArrowLeft":
-        # left arrow
         direction[0] = -1
+        direction[1] = 0
+    elif event.key == "ArrowUp":
+        direction[0] = 0
+        direction[1] = 1
+    elif event.key == "ArrowDown":
+        direction[0] = 0
+        direction[1] = -1   
 
 def getCell():
     return document.getElementById("R{}C{}".format(0, position[0]))

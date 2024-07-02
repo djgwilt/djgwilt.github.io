@@ -8,13 +8,19 @@ from pyodide.ffi import create_proxy
 # Global Variables
 #############################
 
+m1Down = False
+m2Left = False
+m3Up = False
+m4Right = False
+
+
 # to store current position (x,y)
 position = [0, 0]
 
 m1position = [2, 2]
-m2position = [4, 0]
-m3position = [0, 4]
-m4position = [6, 2]
+m2position = [0, 4]
+m3position = [4, 0]
+m4position = [2, 6]
 
 # to store movement directions (x,y)
 direction = [0, 0]
@@ -55,6 +61,14 @@ def getCell():
 def getM1Cell():
     return document.getElementById("R{}C{}".format(m1position[1], m1position[0]))
 
+def getM2Cell():
+    return document.getElementById("R{}C{}".format(m2position[1], m2position[0]))
+
+def getM3Cell():
+    return document.getElementById("R{}C{}".format(m3position[1], m3position[0]))
+
+def getM4Cell():
+    return document.getElementById("R{}C{}".format(m4position[1], m4position[0]))
 
 
 def getExitCell():
@@ -62,21 +76,91 @@ def getExitCell():
 
 # the timer check function - runs every 300 milliseconds to update player1's position
 def updatePosition():
+    global m1Down
+    global m2Left
+    global m3Up
+    global m4Right
+# Missile One 
+    
     cell = getM1Cell()
     cell.className = ""
-    
-    
-
-
-    if m1position[1] == 2 and  m1position[0] == 2:
+    if m1Down == False:
         m1position[1] = m1position[1] - 1
     else:
         m1position[1] = m1position[1] + 1
+    
+    
+    if m1position[1] == 2:
+        m1Down = False
+    elif m1position[1] == 0:
+        m1Down = True
+
     cell = getM1Cell()
     cell.className = "wall3"
 
+# Missile Two
 
 
+    cell = getM2Cell()
+    cell.className = ""
+
+    if m2Left == False:
+        m2position[0] = m2position[0] + 1
+    else:
+        m2position[0] = m2position[0] -1
+    
+    
+    if m2position[0] == 0:
+        m2Left = False
+    elif m2position[0] == 2:
+        m2Left = True
+
+    cell = getM2Cell()
+    cell.className = "wall4"
+
+# Missile Three
+  
+    cell = getM3Cell()
+    cell.className = ""
+
+    if m3Up == False:
+        m3position[1] = m3position[1] + 1
+    else:
+        m3position[1] = m3position[1] -1
+    
+    
+    if m3position[1] == 0:
+        m3Up = False
+    elif m3position[1] == 2:
+        m3Up = True
+
+    cell = getM3Cell()
+    cell.className = "wall5"
+
+
+# Missile Four
+
+    cell = getM4Cell()
+    cell.className = ""
+
+    if m4Right == False:
+        m4position[0] = m4position[0] - 1
+    else:
+        m4position[0] = m4position[0] + 1
+    
+    
+    if m4position[0] == 2:
+        m4Right = False
+    elif m4position[0] == 0:
+        m4Right = True
+
+    cell = getM4Cell()
+    cell.className = "wall6"
+
+
+
+
+####################################################################
 
     if direction[0] != 0 or direction[1] != 0:
         # Set the cell where player1 was to empty
@@ -94,7 +178,15 @@ def updatePosition():
             handleCrash()
         elif cell.className == "wall2":
             handleCrash()  
-        elif cell.className == "Winning" :
+        elif cell.className == "wall3":
+            handleCrash() 
+        elif cell.className == "wall4":
+            handleCrash() 
+        elif cell.className == "wall5":
+            handleCrash() 
+        elif cell.className == "wall6":
+            handleCrash() 
+        elif cell.className == "Winning":
             handleWinMore()
         elif cell.className == "coin1":
             cell.className = "player1"
@@ -132,7 +224,7 @@ def handleCollect1():
 # called when the page is loaded to start the timer checks
 def runGame():
     global intervalHandle
-    print("Running Game")
+    print("We're good to go")
     document.addEventListener('keydown', create_proxy(checkKey))
     intervalHandle = window.setInterval(create_proxy(updatePosition), 300)
 

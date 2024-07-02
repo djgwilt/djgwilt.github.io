@@ -139,7 +139,6 @@ def handleWin(winner):
     window.clearInterval(intervalHandle)
 
 def powerup():
-    print(".")
     cell = getCellPower()
 
     cell.className = ""

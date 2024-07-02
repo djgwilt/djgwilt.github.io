@@ -21,6 +21,7 @@ directiond = [0, 0]
 directionh = [0, 0]
 # to store the handle code for the timer interval to cancel it when we crash
 intervalHandle = 0
+hintervalHandle = 0
 
 #############################
 # Sub-Programs
@@ -85,6 +86,7 @@ def getcelld():
 
 def getcellh():
     return document.getElementById("R{}C{}".format(positionh[1],positionh[0]))
+
 # the timer check function - runs every 300 milliseconds to update player1's position
 def updatePosition():
     if directiond[0] != 0 or directiond[1] != 0:
@@ -109,11 +111,15 @@ def updatePosition():
             handleoffcourse()
         elif cell.className =="burger":
             stomach[1] = stomach[1] + 1
-            if stomach[1]>2:
+            if stomach[1]>2.9:
+                handledharmannWin()
+        elif cell.className =="burger2":
+            stomach[1] = stomach[1] + 0.5
+            if stomach[1]>2.9:
                 handledharmannWin()
         else:
             cell.className = "flag"
-    if direction[0] != 0 or direction[1] != 0:
+    elif direction[0] != 0 or direction[1] != 0:
         # Set the cell where player1 was to empty
         cell = getCell()
         cell.className = ""
@@ -137,7 +143,56 @@ def updatePosition():
             handleCrash()
         else:
             cell.className = "player1"
- 
+    elif direction[0] != 0 or direction[1] != 0:
+        # Set the cell where player1 was to empty
+        cell = getCell()
+        cell.className = ""
+       
+
+        # Update the column position for player1
+        positionh[0] += directionh[0]
+        positionh[1] += directionh[1]
+
+        
+
+        # Re-draw player1 (or report a crash)
+        cell = getCellh()
+        if cell == None:
+            handleCrash()
+        elif cell.className == "flag":
+            handleWin()
+        elif cell.className == "wall":
+            handleCrash()
+        elif cell.className == "dharwall":
+            handleCrash()
+        else:
+            cell.className = "player1"
+    elif directionh[0] != 0 or directionh[1] != 0:
+        # Set the cell where player1 was to empty
+        cell = getcellh()
+        cell.className = ""
+        
+
+        # Update the column position for player1
+        positionh[0] += directionh[0]
+        positionh[1] += directionh[1]
+
+        
+
+        # Re-draw player1 (or report a crash)
+        cell = getcellh()
+        if cell == None:
+            handlercrash()
+        elif cell.className == "wall":
+            handlercrash()
+        elif cell.className == "dharwall":
+            handlercrash()
+        elif cell.className == "fakewall":
+            handlercrash()
+        elif cell.className == "exhandler":
+            handlercrash()
+        else:
+            cell.className = "handler"
 
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():
@@ -152,6 +207,10 @@ def handleWin():
     window.clearInterval(intervalHandle)
     document.getElementById("Message").innerText = "You succesfully forced Dhar Mann to pay you the agreed upon wage. Dhar Mann is forced to pay a $10,000 fine for attempting to mistreat workers and is put on probation for 5 years (Based on a true story)."
  
+def handlercrash():
+    window.clearInterval(intervalHandle)
+    document.getElementById("Message").innerText = "Handler bonked his nose into a wall. Dhar Mann had an easy escape when Mr Feast stayed behind to tend to Handler."
+
 
 def handledharmannWin():
     window.clearInterval(intervalHandle)

@@ -85,7 +85,7 @@ def runGame():
 
 def handleWin():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText="You win and scored {} coins!" .format(2)
+    document.getElementById("Message").innerText="You win and scored {} coins!" .format()
  
 #############################
 # Main Program

@@ -66,7 +66,7 @@ def updatePosition():
 # if the car reaches the flag the user has won
 def handleWin():
     window.clearInterval(intervalHandle)
-    document.getElementById("message").innerText = "you win"
+    document.getElementById("Message").innerText = "You Win!"
  
 # if the car has gone off the table, this tidies up including crash message
 def handleCrash():
@@ -78,7 +78,7 @@ def runGame():
     global intervalHandle
     print("Running Game")
     document.addEventListener('keydown', create_proxy(checkKey))
-    intervalHandle = window.setInterval(create_proxy(updatePosition), 300)
+    intervalHandle = window.setInterval(create_proxy(updatePosition), 500)
  
 #############################
 # Main Program

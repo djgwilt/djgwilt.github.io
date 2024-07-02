@@ -37,3 +37,13 @@ body {
     background-image:url("Water.gif") !important;
     background-size: 40px 40px;
 }
+
+.Flower {
+    background-image:url("Flower.gif") !important;
+    background-size: 40px 40px;
+}
+
+.Tree {
+    background-image:url("Tree.gif") !important;
+    background-size: 40px 40px;
+}

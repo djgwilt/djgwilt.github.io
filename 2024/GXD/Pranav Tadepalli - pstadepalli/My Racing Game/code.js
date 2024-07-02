@@ -1,8 +1,8 @@
 const settings = {
   difficultyLevels: {
-    easy: 10,
-    medium: 20,
-    hard: 30,
+    easy: 1000,
+    medium: 2000,
+    hard: 3000,
   },
   boardWidth: 1200,
   boardHeight: 1200,
@@ -29,6 +29,14 @@ let food = {
   y: Math.floor(Math.random() * (settings.boardHeight / 10)),
 };
 
+// EvilBird object
+const evilBird = {
+  x: Math.floor(Math.random() * (settings.boardWidth / 10)), // Random initial x
+  y: Math.floor(Math.random() * (settings.boardHeight / 10)), // Random initial y
+  image: new Image(), // Create an image object for the EvilBird
+};
+evilBird.image.src = 'EvilBird.jpg'; // Set the image source
+
 document.addEventListener('keydown', changeDirection);
 
 function changeDirection(event) {
@@ -47,6 +55,20 @@ function update() {
   else if (direction === 'DOWN') head.y++;
 
   snake.unshift(head);
+
+  // EvilBird Movement (towards the snake's head)
+  const headX = snake[0].x;
+  const headY = snake[0].y;
+  if (headX > evilBird.x) evilBird.x += 0.1; // Move right
+  else if (headX < evilBird.x) evilBird.x -= 0.1; // Move left
+  if (headY > evilBird.y) evilBird.y += 0.1; // Move down
+  else if (headY < evilBird.y) evilBird.y -= 0.1; // Move up
+
+  // EvilBird-Snake Collision Detection
+  if (headX === Math.round(evilBird.x) && headY === Math.round(evilBird.y)) {
+    clearInterval(game);
+    alert('You died - the Evil Bird got you!');
+  }
 
   if (head.x === food.x && head.y === food.y) {
     food = {
@@ -79,6 +101,9 @@ function draw() {
 
   context.fillStyle = 'red';
   context.fillRect(food.x * 10, food.y * 10, 10, 10);
+
+  // Draw the EvilBird
+  context.drawImage(evilBird.image, evilBird.x * 10, evilBird.y * 10, 100, 100); 
 }
 
 function gameLoop() {

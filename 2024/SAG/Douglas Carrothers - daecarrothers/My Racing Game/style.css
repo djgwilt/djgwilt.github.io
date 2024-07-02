@@ -35,22 +35,22 @@ body {
 }
 
 .wall3 {
-    background-image:url("moving enemies.jpg");
+    background-image:url("moving enemies.jpg") !important;
     background-size: 42px 42px ;
 }
 
 .wall4 {
-    background-image:url("moving enemies down.jpg");
+    background-image:url("moving enemies right.jpg") !important;
     background-size: 42px 42px;
 }
 
 .wall5 {
-    background-image:url("moving enemies right.jpg");
+    background-image:url("moving enemies down.jpg") !important;
     background-size: 42px 42px;
 }
 
 .wall6 {
-    background-image:url("moving enemies left.jpg");
+    background-image:url("moving enemies left.jpg") !important;
     background-size: 42px 42px;
 }
 

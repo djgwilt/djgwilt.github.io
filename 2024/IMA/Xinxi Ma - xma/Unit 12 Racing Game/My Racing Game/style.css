@@ -1,5 +1,6 @@
 body {
-    background-color:grey;
+    background-color:rgba(115, 233, 83, 0.777);;
+
 }
 
 #RacingTrack {
@@ -29,7 +30,7 @@ body {
 }
 
 .finish  {
-    background-image:url("Finish.png");
+    background-image:url("Junior.png");
     background-size: 40px 40px;
 }
 .wallFake {

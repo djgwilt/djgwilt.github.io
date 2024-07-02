@@ -19,7 +19,12 @@ body {
     background-size: 40px 40px;
 }
 
-.player1 {
+.fly {
     background-image:url("butterfly.png");
     background-size: 40px 40px;
+}
+
+.wall {
+    background-image:url("net.png");
+    background-size:40px 40px;
 }

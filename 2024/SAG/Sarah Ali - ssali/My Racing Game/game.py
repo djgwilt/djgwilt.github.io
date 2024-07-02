@@ -8,6 +8,13 @@ from pyodide.ffi import create_proxy
 # Global Variables
 #############################
 
+
+audioFlag = document.getElementById("audioFlag")
+audioWin=document.getElementById("audioWin")
+audioCrash=document.getElementById("audioCrash")
+audioCoin=document.getElementById("audioCoin")
+
+
 # to store current position (x,y)
 position = [0, 0]
 
@@ -112,8 +119,13 @@ def handleWin():
     window.clearInterval(intervalHandle)
     document.getElementById("Message").innerText ="You win and scored {} points!".format(bag)
 
+
 #############################
 # Main Program
 #############################
+audioFlag.autoplay = False
+audioFlag.load()
+audioFlag.autoplay = False
+audioFlag.load()
 
 runGame()

@@ -1,0 +1,33 @@
+body {
+    background-color:rgb(43, 186, 252);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid rgb(247, 5, 171);
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:gold;
+    border-color:rgb(247, 5, 171);
+}
+
+.player1 {
+    background-image:url("Sheldonn.jpg");
+    background-size: 40px 40px;
+}
+
+.wall{
+    background-image:url("emotions.jpg");
+    background-size: 40px 40px;
+}
+
+.wallFake{
+    background-image:url("mathemoji.jpg");
+    background-size: 40px 40px;
+}
+
+

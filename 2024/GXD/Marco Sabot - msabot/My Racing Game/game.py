@@ -3,13 +3,13 @@
 #############################
 from js import document, window
 from pyodide.ffi import create_proxy
+import random
 
 ############################
 # Grid
 ############################
 
-empty_row = ["empty" for i in range(30)]
-track = [ ["player1"] + 29*["empty"], empty_row for j in range(29) ]
+track = [ ["empty" for i in range(40)] for _ in range(39) ] + ["player1" + 39*"empty"]
 
 def loadTrack():
     tableInnerHTML = ""
@@ -25,17 +25,12 @@ def loadTrack():
 # Global Variables
 #############################
 
-# position (int)
-posint = [0,0]
+# to store current position (x,y)
+position = [20, 35]
 
-# position (float)
-posflo = [0, 0]
-
-# velocity 
-vel = [0,0]
-
-#acceleration
-acc = [0,0]
+numberOfEnemies = 10
+enemypositions = [[random.randrange(0,39+1), 0] for _ in range(numberOfEnemies)]
+enemydirection = [[random.randrange(-1,1+1),random.randrange(1,2+1)] for _ in range(numberOfEnemies)]
 
 # to store the handle code for the timer interval to cancel it when we crash
 intervalHandle = 0
@@ -56,37 +51,48 @@ def checkKeyup(event):
     keys.remove(event.key)
 
 def getCell():
-    return document.getElementById("R{}C{}".format(posint[1], posint[0]))
+    return document.getElementById("R{}C{}".format(position[1], position[0]))
+
+def getEnemyCell(i):
+    return document.getElementById("R{}C{}".format(enemypositions[i][1], enemypositions[i][0]))
 
 # the timer check function - runs every 300 milliseconds to update player1's position
 def updatePosition():
-        # Update acceleration
-        if "w" in keys: acc[1] += 0.1
-        if "a" in keys: acc[0] += -0.1
-        if "s" in keys: acc[1] += -0.1
-        if "d" in keys: acc[0] += 0.1
-        # Update Velocity
-        vel[0] += acc[0]
-        vel[1] += acc[1]
-        # Update Position Float
-        posflo[0] += vel[0]
-        posflo[1] -= vel[1]
+    for i in range(len(enemypositions)):
+        cell = getEnemyCell(i)
+        cell.className = ""
 
-        # Check if Position Integer update
-        move = False
-        if posint[0] != int(posflo[0]) or posint[1] != int(posflo[1]):
-            cell = getCell()
-            cell.className = ""
-            posint[0] = int(posflo[0])
-            posint[1] = int(posflo[1])
-            # Set the cell where player1 was to empty
-            # Re-draw player1 (or report a crash)
-            cell = getCell()
-            if cell == None or cell.className == "wall":
-                handleCrash()
-            else:
-                cell.className = "player1"
+        enemypositions[i][0] += enemydirection[i][0]
+        enemypositions[i][1] += enemydirection[i][1]
 
+        cell = getEnemyCell(i)
+        if cell == None:
+            enemypositions[i][0] = random.randrange(0,39+1)
+            enemypositions[i][1] = 0
+            enemydirection[i][0] = random.randrange(-1,1+1)
+            enemydirection[i][1] = random.randrange(1,2+1)
+        elif cell.className == "player1":
+            handleCrash()
+        else:
+            cell.className = "wall"
+
+    if keys != set():
+        # Set the cell where player1 was to empty
+        cell = getCell()
+        cell.className = ""
+        
+        # Update the position for player1
+        if "w" in keys: position[1] += -1
+        if "a" in keys: position[0] += -1
+        if "s" in keys: position[1] += 1
+        if "d" in keys: position[0] += 1
+
+        # Re-draw player1 (or report a crash)
+        cell = getCell()
+        if cell == None or cell.className == "wall":
+            handleCrash()
+        else:
+            cell.className = "player1"
 
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():
@@ -99,7 +105,7 @@ def runGame():
     print("Running Game")
     document.addEventListener('keydown', create_proxy(checkKeydown))
     document.addEventListener('keyup', create_proxy(checkKeyup))
-    intervalHandle = window.setInterval(create_proxy(updatePosition), 300)
+    intervalHandle = window.setInterval(create_proxy(updatePosition), 50)
 
 #############################
 # Main Program

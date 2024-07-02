@@ -13,7 +13,16 @@
 
   <body>
     
-    <p>ijkl for dhar mann. dhar mann must collect 3 burgs to win. wasd for mr feast and mr feast wins by catching dhar mann before he gets 4 coins.</p>
+    <p> Controls: WASD for Dhar Mann. YGHJ for Mr Feast. Arrow Keys for Handler.
+    </p>
+    <p> Rules: Dhar Mann must collect 3 burgs while escaping Mr Feast. Feastables count as Half a burg. Handler cannot catch Dhar Mann but his role is to steal the burgs before Dhar Mann can steal them.
+    </p>
+    <p> Wall types: Black - universal walls, nobody can go through . Grey - Dhar Mann only. Blue - Mr Feast only. Name Change Certificate - everyone except handler
+    </p>
+    <p> if youre wondering about wierd walls explanation is as follows: </p>
+    <p>  Name change certificate - in the lore handler changed his name to handler because feast told him to. Handler has ptsd of his new name and likes not to be reminded of it.</p>
+    <p> fire - dhar mann is like, from hell. theres no other explanation for why hes the way he is</p>
+    
     <table id="RacingTrack">
         <!-- The table cells have an id with the row and column number -->
         <tr>
@@ -27,6 +36,8 @@
             <td id="R0C7"></td>
             <td id="R0C8"></td>
             <td id="R0C9"></td>
+            <td id="R0C10"class="dharwall"></td>
+            <td id="R0C11"class="burger2"></td>
         </tr>
         <tr>
           <td id="R1C0"></td>
@@ -39,6 +50,8 @@
           <td id="R1C7"></td>
           <td id="R1C8"></td>
           <td id="R1C9"></td>
+          <td id="R1C10"class="dharwall"></td>
+          <td id="R1C11"class="dharwall"></td>
       </tr>
         <!-- Add another table row here -->
         <tr>
@@ -52,6 +65,8 @@
           <td id="R2C7" class="wall"></td>
           <td id="R2C8" class="burger" ></td>
           <td id="R2C9"></td>
+          <td id="R2C10"class="dharwall"></td>
+          <td id="R2C11"></td>
         <tr>
           <td id="R3C0"></td>
           <td id="R3C1"></td>
@@ -63,6 +78,8 @@
           <td id="R3C7" class="wall"></td>
           <td id="R3C8"></td>
           <td id="R3C9"></td>
+          <td id="R3C10"class="exhandler"></td>
+          <td id="R3C11"></td>
         </tr>
          
         <tr>
@@ -76,6 +93,8 @@
           <td id="R4C7"class="fakewall" ></td>
           <td id="R4C8" ></td>
           <td id="R4C9"></td>
+          <td id="R4C10"class="dharwall"></td>
+          <td id="R4C11"></td>
         </tr>
         <tr>
           <td id="R5C0" ></td>
@@ -88,6 +107,8 @@
           <td id="R5C7" class="wall"></td>
           <td id="R5C8" ></td>
           <td id="R5C9"></td>
+          <td id="R5C10"class="dharwall"></td>
+          <td id="R5C11"></td>
         </tr>
           
         <tr>
@@ -101,6 +122,8 @@
           <td id="R6C7" ></td>
           <td id="R6C8" ></td>
           <td id="R6C9"></td>
+          <td id="R6C10"class="dharwall"></td>
+          <td id="R6C11"></td>
         </tr>
         <tr>
           <td id="R7C0" ></td>
@@ -113,11 +136,13 @@
           <td id="R7C7" class="wall"></td>
           <td id="R7C8" ></td>
           <td id="R7C9"></td>
+          <td id="R7C10"class="dharwall"></td>
+          <td id="R7C11"></td>
         </tr>
         <tr>
           <td id="R8C0" class="burger" ></td>
           <td id="R8C1" class="wall"></td>
-          <td id="R8C2" ></td>
+          <td id="R8C2" class="dharwall"></td>
           <td id="R8C3" ></td>
           <td id="R8C4" ></td>
           <td id="R8C5" ></td>
@@ -125,11 +150,13 @@
           <td id="R8C7" class="wall"></td>
           <td id="R8C8" class="burger"></td>
           <td id="R8C9"></td>
+          <td id="R8C10"class="exhandler"></td>
+          <td id="R8C11"></td>
         </tr>
         <tr>
           <td id="R9C0"></td>
           <td id="R9C1" class="dharwall"></td>
-          <td id="R9C2"></td>
+          <td id="R9C2" class="dharwall"></td>
           <td id="R9C3"></td>
           <td id="R9C4"></td>
           <td id="R9C5"></td>
@@ -137,18 +164,48 @@
           <td id="R9C7"class="dharwall"></td>
           <td id="R9C8"></td>
           <td id="R9C9"class="handler"></td>
+          <td id="R9C10"class="dharwall"></td>
+          <td id="R9C11"></td>
       </tr>
+      <tr>
+          <td id="R10C0"></td>
+          <td id="R10C1"class="wall"></td>
+          <td id="R10C2"class="wall"></td>
+          <td id="R10C3"></td>
+          <td id="R10C4"></td>
+          <td id="R10C5"></td>
+          <td id="R10C6"></td>
+          <td id="R10C7"class="wall"></td>
+          <td id="R10C8"></td>
+          <td id="R10C9"></td>
+          <td id="R10C10"class="dharwall"></td>
+          <td id="R10C11"class="dharwall"></td>
+      </tr>
+      <tr>
+        <td id="R11C0"></td>
+        <td id="R11C1"class="burger"></td>
+        <td id="R11C2"class="wall"></td>
+        <td id="R11C3"></td>
+        <td id="R11C4"></td>
+        <td id="R11C5"></td>
+        <td id="R11C6"></td>
+        <td id="R11C7"class="wall"></td>
+        <td id="R11C8"></td>
+        <td id="R11C9"></td>
+        <td id="R11C10"class="dharwall"></td>
+        <td id="R11C11"class="burger2"></td>
+    </tr>
           
     
       </tr>
       
     </table>
-
+    
     <p id="Message"><br></p>
 
     <div>
     Console Output:
-    <textarea id='output' style='width: 100%;' rows='20' disabled></textarea>
+    <textarea id='output' style='width: 100%;' rows='40' disabled></textarea>
     </div>
   </body>
 

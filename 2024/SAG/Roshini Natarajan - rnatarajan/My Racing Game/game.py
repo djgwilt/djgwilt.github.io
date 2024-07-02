@@ -62,6 +62,12 @@ def updatePosition():
             handleCrash()
         elif cell.className== "flag":
             handleWin()
+        elif cell.className== "coin":
+            cell.className= "player1"
+            bag[1]= bag[1]+1
+            handleScore()
+            
+        
         else:
             cell.className = "player1"
 
@@ -72,7 +78,9 @@ def updatePosition():
 def handleCrash():
     window.clearInterval(intervalHandle)
     document.getElementById("Message").innerText = "Oops you crashed..."
-
+def handleScore():
+    window.clearInterval(intervalHandle)
+    document.getElementById("Score").innerText = "{} points". format(bag[1])
 def handleWin():
     window.clearInterval(intervalHandle)
     document.getElementbyId("Message").innerText= "You Win!"

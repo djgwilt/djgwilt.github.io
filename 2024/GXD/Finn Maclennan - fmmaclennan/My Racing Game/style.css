@@ -10,17 +10,19 @@ body {
 #RacingTrack td {
     width:40px;
     height:40px;
-    border:1px solid;
-    background-color:white;
+    background-color:rgb(94, 193, 198);
 }
 
 .player1 {
-    background-image:url("flappy_bird.png");
+    background-image:url("blue_FLAPPYBIRD.jpg");
     background-size: 40px 40px;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .wall{
-    background-color:black !important;
+    background-image:url("pipe.jpg");
+    background-size: 42px 42px;
+    background-position: center;
+    background-repeat: no-repeat;
 }

@@ -1,6 +1,4 @@
 #############################
-#############################
-#############################
 # Library Imports
 #############################
 from js import document, window
@@ -45,32 +43,30 @@ def getCell():
  
 # the timer check function - runs every 300 milliseconds to update player1's position
 def updatePosition():
-    if direction[0] != 0 or direction[1] != 0:
+    if direction[0] != 0 or direction[1] != 0: # you are moving!
         # Set the cell where player1 was to empty
         cell = getCell()
-        cell.className = ""
-        
+        cell.className = "" # remove player1 from the cell
+       
         # Update the column position for player1
         position[0] += direction[0]
         position[1] += direction[1]
-
+ 
         # Re-draw player1 (or report a crash)
-        cell = getCell()
-        global cCount
+        cell = getCell() # get the new cell
         if cell == None:
             handleCrash()
         elif cell.className == "wall":
             handleCrash()
-        elif cell.className == "coin":
-            handleWin() 
+        elif cell.className == "flag":
+            handleWin()
         else:
-            cell.className = "player1"
- # re-draw player1 in the new cell
+            cell.className = "player1" # re-draw player1 in the new cell
  
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = "Oops you crashed..."
+    document.getElementById("Message").innerText = "crashed brother"
  
 # called when the page is loaded to start the timer checks
 def runGame():
@@ -78,10 +74,12 @@ def runGame():
     print("Running Game")
     document.addEventListener('keydown', create_proxy(checkKey))
     intervalHandle = window.setInterval(create_proxy(updatePosition), 300)
- 
+
+# if the car reached the flag the user has won
 def handleWin():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = "You win!"
+    document.getElementById("Message").innerText = "congrats betta"
+ 
 #############################
 # Main Program
 #############################

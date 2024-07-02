@@ -23,6 +23,17 @@ intervalHandle = 0
 #############################
 # Sub-Programs
 #############################
+track = [
+    ["player1", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+    ["empty", "wall", "wall", "wall", "empty", "wall", "wall", "empty", "empty"] ,
+    ["empty", "wall", "coin1", "empty", "empty", "wall", "coin2", "empty", "empty"] ,
+    ["empty", "wall", "empty", "wall", "empty", "wall", "wall", "wall", "empty"] ,
+    ["empty", "empty", "empty", "wall", "empty", "empty", "coin3", "wall", "empty"] ,
+    ["empty", "wall", "wall", "wall", "wall", "wall", "empty", "wall", "empty"] ,
+    ["empty", "empty", "empty", "empty", "flag", "wall", "empty", "empty", "empty"] ,
+    ["wall", "wall", "empty", "empty", "empty", "empty", "empty", "wall", "wall"] ,
+]
+
 
 def checkKey(event):
     event.preventDefault()
@@ -95,13 +106,31 @@ def runGame():
 def handleWin():
     global level
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = "You just completed level {} of 5".format(level)
+    document.getElementById("Message").innerText = "You just completed level {} of 2".format(level)
     level = level + 1
+    
 
 def handleMorecoin():
      document.getElementById("Message").innerText = "NEED TO COLLECT ALL THE SAUCES"
+
+
+
+
+# load the track
+def loadTrack():
+    tableInnerHTML = ""
+    for row in range(len(track)):
+        tableInnerHTML += "<tr>"
+        for col in range(len(track[0])):
+            tableInnerHTML += "<td id='R{}C{}' class='{}'></td>".format(row, col, track[row][col])
+        tableInnerHTML += "</tr>"
+    document.getElementById("RacingTrack").innerHTML = tableInnerHTML
+
+    
+
+runGame()
 #############################
 # Main Program
 #############################
 
-runGame()
+

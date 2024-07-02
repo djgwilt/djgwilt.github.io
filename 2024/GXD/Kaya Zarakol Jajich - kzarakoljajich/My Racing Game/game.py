@@ -9,7 +9,7 @@ from pyodide.ffi import create_proxy, to_js
 #############################
 
 # to store current position (x,y)
-position = [3, 3]
+position = [0, 0]
 
 # to store movement directions (x,y)
 direction = [0, 0]
@@ -18,6 +18,8 @@ direction = [0, 0]
 intervalHandle = 0
 
 keysDown = []
+
+items = []
 
 #############################
 # Sub-Programs
@@ -43,16 +45,15 @@ def getCell():
 def updatePosition():
     
     if "d" in keysDown or "D" in keysDown:
-         direction[0] = 2
+         direction[0] = 1
     elif "a" in keysDown or "A" in keysDown:
-         direction[0] = -2
+         direction[0] = -1
     elif "w" in keysDown or "W" in keysDown:
-         direction[1] = -2
+         direction[1] = -1
     elif "s" in keysDown or "S" in keysDown:
-         direction[1] = 2
+         direction[1] = 1
 
 
-    print(keysDown)
     if direction[0] != 0 or direction[1] != 0:
         # Set the cell where player1 was to empty
         cell = getCell()
@@ -64,18 +65,20 @@ def updatePosition():
 
         # Re-draw player1 (or report a crash)
         cell = getCell()
-        if cell.className == "wall":
+        if cell.className == "YellowDoorKey":
+            items.append("YellowDoorKey")
+
+        if cell.className == "wall" or cell.className == "closed-gate" and "YellowDoorKey" not in items:
             position[0] -= direction[0]
             position[1] -= direction[1]
-        #cell.className
-        
+
         else:
             cellRect = cell.getBoundingClientRect()
             tableRect = document.getElementById("RacingTrack").getBoundingClientRect()
             jQuery("#player1").animate(to_js({
                 "left": f"{cellRect.x-tableRect.x-3}px",
                 "top": f"{cellRect.y-tableRect.y-0+25}px",
-                }), 300, "linear")            
+                }), 100, "linear")            
             if direction[0] == 1 and direction[1] == 0:
                 cell.className = "player1-right"
             elif direction[0] == -1 and direction [1] == 0:
@@ -97,7 +100,7 @@ def runGame():
     print("Running Game")
     document.addEventListener('keydown', create_proxy(keydown))
     document.addEventListener('keyup', create_proxy(keyup))
-    intervalHandle = window.setInterval(create_proxy(updatePosition), 300)
+    intervalHandle = window.setInterval(create_proxy(updatePosition), 100)
 
 #############################
 # Main Program

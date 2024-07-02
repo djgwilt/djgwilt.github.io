@@ -74,7 +74,7 @@ def updatePosition():
             audioFlag.play()
             handleWin()
         else:
-           cell.className = "car"
+           cell.className = player1Class
 # if the car has gone off the table, this tidies up including crash message
 def handleCrash():
     window.clearInterval(intervalHandle)

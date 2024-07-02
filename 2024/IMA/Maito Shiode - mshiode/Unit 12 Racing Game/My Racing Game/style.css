@@ -24,9 +24,13 @@ body {
 }
 
 .flag{
-    background-image:url("Imperial Japanese flag.jpg");
+    background-image:url("Finish image.jpg");
     background-size: 40px 40px;
 }
 audio{
     visibility: hidden;
+}
+.money {
+    background-image: url("coin.jpg");
+    background-size: 40px 40px;
 }

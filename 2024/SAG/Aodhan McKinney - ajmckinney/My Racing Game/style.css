@@ -26,3 +26,7 @@ body {
     background-image:url("cake2.png");
     background-size: 110px 110px;
 }
+
+audio {
+    visibility: hidden;
+}

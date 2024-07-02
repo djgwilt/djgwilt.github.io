@@ -8,11 +8,18 @@ from pyodide.ffi import create_proxy
 # Global Variables
 #############################
 
+# audio variables
+audioFlag = document.getElementById("audioFlag")
+audioWin = document.getElementById("audioWin")
+
 # to store current position (x,y)
 position = [0, 0]
 
 # to store movement directions (x,y)
 direction = [0, 0]
+
+# flags and coins
+bag = [2, 0]
 
 # to store the handle code for the timer interval to cancel it when we crash
 intervalHandle = 0
@@ -54,9 +61,13 @@ def updatePosition():
         # Re-draw player1 (or report a crash)
         cell = getCell()
         if cell == None:
+            audioFlag.play()
             handleCrash()
         elif cell.className == "wall":
             handleCrash()
+        elif cell.className == "coin":
+            cell.className = player1Class
+            bag[1] = bag[1] + 1
         elif cell.className == "flag":
             handleWin()
         else:
@@ -70,7 +81,7 @@ def handleCrash():
 # if player1 hits the flag, the user has won
 def handleWin():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = "You beat skibidi toilet!"
+    document.getElementById("Message").innerText = "You beat skibidi toilet and scored {} coins!".format(bag[1])
 
 # called when the page is loaded to start the timer checks
 def runGame():
@@ -82,5 +93,11 @@ def runGame():
 #############################
 # Main Program
 #############################
+
+# load in audio files ready for use
+audioFlag.autoplay = False
+audioFlag.load()
+audioWin.autoplay = False
+audioFlag.load()
 
 runGame()

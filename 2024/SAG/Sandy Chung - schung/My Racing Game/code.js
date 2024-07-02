@@ -97,3 +97,6 @@ $(document).ready(() => {
     addToOutput("There were issues with your HTML table. Please fix them and try again.")
   }
 });
+
+
+

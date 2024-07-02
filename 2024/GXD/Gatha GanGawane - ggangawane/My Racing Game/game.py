@@ -87,11 +87,14 @@ def updatePosition():
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = "Oops you crashed..."
+    document.getElementById("Message").innerText = "You lose! Refresh to try again?"
 
 def handleWin():
     window.clearInterval(intervalHandle)
+    sprite = document.getElementById("player1")
+    sprite.className = ""
     document.getElementById("Message").innerText = "You Win!"
+
 # called when the page is loaded to start the timer checks
 def runGame():
     global intervalHandle

@@ -1,3 +1,6 @@
+
+
+
 #############################
 # Library Imports
 #############################
@@ -67,6 +70,7 @@ def updatePosition():
             handleWin()
         else:
             cell.className = "player1"
+        
 
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():
@@ -83,5 +87,10 @@ def runGame():
 #############################
 # Main Program
 #############################
+
+audioLebron = document.getElementById("audioLebron")
+audioLebron.autoplay = False
+audioLebron.load()
+audioLebron.play()
 
 runGame()

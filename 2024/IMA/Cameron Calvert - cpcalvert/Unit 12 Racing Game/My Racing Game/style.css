@@ -26,4 +26,5 @@ body {
 
 .wall{
     background-color: black  !important;
+    background-size: 40px 40px;
 }

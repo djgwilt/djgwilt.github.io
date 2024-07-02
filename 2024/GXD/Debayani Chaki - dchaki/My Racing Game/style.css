@@ -34,5 +34,8 @@ body {
     background-size: 40px 40px;
 }
 
-
+.flag {
+    background-image:url("spiral-pixelated.gif") !important;
+    background-size: 40px 40px;
+}
 

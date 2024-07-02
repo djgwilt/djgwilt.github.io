@@ -26,6 +26,18 @@ body {
     transform: scaleX(-1);
 }
 
+.carDown {
+    background-image:url(download\ \(2\).jpg);
+    background-size:45px 45px;
+    transform: scaleY(-1);
+}
+
+.carUp {
+    background-image:url(download\ \(2\).jpg);
+    background-size:45px 45px;
+    transform: scaleY(1);
+}
+
 .coin {
     background-image:url("m2i8G6H7A0A0A0A0.jpg");
     background-size:45px 45px;

@@ -14,6 +14,13 @@ body {
     border:1px solid;
 }
 
+#Video {
+    float:right;
+    border-right-width: 200px;
+    border-color: grey;
+    opacity:100;
+}
+
 .playerLeft {
     background-image:url("Left Arrow.png") !important;
     background-size: 25px 25px;

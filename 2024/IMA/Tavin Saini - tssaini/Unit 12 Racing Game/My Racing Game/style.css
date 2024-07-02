@@ -18,7 +18,7 @@
 }
 
 .wall {
-    background-image:url("CookieMonsterWaving2.webp") !important;
+    background-color: darkolivegreen !important;
     background-size: 40px 40px;
 }
 
@@ -28,7 +28,7 @@
 }
 
 body {
-    background-image: linear-gradient(rgb(255, 196, 0), rgba(9, 80, 221, 0.394), white) !important;
+    background-image: linear-gradient(to bottom right, rgb(255, 196, 0), rgba(9, 80, 221, 0.394), white) !important;
   }
 
 .block {

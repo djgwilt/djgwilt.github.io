@@ -29,3 +29,7 @@ body {
 .wallFake {
     background-color:rgb(1, 20, 20)!important;
 }
+.coin {
+    background-image:url(image\ copy.png);
+    background-size: 40px 40px;
+}

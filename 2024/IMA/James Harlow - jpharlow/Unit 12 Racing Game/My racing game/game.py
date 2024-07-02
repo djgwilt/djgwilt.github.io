@@ -3,7 +3,7 @@
 #############################
 from js import document, window
 from pyodide.ffi import create_proxy
-
+import webbrowser
 #############################
 # Global Variables
 #############################
@@ -80,9 +80,9 @@ def handleCrash():
 
     
 def runGame():
-    audioFlag.play()
     global intervalHandle
     print("Game is running")
+    audioFlag.play()
     document.addEventListener('keydown', create_proxy(checkKey))
     intervalHandle = window.setInterval(create_proxy(updatePosition), 300)
 #############################

@@ -89,7 +89,7 @@ function checkCellIds() {
 
 $(document).ready(() => {
   if (checkCellIds()) {
-    addToOutput("Ready!\n");
+    addToOutput("Get all the coins to access the portal!\n");
     $.get("game.py", function(data) {
       evaluatePython(data);
     });

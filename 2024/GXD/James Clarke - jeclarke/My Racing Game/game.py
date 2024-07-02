@@ -43,6 +43,9 @@ def checkKey(event):
 def getCell():
     return document.getElementById("R{}C{}".format(position[1], position[0]))
 
+def getCellXY(x, y):
+    return document.getElementById("R{}C{}".format(y, x))
+
 # the timer check function - runs every 300 milliseconds to update player1's position
 def updatePosition():
     if direction[0] != 0 or direction[1]!=0:
@@ -64,9 +67,17 @@ def updatePosition():
             cell.className = "player1"
             bag[1] = bag[1] + 1
             if bag[1] == 12:
-                handlewin()
+                getCellXY(3,14).className = "flag2"
+                getCellXY(3,13).className = ""
+                getCellXY(3,12).className = ""
+                getCellXY(3,11).className = ""
+                getCellXY(3,10).className = ""
+        elif cell.className == "flag2":
+            handlewin()
         else:
             cell.className = "player1"
+
+        
 
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():
@@ -75,7 +86,7 @@ def handleCrash():
 
 def handlewin():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = "Well done you collected all the flags"
+    document.getElementById("Message").innerText = "Well done you collected all the flags and escaped the maze"
     
 
 

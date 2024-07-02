@@ -1,0 +1,17 @@
+track = [
+    ["player1", "empty", "flag", "wallFake", "empty", "empty", "empty"],
+    ["coin", "empty", "empty", "empty", "wall", "coin", "flag"]
+]
+
+
+# load the track
+def loadTrack():
+    tableInnerHTML = ""
+    for row in range(len(track)):
+        tableInnerHTML += "<tr>"
+        for col in range(len(track[0])):
+            tableInnerHTML += "<td id='R{}C{}' class='{}'></td>".format(row, col, track[row][col])
+        tableInnerHTML += "</tr>"
+    document.getElementById("RacingTrack").innerHTML = tableInnerHTML
+
+loadTrack()

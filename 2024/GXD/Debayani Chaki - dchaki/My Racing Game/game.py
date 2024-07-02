@@ -42,6 +42,10 @@ def checkKey(event):
 
 def getCell():
     return document.getElementById("R{}C{}".format(0, position[0]))
+    
+def handlewin():
+    window.clearInterval()
+    document.getElementById("Message").innerText = "YOU WIN"
 
 # the timer check function - runs every 300 milliseconds to update player1's position
 def updatePosition():
@@ -61,10 +65,14 @@ def updatePosition():
             handleCrash()
         elif cell.className == "wall":
             handleCrash()
-        elif cell.className == "flag":
-            handleCrash()
+        elif cell.className == "spiral":
+            handlecrash()
         else:
             cell.className = "player1"
+def getCell():
+    return document.getElementById("R{}C{}".format(position[1], position[0]))
+
+
 
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():

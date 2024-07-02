@@ -26,3 +26,10 @@ body {
     background-image:url("suiii.jpg");
     background-size: 40px 40px;
 }
+.audio {
+    visibility: hidden;
+}
+.coins {
+    background-image:url("Finn.jpg");
+    background-size: 40px 40px;
+}

@@ -24,6 +24,39 @@ audioWin = document.getElementById("audioWin")
 # Sub-Programs
 #############################
 
+#player2 movement:
+
+positionp2 = [0, 0] 
+directionp2 = [0, 0]
+
+
+def getCell():
+    return document.getElementById("R{}C{}".format(positionp2[1], positionp2[0]))
+
+def updatePosition():
+    if directionp2[0] != 0 or directionp2[1] != 0:
+        # Set the cell where player1 was to empty
+        cell = getCell()
+        cell.className = ""
+        
+        # Update the column position for player1
+        positionp2[0] += directionp2[0]
+        positionp2[1] += directionp2[1]
+
+        # Re-draw player1 (or report a crash)
+        cell = getCell()
+        if cell == None:
+            handleCrash()
+        elif cell.className == "wall":
+            handleCrash()
+        elif cell.className == "flag":
+            cell.className = currClass
+            bag[0] == bag[0] - 1
+            if bag[0] == 0:
+                handleWin()
+        else:
+            cell.className = "player2"
+
 # the function called when a key is pressed - sets direction variable
 def checkKey(event):
     event.preventDefault()
@@ -40,6 +73,22 @@ def checkKey(event):
     elif event.key == "ArrowUp":
         direction[0] = 0
         direction[1] = -1
+
+
+    if event.key == "a":
+        directionp2[0] = 1
+        directionp2[1] = 0
+    elif event.key == "d":
+        # left arrow
+        directionp2[0] = -1
+        directionp2[1] = 0
+    elif event.key == "s":
+        directionp2[0] = 0
+        directionp2[1] = 1
+    elif event.key == "w":
+        directionp2[0] = 0
+        directionp2[1] = -1
+
 
 def getCell():
     return document.getElementById("R{}C{}".format(position[1], position[0]))
@@ -60,18 +109,39 @@ def updatePosition():
         if cell == None:
             handleCrash()
         elif cell.className == "wall":
-            audio
             handleCrash()
         elif cell.className == "flag":
             cell.className = currClass
             bag[0] == bag[0] - 1
             if bag[0] == 0:
-                audioFlag.play() 
                 handleWin()
-            else:
-                audioWin.play()
+        if cell.className == "player2":
+            handleCrash()
         else:
             cell.className = "player1"
+
+        if directionp2[0] != 0 or directionp2[1] != 0:
+        # Set the cell where player1 was to empty
+        cell = getCell()
+        cell.className = ""
+        
+        # Update the column position for player1
+        positionp2[0] += directionp2[0]
+        positionp2[1] += directionp2[1]
+
+        # Re-draw player1 (or report a crash)
+        cell = getCell()
+        if cell == None:
+            handleCrash()
+        elif cell.className == "wall":
+            handleCrash()
+        elif cell.className == "flag":
+            cell.className = currClass
+            bag[0] == bag[0] - 1
+            if bag[0] == 0:
+                handleWin()
+        else:
+            cell.className = "player2"
 
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():
@@ -92,10 +162,6 @@ def runGame():
 # Main Program
 #############################
 
-# load in audio files ready for use
-audioFlag.autoplay = False
-audioFlag.load()
-audioFlag.autoplay = False
-audioWin.load()
+
 
 runGame()

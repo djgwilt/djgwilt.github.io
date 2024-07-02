@@ -28,6 +28,10 @@ var eableToMoveDown = true;
 var eableToMoveUp = true;
 var eableToMoveLeft = true;
 var eableToMoveRight = true;
+var eWallCollisionLeftCount = 0;
+var eWallCollisionRightCount = 0;
+var eWallCollisionUpCount = 0;
+var eWallCollisionDownCount = 0;
 
 //CLASSES
 class WALL {
@@ -44,36 +48,36 @@ class WALL {
   }
 
   //START ENEMY CODE
-  enemyMove(ey, ex, x, y) {
+  enemyMove(eyOld, exOld,) {
     eableToMoveDown = true;
     eableToMoveUp = true;
     eableToMoveLeft = true;
     eableToMoveRight = true;
-    if ((ey + ewidth == this.topy)&&(ex + ewidth > this.leftx)&&(ex < this.rightx)) {
-      eableToMoveDown = false; 
+    if ((eyOld + ewidth == this.topy)&&(exOld + ewidth > this.leftx)&&(exOld < this.rightx)) {
+      eWallCollisionDownCount = 1;
       console.log('Enemy can\'t go down')
     }
-    if ((ey == this.bottomy)&&(ex < this.rightx)&&(ex + ewidth > this.leftx)) {
-      eableToMoveUp = false; 
+    if ((eyOld == this.bottomy)&&(exOld < this.rightx)&&(exOld + ewidth > this.leftx)) {
+      eWallCollisionUpCount = 1;
       console.log('Enemy can\'t go up');
     }
-    if ((ex == this.rightx)&&(ey < this.bottomy)&&(ey + eheight > this.topy)) {
-      eableToMoveLeft = false; 
+    if ((exOld == this.rightx)&&(eyOld < this.bottomy)&&(eyOld + eheight > this.topy)) {
+      eWallCollisionLeftCount = 1;
       console.log('Enemy can\'t go left');
     }
-    if ((ex + ewidth == this.leftx)&&(ey < this.bottomy)&&(ey + eheight > this.topy)) {
-      eableToMoveRight = false; 
+    if ((exOld + ewidth == this.leftx)&&(eyOld < this.bottomy)&&(eyOld + eheight > this.topy)) {
+      eWallCollisionRightCount = 1;
       console.log('Enemy can\'t go right');
     }
-    let xDistance = ex - x
-    let yDistance = ey - y
-    if (xDistance > 0 && eableToMoveLeft == true) {ex = ex - 1; console.log('Move left');} //enemy further right than player
-    if (xDistance < 0 && eableToMoveRight == true) {ex = ex + 1; console.log('Move right');} //enemy further left than player
-    if (yDistance > 0 && eableToMoveUp == true) {ey = ey - 1; console.log('Move Up')}//enemy further down than player
-    if (yDistance < 0 && eableToMoveDown == true) {ey = ey + 1; console.log('Move Down')} //enemy further up than player
+    let xDistance = exOld - x
+    let yDistance = eyOld - y
+    if (xDistance > 0 && eWallCollisionLeftCount == 0) {ex = exOld - 1; console.log('Move left');} //enemy further right than player
+    if (xDistance < 0 && eWallCollisionRightCount == 0) {ex= exOld + 1; console.log('Move right');} //enemy further left than player
+    if (yDistance > 0 && eWallCollisionUpCount == 0) {ey = eyOld - 1; console.log('Move Up')}//enemy further down than player
+    if (yDistance < 0 && eWallCollisionDownCount == 0) {ey = eyOld + 1; console.log('Move Down')} //enemy further up than player
     if (xDistance == 0) console.log('Same distance x');
     if (yDistance == 0) console.log('Same distance y');
-    console.log('ex co-ordinates are: ' + ex, ey)
+    console.log('ex co-ordinates are: ' + exOld, eyOld)
   }
 
   //END ENEMY CODE
@@ -182,7 +186,11 @@ function outOfBoundsCheck() {
   if (x + width > CWIDTH) ableToMoveRight = false;
   for (let i = 0; i < wallList.length; i++) {
     wallList[i].collisionCheck(x,y)
-    wallList[i].enemyMove(ey, ex, x, y)
+    wallList[i].enemyMove(ey, ex,)
+  eWallCollisionDownCount = 0;
+  eWallCollisionLeftCount = 0;
+  eWallCollisionRightCount = 0;
+  eWallCollisionUpCount = 0;
   }
   //console.log(x)
 }

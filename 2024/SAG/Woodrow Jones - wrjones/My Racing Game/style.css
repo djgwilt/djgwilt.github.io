@@ -1,5 +1,5 @@
 body {
-    background-color:grey;
+    background-color:rgb(229,25,21           );
 }
 
 #RacingTrack {
@@ -16,6 +16,55 @@ body {
 
 .player1 {
     background-image:url("Mario.jpg");
+    background-size: 43px 43px;
+}
+
+.player2 {
+    background-image:url("Luigi.jpg") ;
+    background-size: 55px 55px;
+}
+
+.player3 {
+    background-image: url("DK.jpg");
+    background-size: 43px 43px;
+}
+.player4 {
+    background-image: url("Bowser.jpg");
+    background-size: 43px 43px;
+}
+
+.player5 {
+    background-image: url("Peach.jpg");
+    background-size: 43px 43px;
+}
+
+.player6 {
+    background-image: url("Yoshi.jpg");
+    background-size: 43px 43px;
+}
+
+.player7 {
+    background-image: url("Toad.jpg");
+    background-size: 43px 43px;
+}
+
+.player8 {
+    background-image: url("Wario.jpg");
+    background-size: 43px 43px;
+}
+
+.player9 {
+    background-image: url("Waluigi.jpg");
+    background-size: 43px 43px;
+}
+
+.player10 {
+    background-image: url("CHEEP.jpg");
+    background-size: 43px 43px;
+}
+
+.player11 {
+    background-image: url("MORIO.jpg");
     background-size: 43px 43px;
 }
 
@@ -49,3 +98,4 @@ body {
     border:1px solid;
     background-color:white;
 }
+

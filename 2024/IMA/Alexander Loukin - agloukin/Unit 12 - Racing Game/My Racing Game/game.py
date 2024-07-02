@@ -71,6 +71,17 @@ def enemyMove():
             if test_cell.className != "wall":
                 # move the enemy
                 enemy_position[0] += enemy_direction[0]
+            else:
+                if y_distance > 0:
+                    enemy_direction[1] = -1
+                else:
+                    enemy_direction[1] = 1
+                test_location = [enemy_position[0], enemy_position[1] + enemy_direction[1]]
+                test_cell = getChosenCell(test_location[0], test_location[1])
+                if test_cell != None:
+                    if test_cell.className != "wall":
+                # move the enemy
+                        enemy_position[1] += enemy_direction[1]
 
     # repeat for y axis
     else:
@@ -85,6 +96,19 @@ def enemyMove():
             if test_cell.className != "wall":
                 # move the enemy
                 enemy_position[1] += enemy_direction[1]
+            else:
+                if x_distance > 0:  # if x distance is positive
+                    enemy_direction[0] = -1
+                else:
+                    enemy_direction[0] = 1
+
+                test_location = [enemy_position[0] + enemy_direction[0], enemy_position[1]]
+                test_cell = getChosenCell(test_location[0], test_location[1])
+                if test_cell != None:
+                    if test_cell.className != "wall":
+                    # move the enemy
+                        enemy_position[0] += enemy_direction[0]
+                
     cell = getEnemyCell()
     cell.className = "enemy"
 

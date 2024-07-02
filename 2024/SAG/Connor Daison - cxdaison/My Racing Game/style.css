@@ -1,0 +1,27 @@
+body {
+    background-color:rgb(230, 0, 0);
+}
+
+#RacingTrack {
+    border-collapse:collapse;
+    border:5px solid black;
+}
+
+#RacingTrack td {
+    width:40px;
+    height:40px;
+    border:1px solid;
+    background-color:white;
+}
+
+.player1 {
+    background-image:url("Pacman.png");
+    background-size: 40px 40px;
+}
+
+.wall {
+    background-color: black !important;
+}class="wall"></td>class="wall"></td>
+
+.flag {
+    background-image: Url ("C:\Users\cxdaison\The Perse School\Computer Science 9C-Cs1 2023 PS - General\Student work\Connor Daison - cxdaison\My Racing Game\cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTEwL3JtNDY3YmF0Y2gzLWZsYWctMDAxXzIucG5n.webp")

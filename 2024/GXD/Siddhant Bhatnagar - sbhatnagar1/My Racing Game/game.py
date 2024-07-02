@@ -77,11 +77,11 @@ def updatePosition():
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = "Oops you crashed..."
+    document.getElementById("Message").innerText = "looks like you'r not skibbidi enough..."
 
 def handleWin():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = "Well done you won!"
+    document.getElementById("Message").innerText = "wow that was so skibbidi"
 
 # called when the page is loaded to start the timer checks
 def runGame():

@@ -14,12 +14,24 @@ position = [0, 0]
 # to store movement directions (x,y)
 direction = [0, 0]
 
+# to store flags left to collect and coins to collected
+bag = [2, 0]
+
 # to store the handle code for the timer interval to cancel it when we crash
 intervalHandle = 0
 
 #############################
 # Sub-Programs
 #############################
+def handleWin():
+    window.clearInterval(intervalHandle)
+    document.getElementById("Message").innerText = "You Win!"
+
+
+# load in audio files ready for use
+audioFlag = document.getElementById("auidoFlag")
+audioWin = document.getElementById("audioWin")
+
 
 # the function called when a key is pressed - sets direction variable
 def checkKey(event):
@@ -60,6 +72,14 @@ def updatePosition():
             handleCrash()
         elif cell.className == "wall":
             handleCrash()
+        elif cell.className == "flag":
+            cell.className = player1Class
+            bag[0] = bag[0] - 1
+            if bag[0] == 0:
+                handleWin()
+            else:
+                audioFlag.play()
+                
         else:
             cell.className = "player1"
 # if player1 has gone off the table, this tidies up including crash message
@@ -77,5 +97,11 @@ def runGame():
 #############################
 # Main Program
 #############################
+
+audioFlag.autoplay = False
+audioFlag.load()
+audioFlag.autoplay = False
+audioWin.load()
+
 
 runGame()

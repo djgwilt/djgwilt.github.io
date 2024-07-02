@@ -49,6 +49,7 @@ def getCell():
 
 # the timer check function - runs every 300 milliseconds to update player1's position
 def updatePosition():
+    global water
     if direction[0] != 0 or direction[1] != 0:
         # Set the cell where player1 was to empty
         cell = getCell()
@@ -65,7 +66,8 @@ def updatePosition():
             handleCrash()
         elif cell.className == "wall":
             handleCrash()
-        elif cell.className == "water":
+        elif cell.className == "Water":
+            print(".")
             water = True
         elif cell.className == "Finish":
             handleWin()
@@ -79,14 +81,22 @@ def handleCrash():
 
 # called when the page is loaded to start the timer checks
 def runGame():
-    global intervalHandle
+    global intervalHandle, water
     print("Running Game")
     document.addEventListener('keydown', create_proxy(checkKey))
     intervalHandle = window.setInterval(create_proxy(updatePosition), 300)
 
 def handleWin():
+    if water == False:
+        document.getElementById("Message").innerText = "You got the Normal ending! Now try and find the True ending..."
+        cell = getCell()
+        cell.className = "Flower"
+    else:
+        document.getElementById("Message").innerText = "You got the True ending!"
+        cell = getCell()
+        cell.className = "Tree"
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = "YYou win"
+
 
 #############################
 # Main Program

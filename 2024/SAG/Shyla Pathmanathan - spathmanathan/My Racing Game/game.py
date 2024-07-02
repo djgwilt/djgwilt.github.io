@@ -26,9 +26,12 @@ def checkKey(event):
     event.preventDefault()
     if event.key == "ArrowRight":
         direction[0] = 1
+        direction[1] = 0
     elif event.key == "ArrowLeft":
         # left arrow
         direction[0] = -1
+        direction[1] = 0
+        
     elif event.key == "ArrowUp":
         direction[0] = 0
         direction[1] = -1
@@ -44,7 +47,7 @@ def updatePosition():
     if direction[0] != 0 or direction[1] !=0: 
         # Set the cell where player1 was to empty
         cell = getCell()
-        cell.className = "speeder"
+        cell.className = ""
         
         # Update the column position for player1
         position[0] += direction[0]
@@ -54,16 +57,20 @@ def updatePosition():
         cell = getCell()
         if cell == None:
             handleCrash()
-        elif cell.className == "speeder":
+        elif cell.className == "fly":
             pass
         elif cell.className == "flag":
+            handleWin()
+        elif cell.className == "wall":
             handleCrash()
         else:
-            cell.className = "player1"
+            cell.className = "fly"
 
 # if the car reaches the flag the user has won
 def handleWin():
     window.clearInterval(intervalHandle)
+    document.getElementById("Message").innerText = "You win!"
+
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():
     window.clearInterval(intervalHandle)

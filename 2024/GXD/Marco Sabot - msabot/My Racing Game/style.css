@@ -4,14 +4,14 @@ body {
 
 #RacingTrack {
     border-collapse:collapse;
-    border:5px solid black;
+    border:0px solid black;
 }
 
 #RacingTrack td {
-    width:40px;
-    height:40px;
+    width:15px;
+    height:15px;
     border:1px solid;
-    background-color:white;
+    background-color:black;
 }
 
 .player1 {
@@ -20,5 +20,5 @@ body {
 }
 
 .wall {
-    background-color: blue !important;
+    background-color: red !important;
 }

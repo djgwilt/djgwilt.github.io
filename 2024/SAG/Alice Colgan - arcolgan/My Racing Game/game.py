@@ -25,22 +25,19 @@ intervalHandle = 0
 def checkKey(event):
     event.preventDefault()  # this will prevent the down arrow from scrolling the page
     if event.key == "ArrowRight":
-        direction[0] = 1
-        direction[1] = 0
+        direction[0] = 0
+        direction[1] = 1 
     elif event.key == "ArrowLeft":
         # left arrow
         direction[0] = -1
         direction[1] = 0
     elif event.key == "ArrowDown":
-        direction[0] = 0
-        direction[1] = 1 
+        direction[0] = 1
+        direction[1] = 0
     elif event.key == "ArrowUp":
         direction[0] = 0
         direction[1] = -1
         
-
-def getCell():
-    return document.getElementById("R{}C{}".format(position[0], position[1]))
 
 # the timer check function - runs every 300 milliseconds to update player1's position
 
@@ -56,12 +53,16 @@ def updatePosition():
 
         # Re-draw player1 (or report a crash)
         cell = getCell()
-		if cell == None:
+        if cell == None:
             handleCrash()
+        elif cell.className == "wall":
+            handleClass()
         else:
             cell.className = "player1"
 
 
+def getCell():
+    return document.getElementById("R{}C{}".format(position[0], position[1]))
 
 
 

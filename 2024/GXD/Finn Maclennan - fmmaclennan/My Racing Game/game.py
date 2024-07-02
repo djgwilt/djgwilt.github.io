@@ -46,6 +46,7 @@ def wallgen(x,y):
 def updatePosition():  
     global WhenWallGen
     global Score
+    global time
     for x in range(5):
         for y in range(6):
             getCellXY(x, y).className = getCellXY(x+1, y).className
@@ -100,9 +101,10 @@ def handleCrash():
 # called when the page is loaded to start the timer checks
 def runGame():
     global intervalHandle
+    difficulty = int(input("how many miliseconds do you want per tick (guide: 400 = esay 325 = medium 250 = hard):"))
     print("Running Game")
     document.addEventListener('keydown', create_proxy(checkKey))
-    intervalHandle = window.setInterval(create_proxy(updatePosition), 300)
+    intervalHandle = window.setInterval(create_proxy(updatePosition), difficulty)
 
 #############################
 # Main Program
