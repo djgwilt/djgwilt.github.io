@@ -17,6 +17,8 @@ direction = [0, 0]
 # to store the handle code for the timer interval to cancel it when we crash
 intervalHandle = 0
 
+bag = [0]
+
 #############################
 # Sub-Programs
 #############################
@@ -75,6 +77,9 @@ def updatePosition():
             handleCrash()
         elif cell.className == "wall":
             handleCrash()
+        elif cell.className == "coin":
+            cell.className = player1Class
+            bag[0] = bag[0] + 1
         elif cell.className == "flag":
             handleWin()
         else:
@@ -89,7 +94,7 @@ def handleCrash():
 # if the car reaches the flas the user has won
 def handleWin():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = "you win!"
+    document.getElementById("Message").innerText = "you win!You have a total of {}/9 coins!".format(bag[0])
 
 
 # called when the page is loaded to start the timer checks

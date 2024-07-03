@@ -97,3 +97,22 @@ $(document).ready(() => {
     addToOutput("There were issues with your HTML table. Please fix them and try again.")
   }
 });
+
+function remove_shield() {
+  addToOutput("shield down");
+
+  let element;
+  if (document.getElementById("shield3") && document.getElementById("shield3").classList.contains("shield")) {
+    element = document.getElementById("shield3");
+    element.classList.remove("shield");
+    addToOutput("shield 1 down");
+  } else if (document.getElementById("shield2") && document.getElementById("shield2").classList.contains("shield")) {
+    element = document.getElementById("shield2");
+    element.classList.remove("shield");
+    addToOutput("shield 2 down");
+  } else if (document.getElementById("shield1") && document.getElementById("shield1").classList.contains("shield")) {
+    element = document.getElementById("shield1");
+    element.classList.remove("shield");
+    addToOutput("shield 3 down");
+  }
+}

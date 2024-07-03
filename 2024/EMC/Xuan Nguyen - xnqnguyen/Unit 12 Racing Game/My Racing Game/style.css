@@ -13,11 +13,13 @@ body {
     border:1px solid;
     background-color:white;
 }
-.wall{
-    background-image:url("gumball.jpg");
+.wall {
+    background-image:url("gymball.jpg");
+    background-size: 40px 40px;
 }
-.wall2{
-    background-image:url("darwin.jpg");
+.wall2 {
+    background-image:url("darwhine.jpg");
+    background-size: 40px 40px;
 }
 .flag{
     background-image:url("flaggie.png");
@@ -27,3 +29,4 @@ body {
     background-image:url("anais.png");
     background-size: 40px 40px;
 } 
+

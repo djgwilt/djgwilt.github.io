@@ -29,11 +29,23 @@ body {
 }
 
 .wall {
-    background-image:url("bluewall.gif");
+    background-image:url("transpwall.gif");
+    background-color:#330E77;
     background-size: 40px 40px;
 }
 
 .flag {
     background-image:url("earth.gif");
+    background-color:#330E77;
+    background-size: 40px 40px;
+}
+
+.wallFake {
+    background-image:url("bluewall.gif");
+    background-size: 40px 40px;
+}
+
+.coin {
+    background-image:url("aeroplane.gif");
     background-size: 40px 40px;
 }

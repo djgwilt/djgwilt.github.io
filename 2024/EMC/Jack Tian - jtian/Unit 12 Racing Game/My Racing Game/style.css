@@ -29,3 +29,17 @@ body {
     background-image:url("flag.jpg");
     background-size: 40px 40px;
 }
+
+.player1-left {
+    background-image:url("OIP\ mirrored.png");
+    background-size: 40px 40px;
+}
+
+.coin {
+    background-image: url(coin.jpg);
+    background-color: 40px 40px;
+}
+
+.fakewall {
+    background-color:black !important;
+}

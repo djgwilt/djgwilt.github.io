@@ -15,16 +15,26 @@ body {
 }
 
 .player1 {
-    background-image:url("download (2).png");
+    background-image:url("p.peach.gif");
     background-size: 40px 40px;
 }
 
 .wall {
-    background-image: url("image.gif");
+    background-color:rgb(208, 116, 131) !important;
     background-size: 40px 40px;
 }
 
 .flag {
-    background-image: url("download.png");
+    background-image: url("mario_star.gif");
+    background-size: 40px 40px;
+}
+
+.coin {
+    background-image: url("coin.gif");
+    background-size: 40px 40px;
+}
+
+.wallFake {
+    background-color:pink; 
     background-size: 40px 40px;
 }

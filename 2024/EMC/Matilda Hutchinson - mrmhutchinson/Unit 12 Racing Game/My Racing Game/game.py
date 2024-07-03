@@ -14,6 +14,7 @@ position = [0, 0]
 # to store movement directions (x,y)
 direction = [0, 0]
 
+bag = [0]
 # to store the handle code for the timer interval to cancel it when we crash
 intervalHandle = 0
 
@@ -60,24 +61,27 @@ def updatePosition():
             handleCrash()
         elif cell.className == "flag":
             handleWin()
+        elif cell.className == "coin":
+            cell.className = 'player1'
+            bag[0] = bag[0] + 1
         else:
             cell.className = "player1"
 
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = "Oops you crashed..."
+    document.getElementById("Message").innerText = "Aw too bad..."
 
 # called when the page is loaded to start the timer checks
 def runGame():
     global intervalHandle
-    print("Running Game")
+    print("Go go go!")
     document.addEventListener('keydown', create_proxy(checkKey))
     intervalHandle = window.setInterval(create_proxy(updatePosition), 300)
 
 def handleWin():
 	window.clearInterval(intervalHandle)
-	document.getElementById("Message").innterText = "Nice one!"
+	document.getElementById("Message").innerText = "You got a star! You have a total of {}/8 coins!".format(bag[0])
 
 
 

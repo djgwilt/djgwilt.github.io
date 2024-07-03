@@ -49,14 +49,20 @@ def updatePosition():
         # Update the column position for player1
         position[0] += direction[0]
         position[1] += direction[1]
+
         # Re-draw player1 (or report a crash)
         cell = getCell()
         if cell == None:
             handleCrash()
-        elif cell.className == "____":
+        elif cell.className == "wall2":
             handleCrash()
+        elif cell.className == "wall":
+            handleCrash()
+        elif cell.className == "flag":
+            handleWin()
         else:
             cell.className = "player1"
+
 
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():
@@ -69,7 +75,9 @@ def runGame():
     print("Running Game")
     document.addEventListener('keydown', create_proxy(checkKey))
     intervalHandle = window.setInterval(create_proxy(updatePosition), 300)
-
+def handleWin():
+    window.clearInterval(intervalHandle)
+    document.getElementById("Message").innerText = "You stupid"
 #############################
 # Main Program
 #############################

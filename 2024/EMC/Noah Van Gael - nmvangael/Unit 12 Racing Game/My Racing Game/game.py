@@ -10,6 +10,8 @@ from copy import deepcopy
 # Global Variables
 #############################
 
+death = document.getElementById('death')
+
 global shields, shield
 
 shields = [3]
@@ -68,6 +70,12 @@ def generate_track():
         random.choice(accessible_spots)
 
     track[0][0] = 'player1'
+
+    tp_1 = (random.randint(0, width), random.randint(0, height))
+    tp_2 = (random.randint(0, width), random.randint(0, height))
+
+    track[tp_1[0]][tp_1[1]] = 'tp_1'
+    track[tp_2[0]][tp_2[1]] = 'tp_2'
 
     build_track(track)
 
@@ -143,6 +151,8 @@ width = random.randint(10, 20)
 track = [[random_object() for _ in range(width)] for _ in range(height)]
 
 def game_of_life(track):
+    width = len(track)-1
+    height = len(track[0])-1
 #    iterations += 1
 #    try:
 #        window.clearInterval(interval)
@@ -159,8 +169,20 @@ def game_of_life(track):
                     if neighbours(i, j, track) == 3:
                         new_track[i][j] = 'wall'
         track = new_track
+
+        global tp_1, tp_2
+        
+        tp_1 = (random.randint(0, width), random.randint(0, height))
+        tp_2 = (random.randint(0, width), random.randint(0, height))
+
+        track[tp_1[0]][tp_1[1]] = 'tp_1'
+        track[tp_2[0]][tp_2[1]] = 'tp_2'
+
+
+        
         track[0][0] = 'player1'
         track[len(track)-1][len(track[0])-1] = 'finish'
+        
     build_track(track)
 #    if iterations < 3:
 #        interval = window.setInterval(create_proxy(run_game), 500)
@@ -191,23 +213,30 @@ def checkKey(event):
     elif event.key == 'ArrowDown':
         direction[0] = 0
         direction[1] = 1
+    elif event.key == 'w':
+        direction[0] = 0
+        direction[1] = -1
+    elif event.key == 's':
+        direction[0] = 0
+        direction[1] = 1
+    elif event.key == "a":
+        # left arrow
+        direction[0] = -1
+        direction[1] = 0
+    if event.key == "d":
+        direction[0] = 1
+        direction[1] = 0
     elif event.key == ' ':
         if shields[0] > 0:
-            if shields == 3:
-                shield = document.getElementById("shield1")
-                shield.classNamde = "hide_shield"
-            elif shields == 2:
-                shield = document.getElementById("shield2")
-                shield.className = "hide_shield"
-            elif shields == 1:
-                shield = document.getElementById("shield3")
-                shield.className = "hide_shield"
+            window.remove_shield()
             shields[0] -= 1
             shield = [True, 1]
-            print(shield)
 
 def getCell():
     return document.getElementById("R{}C{}".format(position[1], position[0]))
+
+def get_cell_by_position(position_check):
+    return document.getElementById("R{}C{}".format(position_check[0], position_check[1]))
 
 # the timer check function - runs every 300 milliseconds to update player1's position
 def updatePosition():
@@ -244,6 +273,12 @@ def updatePosition():
                 cell.className = "player_shield" if direction[0] == -1 else "player_shield_flipped"
             else:
                 cell.className = "player1" if direction[0] == -1 else "player_flipped"
+        elif cell.className == 'tp_1':
+            position[0] = tp_2[1]
+            position[1] = tp_2[0]
+        elif cell.className == 'tp_2':
+            position[0] = tp_1[1]
+            position[1] = tp_1[0]
         else:
             if shield[0]:
                 cell.className = "player_shield" if direction[0] == -1 else "player_shield_flipped"
@@ -252,6 +287,7 @@ def updatePosition():
 
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():
+    death.play()
     window.clearInterval(intervalHandle)
     document.getElementById("Message").innerText = "Oops you crashed..."
 
@@ -269,5 +305,8 @@ def runGame():
 #############################
 # Main Program
 #############################
+
+death.autoplay = False
+death.load()
 
 runGame()

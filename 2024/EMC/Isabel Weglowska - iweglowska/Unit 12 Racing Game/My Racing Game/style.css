@@ -13,6 +13,9 @@ body {
     border:1px solid;
     background-color:white;
 }
+#Message{
+    font-size: 50px;
+}
 
 .player1 {
     background-image:url("Picture1.jpg");
@@ -22,6 +25,19 @@ body {
 }
 .wall{
      background-color: black!important;
+}
+.Fog{
+     background-color: gray!important;
+}
+.FogWall{
+     background-color: gray!important;
+}
+.FogFly{
+     background-color: gray!important;
+}
+.fly{
+    background-image: url("Fly.png");
+    background-size: 40px 40px
 }
 .flag{
     background-image: url("flag\ new.png");

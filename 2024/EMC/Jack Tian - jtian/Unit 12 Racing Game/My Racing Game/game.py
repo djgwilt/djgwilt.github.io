@@ -14,6 +14,8 @@ position = [0, 0]
 # to store movement directions (x,y)
 direction = [0, 0]
 
+Bag = [2, 0]
+
 # to store the handle code for the timer interval to cancel it when we crash
 intervalHandle = 0
 
@@ -46,21 +48,33 @@ def updatePosition():
     if direction[0] != 0 or direction[1] != 0:
         # Set the cell where player1 was to empty
         cell = getCell()
-        cell.className = ""
+    elif direction[0] > 0:
+            playerClass = "player1"
+    elif direction[0] < 0:
+        playerClass
+    else:
+        player1Class = cell.classname
+    cell.className = ""
         
         # Update the column position for player1
-        position[0] += direction[0]
-        position[1] += direction[1]
+    position[0] += direction[0]
+    position[1] += direction[1]
 
         # Re-draw player1 (or report a crash)
-        cell = getCell()
-        if cell == None:
+    cell = getCell()
+    if cell == None:
             handleCrash()
-        elif cell.className == "wall":
+    elif cell.className == "wall":
             handleCrash()
-        elif cell.className == "flag":
-            handleWin()
-        else:
+    elif cell.className == "coin":
+         cell.className = player1Class
+         Bag[1] = Bag[1] + 1
+    elif cell.className == "flag":
+            cell.className = player1Class
+            Bag[0] = Bag[0] - 2
+            if Bag[0] == 0:
+                 handleWin
+    else:
             cell.className = "player1"
 
 # if player1 has gone off the table, this tidies up including crash message
@@ -77,7 +91,7 @@ def runGame():
 
 def handleWin():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = "You win!"
+    document.getElementById("Message").innerText = "You win and scored {} coins!".format(Bag[1])
     
 #############################
 # Main Program

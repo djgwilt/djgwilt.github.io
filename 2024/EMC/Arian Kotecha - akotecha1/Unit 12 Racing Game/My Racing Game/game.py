@@ -54,6 +54,10 @@ def updatePosition():
         cell = getCell()
         if cell == None:
             handleCrash()
+        elif cell.className == 'wall':
+            handleCrash()
+        elif cell.className == 'flag':
+            handleWin()
         else:
             cell.className = "player1"
 
@@ -69,6 +73,9 @@ def runGame():
     document.addEventListener('keydown', create_proxy(checkKey))
     intervalHandle = window.setInterval(create_proxy(updatePosition), 300)
 
+def handleWin():
+    window.clearInterval(intervalHandle)
+    document.getElementById("Message").innerText = "You Won!"
 #############################
 # Main Program
 #############################

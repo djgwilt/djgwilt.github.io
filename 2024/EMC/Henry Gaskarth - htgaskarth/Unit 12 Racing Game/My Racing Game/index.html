@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/pyodide/v0.26.0/full/pyodide.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script defer src="code.js"></script>
-    <title>RoadKill Rampage</title>    
+    <title>Quokka Crush</title>    
   </head>
 
   <body>
@@ -20,13 +20,13 @@
             <td id="R0C1"></td>
             <td id="R0C2"></td>
             <td id="R0C3"></td>
-            <td id="R0C4"></td>
-            <td id="R0C5"></td>
-            <td id="R0C6"></td>
-            <td id="R0C7"></td>
-            <td id="R0C8"></td>
-            <td id="R0C9"></td>
-            <td id="R0C10"></td>
+            <td id="R0C4"class=roadkillcoin></td>
+            <td id="R0C5"class=roadkillcoin></td>
+            <td id="R0C6"class=roadkillcoin></td>
+            <td id="R0C7"class=roadkillcoin></td>
+            <td id="R0C8"class=roadkillcoin></td>
+            <td id="R0C9"class=roadkillcoin></td>
+            <td id="R0C10"class=roadkillcoin></td>
             <td id="R0C11"class="finishquokka"></td>
             <td id="R0C12" class="wall"></td>
             <td id="R0C13"></td>
@@ -49,7 +49,7 @@
             <td id="R1C13"class="wall"></td>
             <td id="R1C14"></td>
         </tr>
-        <td id="R2C0"class="wallFake"></td>
+        <td id="R2C0"class="wall"></td>
         <td id="R2C1"class="wall"></td>
         <td id="R2C2"class="wall"></td>
         <td id="R2C3"class="wall"></td>
@@ -66,9 +66,9 @@
         <td id="R2C14"></td>
       </tr>
       <td id="R3C0"></td>
-      <td id="R3C1"class="wallFake"></td>
-      <td id="R3C2"class="wallFake"></td>
-      <td id="R3C3"class="wallFake"></td>
+      <td id="R3C1"class="wall"></td>
+      <td id="R3C2"class="wall"></td>
+      <td id="R3C3"class="wall"></td>
       <td id="R3C4"class="wall"></td>
       <td id="R3C5"class="wall"></td>
       <td id="R3C6"class="wall"></td>
@@ -82,13 +82,18 @@
       <td id="R3C14"></td>
     </table>
 
+    <audio id="quokkascream" width="0" height="0">
+      <source src="Comical-Screams-chosic.com_.mp3" type="audio/mpeg">
+    </audio>
+
+
     <p id="Message"><br></p>
     
     <div>
     Console Output:
     <textarea id='output' style='width: 100%;' rows='20' disabled></textarea>
     </div>
-    <div style="visibility: hidden" class="player1-left" />
+    <div style="visibility: hidden" class="player1-left"></div>
   </body>
 
 </html>

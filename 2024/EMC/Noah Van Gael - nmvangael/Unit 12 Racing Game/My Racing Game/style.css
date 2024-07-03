@@ -55,24 +55,18 @@ body {
     background-color:white;
 }
 
-#shield1 {
-    background-image:url("shield.jpg");
+.shield {
+    z-index:5;
+    background-image:url("shield.jpg") !important;
     background-size: 40px 40px;
 }
 
-#shield2 {
-    background-image:url("shield.jpg");
+.tp_1 {
+    background-image:url("teleport_tunnel.jpg");
     background-size: 40px 40px;
 }
 
-#shield3 {
-    background-image:url("shield.jpg");
+.tp_2 {
+    background-image:url("teleport_tunnel.jpg");
     background-size: 40px 40px;
-}
-
-.hide_shield {
-    z-index: 10;
-    width:40px;
-    height:40px;
-    background-color:white;
 }

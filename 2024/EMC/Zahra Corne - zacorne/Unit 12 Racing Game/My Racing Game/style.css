@@ -21,7 +21,7 @@ body {
     background-repeat: no-repeat; /* Do not repeat the image */
 }
 .wall {
-    background-color: rgb(207, 124, 172) !important;
+    background-color: rgb(216, 138, 183) !important;
 }
 
 .flag {
@@ -42,4 +42,8 @@ body {
 .coin {
     background-image: url("coin.jpg");
     background-size: 40px 40px;
+}
+
+.wallFake {
+    background-color: rgb(240, 198, 233) !important;
 }

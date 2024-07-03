@@ -14,6 +14,10 @@ position = [0, 0]
 # to store movement directions (x,y)
 direction = [0, 0]
 
+bag = [0]
+
+quokkascream = document.getElementById("quokkascream")
+
 # to store the handle code for the timer interval to cancel it when we crash
 intervalHandle = 0
 
@@ -57,7 +61,7 @@ def updatePosition():
             #Please make sure you look at the OneNote carefully.
             #player1Class = "player1"
             #cell.className = "player1"
-            player1Class = cell.className #keep current sprite if x-direction not changed
+            player1Class = "player1" #keep current sprite if x-direction not changed
         cell.className = "" #you had this indented
             
             # Update the column position for player1
@@ -71,12 +75,12 @@ def updatePosition():
         elif cell.className == "wall":
             handleCrash()
         elif cell.className == "finishquokka":
+            quokkascream.play()
             handleWin()
-        elif direction[0]>0:
-            cell.className = "player1"
-        else:
-            cell.className = "player1-left"
+        elif cell.className == "roadkillcoin":
+            bag[0]=bag[0]+1
 
+        cell.className = player1Class
 # if player1 has gone off the table, this tidies up including crash message
 def handleCrash():
     window.clearInterval(intervalHandle)
@@ -84,16 +88,22 @@ def handleCrash():
 
 def handleWin():
     window.clearInterval(intervalHandle)
-    document.getElementById("Message").innerText = "Hooray you won"
+    document.getElementById("Message").innerText = f"You completed the track and ran over {bag[0]} chickens and 1 Quokka. Good Job!"
 # called when the page is loaded to start the timer checks
 def runGame():
     global intervalHandle
     print("Running Game")
     document.addEventListener('keydown', create_proxy(checkKey))
     intervalHandle = window.setInterval(create_proxy(updatePosition), 300)
+def handleCoin():
+    window.clearInterval(intervalHandle)
+
 
 #############################
 # Main Program
 #############################
+
+quokkascream.autoplay = False
+quokkascream.load()
 
 runGame()

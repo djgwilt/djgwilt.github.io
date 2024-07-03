@@ -6,10 +6,20 @@ body {
     border-collapse:collapse;
     border:5px solid rgba(0, 0, 0, 0);
 }
-.finishquokka {
+.finishquokka  {
     background-image:url("quokka.jpg") !important;
     background-size: 40px 40px;
 }
+
+.roadkillcoin{
+    background-image:url("chickenkill.jpg") ;
+    background-size: 40px 40px;
+}
+
+audio{
+    visibility: hidden;
+}
+
 #RacingTrack td {
     width:40px;
     height:40px;
@@ -18,9 +28,6 @@ body {
 }
 .wall {
     background-color:rgb(0, 0, 0) !important;
-}
-.wallFake {
-    background-color:dimgrey !important;
 }
 
 .player1 {

@@ -14,6 +14,8 @@ position = [0, 0]
 # to store movement directions (x,y)
 direction = [0, 0]
 
+
+
 # to store the handle code for the timer interval to cancel it when we crash
 intervalHandle = 0
 

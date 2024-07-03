@@ -3,10 +3,45 @@
 #############################
 from js import document, window
 from pyodide.ffi import create_proxy
-
+import webbrowser
 #############################
 # Global Variables
 #############################
+
+track1 = [
+    ["player1", "empty", "empty", "empty", "empty", "empty", "wall", "empty", "empty", "flag"],
+    ["empty", "wall", "empty", "wall", "wall", "empty", "wall", "empty", "wall", "wall"],
+    ["empty", "wall", "empty", "empty", "wall", "empty", "wall", "empty", "empty", "empty"],
+    ["empty", "empty", "wall", "empty", "wall", "empty", "empty", "wall", "wall", "coin"],
+    ["wall", "empty", "wall", "empty", "wall", "wall", "empty", "empty", "wall", "empty"],
+    ["empty", "coin", "wallfake", "empty", "empty", "empty", "wall", "empty", "empty", "empty"],
+    ["empty", "wall", "wall", "wall", "wall", "coin", "wall", "wallfake", "wall", "wall"],
+    ["empty", "empty", "empty", "empty", "wall", "empty", "wall", "empty", "empty", "empty"],
+    ["wall", "wall", "wall", "empty", "wall", "empty", "wall", "empty", "wall", "empty"],
+    ["flag", "empty", "empty", "empty", "wall", "empty", "empty", "empty", "wall", "coin"]
+]
+
+track2 = [
+   ["empty", "empty", "empty", "empty", "empty", "wall", "empty", "wall", "empty", "empty", "empty", "empty", "empty", "wall", "empty", "empty", "empty", "empty", "empty"],
+   ["empty", "empty", "empty", "empty", "empty", "wall", "empty", "wall", "wall", "wall", "wall", "wall", "empty", "wall", "wall", "wall", "wall", "wall", "empty"],
+   ["empty", "empty", "empty", "empty", "empty", "wall", "empty", "empty", "empty", "empty", "empty", "wall", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+   ["empty", "empty", "empty", "empty", "empty", "wall", "wall", "wall", "empty", "wall", "empty", "wall", "wall", "wall", "empty", "wall", "empty", "wall", "empty"],
+   ["empty", "empty", "empty", "empty", "empty", "wall", "empty", "empty", "empty", "wall", "empty", "empty", "empty", "empty", "empty", "wall", "empty", "wall", "empty"],
+   ["wall", "wall", "wall", "wall", "empty", "wall", "empty", "wall", "empty", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "empty", "wall", "wall"],
+   ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "wall", "empty", "wall", "empty", "empty", "empty", "empty", "empty", "wall", "empty", "empty", "empty"],
+   ["empty", "wall", "wall", "wall", "wall", "wall", "empty", "wall", "wall", "wall", "empty", "wall", "wall", "wall", "empty", "wall", "wall", "wall", "empty"],
+   ["empty", "wall", "empty", "empty", "empty", "wall", "empty", "empty", "empty", "empty", "empty", "wall", "empty", "wall", "empty", "empty", "empty", "wall", "empty"],
+   ["empty", "wall", "empty", "wall", "empty", "wall", "wall", "wall", "empty", "wall", "wall", "wall", "empty", "wall", "wall", "wall", "empty", "wall", "empty"],
+   ["empty", "empty", "empty", "wall", "empty", "empty", "empty", "wall", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "wall", "empty", "wall", "empty"],
+   ["wall", "wall", "empty", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "empty", "wall", "wall", "wall", "wall", "wall", "empty", "wall", "wall"],
+   ["empty", "empty", "empty", "wall", "empty", "wall", "empty", "empty", "empty", "empty", "empty", "wall", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+   ["empty", "wall", "wall", "wall", "empty", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "empty", "wall", "wall", "wall", "wall", "wall", "wall"],
+   ["empty", "empty", "empty", "wall", "empty", "empty", "empty", "wall", "empty", "empty", "empty", "wall", "empty", "wall", "empty", "empty", "empty", "empty", "empty"],
+   ["wall", "wall", "empty", "wall", "wall", "wall", "empty", "wall", "empty", "wall", "empty", "wall", "empty", "wall", "empty", "wall", "wall", "wall", "empty"],
+   ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+   ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"],
+   ["empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"]
+]
 
 # to store current position (x,y)
 position = [0, 0]
@@ -29,6 +64,15 @@ audioWin = document.getElementById("audioWin")
 # Sub-Programs
 #############################
 
+def loadtrack1():
+    tableInnerHTML = ""
+    for row in range(len(track1)):
+        tableInnerHTML += "<tr>"
+        for col in range(len(track1[0])):
+            tableInnerHTML += "<td id='R{}C{}' class='{}'></td>".format(row, col, track[row][col])
+        tableInnerHTML += "</tr>"
+    document.getElementById("RacingTrack").innerHTML = tableInnerHTML
+
 # the function called when a key is pressed - sets direction variable
 def checkKey(event):
     event.preventDefault()
@@ -47,6 +91,7 @@ def checkKey(event):
         # down arrow
         direction[1] = 1
         direction[0] = 0
+        #webbrowser.open_new('https://www.youtube.com/watch?v=5Hhti1JyH70')
 
 def getCell():
     return document.getElementById("R{}C{}".format(position[1], position[0]))
@@ -122,5 +167,7 @@ audioCoin.autoplay = False
 audioCoin.load()
 audioCrash.autoplay = False
 audioCrash.load()
+
+loadtrack1()
 
 runGame()
